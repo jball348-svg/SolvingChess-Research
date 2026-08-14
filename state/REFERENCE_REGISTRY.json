@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "registry_kind": "SOLVING_CHESS_REFERENCE_REGISTRY",
+  "generated_at": "2026-08-13T22:41:38Z",
+  "default_authority": "NON_AUTHORITATIVE_REFERENCE",
+  "projects": [
+    {
+      "id": "decision-coordinates",
+      "name": "Decision Coordinates",
+      "authority_classification": "NON_AUTHORITATIVE_REFERENCE",
+      "source": {
+        "local_path": "references/projects/decision-coordinates",
+        "repository_url": "https://github.com/jball348-svg/chess.git",
+        "commit": "eadf71ef1d0562b18124959c63b4a8a2613c6c4c"
+      },
+      "reproducibility": {
+        "mechanism": "PINNED_GIT_SUBMODULE",
+        "locator": "references/projects/decision-coordinates",
+        "status": "REPRODUCIBLE",
+        "commit": "eadf71ef1d0562b18124959c63b4a8a2613c6c4c",
+        "exclusions": [
+          "Ignored data/derived SQLite databases",
+          "Python and test caches"
+        ],
+        "notes": "The supplied working tree was clean and synchronized with origin/main. Its tracked bytes are reproducible from this pin."
+      },
+      "purpose": "PGN ingestion and analysis pipeline representing played chess moves by their position in named legal-move orderings, with matched-cohort empirical comparisons.",
+      "approximate_size": {
+        "files": 46,
+        "bytes": 27401504,
+        "basis": "Git-tracked payload at the pinned commit; ignored regenerable databases and caches excluded."
+      },
+      "languages_and_file_types": [
+        "Python",
+        "Markdown",
+        "TOML",
+        "PGN",
+        "Zstandard byte-range parts",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "content_classes": [
+        "IMPLEMENTATION_IDEAS",
+        "EMPIRICAL_EVIDENCE",
+        "GENERAL_RESEARCH",
+        "DATASET"
+      ],
+      "potentially_relevant_programmes": [
+        "G19",
+        "G23",
+        "G24",
+        "G25",
+        "G35",
+        "G36",
+        "G37"
+      ],
+      "known_overlap": [
+        "Legal-move feature extraction and deterministic ordering.",
+        "PGN corpus provenance and storage boundaries.",
+        "Candidate semantic move languages and empirical comparison machinery."
+      ],
+      "known_non_overlap": [
+        "Its FEN-oriented empirical representation is not the frozen G10/G12 full-history state identity.",
+        "Corpus statistics are not exact chess truth, reachability proof or certificate replay.",
+        "Its ignored derived SQLite database is not part of the reproducible pinned payload."
+      ],
+      "provenance_quality": "HIGH",
+      "licensing": {
+        "status": "PARTIAL",
+        "notes": "pyproject.toml declares MIT but the supplied root has no LICENSE file. The bundled Lichess samples separately record CC0 source provenance."
+      },
+      "review": {
+        "scope": "BOUNDED_TRIAGE",
+        "reviewed_at": "2026-08-13T22:41:38Z",
+        "notes": "README, AGENTS.md, manifest, provenance summaries, Git metadata, file inventory and top-level result summary inspected."
+      },
+      "use_restrictions": [
+        "Do not promote empirical results to exact Solving Chess claims.",
+        "Record the pinned commit and exact imported paths when reusing code or ideas.",
+        "Verify any imported semantics against the active G10/G12 contracts."
+      ]
+    },
+    {
+      "id": "structural-invariants-endgames",
+      "name": "Structural Invariants in Chess Endgames",
+      "authority_classification": "NON_AUTHORITATIVE_REFERENCE",
+      "source": {
+        "local_path": "references/local/structural-invariants-endgames",
+        "repository_url": "https://github.com/jball348-svg/chess_research.git",
+        "base_commit": "ade9f4e51ed3048e915386d82e0b53d28ed7e3ab",
+        "snapshot_manifest_sha256": "5b62101a73bfa85277f7246ee2b304921921828e2f0b1bb50d618d917512a1ca"
+      },
+      "reproducibility": {
+        "mechanism": "PRIVATE_SNAPSHOT_MANIFEST",
+        "locator": "references/local-snapshots/structural-invariants-endgames.snapshot.zip",
+        "status": "PENDING_DURABLE_HOSTING",
+        "availability": "LOCAL_PRIVATE_ONLY",
+        "manifest_path": "references/manifests/structural-invariants-endgames.files.sha256",
+        "manifest_sha256": "5b62101a73bfa85277f7246ee2b304921921828e2f0b1bb50d618d917512a1ca",
+        "metadata_manifest_path": "references/manifests/structural-invariants-endgames.manifest.json",
+        "snapshot_sha256": "71ed9950df89c9d61e04c08895c28596c7c1964cb3615478008061b15bfc5be3",
+        "snapshot_size": 52608393,
+        "exclusions": [
+          ".git metadata and local Codex checkpoint refs",
+          "Ignored Rust target directories",
+          "Python bytecode and test caches",
+          "Ignored in-progress work files and local tablebase cache"
+        ],
+        "notes": "The exact private snapshot is materialized locally and identified by the tracked per-file manifest. The public base commit tracks only .gitattributes and does not identify these research bytes. Durable private hosting remains pending; do not use a submodule until the snapshot is committed and hosted with resolved access and licensing."
+      },
+      "purpose": "Structural endgame research covering formal Model C/F semantics, wrong-bishop fortress theorems and counterexamples, controlled attractors, exact finite certificates and two implementation approaches to dead-position classification.",
+      "approximate_size": {
+        "files": 138,
+        "bytes": 262213060,
+        "basis": "Git-tracked plus nonignored untracked files in the supplied snapshot; ignored build and cache material excluded."
+      },
+      "languages_and_file_types": [
+        "Markdown",
+        "JSON",
+        "Python",
+        "Rust",
+        "PGN",
+        "u1 bitmaps",
+        "u8 labels",
+        "u16le ranks",
+        "u32le ranks and queues"
+      ],
+      "content_classes": [
+        "SCIENTIFIC_CLAIMS",
+        "IMPLEMENTATION_IDEAS",
+        "EXACT_FINITE_COMPUTATION",
+        "GENERAL_RESEARCH",
+        "NEGATIVE_RESULTS",
+        "ENGINEERING_PATTERNS"
+      ],
+      "potentially_relevant_programmes": [
+        "G14",
+        "G15",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34"
+      ],
+      "known_overlap": [
+        "Fixed-point and controlled-attractor semantics.",
+        "Dead-position and history-dependent terminal-state distinctions.",
+        "Hash manifests, dense exact arrays, counterexample retention and independent-verifier patterns."
+      ],
+      "known_non_overlap": [
+        "The project explicitly disclaims being a Solving Chess programme result.",
+        "Its narrow diagram/endgame models may differ from the active G10 rules and G12 state contract.",
+        "Static-valid diagrams are not automatically orthodox-reachable states.",
+        "Task 03 remains pending: Implementation A output has not received complete state-for-state agreement from Implementation B."
+      ],
+      "provenance_quality": "MIXED",
+      "licensing": {
+        "status": "UNRESOLVED",
+        "notes": "No project-root license was found. One inner Rust crate declares MIT, which does not license the whole research tree. Treat the snapshot as private/internal until clarified."
+      },
+      "review": {
+        "scope": "BOUNDED_TRIAGE",
+        "reviewed_at": "2026-08-13T22:41:38Z",
+        "notes": "README and assessment documents, task summaries, manifests, implementation READMEs, Git metadata and file inventory inspected. No fresh scientific synthesis performed."
+      },
+      "use_restrictions": [
+        "Do not treat any claim as a frozen Solving Chess fact merely because the project is indexed.",
+        "Preserve Task 03's pending gate and all PROVED-MODULO qualifications.",
+        "Independently verify imported claims to the proof standard of the active G.",
+        "Keep the snapshot private until project-wide redistribution rights are resolved."
+      ]
+    },
+    {
+      "id": "solvingchess-public-legacy",
+      "name": "jball348-svg/SolvingChess public legacy repository",
+      "authority_classification": "NON_AUTHORITATIVE_REFERENCE",
+      "source": {
+        "repository_url": "https://github.com/jball348-svg/SolvingChess.git",
+        "commit": "1861f4a8ea4978b1599a042809f9f7cd53345151"
+      },
+      "reproducibility": {
+        "mechanism": "PINNED_GIT_SUBMODULE",
+        "locator": "references/projects/solvingchess-public",
+        "status": "REPRODUCIBLE",
+        "commit": "1861f4a8ea4978b1599a042809f9f7cd53345151",
+        "exclusions": [],
+        "notes": "Public remote pin containing small early experiments and research notes. It is adjacent work, not the migrated frozen programme corpus."
+      },
+      "purpose": "Legacy public repository with early Decision Coordinates, representation-space, symmetry-compression and mathematical-hypothesis experiments.",
+      "approximate_size": {
+        "files": 33,
+        "bytes": 27043,
+        "basis": "Blob count and byte total from the pinned Git tree."
+      },
+      "languages_and_file_types": [
+        "Python",
+        "Markdown",
+        "PGN",
+        "CSV",
+        "Python bytecode"
+      ],
+      "content_classes": [
+        "IMPLEMENTATION_IDEAS",
+        "EMPIRICAL_EVIDENCE",
+        "GENERAL_RESEARCH"
+      ],
+      "potentially_relevant_programmes": [
+        "G19",
+        "G23",
+        "G24",
+        "G25",
+        "G35",
+        "G37"
+      ],
+      "known_overlap": [
+        "Early legal-move coordinate and representation experiments.",
+        "Symmetry-compression and semantic-description hypotheses."
+      ],
+      "known_non_overlap": [
+        "The repository is not in the Pilot/G1-G13 frozen authority chain.",
+        "Small exploratory scripts and results are not exact programme certificates.",
+        "Tracked Python bytecode is incidental and should not be imported as source."
+      ],
+      "provenance_quality": "HIGH",
+      "licensing": {
+        "status": "UNRESOLVED",
+        "notes": "No repository-root license was found at the pinned tree during bounded triage."
+      },
+      "review": {
+        "scope": "BOUNDED_TRIAGE",
+        "reviewed_at": "2026-08-13T22:41:38Z",
+        "notes": "Pinned remote tree, README-level themes and file inventory inspected."
+      },
+      "use_restrictions": [
+        "Treat all content as non-authoritative reference material.",
+        "Record the exact commit and imported path for any later use.",
+        "Resolve licensing before copying code into the main repository."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "certificate_schema": "G8.CERT.v0.1",
+  "compiler": {
+    "source_sha256": "3a43df267d54e6f7da5f6a179e9d9d9916b77b076ff6524f0a7adf10ff2bc5a9"
+  },
+  "compiler_note": "Derived membership masks are producer-side audit artifacts and are not certificate payloads. Only semantic declarations, dependency hashes, and the four sparse G8DV payloads are needed by the independent verifier.",
+  "date": "2026-08-11",
+  "dependencies": {
+    "F01": {
+      "file": "G8_1_BB_opp_d7_e2_canonical_truth.bin",
+      "sha256": "e328e0f68c32863945cfbdbbab10fb78cf20f08141af2f53070ccd32a6e11d99"
+    },
+    "F02": {
+      "file": "G8_1_BB_same_c7_f2_canonical_truth.bin",
+      "sha256": "e9604c7489592a84869ba41c64af5abf244e546f5bdeb81eb45a3c4cd7d8d68e"
+    },
+    "F09": {
+      "file": "G8_1_F09_canonical_truth.bin",
+      "sha256": "0d550158522726e253a8dc9a271cb1a6f4a8e1c50854f24f79e295f0fdfecbf4"
+    }
+  },
+  "objects": {
+    "F01.BRANCH.7_11": {
+      "arena": "BB_opp_d7_e2",
+      "constituent_attr_counts": {
+        "SIG11": 12831,
+        "SIG7": 355
+      },
+      "irreducible_count": 656,
+      "irreducible_membership": {
+        "bytes": 1048576,
+        "sha256": "a2c62650093ea8def2c28817e5256761bac598077f6054a7eac489246aae7bd8"
+      },
+      "kernel_count": 152,
+      "payload": "F01_branch_kernel.g8dv",
+      "payload_meta": {
+        "bytes": 248,
+        "count": 152,
+        "encoding": "G8DV1 sorted raw-code delta ULEB128",
+        "sha256": "b3be904a04dd4d8b96fd35325064b5d33c7c7ca68d8c4642ded43eb6291ca609"
+      },
+      "proper_union_count": 13186,
+      "target_signatures": [
+        7,
+        11
+      ],
+      "type": "BRANCH_KERNEL",
+      "union_attr_count": 13842,
+      "union_membership": {
+        "bytes": 1048576,
+        "sha256": "25b56efd104d97c3e5cdcc7277ff3dc2dffe8ecc7f0712ef8eb1792d7dd20832"
+      },
+      "verification": "kernel local obligations + residual closure outside proper constituent union"
+    },
+    "F02.DERIVED.ATTR": {
+      "arena": "BB_same_c7_f2",
+      "count": 23327,
+      "domain_object": "F02.HYPER.7_11_14.full_attr",
+      "membership": {
+        "bytes": 1048576,
+        "sha256": "f5acff0242dc714680b23306815f8b079e57cb9a66dd9ecc3472dccb08b95477"
+      },
+      "target_object": "F02.HYPER.7_11_14.irreducible",
+      "type": "STRICT_ATTRACTOR"
+    },
+    "F02.DERIVED.CHECK": {
+      "arena": "BB_same_c7_f2",
+      "count": 23026,
+      "domain_object": "F02.HYPER.7_11_14.full_attr",
+      "filter": "CHECK",
+      "membership": {
+        "bytes": 1048576,
+        "sha256": "390e6154f07bfeebbd960fba09b98cf26fbba1b92b7eaae2beb460666fdfd997"
+      },
+      "target_entry_exemption": true,
+      "target_object": "F02.HYPER.7_11_14.irreducible",
+      "type": "FILTERED_ATTRACTOR"
+    },
+    "F02.DERIVED.FILTER_PIVOT": {
+      "arena": "BB_same_c7_f2",
+      "filter": "CHECK",
+      "filtered_object": "F02.DERIVED.CHECK",
+      "ordinary_object": "F02.DERIVED.ATTR",
+      "payload": "F02_filter_pivots.g8dv",
+      "payload_meta": {
+        "bytes": 460,
+        "count": 239,
+        "encoding": "G8DV1 sorted raw-code delta ULEB128",
+        "sha256": "d9678ff2f29c29d9592703686d398bd2eafa8611a326d8d9307f062c34504a2e"
+      },
+      "pivot_count": 239,
+      "quiet_membership": {
+        "bytes": 1048576,
+        "sha256": "af365139177464888ad0b3779ee9a39d530e229fc5670e7be207599b86e39b9b"
+      },
+      "quiet_required_count": 301,
+      "type": "FILTER_PIVOT_FACTORIZATION",
+      "verification": "pivot local quiet-edge-to-filtered obligation + ordinary residual closure outside filtered object"
+    },
+    "F02.HYPER.7_11_14": {
+      "arena": "BB_same_c7_f2",
+      "full_attr_count": 612427,
+      "full_membership": {
+        "bytes": 1048576,
+        "sha256": "2f4c507c08fbb09c4fd6d2dd72c16602e3352d90c32aaf4e2dadf03a403226cb"
+      },
+      "irreducible_count": 7195,
+      "irreducible_membership": {
+        "bytes": 1048576,
+        "sha256": "625510feaf87a852d0dfcfa0474677f54853b5ee947c18fbedd04bea080f2c37"
+      },
+      "kernel_count": 1641,
+      "payload": "F02_hyperkernel.g8dv",
+      "payload_meta": {
+        "bytes": 2135,
+        "count": 1641,
+        "encoding": "G8DV1 sorted raw-code delta ULEB128",
+        "sha256": "b1cbcfc21adbc3cb89907a6512d5d118e3826ae2ff9955de2a3b57093709eb3f"
+      },
+      "proper_pair_attr_counts": {
+        "11+14": 564193,
+        "7+11": 81249,
+        "7+14": 534327
+      },
+      "proper_subunion_count": 605232,
+      "single_attr_counts": {
+        "SIG11": 72757,
+        "SIG14": 493591,
+        "SIG7": 41
+      },
+      "target_signatures": [
+        7,
+        11,
+        14
+      ],
+      "type": "FINITE_N_HYPERKERNEL",
+      "verification": "kernel local obligations + residual closure outside all proper subunions"
+    },
+    "F09.ATTR": {
+      "arena": "F09_faithful_fortress",
+      "count": 8295062,
+      "external_non-target_transitions": "block",
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "b6b00440000301e2a5dee7dc95385ac3d13a2c0112a0c99413d1bd9cc20576bb"
+      },
+      "target_object": "F09.TARGET",
+      "type": "STRICT_ATTRACTOR"
+    },
+    "F09.CHECK": {
+      "arena": "F09_faithful_fortress",
+      "count": 2461867,
+      "filter": "CHECK",
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "414fc8238749eea3b02e7e026e53f00af9b4e0efe3013f990e2279d83b62238f"
+      },
+      "target_entry_exemption": true,
+      "target_object": "F09.TARGET",
+      "type": "FILTERED_ATTRACTOR"
+    },
+    "F09.FILTER_PIVOT": {
+      "arena": "F09_faithful_fortress",
+      "filter": "CHECK",
+      "filtered_object": "F09.CHECK",
+      "ordinary_object": "F09.ATTR",
+      "payload": "F09_filter_pivots.g8dv",
+      "payload_meta": {
+        "bytes": 530753,
+        "count": 517120,
+        "encoding": "G8DV1 sorted raw-code delta ULEB128",
+        "sha256": "b35bd89507b57f38a116f39985fe77e9a5585290f2c674c07447a54efca90deb"
+      },
+      "pivot_count": 517120,
+      "quiet_membership": {
+        "bytes": 3047424,
+        "sha256": "67ee9edd41ea0c823186909617b5327079608bd4ad41200abfa85c626481f918"
+      },
+      "quiet_required_count": 5833195,
+      "type": "FILTER_PIVOT_FACTORIZATION",
+      "verification": "pivot local quiet-edge-to-filtered obligation + ordinary residual closure outside filtered object"
+    },
+    "F09.SANCTUARY.CONSERVATIVE": {
+      "arena": "F09_faithful_fortress",
+      "count": 3133058,
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "bdd713e2e82a213a773dc28cf4792cca367f28a9562dca5abf7bfb0e9bc1bb49"
+      },
+      "safe_external_exits": false,
+      "target_object": "F09.SANCTUARY.DIRECT",
+      "type": "ROLE_DUAL_SANCTUARY_ATTRACTOR"
+    },
+    "F09.SANCTUARY.DIRECT": {
+      "arena": "F09_faithful_fortress",
+      "count": 330264,
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "f61a8aee721a76bc1af79b98da3984e585b2f020fcf5d730c2f356773bf34698"
+      },
+      "role": "defender",
+      "semantic_predicate": "BK=h8",
+      "type": "TARGET"
+    },
+    "F09.SANCTUARY.SAFE": {
+      "arena": "F09_faithful_fortress",
+      "count": 4437719,
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "af7024f181117b1024e384dee8f39321460803b6e495150892710ec65bb0a10f"
+      },
+      "safe_external_exits": "exact lower-material draws + faithful draw promotion continuations + stalemate terminals",
+      "target_object": "F09.SANCTUARY.DIRECT",
+      "type": "ROLE_DUAL_SANCTUARY_ATTRACTOR"
+    },
+    "F09.TARGET": {
+      "arena": "F09_faithful_fortress",
+      "count": 1448464,
+      "membership": {
+        "bytes": 3047424,
+        "sha256": "84455099b4152d8d58a6e3e30ab5ce5628a735ce9dbcadaa80975d5c75281843"
+      },
+      "semantic_predicate": "pawn rank >= h6 equivalent pri>=4; Chebyshev(WK,h8)<=4; Chebyshev(BK,h8)>=5",
+      "type": "RESOURCE_SAFE_TARGET"
+    }
+  },
+  "payload_encoding": "G8DV1: sorted uint32 raw codes, delta encoded, unsigned LEB128; 8-byte magic + uint64 count",
+  "producer": {
+    "brink_source_sha256": "997613eefaf56b1e4cacb22f85bcf60dc9398b0084490669930db40394da8aea",
+    "build": "g++ -O3 -march=native -std=c++20",
+    "f09_source_sha256": "c39807c4c8c11e15f10329130f71174825c458b3f032cb436c149709971ce1af"
+  },
+  "proof_language": "G7 Proof Language v0.3 (frozen)",
+  "state_identity": "(arena_signature, canonical raw code); raw code conventions are arena-declared and verifier-regenerated",
+  "verifier": {
+    "brink_source_sha256": "f89caa861294630b9baa190ed78d781449136059a0e3a04303c4d1303d8e6ecf",
+    "f09_source_sha256": "065f59c0d214c3aae5cd0627dfd1c3d7f029d6a37af6e2f163fa8e3593d9224a",
+    "implementation_separation": "standalone verifier sources; no producer source inclusion; verifier regenerates arena move relations/fixed points and consumes only declared truth dependencies + sparse payloads",
+    "replay_harness_sha256": "49560c7feb289b7a326875b37f696a45d5b55aa4aec14f499dbebab52b557d38"
+  }
+}

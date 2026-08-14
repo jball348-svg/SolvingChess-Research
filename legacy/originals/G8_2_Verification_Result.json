@@ -1,0 +1,88 @@
+{
+  "all_membership_hashes_exact": true,
+  "all_payloads_exact": true,
+  "manifest_sha256": "1014a245457ef9ca8428ccd0604db98f3ff3823760d206d9f0e71e2c7967cb4e",
+  "membership_replay_hashes": {
+    "F01_bridge.bits": "a2c62650093ea8def2c28817e5256761bac598077f6054a7eac489246aae7bd8",
+    "F01_union_attr.bits": "25b56efd104d97c3e5cdcc7277ff3dc2dffe8ecc7f0712ef8eb1792d7dd20832",
+    "F02_derived_attr.bits": "f5acff0242dc714680b23306815f8b079e57cb9a66dd9ecc3472dccb08b95477",
+    "F02_derived_check.bits": "390e6154f07bfeebbd960fba09b98cf26fbba1b92b7eaae2beb460666fdfd997",
+    "F02_irreducible.bits": "625510feaf87a852d0dfcfa0474677f54853b5ee947c18fbedd04bea080f2c37",
+    "F02_quiet.bits": "af365139177464888ad0b3779ee9a39d530e229fc5670e7be207599b86e39b9b",
+    "F02_three_attr.bits": "2f4c507c08fbb09c4fd6d2dd72c16602e3352d90c32aaf4e2dadf03a403226cb",
+    "F09_attr.bits": "b6b00440000301e2a5dee7dc95385ac3d13a2c0112a0c99413d1bd9cc20576bb",
+    "F09_check.bits": "414fc8238749eea3b02e7e026e53f00af9b4e0efe3013f990e2279d83b62238f",
+    "F09_quiet.bits": "67ee9edd41ea0c823186909617b5327079608bd4ad41200abfa85c626481f918",
+    "F09_sanctuary_conservative.bits": "bdd713e2e82a213a773dc28cf4792cca367f28a9562dca5abf7bfb0e9bc1bb49",
+    "F09_sanctuary_direct.bits": "f61a8aee721a76bc1af79b98da3984e585b2f020fcf5d730c2f356773bf34698",
+    "F09_sanctuary_safe.bits": "af7024f181117b1024e384dee8f39321460803b6e495150892710ec65bb0a10f",
+    "F09_target.bits": "84455099b4152d8d58a6e3e30ab5ce5628a735ce9dbcadaa80975d5c75281843"
+  },
+  "results": {
+    "F01": {
+      "A11": 12831,
+      "A7": 355,
+      "arena": "F01",
+      "bridge": 656,
+      "closure": 656,
+      "closure_exact": true,
+      "kernel": 152,
+      "nonwins": 0,
+      "payload_kernel_exact": true,
+      "proper": 13186,
+      "replay_wall_seconds": 2.20849,
+      "union": 13842
+    },
+    "F02": {
+      "arena": "F02",
+      "check": 23026,
+      "derived": 23327,
+      "fixed_check_bad": 0,
+      "fixed_ordinary_bad": 0,
+      "full": 612427,
+      "hyper_closure": 7195,
+      "hyper_closure_exact": true,
+      "hyperkernel": 1641,
+      "irreducible": 7195,
+      "pairs": [
+        81249,
+        534327,
+        564193
+      ],
+      "parent_nonwins": 0,
+      "payload_hyper_exact": true,
+      "payload_pivot_exact": true,
+      "pivot_closure": 301,
+      "pivot_closure_exact": true,
+      "pivots": 239,
+      "proper": 605232,
+      "quiet": 301,
+      "replay_wall_seconds": 1.567212,
+      "singles": [
+        41,
+        72757,
+        493591
+      ]
+    },
+    "F09": {
+      "arena": "F09",
+      "attr": 8295062,
+      "attr_nonwins": 0,
+      "check": 2461867,
+      "check_nonwins": 0,
+      "payload_pivot_exact": true,
+      "pivot_closure": 5833195,
+      "pivot_closure_exact": true,
+      "pivots": 517120,
+      "quiet": 5833195,
+      "replay_wall_seconds": 15.839025,
+      "sanctuary_conservative": 3133058,
+      "sanctuary_direct": 330264,
+      "sanctuary_nondraws": 0,
+      "sanctuary_safe": 4437719,
+      "target": 1448464
+    }
+  },
+  "schema": "G8.CERT.v0.1",
+  "status": "PASS"
+}

@@ -1,0 +1,67 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "handoffs/normalized/G6_Final_Technical_Handoff.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G6_Final_Technical_Handoff.md",
+    "repository_path": "handoffs/normalized/G6_Final_Technical_Handoff.md",
+    "sha256": "6523ae80ec5eaa22a6ab0a9540aaf7bf379af3bae768aba9177c362396a3fbac",
+    "size": 26860
+  },
+  "footer_text": [
+    "Page"
+  ],
+  "header_text": [
+    "G6 FINAL TECHNICAL HANDOFF"
+  ],
+  "losses": [
+    {
+      "code": "HEADER_FOOTER_NOT_IN_BODY_MARKDOWN",
+      "count": 2,
+      "detail": "Header/footer visible text is recorded in audit metadata, not repeated in the body derivative.",
+      "severity": "documentary"
+    },
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 303,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G6_Final_Technical_Handoff.docx",
+    "repository_path": "handoffs/originals/G6_Final_Technical_Handoff.docx",
+    "sha256": "6e181acf7bc8ca5c3a030087bfb8f704f2dd6a2abb691d8129d2974ab6fd7b97",
+    "size": 52546,
+    "visible_text_sequence_sha256": "86cb321a337e545a1fcb26bc42989a0da03d8215cecfc15cd7ff6a377ad64a6f"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 0,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 27,
+    "hyperlinks": 0,
+    "list_items": 31,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 384,
+    "paragraphs": 404,
+    "pictures": 0,
+    "table_cells": 291,
+    "table_rows": 91,
+    "tables": 19,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

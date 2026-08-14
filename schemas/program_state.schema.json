@@ -1,0 +1,3948 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solving-chess.local/schemas/program_state.schema.json",
+  "title": "Solving Chess programme state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "generated_at",
+    "permanent_roadmap",
+    "latest_completed_programme",
+    "latest_frozen_handoff",
+    "next_programme",
+    "routing_transition",
+    "active_contracts",
+    "frozen_exceptions",
+    "live_blockers",
+    "broken_historical_chains",
+    "completed_gates",
+    "held_gates",
+    "blocked_downstream_programmes",
+    "registries",
+    "repository_bootstrap",
+    "last_frozen_git",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project_id": {
+      "const": "solving-chess"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "permanent_roadmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "original_path",
+        "sha256",
+        "identity_status"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "original_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of original_path, the controlling immutable byte authority."
+        },
+        "identity_status": {
+          "const": "VERIFIED"
+        },
+        "role": {
+          "const": "PERMANENT_STRATEGIC_AUTHORITY"
+        }
+      }
+    },
+    "latest_completed_programme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "programme",
+        "number",
+        "title",
+        "research_status",
+        "core_result",
+        "roadmap_gate"
+      ],
+      "properties": {
+        "programme": {
+          "type": "string",
+          "enum": [
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5",
+            "G6",
+            "G7",
+            "G8",
+            "G9",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G14",
+            "G15",
+            "G16",
+            "G17",
+            "G18",
+            "G19",
+            "G20",
+            "G21",
+            "G22",
+            "G23",
+            "G24",
+            "G25",
+            "G26",
+            "G27",
+            "G28",
+            "G29",
+            "G30",
+            "G31",
+            "G32",
+            "G33",
+            "G34",
+            "G35",
+            "G36",
+            "G37",
+            "G38",
+            "G39",
+            "G40",
+            "G41",
+            "G42"
+          ]
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 42
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "research_status": {
+          "const": "COMPLETED"
+        },
+        "core_result": {
+          "enum": [
+            "PASS",
+            "HOLD",
+            "BLOCKED",
+            "FAILED"
+          ]
+        },
+        "roadmap_gate": {
+          "enum": [
+            "PASS",
+            "HOLD",
+            "BLOCKED",
+            "FAILED"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "latest_frozen_handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "programme",
+        "path",
+        "original_path",
+        "sha256",
+        "identity_status"
+      ],
+      "properties": {
+        "programme": {
+          "type": "string",
+          "enum": [
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5",
+            "G6",
+            "G7",
+            "G8",
+            "G9",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G14",
+            "G15",
+            "G16",
+            "G17",
+            "G18",
+            "G19",
+            "G20",
+            "G21",
+            "G22",
+            "G23",
+            "G24",
+            "G25",
+            "G26",
+            "G27",
+            "G28",
+            "G29",
+            "G30",
+            "G31",
+            "G32",
+            "G33",
+            "G34",
+            "G35",
+            "G36",
+            "G37",
+            "G38",
+            "G39",
+            "G40",
+            "G41",
+            "G42"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "original_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of original_path, the controlling immutable byte authority."
+        },
+        "identity_status": {
+          "const": "VERIFIED"
+        }
+      }
+    },
+    "next_programme": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "programme",
+            "number",
+            "title",
+            "sequentially_permitted",
+            "authorized",
+            "started",
+            "launch_status",
+            "authorization_reason"
+          ],
+          "properties": {
+            "programme": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "number": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 42
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sequentially_permitted": {
+              "type": "boolean"
+            },
+            "authorized": {
+              "type": "boolean"
+            },
+            "started": {
+              "type": "boolean"
+            },
+            "launch_status": {
+              "enum": [
+                "NOT_STARTED",
+                "IN_PROGRESS"
+              ]
+            },
+            "authorization_reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "started": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "started"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "launch_status": {
+                    "const": "IN_PROGRESS"
+                  },
+                  "authorized": {
+                    "const": true
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "started": {
+                    "const": false
+                  }
+                },
+                "required": [
+                  "started"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "launch_status": {
+                    "const": "NOT_STARTED"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "authorized": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "authorized"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "sequentially_permitted": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "routing_transition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "to": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            }
+          },
+          "allOf": [
+            {
+              "$ref": "#/$defs/sequentialTransition"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "active_contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rules",
+        "state_serialization",
+        "compute",
+        "proof_certificate_contracts"
+      ],
+      "properties": {
+        "rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "kind",
+            "status",
+            "authority_path",
+            "original_authority_path",
+            "sha256"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "kind": {
+              "const": "RULES"
+            },
+            "status": {
+              "const": "ACTIVE"
+            },
+            "authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "original_authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "SHA-256 of original_authority_path, the controlling immutable byte authority."
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "state_serialization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "kind",
+            "status",
+            "authority_path",
+            "original_authority_path",
+            "sha256"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "kind": {
+              "const": "STATE_SERIALIZATION"
+            },
+            "status": {
+              "const": "ACTIVE"
+            },
+            "authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "original_authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "SHA-256 of original_authority_path, the controlling immutable byte authority."
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "compute": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "kind",
+            "status",
+            "authority_path",
+            "original_authority_path",
+            "sha256"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "kind": {
+              "const": "COMPUTE"
+            },
+            "status": {
+              "const": "ACTIVE"
+            },
+            "authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "original_authority_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "SHA-256 of original_authority_path, the controlling immutable byte authority."
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "proof_certificate_contracts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind",
+              "status",
+              "authority_path",
+              "original_authority_path",
+              "sha256"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "PROOF_CERTIFICATE"
+              },
+              "status": {
+                "const": "ACTIVE"
+              },
+              "authority_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+              },
+              "original_authority_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$",
+                "description": "SHA-256 of original_authority_path, the controlling immutable byte authority."
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "frozen_exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "description",
+          "implications"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "PRESERVED",
+              "RESOLVED",
+              "SUPERSEDED"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "implications": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "expected_sha256": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "observed_sha256": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bytes_status": {
+            "enum": [
+              "NOT_APPLICABLE",
+              "UNAVAILABLE",
+              "RECOVERED_EXACT_BYTES",
+              "RECOVERED",
+              "VERIFIED"
+            ]
+          },
+          "integrity_status": {
+            "enum": [
+              "NOT_CHECKED",
+              "VERIFIED",
+              "FAILED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "replay_status": {
+            "enum": [
+              "NOT_APPLICABLE",
+              "NOT_PERFORMED",
+              "PASS",
+              "FAILED"
+            ]
+          }
+        }
+      }
+    },
+    "live_blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "description",
+          "blocks",
+          "required_resolution"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "const": "OPEN"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "required_resolution": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "broken_historical_chains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "const": "BROKEN_PRESERVED"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "completed_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "programme",
+          "gate",
+          "result"
+        ],
+        "properties": {
+          "programme": {
+            "type": "string",
+            "enum": [
+              "G1",
+              "G2",
+              "G3",
+              "G4",
+              "G5",
+              "G6",
+              "G7",
+              "G8",
+              "G9",
+              "G10",
+              "G11",
+              "G12",
+              "G13",
+              "G14",
+              "G15",
+              "G16",
+              "G17",
+              "G18",
+              "G19",
+              "G20",
+              "G21",
+              "G22",
+              "G23",
+              "G24",
+              "G25",
+              "G26",
+              "G27",
+              "G28",
+              "G29",
+              "G30",
+              "G31",
+              "G32",
+              "G33",
+              "G34",
+              "G35",
+              "G36",
+              "G37",
+              "G38",
+              "G39",
+              "G40",
+              "G41",
+              "G42"
+            ]
+          },
+          "gate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "const": "PASS"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "held_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "programme",
+          "gate",
+          "result",
+          "reason"
+        ],
+        "properties": {
+          "programme": {
+            "type": "string",
+            "enum": [
+              "G1",
+              "G2",
+              "G3",
+              "G4",
+              "G5",
+              "G6",
+              "G7",
+              "G8",
+              "G9",
+              "G10",
+              "G11",
+              "G12",
+              "G13",
+              "G14",
+              "G15",
+              "G16",
+              "G17",
+              "G18",
+              "G19",
+              "G20",
+              "G21",
+              "G22",
+              "G23",
+              "G24",
+              "G25",
+              "G26",
+              "G27",
+              "G28",
+              "G29",
+              "G30",
+              "G31",
+              "G32",
+              "G33",
+              "G34",
+              "G35",
+              "G36",
+              "G37",
+              "G38",
+              "G39",
+              "G40",
+              "G41",
+              "G42"
+            ]
+          },
+          "gate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "const": "HOLD"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "blocked_downstream_programmes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "programme",
+          "status",
+          "reasons"
+        ],
+        "properties": {
+          "programme": {
+            "type": "string",
+            "enum": [
+              "G1",
+              "G2",
+              "G3",
+              "G4",
+              "G5",
+              "G6",
+              "G7",
+              "G8",
+              "G9",
+              "G10",
+              "G11",
+              "G12",
+              "G13",
+              "G14",
+              "G15",
+              "G16",
+              "G17",
+              "G18",
+              "G19",
+              "G20",
+              "G21",
+              "G22",
+              "G23",
+              "G24",
+              "G25",
+              "G26",
+              "G27",
+              "G28",
+              "G29",
+              "G30",
+              "G31",
+              "G32",
+              "G33",
+              "G34",
+              "G35",
+              "G36",
+              "G37",
+              "G38",
+              "G39",
+              "G40",
+              "G41",
+              "G42"
+            ]
+          },
+          "status": {
+            "const": "BLOCKED"
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "registries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_registry_path",
+        "reference_registry_path"
+      ],
+      "properties": {
+        "artifact_registry_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "artifact_registry_sha256": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reference_registry_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "reference_registry_sha256": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "repository_bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "completion_status",
+        "autonomous_loop_readiness",
+        "real_loop_running"
+      ],
+      "properties": {
+        "version": {
+          "const": "1.0.0"
+        },
+        "completion_status": {
+          "enum": [
+            "IN_PROGRESS",
+            "COMPLETE",
+            "HOLD",
+            "FAILED"
+          ]
+        },
+        "autonomous_loop_readiness": {
+          "enum": [
+            "NOT_READY",
+            "READY",
+            "BLOCKED"
+          ]
+        },
+        "real_loop_running": {
+          "type": "boolean"
+        },
+        "validation_summary": {
+          "type": "string"
+        }
+      }
+    },
+    "last_frozen_git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "commit",
+        "tag"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_FROZEN",
+            "FROZEN"
+          ]
+        },
+        "commit": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tag": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "FROZEN"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "tag": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "commit": {
+                "type": "null"
+              },
+              "tag": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bootstrap_is_research",
+        "g14_research_progress",
+        "new_chess_truth_claimed"
+      ],
+      "properties": {
+        "bootstrap_is_research": {
+          "const": false
+        },
+        "g14_research_progress": {
+          "const": "NONE"
+        },
+        "new_chess_truth_claimed": {
+          "const": false
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G1"
+                },
+                "number": {
+                  "const": 1
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G2"
+                },
+                "number": {
+                  "const": 2
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G1"
+                },
+                "to": {
+                  "const": "G2"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G2"
+                },
+                "number": {
+                  "const": 2
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G3"
+                },
+                "number": {
+                  "const": 3
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G2"
+                },
+                "to": {
+                  "const": "G3"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G3"
+                },
+                "number": {
+                  "const": 3
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G4"
+                },
+                "number": {
+                  "const": 4
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G3"
+                },
+                "to": {
+                  "const": "G4"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G4"
+                },
+                "number": {
+                  "const": 4
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G5"
+                },
+                "number": {
+                  "const": 5
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G4"
+                },
+                "to": {
+                  "const": "G5"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G5"
+                },
+                "number": {
+                  "const": 5
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G6"
+                },
+                "number": {
+                  "const": 6
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G5"
+                },
+                "to": {
+                  "const": "G6"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G6"
+                },
+                "number": {
+                  "const": 6
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G7"
+                },
+                "number": {
+                  "const": 7
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G6"
+                },
+                "to": {
+                  "const": "G7"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G7"
+                },
+                "number": {
+                  "const": 7
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G8"
+                },
+                "number": {
+                  "const": 8
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G7"
+                },
+                "to": {
+                  "const": "G8"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G8"
+                },
+                "number": {
+                  "const": 8
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G9"
+                },
+                "number": {
+                  "const": 9
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G8"
+                },
+                "to": {
+                  "const": "G9"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G9"
+                },
+                "number": {
+                  "const": 9
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G10"
+                },
+                "number": {
+                  "const": 10
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G9"
+                },
+                "to": {
+                  "const": "G10"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G10"
+                },
+                "number": {
+                  "const": 10
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G11"
+                },
+                "number": {
+                  "const": 11
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G10"
+                },
+                "to": {
+                  "const": "G11"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G11"
+                },
+                "number": {
+                  "const": 11
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G12"
+                },
+                "number": {
+                  "const": 12
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G11"
+                },
+                "to": {
+                  "const": "G12"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G12"
+                },
+                "number": {
+                  "const": 12
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G13"
+                },
+                "number": {
+                  "const": 13
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G12"
+                },
+                "to": {
+                  "const": "G13"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G13"
+                },
+                "number": {
+                  "const": 13
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G14"
+                },
+                "number": {
+                  "const": 14
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G13"
+                },
+                "to": {
+                  "const": "G14"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G14"
+                },
+                "number": {
+                  "const": 14
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G15"
+                },
+                "number": {
+                  "const": 15
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G14"
+                },
+                "to": {
+                  "const": "G15"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G15"
+                },
+                "number": {
+                  "const": 15
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G16"
+                },
+                "number": {
+                  "const": 16
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G15"
+                },
+                "to": {
+                  "const": "G16"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G16"
+                },
+                "number": {
+                  "const": 16
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G17"
+                },
+                "number": {
+                  "const": 17
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G16"
+                },
+                "to": {
+                  "const": "G17"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G17"
+                },
+                "number": {
+                  "const": 17
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G18"
+                },
+                "number": {
+                  "const": 18
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G17"
+                },
+                "to": {
+                  "const": "G18"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G18"
+                },
+                "number": {
+                  "const": 18
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G19"
+                },
+                "number": {
+                  "const": 19
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G18"
+                },
+                "to": {
+                  "const": "G19"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G19"
+                },
+                "number": {
+                  "const": 19
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G20"
+                },
+                "number": {
+                  "const": 20
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G19"
+                },
+                "to": {
+                  "const": "G20"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G20"
+                },
+                "number": {
+                  "const": 20
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G21"
+                },
+                "number": {
+                  "const": 21
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G20"
+                },
+                "to": {
+                  "const": "G21"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G21"
+                },
+                "number": {
+                  "const": 21
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G22"
+                },
+                "number": {
+                  "const": 22
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G21"
+                },
+                "to": {
+                  "const": "G22"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G22"
+                },
+                "number": {
+                  "const": 22
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G23"
+                },
+                "number": {
+                  "const": 23
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G22"
+                },
+                "to": {
+                  "const": "G23"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G23"
+                },
+                "number": {
+                  "const": 23
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G24"
+                },
+                "number": {
+                  "const": 24
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G23"
+                },
+                "to": {
+                  "const": "G24"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G24"
+                },
+                "number": {
+                  "const": 24
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G25"
+                },
+                "number": {
+                  "const": 25
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G24"
+                },
+                "to": {
+                  "const": "G25"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G25"
+                },
+                "number": {
+                  "const": 25
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G26"
+                },
+                "number": {
+                  "const": 26
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G25"
+                },
+                "to": {
+                  "const": "G26"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G26"
+                },
+                "number": {
+                  "const": 26
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G27"
+                },
+                "number": {
+                  "const": 27
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G26"
+                },
+                "to": {
+                  "const": "G27"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G27"
+                },
+                "number": {
+                  "const": 27
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G28"
+                },
+                "number": {
+                  "const": 28
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G27"
+                },
+                "to": {
+                  "const": "G28"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G28"
+                },
+                "number": {
+                  "const": 28
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G29"
+                },
+                "number": {
+                  "const": 29
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G28"
+                },
+                "to": {
+                  "const": "G29"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G29"
+                },
+                "number": {
+                  "const": 29
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G30"
+                },
+                "number": {
+                  "const": 30
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G29"
+                },
+                "to": {
+                  "const": "G30"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G30"
+                },
+                "number": {
+                  "const": 30
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G31"
+                },
+                "number": {
+                  "const": 31
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G30"
+                },
+                "to": {
+                  "const": "G31"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G31"
+                },
+                "number": {
+                  "const": 31
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G32"
+                },
+                "number": {
+                  "const": 32
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G31"
+                },
+                "to": {
+                  "const": "G32"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G32"
+                },
+                "number": {
+                  "const": 32
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G33"
+                },
+                "number": {
+                  "const": 33
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G32"
+                },
+                "to": {
+                  "const": "G33"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G33"
+                },
+                "number": {
+                  "const": 33
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G34"
+                },
+                "number": {
+                  "const": 34
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G33"
+                },
+                "to": {
+                  "const": "G34"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G34"
+                },
+                "number": {
+                  "const": 34
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G35"
+                },
+                "number": {
+                  "const": 35
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G34"
+                },
+                "to": {
+                  "const": "G35"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G35"
+                },
+                "number": {
+                  "const": 35
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G36"
+                },
+                "number": {
+                  "const": 36
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G35"
+                },
+                "to": {
+                  "const": "G36"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G36"
+                },
+                "number": {
+                  "const": 36
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G37"
+                },
+                "number": {
+                  "const": 37
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G36"
+                },
+                "to": {
+                  "const": "G37"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G37"
+                },
+                "number": {
+                  "const": 37
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G38"
+                },
+                "number": {
+                  "const": 38
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G37"
+                },
+                "to": {
+                  "const": "G38"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G38"
+                },
+                "number": {
+                  "const": 38
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G39"
+                },
+                "number": {
+                  "const": 39
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G38"
+                },
+                "to": {
+                  "const": "G39"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G39"
+                },
+                "number": {
+                  "const": 39
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G40"
+                },
+                "number": {
+                  "const": 40
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G39"
+                },
+                "to": {
+                  "const": "G40"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G40"
+                },
+                "number": {
+                  "const": 40
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G41"
+                },
+                "number": {
+                  "const": 41
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G40"
+                },
+                "to": {
+                  "const": "G41"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G41"
+                },
+                "number": {
+                  "const": 41
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G42"
+                },
+                "number": {
+                  "const": 42
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "routing_transition": {
+              "properties": {
+                "from": {
+                  "const": "G41"
+                },
+                "to": {
+                  "const": "G42"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_completed_programme": {
+              "properties": {
+                "programme": {
+                  "const": "G42"
+                },
+                "number": {
+                  "const": 42
+                }
+              },
+              "required": [
+                "programme",
+                "number"
+              ]
+            },
+            "next_programme": {
+              "type": "null"
+            },
+            "routing_transition": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "repository_bootstrap": {
+              "properties": {
+                "completion_status": {
+                  "const": "COMPLETE"
+                },
+                "autonomous_loop_readiness": {
+                  "const": "READY"
+                }
+              },
+              "required": [
+                "completion_status",
+                "autonomous_loop_readiness"
+              ]
+            },
+            "registries": {
+              "properties": {
+                "artifact_registry_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "reference_registry_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "required": [
+                "artifact_registry_sha256",
+                "reference_registry_sha256"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "repository_bootstrap": {
+              "properties": {
+                "completion_status": {
+                  "const": "IN_PROGRESS"
+                },
+                "autonomous_loop_readiness": {
+                  "const": "NOT_READY"
+                },
+                "real_loop_running": {
+                  "const": false
+                }
+              },
+              "required": [
+                "completion_status",
+                "autonomous_loop_readiness",
+                "real_loop_running"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "repository_bootstrap": {
+              "properties": {
+                "completion_status": {
+                  "enum": [
+                    "HOLD",
+                    "FAILED"
+                  ]
+                },
+                "autonomous_loop_readiness": {
+                  "const": "BLOCKED"
+                },
+                "real_loop_running": {
+                  "const": false
+                }
+              },
+              "required": [
+                "completion_status",
+                "autonomous_loop_readiness",
+                "real_loop_running"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "sequentialTransition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G1"
+            },
+            "to": {
+              "const": "G2"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G2"
+            },
+            "to": {
+              "const": "G3"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G3"
+            },
+            "to": {
+              "const": "G4"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G4"
+            },
+            "to": {
+              "const": "G5"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G5"
+            },
+            "to": {
+              "const": "G6"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G6"
+            },
+            "to": {
+              "const": "G7"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G7"
+            },
+            "to": {
+              "const": "G8"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G8"
+            },
+            "to": {
+              "const": "G9"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G9"
+            },
+            "to": {
+              "const": "G10"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G10"
+            },
+            "to": {
+              "const": "G11"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G11"
+            },
+            "to": {
+              "const": "G12"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G12"
+            },
+            "to": {
+              "const": "G13"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G13"
+            },
+            "to": {
+              "const": "G14"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G14"
+            },
+            "to": {
+              "const": "G15"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G15"
+            },
+            "to": {
+              "const": "G16"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G16"
+            },
+            "to": {
+              "const": "G17"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G17"
+            },
+            "to": {
+              "const": "G18"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G18"
+            },
+            "to": {
+              "const": "G19"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G19"
+            },
+            "to": {
+              "const": "G20"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G20"
+            },
+            "to": {
+              "const": "G21"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G21"
+            },
+            "to": {
+              "const": "G22"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G22"
+            },
+            "to": {
+              "const": "G23"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G23"
+            },
+            "to": {
+              "const": "G24"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G24"
+            },
+            "to": {
+              "const": "G25"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G25"
+            },
+            "to": {
+              "const": "G26"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G26"
+            },
+            "to": {
+              "const": "G27"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G27"
+            },
+            "to": {
+              "const": "G28"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G28"
+            },
+            "to": {
+              "const": "G29"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G29"
+            },
+            "to": {
+              "const": "G30"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G30"
+            },
+            "to": {
+              "const": "G31"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G31"
+            },
+            "to": {
+              "const": "G32"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G32"
+            },
+            "to": {
+              "const": "G33"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G33"
+            },
+            "to": {
+              "const": "G34"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G34"
+            },
+            "to": {
+              "const": "G35"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G35"
+            },
+            "to": {
+              "const": "G36"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G36"
+            },
+            "to": {
+              "const": "G37"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G37"
+            },
+            "to": {
+              "const": "G38"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G38"
+            },
+            "to": {
+              "const": "G39"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G39"
+            },
+            "to": {
+              "const": "G40"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G40"
+            },
+            "to": {
+              "const": "G41"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G41"
+            },
+            "to": {
+              "const": "G42"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

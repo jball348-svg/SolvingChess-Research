@@ -1,0 +1,29 @@
+* text=auto eol=lf
+
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+
+*.docx binary
+*.zip binary
+*.gz binary
+*.bin binary
+*.u1 binary
+*.u8 binary
+*.u16le binary
+*.u32le binary
+
+# Frozen inherited occurrences are byte authorities. Keep this block last so
+# it overrides extension rules and Git never rewrites their line endings.
+/roadmap/originals/** -text
+/handoffs/originals/** -text
+/legacy/originals/** -text
+
+# Controller evidence hashes bind the exact captured process bytes.
+/logs/orchestration/** -text

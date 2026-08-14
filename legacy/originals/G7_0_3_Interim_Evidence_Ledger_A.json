@@ -1,0 +1,182 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "freeze": "G7.0-G7.3 Interim Evidence Freeze A",
+  "date": "2026-08-11",
+  "status": "G7 OPEN; G7.0-G7.3 materially complete for first two six-man families; G7F03 on tractability hold; G7.4 next",
+  "authoritative_history": "Frozen Pilot1->Pilot2->G3->G4->G5->G6 handoffs; G6 proof-language and terminal typing retained",
+  "prospective_protocol": {
+    "manifest": "G7_0_1_Frozen_Ascent_Manifest_v2.json",
+    "selection_before_truth": true,
+    "supersession": "v1 structural metrics and all buggy-generator WDL discarded after slider successor defect; v2 frozen before any accepted WDL; first-wave order unchanged"
+  },
+  "solver_model": {
+    "ordinary_mate_stalemate": true,
+    "promotion": "immediate win for promoting side",
+    "captures": "internal optional-material closure",
+    "repetition_en_passant_move_count": "not represented",
+    "rank": "side-to-move retrograde queue depth; WDL membership primary"
+  },
+  "families": {
+    "G7F01": {
+      "name": "BB_opp_d7_e2",
+      "entire_graph": {
+        "static": 23728925,
+        "W": 7282421,
+        "B": 8205091,
+        "D": 8241413
+      },
+      "full_SIG15": {
+        "static": 5105749,
+        "W": 2506683,
+        "B": 2519613,
+        "D": 79453
+      },
+      "bellman_sample": {
+        "checked": 92325,
+        "mismatches": 0
+      },
+      "direct_full_capture_edges": {
+        "total": 1682943,
+        "to_SIG7": 255368,
+        "to_SIG11": 231650,
+        "to_SIG13": 981578,
+        "to_SIG14": 214347
+      },
+      "g6_race_path_target_fire": {
+        "direct": 635658,
+        "W": 559894,
+        "D": 36,
+        "B": 75728,
+        "false_nonW": 75764,
+        "verdict": "fails unchanged published double-brink instance in presence of opposing bishop"
+      },
+      "projection": {
+        "del_Wpiece": {
+          "lowerW": 2192425,
+          "restoreW": 2154192,
+          "restoreD": 4269,
+          "restoreB": 33964
+        },
+        "del_Bpiece": {
+          "lowerW": 2842052,
+          "restoreW": 2498425,
+          "restoreD": 46868,
+          "restoreB": 296759
+        },
+        "del_Wpawn": {
+          "lowerW": 324,
+          "restoreW": 324,
+          "restoreD": 0,
+          "restoreB": 0
+        },
+        "del_Bpawn": {
+          "lowerW": 3910436,
+          "restoreW": 2503731,
+          "restoreD": 27354,
+          "restoreB": 1379351
+        }
+      },
+      "endpoint_bridge_SIG11_SIG14": {
+        "A11_full": 12831,
+        "A14_full": 130295,
+        "Aunion_full": 142713,
+        "pure_full": 16,
+        "kernel_full": 15,
+        "amplification": 1.0666666667
+      }
+    },
+    "G7F02": {
+      "name": "BB_same_c7_f2",
+      "entire_graph": {
+        "static": 22770972,
+        "W": 7043319,
+        "B": 7043319,
+        "D": 8684334
+      },
+      "full_SIG15": {
+        "static": 4761076,
+        "W": 2321127,
+        "B": 2321127,
+        "D": 118822
+      },
+      "bellman_sample": {
+        "checked": 88595,
+        "mismatches": 0
+      },
+      "direct_full_capture_edges": {
+        "total": 3190606,
+        "to_SIG7": 784233,
+        "to_SIG11": 784233,
+        "to_SIG13": 811070,
+        "to_SIG14": 811070
+      },
+      "g6_race_path_target_fire": {
+        "direct": 650857,
+        "W": 576481,
+        "D": 1907,
+        "B": 72469,
+        "false_nonW": 74376,
+        "verdict": "fails unchanged published double-brink instance in presence of opposing bishop"
+      },
+      "projection": {
+        "del_Wpiece": {
+          "lowerW": 2070016,
+          "restoreW": 2065988,
+          "restoreD": 36,
+          "restoreB": 3992
+        },
+        "del_Bpiece": {
+          "lowerW": 2620273,
+          "restoreW": 2302095,
+          "restoreD": 68216,
+          "restoreB": 249962
+        },
+        "del_Wpawn": {
+          "lowerW": 0,
+          "restoreW": 0,
+          "restoreD": 0,
+          "restoreB": 0
+        },
+        "del_Bpawn": {
+          "lowerW": 3752257,
+          "restoreW": 2301237,
+          "restoreD": 38220,
+          "restoreB": 1412800
+        }
+      },
+      "endpoint_bridge_SIG11_SIG14": {
+        "A11_full": 72757,
+        "A14_full": 493591,
+        "Aunion_full": 564193,
+        "pure_full": 14072,
+        "kernel_full": 3900,
+        "amplification": 3.6082051282
+      }
+    },
+    "G7F03": {
+      "name": "BN_opp_d7_e2",
+      "static_valid": 48028628,
+      "predaudit": {
+        "sound_edges": 130292,
+        "bad": 0,
+        "successor_edges": 129932,
+        "missing": 0
+      },
+      "status": "tractability hold: full solve did not reach WDL initialization within execution budget; no WDL accepted"
+    }
+  },
+  "g6_upward_fire": {
+    "PROJECT": "exact lower-material projections available; raw restoration is non-monotone in richer graph; G6 FAR3/FAR5 domains are not silently widened to these extra-opponent-resource states",
+    "TARGET": "unchanged published double-brink race/path instance fails in both first-wave families; generic G6 resource-safe schema correctly indicates additional conversion/opponent-access guards are required",
+    "STRICT_ATTRACTOR": "fires unchanged on exact material-labelled endpoint targets",
+    "BRANCH_KERNEL": "fires unchanged over two materially distinct exact endpoints in both families; nonzero pure bridge and exact kernel mechanism",
+    "HYPERKERNEL": "not yet run in this freeze",
+    "LOCALIZE_GROUP_OUT_STOP": "not yet run in this freeze"
+  },
+  "scientific_interpretation": [
+    "Alternative exact material-reduction endpoints can be used as ordinary typed targets; no new game-graph theorem is required for the first exchange-funnel result.",
+    "The same-colour exchange-rich family has a much larger material-endpoint pure bridge (14072 vs 16) and kernel (3900 vs 15) than the opposite-colour family, but pawn geometry also differs, so this is not yet a causal colour-complex theorem.",
+    "The first G7 higher-tree failure is informative: an old target instance is under-typed once an opposing mobile bishop exists, while the higher-level G6 resource-safe constructor remains directionally correct."
+  ],
+  "next_stage": "G7.4 structural/exact seven-man fortress-imbalance wave, then finish unchanged G6 upward-fire matrix before any G7.6 abstraction promotion."
+}

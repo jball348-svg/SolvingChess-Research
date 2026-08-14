@@ -1,0 +1,161 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "freeze": "G7.0-G7.1 prospective ascent manifest v2 \u2014 supersedes v1 structural metrics only",
+  "date": "2026-08-11",
+  "history_contract": {
+    "authoritative": "Frozen Pilot1->Pilot2->G3->G4->G5->G6 handoffs; G6 proof language v1.0",
+    "g6_historical_exceptions": [
+      "G4 optional-pawn/capture implementation graph: provenance-only exception",
+      "G5 knight max-rank label: historical certificate-format exception"
+    ],
+    "rank_semantics_g7": "side-to-move retrograde queue depth; membership is primary; rank comparisons require this declared convention",
+    "terminal_semantics_brink_wave": "ordinary mate/stalemate; no repetition/en-passant/move-count state; promotion by either side is immediate win for promoting side; material captures stay inside the optional-piece/pawn dependency graph"
+  },
+  "selection_rule": {
+    "allowed": [
+      "raw/static-valid scale estimate",
+      "mean legal branching",
+      "capture density",
+      "checking density",
+      "promotion-exit density",
+      "movement topology",
+      "invariant symmetry/restriction completeness",
+      "material novelty"
+    ],
+    "forbidden_before_freeze": [
+      "W/D/L",
+      "target coverage",
+      "attractor size",
+      "classifier accuracy",
+      "symbolic compressibility"
+    ],
+    "sampling": "120000 deterministic random encoded states/family; seed 0x677; corrected slider move generator; no accepted outcome truth existed when v2 was frozen"
+  },
+  "candidate_atlas": [
+    {
+      "id": "G7F01",
+      "family": "BB_opp_d7_e2",
+      "material": "K+B+P vs K+B+P",
+      "men": 6,
+      "restriction": "White bishop one colour complex; Black bishop opposite colour complex; pawns d7/e2; captures may remove material",
+      "raw": 35684352,
+      "estimated_static": 23719686,
+      "mean_branch": 12.07,
+      "capture_density_pct": 1.702,
+      "check_density_pct": 4.072,
+      "promotion_available_state_pct": 38.27,
+      "topology": "opposite-colour sliders + two promotion exits; direct bishop exchange impossible by colour"
+    },
+    {
+      "id": "G7F02",
+      "family": "BB_same_c7_f2",
+      "material": "K+B+P vs K+B+P",
+      "men": 6,
+      "restriction": "both bishops same colour complex; pawns c7/f2; captures may remove material",
+      "raw": 35684352,
+      "estimated_static": 22807654,
+      "mean_branch": 11.887,
+      "capture_density_pct": 4.129,
+      "check_density_pct": 3.616,
+      "promotion_available_state_pct": 39.863,
+      "topology": "same-colour sliders + two promotion exits; bishop-bishop exchanges enabled"
+    },
+    {
+      "id": "G7F03",
+      "family": "BN_opp_d7_e2",
+      "material": "K+B+P vs K+N+P",
+      "men": 6,
+      "restriction": "bishop colour invariant; knight unrestricted; pawns d7/e2",
+      "raw": 70287360,
+      "estimated_static": 48064840,
+      "mean_branch": 11.29,
+      "capture_density_pct": 2.418,
+      "check_density_pct": 4.042,
+      "promotion_available_state_pct": 38.759,
+      "topology": "slider/leaper interference + competing promotions + material-reduction endpoints"
+    },
+    {
+      "id": "G7F04",
+      "family": "RB_c7_f2",
+      "material": "K+R+P vs K+B+P",
+      "men": 6,
+      "restriction": "rook unrestricted; bishop colour invariant; pawns c7/f2",
+      "raw": 70287360,
+      "estimated_static": 44816392,
+      "mean_branch": 13.454,
+      "capture_density_pct": 2.625,
+      "check_density_pct": 6.673,
+      "promotion_available_state_pct": 36.291,
+      "topology": "orthogonal checks + bishop access cones + exchanges"
+    },
+    {
+      "id": "G7F05",
+      "family": "NB_b7_g2",
+      "material": "K+N+P vs K+B+P",
+      "men": 6,
+      "restriction": "knight unrestricted; bishop colour invariant; pawns b7/g2",
+      "raw": 70287360,
+      "estimated_static": 47955894,
+      "mean_branch": 11.274,
+      "capture_density_pct": 2.402,
+      "check_density_pct": 4.024,
+      "promotion_available_state_pct": 38.586,
+      "topology": "edge leaper/slider control with asymmetric promotion corners"
+    },
+    {
+      "id": "G7F06",
+      "family": "QB_d7_e2",
+      "material": "K+Q+P vs K+B+P",
+      "men": 6,
+      "restriction": "queen unrestricted; bishop colour invariant; pawns d7/e2",
+      "raw": 70287360,
+      "estimated_static": 40235414,
+      "mean_branch": 14.897,
+      "capture_density_pct": 3.077,
+      "check_density_pct": 15.823,
+      "promotion_available_state_pct": 33.65,
+      "topology": "high-mobility checking control / adversarial branch benchmark"
+    },
+    {
+      "id": "G7F07",
+      "family": "BB_opp_2P1P_brink",
+      "material": "K+B+2P vs K+B+P",
+      "men": 7,
+      "restriction": "opposite-colour bishops; two White brink pawns and one Black brink pawn; pawn-presence closure under captures",
+      "raw_upper": 71368704,
+      "scale_status": "pre-outcome combinatorial budget; exact structural scan deferred until seven-man wave",
+      "topology": "opposite-colour fortress/race with three promotion resources"
+    },
+    {
+      "id": "G7F08",
+      "family": "BB_same_2P1P_brink",
+      "material": "K+B+2P vs K+B+P",
+      "men": 7,
+      "restriction": "same-colour bishops; two White brink pawns and one Black brink pawn; pawn-presence closure under captures",
+      "raw_upper": 71368704,
+      "scale_status": "pre-outcome combinatorial budget; exact structural scan deferred until seven-man wave",
+      "topology": "exchange-rich same-colour bishop complex with three promotion resources"
+    }
+  ],
+  "first_wave_frozen_order": [
+    "G7F01",
+    "G7F02",
+    "G7F03"
+  ],
+  "first_wave_reason": "Corrected structural scan preserves the v1 order: G7F01/G7F02 remain the two ~23M-static bishop-bishop candidates with sharply different exchange topology; G7F03 is the next movement-mix material class at ~48M static. No accepted W/D/L truth was consulted.",
+  "g6_upward_fire_order_after_truth": [
+    "PROJECT dependency DAG",
+    "resource-safe TARGET constructor",
+    "strict attacker/defender ATTRACTOR",
+    "Branch/Hyperkernel over distinct material endpoints",
+    "RESIDUAL/GROUP_OUT",
+    "LOCALIZE with lift",
+    "STOP"
+  ],
+  "solver_source": "g7_brink_lab.cpp",
+  "supersedes": {
+    "artifact": "G7_0_1_Frozen_Ascent_Manifest_v1.json",
+    "reason": "slider successor loop incorrectly stopped the entire flattened destination list after the first occupied square; predecessor soundness audit exposed the bug before any W/D/L result was accepted",
+    "outcome_use": "none; all W/D/L produced by the buggy generator are explicitly discarded"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex API admission shape for one-G completion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "programme",
+    "status",
+    "gate_result",
+    "state_transition",
+    "handoff_path",
+    "freeze_manifest_path",
+    "program_state_path",
+    "tests_run",
+    "validation_summary",
+    "blockers",
+    "next_programme",
+    "next_programme_authorized",
+    "human_input_required",
+    "human_input_reason",
+    "final_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0.0"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "programme": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["PASS", "HOLD", "BLOCKED", "FAILED"]
+    },
+    "gate_result": {
+      "type": "string",
+      "enum": ["PASS", "HOLD", "BLOCKED", "FAILED"]
+    },
+    "state_transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      }
+    },
+    "handoff_path": {
+      "type": "string"
+    },
+    "freeze_manifest_path": {
+      "type": "string"
+    },
+    "program_state_path": {
+      "type": "string"
+    },
+    "tests_run": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["command", "exit_code", "result", "summary"],
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "exit_code": {
+            "type": "integer"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["PASS", "FAIL", "NOT_RUN"]
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "validation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["result", "checks"],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["PASS", "HOLD", "BLOCKED", "FAILED"]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_programme": {
+      "anyOf": [
+        {"type": "string"},
+        {"type": "null"}
+      ]
+    },
+    "next_programme_authorized": {
+      "type": "boolean"
+    },
+    "human_input_required": {
+      "type": "boolean"
+    },
+    "human_input_reason": {
+      "anyOf": [
+        {"type": "string"},
+        {"type": "null"}
+      ]
+    },
+    "final_summary": {
+      "type": "string"
+    }
+  }
+}

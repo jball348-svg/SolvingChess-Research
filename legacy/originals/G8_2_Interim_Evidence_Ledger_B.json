@@ -1,0 +1,185 @@
+{
+  "authority": {
+    "proof_language": "G7 Proof Language v0.3 frozen",
+    "prospective_contract": "G8 Certificate Engine and Re-Ascent Programme Memo",
+    "truth_dependencies": {
+      "F01": {
+        "file": "G8_1_BB_opp_d7_e2_canonical_truth.bin",
+        "sha256": "e328e0f68c32863945cfbdbbab10fb78cf20f08141af2f53070ccd32a6e11d99"
+      },
+      "F02": {
+        "file": "G8_1_BB_same_c7_f2_canonical_truth.bin",
+        "sha256": "e9604c7489592a84869ba41c64af5abf244e546f5bdeb81eb45a3c4cd7d8d68e"
+      },
+      "F09": {
+        "file": "G8_1_F09_canonical_truth.bin",
+        "sha256": "0d550158522726e253a8dc9a271cb1a6f4a8e1c50854f24f79e295f0fdfecbf4"
+      }
+    }
+  },
+  "certificate_schema": "G8.CERT.v0.1",
+  "date": "2026-08-11",
+  "freeze": "B",
+  "implementation_alarm": {
+    "classification": "positive verifier/declaration audit event; no chess truth changed",
+    "effect": "Independent object counts failed immediately; no result was accepted.",
+    "event": "Initial standalone brink verifier declared the White brink pawn one rank too high in F01/F02.",
+    "resolution": "Corrected the arena declaration to frozen d7/c7 squares; exact counts and canonical membership hashes then matched 14/14."
+  },
+  "independent_verification": {
+    "all_membership_hashes_exact": true,
+    "all_payloads_exact": true,
+    "implementation_separation": "standalone verifier sources; no producer source inclusion; verifier regenerates arena move relations/fixed points and consumes only declared truth dependencies + sparse payloads",
+    "measured_resources": {
+      "F01": {
+        "peak_rss_kb": 617524,
+        "wall_seconds": 2.12
+      },
+      "F02": {
+        "peak_rss_kb": 551280,
+        "wall_seconds": 1.56
+      },
+      "F09": {
+        "peak_rss_kb": 84356,
+        "wall_seconds": 16.08
+      }
+    },
+    "membership_hashes_checked": 14,
+    "producer_verifier_bitstreams": "14/14 identical SHA-256",
+    "replay_harness_max_rss_kb": 617484,
+    "replay_harness_total_wall_seconds_including_two_compiles": 26.42,
+    "results": {
+      "F01": {
+        "A11": 12831,
+        "A7": 355,
+        "arena": "F01",
+        "bridge": 656,
+        "closure": 656,
+        "closure_exact": true,
+        "kernel": 152,
+        "nonwins": 0,
+        "payload_kernel_exact": true,
+        "proper": 13186,
+        "replay_wall_seconds": 2.20849,
+        "union": 13842
+      },
+      "F02": {
+        "arena": "F02",
+        "check": 23026,
+        "derived": 23327,
+        "fixed_check_bad": 0,
+        "fixed_ordinary_bad": 0,
+        "full": 612427,
+        "hyper_closure": 7195,
+        "hyper_closure_exact": true,
+        "hyperkernel": 1641,
+        "irreducible": 7195,
+        "pairs": [
+          81249,
+          534327,
+          564193
+        ],
+        "parent_nonwins": 0,
+        "payload_hyper_exact": true,
+        "payload_pivot_exact": true,
+        "pivot_closure": 301,
+        "pivot_closure_exact": true,
+        "pivots": 239,
+        "proper": 605232,
+        "quiet": 301,
+        "replay_wall_seconds": 1.567212,
+        "singles": [
+          41,
+          72757,
+          493591
+        ]
+      },
+      "F09": {
+        "arena": "F09",
+        "attr": 8295062,
+        "attr_nonwins": 0,
+        "check": 2461867,
+        "check_nonwins": 0,
+        "payload_pivot_exact": true,
+        "pivot_closure": 5833195,
+        "pivot_closure_exact": true,
+        "pivots": 517120,
+        "quiet": 5833195,
+        "replay_wall_seconds": 15.839025,
+        "sanctuary_conservative": 3133058,
+        "sanctuary_direct": 330264,
+        "sanctuary_nondraws": 0,
+        "sanctuary_safe": 4437719,
+        "target": 1448464
+      }
+    },
+    "source_hashes": {
+      "brink_source_sha256": "f89caa861294630b9baa190ed78d781449136059a0e3a04303c4d1303d8e6ecf",
+      "f09_source_sha256": "065f59c0d214c3aae5cd0627dfd1c3d7f029d6a37af6e2f163fa8e3593d9224a",
+      "implementation_separation": "standalone verifier sources; no producer source inclusion; verifier regenerates arena move relations/fixed points and consumes only declared truth dependencies + sparse payloads",
+      "replay_harness_sha256": "49560c7feb289b7a326875b37f696a45d5b55aa4aec14f499dbebab52b557d38"
+    }
+  },
+  "manifest_sha256": "1014a245457ef9ca8428ccd0604db98f3ff3823760d206d9f0e71e2c7967cb4e",
+  "next_stage": "G8.3 \u2014 recover F03/F04/F06 unchanged with the G8 material-signature engine; retain measured boundary if a hold persists.",
+  "payload_economics": {
+    "F01_branch_payload_pct_of_parent_raw_2bit_width": 0.0118255615234375,
+    "F02_deep_payload_bytes": 2595,
+    "F02_deep_payload_pct_of_parent_raw_2bit_width": 0.12373924255371094,
+    "F02_reduction_vs_G7_sparse64_seed_estimate_pct": 82.74601063829788,
+    "F09_pivot_payload_pct_of_parent_raw_2bit_width": 8.708223732568884,
+    "F09_reduction_vs_G7_sparse64_seed_estimate_pct": 87.17045850092822,
+    "combined_sparse_payload_bytes": 533596
+  },
+  "payload_encoding": "G8DV1 sorted uint32 canonical raw codes, delta ULEB128",
+  "payloads": {
+    "F01_branch_kernel": {
+      "bytes": 248,
+      "count": 152,
+      "encoding": "G8DV1 sorted raw-code delta ULEB128",
+      "sha256": "b3be904a04dd4d8b96fd35325064b5d33c7c7ca68d8c4642ded43eb6291ca609"
+    },
+    "F02_filter_pivots": {
+      "bytes": 460,
+      "count": 239,
+      "encoding": "G8DV1 sorted raw-code delta ULEB128",
+      "sha256": "d9678ff2f29c29d9592703686d398bd2eafa8611a326d8d9307f062c34504a2e"
+    },
+    "F02_hyperkernel": {
+      "bytes": 2135,
+      "count": 1641,
+      "encoding": "G8DV1 sorted raw-code delta ULEB128",
+      "sha256": "b1cbcfc21adbc3cb89907a6512d5d118e3826ae2ff9955de2a3b57093709eb3f"
+    },
+    "F09_filter_pivots": {
+      "bytes": 530753,
+      "count": 517120,
+      "encoding": "G8DV1 sorted raw-code delta ULEB128",
+      "sha256": "b35bd89507b57f38a116f39985fe77e9a5585290f2c674c07447a54efca90deb"
+    }
+  },
+  "producer_resources": {
+    "F01": {
+      "peak_rss_kb": 626880,
+      "wall_seconds": 22.57
+    },
+    "F02": {
+      "peak_rss_kb": 557412,
+      "wall_seconds": 20.78
+    },
+    "F09": {
+      "peak_rss_kb": 92232,
+      "wall_seconds": 29.06
+    }
+  },
+  "programme": "G8",
+  "stage": "G8.2",
+  "stage_findings": [
+    "BRANCH_KERNEL sparse certificate independently verifies F01 152 -> 656.",
+    "FINITE_N_HYPERKERNEL sparse certificate independently verifies F02 1,641 -> 7,195.",
+    "F02 derived STRICT_ATTRACTOR and CHECK FILTERED_ATTRACTOR independently reproduce 23,327 and 23,026 with zero fixed-point audit violations; 239 pivots reconstruct the 301-state complement exactly.",
+    "F09 independent verifier reproduces target 1,448,464; ordinary attractor 8,295,062; CHECK attractor 2,461,867; 517,120 pivots -> 5,833,195 quiet complement; direct/conservative/safe sanctuary 330,264 / 3,133,058 / 4,437,719; zero outcome-type violations.",
+    "Certificate payload is now compact; brink reverse-graph verifier memory remains a material engineering cost and is not hidden as a certificate-language cost."
+  ],
+  "status": "CLOSED \u2014 PASS STRONGLY"
+}

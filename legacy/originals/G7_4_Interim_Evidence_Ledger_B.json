@@ -1,0 +1,65 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "stage": "G7.4",
+  "date": "2026-08-11",
+  "verdict": "PASS WITH SEVEN-MAN SCALE HOLD",
+  "seven_man": {
+    "G7F07": {
+      "name": "BB_opp_a7c7_b2",
+      "raw": 71368704,
+      "static": 45823238,
+      "predaudit": {"reverse":115563,"unsound":0,"forward":116006,"missing":0},
+      "wdl": null,
+      "status": "scale hold; no outcome output"
+    },
+    "G7F08": {
+      "name": "BB_same_a7c7_b2",
+      "raw": 71368704,
+      "static": 43334293,
+      "predaudit": {"reverse":114494,"unsound":0,"forward":114669,"missing":0},
+      "wdl": null,
+      "status": "scale hold after matched F07 boundary"
+    }
+  },
+  "faithful_fortress_regression": {
+    "static": 1182440,
+    "W": 825269,
+    "D": 357171,
+    "BK_h8": 22008,
+    "BK_h8_W": 0,
+    "target_direct": 103451,
+    "target_direct_fail": 0,
+    "target_strict_attr": 585732,
+    "target_attr_fail": 0,
+    "status": "matches frozen G6 faithful-fortress checksums"
+  },
+  "terminal_model_diagnostic": {
+    "continuation_aware_hfile_KPK": {"static":41619,"W":27430,"D":14189},
+    "promotion_terminal_hfile_KPK": {"static":41619,"W":29520,"D":12099},
+    "interpretation": "typed terminal-model distinction; promotion-terminal diagnostic reproduces historical Pilot KPK split"
+  },
+  "G7F09": {
+    "name": "TWO_WRONG_BISHOPS_HPAWN",
+    "material": "K+2B+hP vs K",
+    "raw": 24379392,
+    "static": 16557288,
+    "W": 12115187,
+    "D": 4442101,
+    "predaudit": {"reverse":118745,"unsound":0,"forward":121885,"missing":0},
+    "bellman_exhaustive": {"checked":16557288,"mismatches":0},
+    "sanctuary": {"BK_h8_states":330264,"white_wins":0,"draws":330264},
+    "target": {"direct":1448464,"direct_nonwins":0,"strict_attr":8295062,"attr_nonwins":0,"win_basin_coverage_pct":68.4683},
+    "defender_strict_target_only": {"attr":3133058,"false_white_wins":0,"draw_basin_coverage_pct":70.5310},
+    "defender_safe_exit": {"attr":4437719,"false_white_wins":0,"draw_basin_coverage_pct":99.9014,"residual_draws":4382}
+  },
+  "superseded": [
+    "No G7F07 W/D/L exists; timed-out solve emitted no outcome.",
+    "Post-analysis 5,462,806 sanctuary attractor / 1,024,496 false-W figure discarded: F4 dependency was not initialized in that analysis mode.",
+    "Post-analysis 873,735 Bellman mismatch diagnostic discarded for the same unsolved-F4 dependency reason; dependency-aware exhaustive audit is 0/16,557,288 mismatches."
+  ],
+  "promotion_status": {
+    "sanctuary_preservation": "exact finite G7.4 result; candidate object, not yet promoted as general G7 abstraction",
+    "resource_safe_target": "unchanged G6 faithful-fortress target form transfers exactly to G7F09",
+    "new_g7_object_discovery": "deferred to G7.6 by programme order"
+  }
+}

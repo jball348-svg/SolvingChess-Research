@@ -1,0 +1,67 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "roadmap/normalized/G9_Review_Road_to_100_Planning_Kickoff_Memo.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G9_Review_Road_to_100_Planning_Kickoff_Memo.md",
+    "repository_path": "roadmap/normalized/G9_Review_Road_to_100_Planning_Kickoff_Memo.md",
+    "sha256": "5e6d04985a51b8f1aa9008b07c2743c78cbba78d029884e259030b9c188b3ae1",
+    "size": 21083
+  },
+  "footer_text": [
+    "Page"
+  ],
+  "header_text": [
+    "G9 Review, Road-to-100 and Long-Range Planning - Kickoff Memo"
+  ],
+  "losses": [
+    {
+      "code": "HEADER_FOOTER_NOT_IN_BODY_MARKDOWN",
+      "count": 2,
+      "detail": "Header/footer visible text is recorded in audit metadata, not repeated in the body derivative.",
+      "severity": "documentary"
+    },
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 24,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G9_Review_Road_to_100_Planning_Kickoff_Memo.docx",
+    "repository_path": "roadmap/originals/G9_Review_Road_to_100_Planning_Kickoff_Memo.docx",
+    "sha256": "55a5a8b86cea3119268d4cfc8bb9b68825ef2081bec8eb5a7d2d8ea262a910fe",
+    "size": 47533,
+    "visible_text_sequence_sha256": "6e27f498363ab78bac7c9aa6cc2592337b0741bf0f5d9c6fd331f2fafdd6381c"
+  },
+  "statistics": {
+    "callouts": 4,
+    "code_paragraphs": 0,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 20,
+    "hyperlinks": 0,
+    "list_items": 70,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 180,
+    "paragraphs": 182,
+    "pictures": 0,
+    "table_cells": 67,
+    "table_rows": 35,
+    "tables": 7,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

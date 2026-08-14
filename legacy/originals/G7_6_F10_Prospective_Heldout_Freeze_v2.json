@@ -1,0 +1,40 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "stage": "G7.6",
+  "family_id": "G7F10",
+  "date": "2026-08-11",
+  "freeze_event": "Family and qualitative prediction frozen before any F10 W/D/L truth or terminal-witness inspection.",
+  "material": "K+B(wrong-colour)+B(correct-colour)+hP vs K",
+  "matched_control": "G7F09 K+2 wrong-colour bishops+hP vs K",
+  "selection_basis_pretruth": [
+    "same material count and h-pawn geometry as F09",
+    "single structural toggle: added bishop changes to the colour complex that can access h8",
+    "structural scale estimate only",
+    "tests sanctuary preservation/destruction under critical-square access"
+  ],
+  "frozen_prediction": "Universal BK=h8 sanctuary preservation should fail when the added attacking bishop belongs to the h8-access colour complex. No finer outcome rule is frozen before truth inspection.",
+  "chronology_note": "The original v1 manifest embedded dependency-solver W/D lines inside a field labelled pretruth_structural_scan. Those lower-material lines were produced after the family/prediction freeze and were not selection signals. This v2 separates them to avoid provenance ambiguity.",
+  "post_freeze_dependency_regressions": {
+    "faithful_h_file_KPK": {"static": 41619, "W": 27430, "D": 14189},
+    "wrong_colour_F4": {"static": 1182440, "W": 825269, "D": 357171},
+    "correct_colour_F4": {"static": 1182525, "W": 1099020, "D": 83505}
+  },
+  "structural_certificate": {
+    "raw": 50331648,
+    "static_valid": 33305146,
+    "sampled_states": 100000,
+    "mean_branching": 12.2704,
+    "capture_exit_density": 0.0124332,
+    "predecessor_sound_edges": 145620,
+    "predecessor_unsound": 0,
+    "forward_edges": 141841,
+    "missing_predecessors": 0
+  },
+  "full_WDL_status": "SCALE HOLD: two full retrograde attempts exceeded execution budget before emitting W/D/L; no partial propagation is evidence.",
+  "exact_terminal_falsification_after_freeze": {
+    "BK_h8_static_states": 586893,
+    "black_in_check": 73059,
+    "immediate_checkmates": 3578,
+    "conclusion": "BK=h8 => draw is falsified in F10 without requiring a complete tablebase."
+  }
+}

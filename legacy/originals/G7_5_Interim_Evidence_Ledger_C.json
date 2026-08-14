@@ -1,0 +1,361 @@
+{
+  "version": "G7.5-C",
+  "date": "2026-08-11",
+  "stage": "G7.5 \u2014 Fire frozen G6 architecture upward without retuning",
+  "status": "PASS \u2014 strong architecture reuse with typed domain boundaries; G7 remains open",
+  "authoritative_type_rules": {
+    "universal": [
+      "STRICT_ATTRACTOR",
+      "BRANCH_KERNEL_FACTORIZATION_2",
+      "HYPERKERNEL_FACTORIZATION_N",
+      "ROLE_DUAL_SANCTUARY_ATTRACTOR"
+    ],
+    "reusable_schemas": [
+      "PROJECT_EXACT_LOWER_TRUTH",
+      "RESOURCE_SAFE_TARGET",
+      "RESIDUAL",
+      "GROUP_OUT",
+      "LOCALIZATION_LIFT"
+    ],
+    "conditional_finite_theorems": [
+      "FAR5",
+      "FAR3_SLIDERS",
+      "FAR3_KNIGHT_WITH_EXCEPTION",
+      "WRONG_COLOUR_CORNER_SANCTUARY"
+    ],
+    "rule": "Do not widen conditional theorem domains by analogy."
+  },
+  "families": {
+    "G7F01": {
+      "label": "opposite-colour K+B+P vs K+B+P, d7/e2",
+      "full": {
+        "states": 5105749,
+        "W": 2506683,
+        "B": 2519613,
+        "D": 79453
+      },
+      "projection": {
+        "del_Wpiece": {
+          "valid": 5105749,
+          "lowerW": 2192425,
+          "restoreW": 2154192,
+          "restoreD": 4269,
+          "restoreB": 33964
+        },
+        "del_Bpiece": {
+          "valid": 5105749,
+          "lowerW": 2842052,
+          "restoreW": 2498425,
+          "restoreD": 46868,
+          "restoreB": 296759
+        },
+        "del_Wpawn": {
+          "valid": 5082118,
+          "lowerW": 324,
+          "restoreW": 324,
+          "restoreD": 0,
+          "restoreB": 0
+        },
+        "del_Bpawn": {
+          "valid": 5094171,
+          "lowerW": 3910436,
+          "restoreW": 2503731,
+          "restoreD": 27354,
+          "restoreB": 1379351
+        }
+      },
+      "unchanged_old_double_brink_target": {
+        "direct": 635658,
+        "W": 559894,
+        "D": 36,
+        "B": 75728,
+        "nonW": 75764,
+        "status": "FAIL \u2014 old instance under-types extra opposing bishop access resource"
+      },
+      "material_targets": {
+        "A7": {
+          "target": 82900,
+          "all": 83255,
+          "full": 355
+        },
+        "A11": {
+          "target": 99935,
+          "all": 112766,
+          "full": 12831
+        },
+        "A14": {
+          "target": 4250413,
+          "all": 4380708,
+          "full": 130295
+        },
+        "A7_11": {
+          "target": 182835,
+          "all": 196677,
+          "full": 13842,
+          "pure_full": 656,
+          "kernel_full": 152,
+          "amp": 4.31579
+        },
+        "A7_14": {
+          "target": 4333313,
+          "all": 4466307,
+          "full": 132994,
+          "pure_full": 2344,
+          "kernel_full": 2344,
+          "amp": 1.0
+        },
+        "A11_14": {
+          "target": 4350348,
+          "all": 4493061,
+          "full": 142713,
+          "pure_full": 16,
+          "kernel_full": 15,
+          "amp": 1.06667
+        },
+        "A7_11_14": {
+          "target": 4433248,
+          "all": 4579316,
+          "full": 146068
+        }
+      },
+      "hyper3": {
+        "pure_full": 0,
+        "kernel_full": 0,
+        "closure_missing": 0,
+        "closure_extra": 0
+      },
+      "material_triple_win_coverage_pct": 5.8271428816487765,
+      "residual_after_material_triple": {
+        "states": 4959681,
+        "W": 2360615,
+        "B": 2519613,
+        "D": 79453,
+        "geometries_grouping_out_WK": 107725,
+        "mixed_geometries": 99409
+      },
+      "localization": {
+        "frozen_double_brink_race_slab_mixed_pct": 100.0,
+        "all_residual_pct": 100.0,
+        "lift_pp": 0.0,
+        "regime": "SATURATED_CLOCKS"
+      }
+    },
+    "G7F02": {
+      "label": "same-colour K+B+P vs K+B+P, c7/f2",
+      "full": {
+        "states": 4761076,
+        "W": 2321127,
+        "B": 2321127,
+        "D": 118822
+      },
+      "projection": {
+        "del_Wpiece": {
+          "valid": 4747044,
+          "lowerW": 2070016,
+          "restoreW": 2065988,
+          "restoreD": 36,
+          "restoreB": 3992
+        },
+        "del_Bpiece": {
+          "valid": 4747044,
+          "lowerW": 2620273,
+          "restoreW": 2302095,
+          "restoreD": 68216,
+          "restoreB": 249962
+        },
+        "del_Wpawn": {
+          "valid": 4732097,
+          "lowerW": 0,
+          "restoreW": 0,
+          "restoreD": 0,
+          "restoreB": 0
+        },
+        "del_Bpawn": {
+          "valid": 4732097,
+          "lowerW": 3752257,
+          "restoreW": 2301237,
+          "restoreD": 38220,
+          "restoreB": 1412800
+        }
+      },
+      "unchanged_old_double_brink_target": {
+        "direct": 650857,
+        "W": 576481,
+        "D": 1907,
+        "B": 72469,
+        "nonW": 74376,
+        "status": "FAIL \u2014 old instance under-types extra opposing bishop access resource"
+      },
+      "material_targets": {
+        "A7": {
+          "target": 82614,
+          "all": 82655,
+          "full": 41
+        },
+        "A11": {
+          "target": 94596,
+          "all": 167353,
+          "full": 72757
+        },
+        "A14": {
+          "target": 4202468,
+          "all": 4696059,
+          "full": 493591
+        },
+        "A7_11": {
+          "target": 177210,
+          "all": 258459,
+          "full": 81249,
+          "pure_full": 8485,
+          "kernel_full": 1507,
+          "amp": 5.63039
+        },
+        "A7_14": {
+          "target": 4285082,
+          "all": 4819409,
+          "full": 534327,
+          "pure_full": 40731,
+          "kernel_full": 16963,
+          "amp": 2.40117
+        },
+        "A11_14": {
+          "target": 4297064,
+          "all": 4861257,
+          "full": 564193,
+          "pure_full": 14072,
+          "kernel_full": 3900,
+          "amp": 3.60821
+        },
+        "A7_11_14": {
+          "target": 4379678,
+          "all": 4992105,
+          "full": 612427
+        }
+      },
+      "hyper3": {
+        "pure_all": 7195,
+        "pure_full": 7195,
+        "kernel_all": 1641,
+        "kernel_full": 1641,
+        "amp": 4.384521633150518,
+        "closure_all": 7195,
+        "closure_full": 7195,
+        "closure_missing": 0,
+        "closure_extra": 0
+      },
+      "material_triple_win_coverage_pct": 26.384898370489854,
+      "residual_after_material_triple": {
+        "states": 4148649,
+        "W": 1708700,
+        "B": 2321127,
+        "D": 118822,
+        "geometries_grouping_out_WK": 98392,
+        "mixed_geometries": 83029
+      },
+      "localization": {
+        "frozen_double_brink_race_slab_mixed_pct": 100.0,
+        "all_residual_pct": 100.0,
+        "lift_pp": 0.0,
+        "regime": "SATURATED_CLOCKS"
+      }
+    },
+    "G7F09": {
+      "label": "K + 2 wrong-colour bishops + h-pawn vs K, faithful continuation",
+      "full": {
+        "states": 16557288,
+        "W": 12115187,
+        "D": 4442101
+      },
+      "projection_two_bishop_deletions": {
+        "deletion_projection_instances_valid": 33114576,
+        "lowerW_antecedent_instances": 22957573,
+        "restoreW_instances": 22894100,
+        "restoreD_instances": 63473,
+        "full_states_with_any_valid_projection": 16557288,
+        "full_states_with_any_lowerW_projection": 11712482,
+        "full_states_with_both_lowerW_projections": 11245091,
+        "any_lowerW_restoreW": 11652020,
+        "any_lowerW_restoreD": 60462
+      },
+      "faithful_target": {
+        "direct": 1448464,
+        "nonwin_direct": 0,
+        "strict_attr": 8295062,
+        "nonwin_attr": 0,
+        "win_coverage_pct": 68.46829520666911
+      },
+      "corner_sanctuary": {
+        "direct_BK_h8": 330264,
+        "direct_white_wins": 0,
+        "strict_target_only_attr": 3133058,
+        "typed_safe_exit_attr": 4437719,
+        "false_white_wins": 0,
+        "draw_coverage_pct": 99.90135298589564
+      },
+      "combined_white_and_defender_certificates": {
+        "states": 12732781,
+        "overlap": 0,
+        "state_coverage_pct": 76.90136814676413
+      },
+      "residual_after_both_certificates": {
+        "family": "G7F09_TWO_WRONG_BISHOPS_HPAWN",
+        "residual_definition": "full valid F5 minus unchanged faithful-fortress White target attractor minus typed safe-exit defender sanctuary attractor",
+        "residual_states": 3824507,
+        "residual_W": 3820125,
+        "residual_D": 4382,
+        "residual_geometries": 192675,
+        "mixed_geometries": 2698,
+        "mixed_W_placements": 82217,
+        "mixed_D_placements": 4302,
+        "mixed_total_placements": 86519,
+        "target_attr": 8295062,
+        "sanctuary_attr": 4437719,
+        "combined_certified": 12732781,
+        "combined_state_coverage_pct": 76.90136814676413
+      },
+      "localization_status": "Frozen G6 fortress slab count not re-fired because the flattened slab predicate was not recovered from authoritative artifacts; no post-hoc reconstruction is claimed."
+    }
+  },
+  "architecture_matrix": {
+    "PROJECT": "PASS mechanically; exact lower-material truth maps remain useful, but raw restoration is strongly non-monotone.",
+    "FAR5_FAR3": "OUT OF FROZEN DOMAIN on F01/F02/F09; neither credited nor falsified.",
+    "TARGET": "MIXED/TYPED PASS: faithful fortress instance exact in F09; old double-brink instance fails in F01/F02 exactly where an extra opponent-access resource exists.",
+    "STRICT_ATTRACTOR": "STRONG PASS across material endpoints and F09 faithful target.",
+    "BRANCH_KERNEL": "STRONG PASS: all six tested material-endpoint pairs have positive pure bridge; kernel mechanism observed.",
+    "HYPERKERNEL_N": "STRONG PASS: F02 has exact 1,641 -> 7,195 irreducible three-way material transition factorization; F01 exact zero occurrence.",
+    "ROLE_DUAL_SANCTUARY": "STRONG PASS in F09, 99.9014% draw basin under typed safe exits.",
+    "RESIDUAL_GROUP_OUT": "PASS; exact residual/grouped boundary populations produced.",
+    "LOCALIZATION_LIFT": "PASS AS NEGATIVE DIAGNOSTIC on F01/F02: 100% mixed and 100% all residual, lift 0, reproducing saturated-clock regime.",
+    "LOCAL_GRAMMAR": "NOT CLAIMED unchanged: frozen handoff gives 10-leaf performance but not a recovered flattened predicate in current authoritative artifact set.",
+    "STOP": "PASS methodologically: no new grammar fitted in G7.5; discovery remains reserved for G7.6.",
+    "TERMINAL_SEMANTICS": "STRONG PASS as typed model requirement via faithful F09 dependency regression."
+  },
+  "audit_supersessions": [
+    {
+      "diagnostic": "Initial F02 hyper3 scan: 7,195 pure / 0 kernel",
+      "status": "DISCARDED",
+      "cause": "Analysis bug: proper-subunion base B was populated lazily in the same numeric state scan used to inspect successor membership, so higher-index B successors appeared absent.",
+      "fix": "Precompute B over the whole domain before kernel scan.",
+      "postfix": "1,641 kernel; 7,195 pure; residual closure exactly 7,195 with 0 missing / 0 extra."
+    }
+  ],
+  "implementation_audits": {
+    "F02_predecessor_duplicate_sample": {
+      "states": 250000,
+      "emissions": 2870352,
+      "duplicate_extra": 0
+    },
+    "F02_predecessor_soundness_sample": {
+      "states": 500000,
+      "edges": 5744732,
+      "unsound": 0
+    },
+    "F02_predecessor_completeness_sample": {
+      "states": 300000,
+      "edges": 3447536,
+      "missing": 0
+    },
+    "rank_trace": "Minimum F02 three-way pure rank = 2; traced Black-to-move state has all 8 successors in proper-subunion base, confirming expected hyperkernel structure after analysis fix."
+  },
+  "stage_verdict": "G7.5 PASS STRONGLY. The frozen G6 architecture climbs higher: universal graph operations transfer exactly, guarded TARGET succeeds when type-compatible and fails cleanly when under-typed, conditional FAR theorems are correctly refused outside domain, and finite-n Hyperkernel composition now operates over materially distinct exact subgames."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_kind": "PRIVATE_REFERENCE_SNAPSHOT_METADATA",
+  "generated_at": "2026-08-13T22:41:38Z",
+  "project_id": "structural-invariants-endgames",
+  "source": {
+    "local_path": "references/local/structural-invariants-endgames",
+    "repository_url": "https://github.com/jball348-svg/chess_research.git",
+    "base_commit": "ade9f4e51ed3048e915386d82e0b53d28ed7e3ab"
+  },
+  "snapshot_scope": {
+    "selection": "Git-tracked files plus nonignored untracked files",
+    "file_count": 138,
+    "total_bytes": 262213060,
+    "excluded": [
+      ".git metadata and local Codex checkpoint refs",
+      "Git-ignored Rust target directories",
+      "Git-ignored Python/test caches",
+      "Git-ignored local tablebases and in-progress work outputs"
+    ]
+  },
+  "content_identity": {
+    "algorithm": "SHA-256 over UTF-8 manifest records",
+    "record_format": "slash-normalized relative path, TAB, decimal byte size, TAB, lowercase file SHA-256",
+    "ordering": "ordinal ascending by normalized relative path",
+    "line_endings": "LF with a final LF",
+    "sha256": "5b62101a73bfa85277f7246ee2b304921921828e2f0b1bb50d618d917512a1ca"
+  },
+  "manifest_status": "MATERIALIZED_LOCAL_PRIVATE_SNAPSHOT",
+  "materialized_at": "2026-08-13T23:05:58Z",
+  "per_file_manifest": {
+    "path": "references/manifests/structural-invariants-endgames.files.sha256",
+    "sha256": "5b62101a73bfa85277f7246ee2b304921921828e2f0b1bb50d618d917512a1ca",
+    "size": 15304,
+    "tracked": true
+  },
+  "per_file_entries_embedded": false,
+  "snapshot_archive": {
+    "local_path": "references/local-snapshots/structural-invariants-endgames.snapshot.zip",
+    "sha256": "71ed9950df89c9d61e04c08895c28596c7c1964cb3615478008061b15bfc5be3",
+    "size": 52608393,
+    "availability": "LOCAL_PRIVATE_ONLY",
+    "tracked": false
+  },
+  "durable_snapshot_status": "PENDING_DURABLE_HOSTING",
+  "warnings": [
+    "The base remote commit tracks only .gitattributes and is not the identity of the supplied research content.",
+    "The tracked per-file manifest is materialized and matches the declared content identity; durable private hosting is still pending.",
+    "The project-root redistribution license is unresolved; keep the snapshot private until clarified.",
+    "Task 03 is incomplete and its pending claim status must be preserved."
+  ]
+}

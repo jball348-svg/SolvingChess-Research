@@ -1,0 +1,287 @@
+{
+  "programme": "G6 Grand Programme",
+  "freeze": "G6 interim freeze A: reconstruction + first restoration/target/bridge/scaling campaign",
+  "date": "2026-08-11",
+  "authoritative_history": [
+    "G5_Prospective_Transfer_Benchmark_Technical_Handoff.docx",
+    "G4_Three_Pawn_Compositional_Proof_Technical_Handoff.docx",
+    "Pilot_2_G3_Technical_Handoff.docx",
+    "Pilot_2_K2P_vs_K_Technical_Handoff.docx",
+    "Pilot_1_Symbolic_Backward_Attractor_Technical_Handoff.docx"
+  ],
+  "model": {
+    "finite_state": "static-valid board states; both sides to move",
+    "terminal": "ordinary checkmate/stalemate; white pawn promotion is White win",
+    "omitted": "repetition, en passant, move-count claim state",
+    "static_validity_reconstructed": "pieces distinct; kings non-adjacent; side not to move is not already in check"
+  },
+  "g6_0_reconstruction": {
+    "status": "strong partial; G5 membership/count suite reproduced, full G4 graph pending implementation-level capture encoding",
+    "kpk_d": {
+      "valid": 41358,
+      "W": 28853,
+      "D": 12505
+    },
+    "g5_knight": {
+      "static": 1211042,
+      "W": 1106864,
+      "D": 104178,
+      "target": 214344,
+      "strict_attractor": 366763,
+      "restoration_failures": 1086,
+      "immediate_stalemates": 131
+    },
+    "g5_bishop": {
+      "static": 1180148,
+      "W": 1094908,
+      "D": 85240,
+      "target": 208717,
+      "strict_attractor": 373545,
+      "restoration_failures": 1557,
+      "immediate_stalemates": 395
+    },
+    "rank_label_discrepancy": {
+      "frozen_N": 24,
+      "reconstructed_N": 26,
+      "frozen_B": 21,
+      "reconstructed_B": 22,
+      "interpretation": "truth membership and all listed counts match; rank-number convention remains unresolved"
+    }
+  },
+  "lower_material_certificates": {
+    "KRK": {
+      "valid": 399112,
+      "W": 376868,
+      "D": 22244,
+      "white_to_move_valid": 175168,
+      "white_to_move_W": 175168,
+      "white_to_move_D": 0,
+      "checkmates": 216,
+      "stalemates": 68,
+      "max_internal_distance": 50
+    }
+  },
+  "typed_candidates": {
+    "TARGET_SAFE": {
+      "predicate": "G5 geometric target AND not immediate stalemate",
+      "origin": "semantic repair frozen after c-file falsification",
+      "heldout": {
+        "N_b": {
+          "target": 224570,
+          "violations": 0,
+          "strict_attractor": 754922
+        },
+        "B_b": {
+          "target": 218536,
+          "violations": 0,
+          "strict_attractor": 966060
+        },
+        "N_e": {
+          "target": 214344,
+          "violations": 0,
+          "strict_attractor": 366763
+        },
+        "B_e": {
+          "target": 208717,
+          "violations": 0,
+          "strict_attractor": 373545
+        }
+      },
+      "status": "prospective pass on held-out b/e files"
+    },
+    "INHERITS_SAFE_ROOK": {
+      "predicate": "projected KPK win AND not immediate stalemate => restored K+R+P win",
+      "d2_d7": {
+        "antecedents": 1549818,
+        "failures": 463,
+        "stalemates": 463,
+        "nonstalemate_violations": 0
+      },
+      "status": "exact on tested a-d rank5-7 families and widened/full d-file; KRK dependency independently certified"
+    },
+    "FAR_RESTORATION_GUARD": {
+      "predicate": "projected KPK win AND BK-pawn Chebyshev distance >=5 AND not immediate stalemate",
+      "discovery_domain": "d2-d7",
+      "heldout_full_rank_files": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "bishop_violations": {
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "e": 0
+      },
+      "rook_violations": {
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "e": 0
+      },
+      "knight_violations": {
+        "a": 103,
+        "b": 46,
+        "c": 0,
+        "e": 0
+      },
+      "status": "prospective topology split: passes bishop/rook, fails edge knight"
+    }
+  },
+  "target_falsification": {
+    "old_G5_geometric_target_c_file": {
+      "knight_draw_false_positives": 16,
+      "bishop_draw_false_positives": 50,
+      "mechanism": "all immediate Black-to-move stalemates"
+    }
+  },
+  "bridge_campaign": {
+    "definition": "pure bridge = Attr(T1 union T2) minus (Attr(T1) union Attr(T2))",
+    "defender_BK_side_split": {
+      "N_d": 3486,
+      "B_d": 9756,
+      "R_d": 0,
+      "N_b": 1937,
+      "B_b": 234,
+      "R_b": 0
+    },
+    "attacker_WK_side_negative_control": {
+      "N_d": 17,
+      "B_d": 1708,
+      "R_d": 0,
+      "N_b": 57,
+      "B_b": 0,
+      "R_b": 0
+    },
+    "rook_inheritance_plus_target": {
+      "pure_bridge": 0,
+      "mechanism": "inheritance attractor subsumes target attractor in tested rook arenas"
+    },
+    "interpretation": "defender-controlled target ambiguity is a strong candidate mechanism for nonzero BRIDGE; historical G3/G4 causal audit still pending"
+  },
+  "scaling_d_file": {
+    "knight": [
+      {
+        "ranks": "5-7",
+        "static": 1211042,
+        "W": 1106864,
+        "target_attractor": 366763,
+        "rest_fail": 1086,
+        "rest_stale": 131
+      },
+      {
+        "ranks": "4-7",
+        "static": 1615112,
+        "W": 1467936,
+        "target_attractor": 429481,
+        "rest_fail": 1391,
+        "rest_stale": 171
+      },
+      {
+        "ranks": "2-7",
+        "static": 2423074,
+        "W": 2168363,
+        "target_attractor": 474616,
+        "rest_fail": 12109,
+        "rest_stale": 249
+      }
+    ],
+    "bishop": [
+      {
+        "ranks": "5-7",
+        "static": 1180148,
+        "W": 1094908,
+        "target_attractor": 373545,
+        "rest_fail": 1557,
+        "rest_stale": 395
+      },
+      {
+        "ranks": "4-7",
+        "static": 1574944,
+        "W": 1457426,
+        "target_attractor": 456302,
+        "rest_fail": 1982,
+        "rest_stale": 515
+      },
+      {
+        "ranks": "2-7",
+        "static": 2361982,
+        "W": 2172908,
+        "target_attractor": 578590,
+        "rest_fail": 6579,
+        "rest_stale": 769
+      }
+    ],
+    "rook": [
+      {
+        "ranks": "5-7",
+        "static": 1132902,
+        "W": 1126246,
+        "target_attractor": 1020928,
+        "rest_fail": 268,
+        "rest_stale": 268
+      },
+      {
+        "ranks": "4-7",
+        "static": 1510918,
+        "W": 1497706,
+        "target_attractor": 1358874,
+        "rest_fail": 336,
+        "rest_stale": 336
+      },
+      {
+        "ranks": "2-7",
+        "static": 2266122,
+        "W": 2239337,
+        "target_attractor": 2031052,
+        "rest_fail": 463,
+        "rest_stale": 463
+      }
+    ],
+    "phase_transition": "rank-2 inclusion creates large non-stalemate restoration failure growth for N/B but not R"
+  },
+  "rank2_restoration_profile": {
+    "N": {
+      "fail": 10444,
+      "stale": 38,
+      "BK_distance_to_pawn_le_2": 9097,
+      "minor_on_d3_or_d4": 286
+    },
+    "B": {
+      "fail": 4158,
+      "stale": 135,
+      "BK_distance_to_pawn_le_2": 4017,
+      "minor_on_d3_or_d4": 264
+    },
+    "R": {
+      "fail": 59,
+      "stale": 59
+    }
+  },
+  "open_certification_items": [
+    "Resolve historical G5 rank-label convention without changing membership truth.",
+    "Reconstruct full G4 optional-pawn/capture graph from implementation-level artifact or sufficiently explicit transition encoding; prose handoff alone is not treated as enough to guess.",
+    "Retrospectively audit G3/G4 bridge states for defender-choice/complementarity metrics.",
+    "Extend critical-manifold atlas to new file and rook families.",
+    "Run opposing-minor prospective arena after tractability freeze."
+  ],
+  "artifacts": {
+    "g6_lab_cpp": {
+      "path": "g6_lab.cpp",
+      "sha256": "e37463d016cca8fc061dd075775a968885042cd3d23fdba7b668ea11d2dc6bf2"
+    },
+    "g6_lab_binary": {
+      "path": "g6_lab",
+      "sha256": "4e3f9af6c51d9b0cb2cca56909371e301c2046856565cc3c25efd0bfdf9ec065"
+    },
+    "krk_cert_cpp": {
+      "path": "krk_cert.cpp",
+      "sha256": "5184138dc15b7aa788ac555b598aad7bafa2c3e53f061ee85bfba8841ed2c9cf"
+    },
+    "krk_cert_binary": {
+      "path": "krk_cert",
+      "sha256": "d75c393b66a9d37a2569acbbcdd12fc8fa2acc67f7b4c2901de081db92762e2d"
+    }
+  }
+}

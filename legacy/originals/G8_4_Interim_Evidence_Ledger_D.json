@@ -1,0 +1,83 @@
+{
+  "programme": "G8 Certificate Engine and Re-Ascent",
+  "stage": "G8.4",
+  "freeze": "Interim Evidence Freeze D",
+  "date": "2026-08-11",
+  "verdict": "PASS EXCEPTIONALLY STRONGLY",
+  "F07": {
+    "arena": "BB_opp_a7c7_b2",
+    "graph_static": 45823238,
+    "graph_W": 24428400,
+    "graph_B": 12317126,
+    "graph_D": 9077712,
+    "full_static": 4759054,
+    "full_W": 2556211,
+    "full_B": 2200883,
+    "full_D": 1960,
+    "capture_edges": {"sig15":217215,"sig23":238411,"sig27":148955,"sig29":201330,"sig30":924295,"total":1730206},
+    "producer_wall_s": 10.76,
+    "producer_peak_rss_kb": 55696,
+    "verifier_wall_s": 4.08,
+    "verifier_peak_rss_kb": 29700,
+    "static_mismatches": 0,
+    "bellman_mismatches": 0,
+    "truth_sha256": "6cda93279161aba0dfaa07a08e98443fa351b54823ab1b0529faf37354bef992"
+  },
+  "F08": {
+    "arena": "BB_same_a7c7_b2",
+    "graph_static": 43334293,
+    "graph_W": 21993686,
+    "graph_B": 11672354,
+    "graph_D": 9668253,
+    "full_static": 4294949,
+    "full_W": 2305156,
+    "full_B": 1987745,
+    "full_D": 2048,
+    "capture_edges": {"sig15":710877,"sig23":711753,"sig27":535487,"sig29":740705,"sig30":737839,"total":3436661},
+    "producer_wall_s": 10.49,
+    "producer_peak_rss_kb": 54876,
+    "verifier_wall_s": 3.76,
+    "verifier_peak_rss_kb": 29700,
+    "static_mismatches": 0,
+    "bellman_mismatches": 0,
+    "truth_sha256": "fc86918a8b2fbaa71f31464777d0fdc028214fb6092ead616e60f9182d1cf620"
+  },
+  "F10": {
+    "arena": "K+wrong-colour B+correct-colour B+hP vs K faithful",
+    "raw": 50331648,
+    "static": 33305146,
+    "W": 32828134,
+    "D": 477012,
+    "BK_h8": 586893,
+    "BK_h8_W": 572681,
+    "BK_h8_D": 14212,
+    "BK_h8_immediate_mates": 3578,
+    "dependency_checksums": {
+      "KPK": {"static":41619,"W":27430,"D":14189},
+      "wrong_F4": {"static":1182440,"W":825269,"D":357171},
+      "correct_F4": {"static":1182525,"W":1099020,"D":83505}
+    },
+    "producer_dump_wall_s": 9.77,
+    "producer_peak_rss_kb": 81208,
+    "independent_verifier_checked_all_dependencies": 35711730,
+    "static_mismatches": 0,
+    "bellman_mismatches": 0,
+    "verifier_wall_s": 14.08,
+    "verifier_peak_rss_kb": 16648,
+    "truth_sha256": "aa145109278da9570f4f30860f7e8346f8285323301e50ae2941075a5ea521b2"
+  },
+  "rejected_alarm": {
+    "type": "unsound reverse double-pawn edge in reconstructed F4 helper",
+    "effect": "402 spurious wrong-colour F4 wins",
+    "status": "rejected before F10 truth acceptance; fixed and all frozen lower checksums reproduced"
+  },
+  "source_hashes": {
+    "seven_source": "8675dce2ee71fe25c0c321324334fa2e42b53b4b72e2853c3c79cfe4aaa298d4",
+    "seven_dump_source": "f8613f43633f4148bff964b25200f4707e18e70bbbcc012d9ea594ece0e06423",
+    "seven_verifier_source": "cb5091cb13cc99dcdcb44b219267326f2308816893875f78561a2df83dade75b",
+    "f10_source": "c351eb3ee960d7667c2d66bfa25806aebb693c7bca216769b378aca0397af018",
+    "f10_dump_source": "74e5cbfe0281ddef168379cf1ad45cef469a61386a7198199ed59b99b6c675fc",
+    "f10_verifier_source": "e8d63790df818a33b0fc37402cac8a0535b7f32bacfd3837bf776d86c8217f62"
+  },
+  "next_stage": "G8.5 — strategy-language algebra"
+}

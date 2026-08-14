@@ -1,0 +1,470 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "stage": "G7.9 Cross-level synthesis",
+  "freeze": "Final Closeout G",
+  "date": "2026-08-11",
+  "status": "CLOSED \u2014 STRONG SCIENTIFIC PASS WITH A FROZEN PORTFOLIO-BREADTH / SCALE-BOUNDARY EXCEPTION",
+  "authority": {
+    "historical_precedence": "Pilot1 -> Pilot2 -> G3 -> G4 -> G5 -> G6 frozen technical handoffs remain authoritative; G7 does not rewrite the two G6 historical certification exceptions.",
+    "g7_prospective_basis": "G7_Higher_Tree_Position_Discovery_Kickoff_Memo.docx plus G7.0-G7.1 manifest v2, frozen before accepted W/D/L.",
+    "closeout_rule": "G7.9 adds synthesis/classification only; it does not introduce new arena truth or retune frozen rules."
+  },
+  "primary_higher_tree_families": {
+    "G7F01": {
+      "material": "K+B+P vs K+B+P, opposite-colour bishops",
+      "full_states": 5105749,
+      "full_W": 2506683,
+      "full_B": 2519613,
+      "full_D": 79453,
+      "dependency_graph_states": 23728925,
+      "status": "FULL EXACT W/D/L PASS"
+    },
+    "G7F02": {
+      "material": "K+B+P vs K+B+P, same-colour bishops",
+      "full_states": 4761076,
+      "full_W": 2321127,
+      "full_B": 2321127,
+      "full_D": 118822,
+      "dependency_graph_states": 22770972,
+      "status": "FULL EXACT W/D/L PASS"
+    },
+    "G7F03": {
+      "material": "K+B+P vs K+N+P",
+      "static_valid": 48028628,
+      "status": "tractability hold: full solve did not reach WDL initialization within execution budget; no WDL accepted"
+    },
+    "G7F04": {
+      "material": "K+R+P vs K+B+P",
+      "static_valid": 44820777,
+      "status": "HIGH-BRANCH COMPLEXITY FLOOR; audited graph, no W/D/L within 180 s"
+    },
+    "G7F05": {
+      "material": "K+N+P vs K+B+P, edge race candidate",
+      "status": "PROSPECTIVELY FROZEN BUT NOT EXECUTED; portfolio reprioritized before truth inspection"
+    },
+    "G7F06": {
+      "material": "K+Q+P vs K+B+P",
+      "static_valid": 40499052,
+      "status": "HIGH-BRANCH COMPLEXITY FLOOR; audited graph, no W/D/L within 180 s"
+    },
+    "G7F07": {
+      "material": "K+B+2P vs K+B+P, opposite-colour bishops",
+      "static_valid": 45823238,
+      "status": "scale hold; no outcome output"
+    },
+    "G7F08": {
+      "material": "K+B+2P vs K+B+P, same-colour bishops",
+      "static_valid": 43334293,
+      "status": "scale hold after matched F07 boundary"
+    },
+    "G7F09": {
+      "material": "K+2 wrong-colour bishops+hP vs K, faithful continuation",
+      "full_states": 16557288,
+      "W": 12115187,
+      "D": 4442101,
+      "bellman_checked": 16557288,
+      "bellman_mismatches": 0,
+      "status": "FULL EXACT W/D PASS"
+    },
+    "G7F10": {
+      "material": "K+wrong-colour B+correct-colour B+hP vs K, faithful continuation",
+      "static_valid": 33305146,
+      "BK_h8_states": 586893,
+      "immediate_checkmates": 3578,
+      "status": "FULL W/D/L SCALE HOLD; EXACT TERMINAL FALSIFICATION PASS FOR SANCTUARY LIFT"
+    }
+  },
+  "key_results": {
+    "material_endpoint_composition": {
+      "F01_two_way_positive_pairs": 3,
+      "F02_two_way_positive_pairs": 3,
+      "F02_three_way_hyperkernel": {
+        "pure_all": 7195,
+        "pure_full": 7195,
+        "kernel_all": 1641,
+        "kernel_full": 1641,
+        "amp": 4.384521633150518,
+        "closure_all": 7195,
+        "closure_full": 7195,
+        "closure_missing": 0,
+        "closure_extra": 0
+      },
+      "interpretation": "G6 Branch/Hyperkernel factorization transfers from semantic/square targets to materially distinct exact subgame endpoints."
+    },
+    "fortress_ascent": {
+      "F09_BK_h8_draws": {
+        "BK_h8_states": 330264,
+        "white_wins": 0,
+        "draws": 330264
+      },
+      "F09_target": {
+        "direct": 1448464,
+        "direct_nonwins": 0,
+        "strict_attr": 8295062,
+        "attr_nonwins": 0,
+        "win_basin_coverage_pct": 68.4683
+      },
+      "F09_defender_safe_exit": {
+        "attr": 4437719,
+        "false_white_wins": 0,
+        "draw_basin_coverage_pct": 99.9014,
+        "residual_draws": 4382
+      },
+      "F10_access_destruction": {
+        "static_valid": 33305146,
+        "full_WDL": "scale hold",
+        "BK_h8_states": 586893,
+        "immediate_checkmates": 3578,
+        "universal_BK_h8_draw": "FALSIFIED"
+      }
+    },
+    "new_g7_core_objects": {
+      "FILTERED_ATTRACTOR": "PROMOTED \u2014 derived universal strategy-language reachability field/operator. CHECK is first empirical instantiation; exactness is by fixed-point construction but compression/coverage is topology-dependent.",
+      "FILTER_PIVOT": "PROMOTED \u2014 universal finite-game factorization/core proof-language operation. Mathematical proof from G7.6 plus 100k generic regression plus exact backward factorization on 24 all-file advanced same-side arenas, 3 nested d-file full-rank arenas, faithful fortress, and prior G7 F01/F02/F09."
+    },
+    "backward_fire": {
+      "same_side_advanced_arenas": 24,
+      "all_filter_pivot_factorizations_exact": true,
+      "aggregate": {
+        "N": {
+          "arenas": 8,
+          "ordinary_attr_total": 5216274,
+          "check_attr_total": 2860796,
+          "retained_total_pct": 54.84366810485799,
+          "retained_min_pct": 45.618211,
+          "retained_max_pct": 88.8931,
+          "quiet_required_total": 2355478,
+          "pivots_total": 252912,
+          "aggregate_pivot_amplification": 9.313429176946922,
+          "all_factorizations_exact": true
+        },
+        "B": {
+          "arenas": 8,
+          "ordinary_attr_total": 5828716,
+          "check_attr_total": 2782282,
+          "retained_total_pct": 47.73404640061379,
+          "retained_min_pct": 37.62344,
+          "retained_max_pct": 85.007697,
+          "quiet_required_total": 3046434,
+          "pivots_total": 251552,
+          "aggregate_pivot_amplification": 12.110553682737565,
+          "all_factorizations_exact": true
+        },
+        "R": {
+          "arenas": 8,
+          "ordinary_attr_total": 8148388,
+          "check_attr_total": 2676768,
+          "retained_total_pct": 32.850276643674796,
+          "retained_min_pct": 29.838245,
+          "retained_max_pct": 34.49184,
+          "quiet_required_total": 5471620,
+          "pivots_total": 264788,
+          "aggregate_pivot_amplification": 20.66415396468118,
+          "all_factorizations_exact": true
+        }
+      },
+      "faithful_fortress": {
+        "direct": 103451,
+        "ordinary_attr": 585732,
+        "check_attr": 178642,
+        "retained_pct": 30.498931,
+        "quiet_required": 407090,
+        "pivots": 39790,
+        "pivot_amplification": 10.230963,
+        "missing": 0,
+        "extra": 0,
+        "check_nonwins": 0,
+        "pivot_categories": "B:843,K:16106,KB:200,KP:6729,KPB:202,P:15697,PB:13,"
+      },
+      "branch_strategy_interaction": [
+        {
+          "arena": "N-d",
+          "AL": 248775,
+          "AR": 281326,
+          "constituent_union": 363277,
+          "ordinary_union_attr": 366763,
+          "ordinary_pure_bridge": 3486,
+          "check_union_attr": 326027,
+          "ordinary_pure_in_check": 2156,
+          "ordinary_pure_check_pct": 61.84739,
+          "filtered_pure": 5538
+        },
+        {
+          "arena": "B-d",
+          "AL": 178525,
+          "AR": 220794,
+          "constituent_union": 363789,
+          "ordinary_union_attr": 373545,
+          "ordinary_pure_bridge": 9756,
+          "check_union_attr": 317542,
+          "ordinary_pure_in_check": 4734,
+          "ordinary_pure_check_pct": 48.523985,
+          "filtered_pure": 5481
+        },
+        {
+          "arena": "B-c",
+          "AL": 127870,
+          "AR": 622061,
+          "constituent_union": 678338,
+          "ordinary_union_attr": 795768,
+          "ordinary_pure_bridge": 117430,
+          "check_union_attr": 351692,
+          "ordinary_pure_in_check": 3190,
+          "ordinary_pure_check_pct": 2.716512,
+          "filtered_pure": 6028
+        }
+      ]
+    },
+    "deep_proof_dag": {
+      "programme": "G7",
+      "stage": "G7.8",
+      "freeze": "F",
+      "date": "2026-08-11",
+      "F02": {
+        "arena": "BB_same_c7_f2",
+        "parent_full_three_target_attr": 612427,
+        "proper_subunion_full": 605232,
+        "three_way_irreducible": 7195,
+        "hyperkernel": 1641,
+        "hyperkernel_amplification": 4.384521633,
+        "derived_target_attr": 23327,
+        "derived_target_attr_amplification_over_pure": 3.242112578,
+        "derived_target_attr_amplification_over_kernel": 14.21511274,
+        "derived_check_attr": 23026,
+        "derived_check_retention_pct": 98.70964976,
+        "derived_quiet_required": 301,
+        "derived_filter_pivots": 239,
+        "derived_filter_pivot_amplification": 1.259414226,
+        "pivot_missing": 0,
+        "pivot_extra": 0,
+        "fixed_point_audit": {
+          "checked_full_parent": 612427,
+          "ordinary_member_violations": 0,
+          "ordinary_outside_qualifiers": 0,
+          "check_member_violations": 0,
+          "check_outside_qualifiers": 0
+        },
+        "cross_axis": {
+          "proper_and_check": 581012,
+          "proper_and_quiet_required": 24220,
+          "irreducible_and_check": 1235,
+          "irreducible_and_quiet_required": 5960,
+          "irreducible_quiet_required_pct": 82.8353022933,
+          "proper_quiet_required_pct": 4.0017712216
+        }
+      },
+      "F09": {
+        "direct_target": 1448464,
+        "check_filtered_attr": 2461867,
+        "ordinary_target_attr": 8295062,
+        "quiet_required": 5833195,
+        "filter_pivots": 517120,
+        "filter_pivot_amplification": 11.28015741,
+        "pivot_missing": 0,
+        "pivot_extra": 0,
+        "sanctuary_direct": 330264,
+        "sanctuary_draw_certificate": 4437719,
+        "exact_draw_basin": 4442101,
+        "sanctuary_draw_coverage_pct": 99.9014
+      }
+    },
+    "complexity_floor": {
+      "solved_baselines": {
+        "F01": {
+          "static": 23728925,
+          "seconds": 28.829
+        },
+        "F02": {
+          "static": 22770972,
+          "seconds": 27.198
+        },
+        "F09": {
+          "static": 16557288,
+          "seconds": 20.75
+        }
+      },
+      "holds": {
+        "F04": {
+          "static": 44820777,
+          "mean_branch": 13.454,
+          "check_density_pct": 6.673,
+          "seconds_without_result": 180
+        },
+        "F06": {
+          "static": 40499052,
+          "mean_branch": 14.897,
+          "check_density_pct": 15.823,
+          "seconds_without_result": 180
+        },
+        "F07": {
+          "static": 45823238,
+          "status": "seven-man scale hold"
+        },
+        "F08": {
+          "static": 43334293,
+          "status": "matched seven-man hold"
+        }
+      },
+      "certificate_seed_economics": {
+        "F02_seed_bytes": 15040,
+        "F02_final_region": 23327,
+        "F02_seed_bytes_per_final_state": 0.645,
+        "F09_seed_bytes": 4136960,
+        "F09_final_region": 8295062,
+        "F09_seed_bytes_per_final_state": 0.499
+      }
+    }
+  },
+  "proof_language_final_classification": {
+    "universal_core": [
+      "STRICT_ATTRACTOR",
+      "ROLE_DUAL_SANCTUARY_ATTRACTOR",
+      "BRANCH_KERNEL",
+      "FINITE_N_HYPERKERNEL",
+      "FILTERED_ATTRACTOR (typed attacker-edge strategy language)",
+      "FILTER_PIVOT_FACTORIZATION",
+      "DEPENDENCY_DAG_AND_SUBSUMPTION_SEMANTICS"
+    ],
+    "reusable_schema": [
+      "PROJECT_EXACT_LOWER_TRUTH",
+      "RESOURCE_SAFE_TARGET",
+      "RESIDUAL",
+      "GROUP_OUT",
+      "LOCALIZATION_LIFT",
+      "STOP",
+      "CERTIFY"
+    ],
+    "conditional_finite_theorems_or_guards": [
+      "G6 FAR5",
+      "G6 FAR3 sliders",
+      "G6 FAR3 knight outside exact exception",
+      "faithful wrong-colour sanctuary",
+      "G7 RESTORE.CONVERSION_SAFE_WHITE_MOBILE sharpening",
+      "G7 SANCTUARY_ACCESS_GUARD preservation/destruction family"
+    ],
+    "representation_dependent": [
+      "CHECK as a specific strategy language (exact construction, topology-dependent retention)",
+      "critical-manifold/local grammar representations",
+      "strategy-retention and pivot-amplification empirical scaling"
+    ],
+    "not_promoted_new_objects": [
+      "EXCHANGE_FUNNEL -> reduces to Branch-Kernel over material targets",
+      "TRANSITION_HYPERKERNEL -> reduces to finite-n Hyperkernel",
+      "MULTI_PROJECTION_CONSISTENCY -> rejected by subsumption; guarded single projection is stronger"
+    ]
+  },
+  "advance_criteria_audit": [
+    {
+      "criterion": "At least six prospective higher-tree families receive exact certified passes, with at least three new material classes and at least two six-man-or-higher opposing-mobile-piece families.",
+      "status": "NOT MET STRICTLY",
+      "evidence": "F01, F02 and F09 have full exact outcome passes; F10 has an exact held-out terminal falsification but no full table; F03/F04/F06/F07/F08 hit scale holds and F05 was not executed. Thus the strict six-family/full breadth gate is not claimed. The opposing-mobile-piece subcondition is met by F01/F02."
+    },
+    {
+      "criterion": "Candidate selection frozen before W/D/L and driven by structural novelty/tractability.",
+      "status": "MET STRONGLY",
+      "evidence": "G7.0-G7.1 manifest v2; buggy v1 structural metrics and W/D outputs discarded before accepted truth; order unchanged after correction."
+    },
+    {
+      "criterion": "At least two families contain >=3 distinct exact material-reduction endpoints.",
+      "status": "MET",
+      "evidence": "F01 and F02 each expose four direct lower-material capture signatures; three exact White-winning endpoint targets were composed exhaustively."
+    },
+    {
+      "criterion": "At least three G6 object types add exact coverage unchanged or have sharply characterized failure domains.",
+      "status": "MET STRONGLY",
+      "evidence": "Strict attractor, Branch-Kernel, finite-n Hyperkernel, role-dual sanctuary, PROJECT, resource-safe TARGET, residual/grouping and localization-lift all receive exact higher-tree verdicts; FAR domains are explicitly refused outside type."
+    },
+    {
+      "criterion": "At least one composition over alternative material-transition endpoints.",
+      "status": "MET STRONGLY",
+      "evidence": "All six tested F01/F02 two-way endpoint pairs produce pure BRIDGE; F02 adds 1,641 -> 7,195 irreducible three-way Hyperkernel factorization."
+    },
+    {
+      "criterion": "At least one new G7 abstraction succeeds prospectively held-out and survives backward fire.",
+      "status": "MET STRONGLY",
+      "evidence": "FILTER_PIVOT is mathematically proved, exact in F01/F02, held-out F09, 100,000 arbitrary graphs, 24/24 G6 all-file N/B/R arenas, nested d-file scale runs and faithful fortress; 0 missing/extra."
+    },
+    {
+      "criterion": "Proof DAG depth >=3 typed operations certifies a region materially larger than constituents.",
+      "status": "MET",
+      "evidence": "F02: exact lower endpoints -> 1,641 Hyperkernel -> 7,195 irreducible region -> 23,327 second-order attractor -> 23,026 CHECK corridor plus 239 Filter-Pivots for the 301-state complement."
+    },
+    {
+      "criterion": "At least one higher-tree sanctuary/fortress preservation or destruction result.",
+      "status": "MET TWICE",
+      "evidence": "F09: BK=h8 => draw in 330,264/330,264 exact states; F10 held-out access control destroys universal lift with 3,578 immediate checkmates among BK=h8 states."
+    },
+    {
+      "criterion": "At least two adversarial high-branch controls preserved honestly.",
+      "status": "MET",
+      "evidence": "F04 and F06 audited with zero sampled edge errors and frozen as >180 s no-W/D/L complexity-floor controls without post-truth shrinking."
+    },
+    {
+      "criterion": "Description/certificate cost tracked against exact state growth.",
+      "status": "MET",
+      "evidence": "Solve wall times, verifier RSS, byte-mask engineering cost and sparse seed-payload estimates are frozen; logical seed payload is far below enumerated state-table size in F02/F09."
+    }
+  ],
+  "failure_criteria_audit": [
+    {
+      "criterion": "Most selected arenas are G6 file/rank variants with decorative material.",
+      "triggered": false,
+      "evidence": "Portfolio includes opposing/same-colour bishop races, slider/leaper/rook/queen controls, seven-man triple-pawn races and higher fortress ascent."
+    },
+    {
+      "criterion": "Tractability restrictions changed after outcome inspection.",
+      "triggered": false,
+      "evidence": "No truth-driven shrinking accepted; seven-man and hostile controls frozen as holds."
+    },
+    {
+      "criterion": "Lower-material dependency semantics underspecified/model-sensitive.",
+      "triggered": false,
+      "evidence": "Faithful fortress reproduces G6 checksums; promotion-model distinction explicitly typed; dependency initialization bug detected and superseded."
+    },
+    {
+      "criterion": "G6 objects contribute negligible higher-tree coverage and no replacement emerges.",
+      "triggered": false,
+      "evidence": "Multiple G6 graph operations transfer strongly; F09 white+defender certificates cover 76.9014% of the full state space; new strategy-language axis emerges."
+    },
+    {
+      "criterion": "New rules depend on absolute-square catalogues/material constants and fail backward fire.",
+      "triggered": false,
+      "evidence": "Filter-Pivot is graph-general and backward exact; subsumed/failed candidates were not promoted."
+    },
+    {
+      "criterion": "Material-endpoint Branch/Hyperkernel adds negligible value.",
+      "triggered": false,
+      "evidence": "All six pairwise bridges positive; F02 irreducible three-way region exact and reused as a second-order proof target."
+    },
+    {
+      "criterion": "Proof description/certificate cost grows approximately with raw state count before reusable layers appear.",
+      "triggered": false,
+      "evidence": "Sparse seed estimates remain sub-byte per final certified state in F02/F09, though current implementation masks are intentionally uncompressed."
+    },
+    {
+      "criterion": "Held-out performance collapses while training compression remains high.",
+      "triggered": false,
+      "evidence": "CHECK retention varies sharply, but Filter-Pivot factorization remains exact held-out and backward; coverage variation is typed rather than hidden."
+    },
+    {
+      "criterion": "High mobility/checking prevents meaningful finite-window certification within budget.",
+      "triggered": true,
+      "evidence": "F04/F06 and seven-man F07/F08 define the present exact-solve engineering frontier. The memo-required response\u2014freeze the scale boundary rather than shrink after truth\u2014was followed."
+    }
+  ],
+  "final_gate": {
+    "advance_criteria_met": 9,
+    "advance_criteria_total": 10,
+    "failure_criteria_triggered": 1,
+    "failure_criteria_total": 9,
+    "strict_exception": "The sole unmet advance criterion and sole triggered failure criterion share one cause: exact full-table breadth stalls at the current high-branch ~40-45M/seven-man frontier.",
+    "scientific_verdict": "PASS STRONGLY",
+    "programme_closeout": "CLOSED",
+    "reason": "The north-star ascent, bidirectional transfer, new proof-language object, deep proof DAG, sanctuary result and honest complexity boundary are established. Further work would primarily be solver/certificate engineering rather than necessary G7 scientific validation."
+  },
+  "G8_gate": {
+    "decision": "CONSOLIDATE AND SCALE, THEN RE-ASCEND",
+    "rationale": "The proof language is ahead of the current exact solver. G8 should build a repository-quality material-signature DAG solver and proof-object compiler/verifier, then use it to recover F03/F04/F06/F07/F08 and extend strategy-language algebra prospectively.",
+    "do_not_do": "Do not simply add more nearby arenas under the same monolithic optional-material retrograde; do not spend G8 repairing the two frozen G6 historical exceptions unless new source artifacts appear."
+  }
+}

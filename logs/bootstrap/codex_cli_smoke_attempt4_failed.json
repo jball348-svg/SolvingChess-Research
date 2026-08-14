@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "synthetic_only": true,
+  "programme_routing_used": false,
+  "codex_version": "codex-cli 0.147.0-alpha.6.6",
+  "codex_executable_sha256": "592958896cbffa154709618476fc9c9bf7fe73957e9a4fc12094c5051b6c69b3",
+  "security_mode": "profile-auto-review/windows-elevated",
+  "valid": false,
+  "failure_stage": "OUTER_VERIFIER_FILE_READ",
+  "agent_process_result": "PASS",
+  "agent_process_notes": "The exact production admission schema, workspace write, public HTTPS check and structured final all passed inside an ignored C:/Solving_Chess/.run smoke repository. The outer verifier could not read the two sandbox-created files because native elevated mode replaced the worktree ACL and left new files owned only by the dedicated sandbox SID. Recursive read grants failed on those files without administrator ownership takeover, so elevated mode cannot support controller validation or Git freeze on this installed CLI.",
+  "resolution": "Use the official native unelevated restricted-token fallback with the same permission profile and auto-review; verify it with the exact same smoke before readiness.",
+  "errors": [
+    "PermissionError reading marker.txt from an ACL-matched in-repository smoke worktree",
+    "Elevated sandbox output is not readable by the outer controller"
+  ],
+  "process": {
+    "returncode": 0,
+    "timed_out": false,
+    "jsonl_valid": true,
+    "turn_completed": true,
+    "final_schema_valid": true
+  },
+  "evidence": {
+    "events.jsonl": {
+      "bytes": 13110,
+      "sha256": "ab40971334a250d1a49c3a43d5139ee43aad98b08b53c4f47e5220e86c4fad49"
+    },
+    "final.json": {
+      "bytes": 844,
+      "sha256": "e3244fd3485637bd60d93998549d6de418e63bead26fdb0320af410efbde808f"
+    },
+    "stderr.log": {
+      "bytes": 3119,
+      "sha256": "28e79c1f120d54d0d2ac150ce5d9d14696c16f5c61b7aed92f02104b3184b82c"
+    },
+    "output.schema.json": {
+      "bytes": 2857,
+      "sha256": "0aa510d5555301c1e5feb5e1cfe5deae1134979a36ae1674fd32470dc7eca818"
+    },
+    "prompt.md": {
+      "bytes": 1312,
+      "sha256": "9a7bee8f3aee9e03de8594da5f2b2d6e1ead583adb156ec47b4dae661090b5cf"
+    },
+    "marker.txt": {
+      "bytes": 29,
+      "sha256": null,
+      "read_status": "DENIED_BY_ELEVATED_SANDBOX_ACL"
+    },
+    "network_receipt.json": {
+      "bytes": 79,
+      "sha256": null,
+      "read_status": "DENIED_BY_ELEVATED_SANDBOX_ACL"
+    }
+  }
+}

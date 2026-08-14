@@ -1,0 +1,892 @@
+{
+  "programme": "G8 Certificate Engine and Re-Ascent",
+  "final_freeze": "I",
+  "date": "2026-08-11",
+  "status": "CLOSED \u2014 FULL PROGRAMME PASS",
+  "authority": {
+    "historical": "Pilot 1 -> Pilot 2 -> G3 -> G4 -> G5 -> G6 -> G7 frozen handoffs",
+    "prospective": "G8 Certificate Engine and Re-Ascent Programme Memo",
+    "proof_language_start": "G7 v0.3 frozen"
+  },
+  "engine": {
+    "material_signature_DAG": true,
+    "packed_membership": true,
+    "explicit_capture_promotion_dependencies": true,
+    "independent_verifier": true,
+    "certificate_schema": "G8.CERT.v0.1",
+    "product_schema": "G8.PRODUCT.CERT.v0.1"
+  },
+  "regression": {
+    "F01": {
+      "graph_states": 23728925,
+      "graph_W": 7282421,
+      "graph_B": 8205091,
+      "graph_D": 8241413,
+      "full_states": 5105749,
+      "full_W": 2506683,
+      "full_B": 2519613,
+      "full_D": 79453,
+      "capture_edges": {
+        "SIG7": 255368,
+        "SIG11": 231650,
+        "SIG13": 981578,
+        "SIG14": 214347,
+        "total": 1682943
+      },
+      "bellman_checked": 23728925,
+      "bellman_bad": 0,
+      "baseline_seconds": 28.829,
+      "g8_solver_seconds": 18.62,
+      "speedup_x": 1.5483,
+      "wall_reduction_pct": 35.41,
+      "audited_total_seconds": 29.277,
+      "peak_rss_kb": 42264,
+      "canonical_truth_sha256": "e328e0f68c32863945cfbdbbab10fb78cf20f08141af2f53070ccd32a6e11d99"
+    },
+    "F02": {
+      "graph_states": 22770972,
+      "graph_W": 7043319,
+      "graph_B": 7043319,
+      "graph_D": 8684334,
+      "full_states": 4761076,
+      "full_W": 2321127,
+      "full_B": 2321127,
+      "full_D": 118822,
+      "capture_edges": {
+        "SIG7": 784233,
+        "SIG11": 784233,
+        "SIG13": 811070,
+        "SIG14": 811070,
+        "total": 3190606
+      },
+      "bellman_checked": 22770972,
+      "bellman_bad": 0,
+      "baseline_seconds": 27.198,
+      "g8_solver_seconds": 16.73,
+      "speedup_x": 1.6257,
+      "wall_reduction_pct": 38.49,
+      "audited_total_seconds": 27.245,
+      "peak_rss_kb": 41632,
+      "canonical_truth_sha256": "e9604c7489592a84869ba41c64af5abf244e546f5bdeb81eb45a3c4cd7d8d68e"
+    },
+    "F09": {
+      "KPK": {
+        "states": 41619,
+        "W": 27430,
+        "D": 14189
+      },
+      "F4": {
+        "states": 1182440,
+        "W": 825269,
+        "D": 357171,
+        "BK_h8": 22008,
+        "BK_h8_W": 0
+      },
+      "states": 16557288,
+      "W": 12115187,
+      "D": 4442101,
+      "BK_h8": 330264,
+      "BK_h8_W": 0,
+      "safe_target": 1448464,
+      "safe_target_nonwins": 0,
+      "bellman_checked": 16557288,
+      "bellman_bad": 0,
+      "baseline_seconds": 20.75,
+      "g8_solver_seconds": 9.738,
+      "speedup_x": 2.1308,
+      "wall_reduction_pct": 53.07,
+      "solver_plus_exhaustive_audit_seconds": 15.243,
+      "peak_rss_kb": 39348,
+      "canonical_truth_sha256": "0d550158522726e253a8dc9a271cb1a6f4a8e1c50854f24f79e295f0fdfecbf4"
+    }
+  },
+  "recovered_G7_holds": {
+    "F03": {
+      "family": "BN_opp_d7_e2",
+      "material": "K+B+P vs K+N+P",
+      "graph": 48028628,
+      "W": 15988090,
+      "B": 16147057,
+      "D": 15893481,
+      "full": 10631072,
+      "fullW": 5381419,
+      "fullB": 5055467,
+      "fullD": 194186,
+      "capture_edges": {
+        "SIG7": 964540,
+        "SIG11": 1204532,
+        "SIG13": 1108688,
+        "SIG14": 554624,
+        "total": 3832384
+      },
+      "producer_wall_s": 7.81,
+      "producer_peak_rss_kb": 81980,
+      "verifier_wall_s": 4.58,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 48028628,
+      "bellman_mismatches": 0,
+      "truth_sha256": "686bdf95d6d2ec16ed22868fed9269e92c94ab2b4476728341103354ce41ad34"
+    },
+    "F04": {
+      "family": "RB_c7_f2",
+      "material": "K+R+P vs K+B+P",
+      "graph": 44820777,
+      "W": 18876467,
+      "B": 13279606,
+      "D": 12664704,
+      "full": 9956314,
+      "fullW": 5170590,
+      "fullB": 4640695,
+      "fullD": 145029,
+      "capture_edges": {
+        "SIG7": 1204113,
+        "SIG11": 1411402,
+        "SIG13": 485335,
+        "SIG14": 1483432,
+        "total": 4584282
+      },
+      "producer_wall_s": 9.65,
+      "producer_peak_rss_kb": 77952,
+      "g7_runtime_floor_s": 180,
+      "speedup_lower_bound_vs_g7_floor": 18.65,
+      "verifier_wall_s": 5.38,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 44820777,
+      "bellman_mismatches": 0,
+      "truth_sha256": "a9af726992d8ec8eded325ada4d41458edb959d3cfc0967c0535207e863b4717"
+    },
+    "F06": {
+      "family": "QB_d7_e2",
+      "material": "K+Q+P vs K+B+P",
+      "graph": 40499052,
+      "W": 27773901,
+      "B": 8530120,
+      "D": 4195031,
+      "full": 8787241,
+      "fullW": 5210861,
+      "fullB": 3476720,
+      "fullD": 99660,
+      "capture_edges": {
+        "SIG7": 1039257,
+        "SIG11": 1556350,
+        "SIG13": 1380393,
+        "SIG14": 1539467,
+        "total": 5515467
+      },
+      "producer_wall_s": 12.22,
+      "producer_peak_rss_kb": 73236,
+      "g7_runtime_floor_s": 180,
+      "speedup_lower_bound_vs_g7_floor": 14.73,
+      "verifier_wall_s": 6.03,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 40499052,
+      "bellman_mismatches": 0,
+      "truth_sha256": "fa93c352b9a0e489b323612710bc062ef27b25e08c751ce2ef98571f78e6f508"
+    },
+    "F07": {
+      "arena": "BB_opp_a7c7_b2",
+      "graph_static": 45823238,
+      "graph_W": 24428400,
+      "graph_B": 12317126,
+      "graph_D": 9077712,
+      "full_static": 4759054,
+      "full_W": 2556211,
+      "full_B": 2200883,
+      "full_D": 1960,
+      "capture_edges": {
+        "sig15": 217215,
+        "sig23": 238411,
+        "sig27": 148955,
+        "sig29": 201330,
+        "sig30": 924295,
+        "total": 1730206
+      },
+      "producer_wall_s": 10.76,
+      "producer_peak_rss_kb": 55696,
+      "verifier_wall_s": 4.08,
+      "verifier_peak_rss_kb": 29700,
+      "static_mismatches": 0,
+      "bellman_mismatches": 0,
+      "truth_sha256": "6cda93279161aba0dfaa07a08e98443fa351b54823ab1b0529faf37354bef992"
+    },
+    "F08": {
+      "arena": "BB_same_a7c7_b2",
+      "graph_static": 43334293,
+      "graph_W": 21993686,
+      "graph_B": 11672354,
+      "graph_D": 9668253,
+      "full_static": 4294949,
+      "full_W": 2305156,
+      "full_B": 1987745,
+      "full_D": 2048,
+      "capture_edges": {
+        "sig15": 710877,
+        "sig23": 711753,
+        "sig27": 535487,
+        "sig29": 740705,
+        "sig30": 737839,
+        "total": 3436661
+      },
+      "producer_wall_s": 10.49,
+      "producer_peak_rss_kb": 54876,
+      "verifier_wall_s": 3.76,
+      "verifier_peak_rss_kb": 29700,
+      "static_mismatches": 0,
+      "bellman_mismatches": 0,
+      "truth_sha256": "fc86918a8b2fbaa71f31464777d0fdc028214fb6092ead616e60f9182d1cf620"
+    }
+  },
+  "F10_full_faithful": {
+    "arena": "K+wrong-colour B+correct-colour B+hP vs K faithful",
+    "raw": 50331648,
+    "static": 33305146,
+    "W": 32828134,
+    "D": 477012,
+    "BK_h8": 586893,
+    "BK_h8_W": 572681,
+    "BK_h8_D": 14212,
+    "BK_h8_immediate_mates": 3578,
+    "dependency_checksums": {
+      "KPK": {
+        "static": 41619,
+        "W": 27430,
+        "D": 14189
+      },
+      "wrong_F4": {
+        "static": 1182440,
+        "W": 825269,
+        "D": 357171
+      },
+      "correct_F4": {
+        "static": 1182525,
+        "W": 1099020,
+        "D": 83505
+      }
+    },
+    "producer_dump_wall_s": 9.77,
+    "producer_peak_rss_kb": 81208,
+    "independent_verifier_checked_all_dependencies": 35711730,
+    "static_mismatches": 0,
+    "bellman_mismatches": 0,
+    "verifier_wall_s": 14.08,
+    "verifier_peak_rss_kb": 16648,
+    "truth_sha256": "aa145109278da9570f4f30860f7e8346f8285323301e50ae2941075a5ea521b2"
+  },
+  "strategy_language": {
+    "ordinary": {
+      "F01": 146068,
+      "F02": 612427,
+      "F03": 623638,
+      "F04": 3089492,
+      "F06": 4896620,
+      "F07": 1186903,
+      "F08": 927338,
+      "F09": 8295062
+    },
+    "best_single": {
+      "F01": {
+        "filter": "CHECK",
+        "attr": 146044,
+        "retention_pct": 99.9835693
+      },
+      "F02": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 603816,
+        "retention_pct": 98.5939548714
+      },
+      "F03": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 594708,
+        "retention_pct": 95.3610908893
+      },
+      "F04": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 2877371,
+        "retention_pct": 93.1341139579
+      },
+      "F06": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 4846005,
+        "retention_pct": 98.96632779
+      },
+      "F07": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 1149297,
+        "retention_pct": 96.831586069
+      },
+      "F08": {
+        "filter": "MOBILE_PIECE_ONLY",
+        "attr": 913843,
+        "retention_pct": 98.5447593003
+      },
+      "F09": {
+        "filter": "KING_ONLY",
+        "attr": 3288923,
+        "retention_pct": 39.64916718
+      }
+    },
+    "best_one_switch": {
+      "F01": {
+        "switch": "KING_ONLY->CHECK",
+        "cover": 146068,
+        "pct": 100,
+        "residual": 0
+      },
+      "F02": {
+        "switch": "MOBILE_PIECE_ONLY->CHECK",
+        "cover": 610443,
+        "pct": 99.676043,
+        "residual": 1984
+      },
+      "F03": {
+        "switch": "KING_ONLY->CHECK",
+        "cover": 618377,
+        "pct": 99.1564016,
+        "residual": 5261
+      },
+      "F04": {
+        "switch": "MOBILE_PIECE_ONLY->CHECK",
+        "cover": 3082437,
+        "pct": 99.7716453,
+        "residual": 7055
+      },
+      "F06": {
+        "switch": "CHECK->MOBILE_PIECE_ONLY",
+        "cover": 4895768,
+        "pct": 99.9826002,
+        "residual": 852
+      },
+      "F07": {
+        "switch": "MOBILE_PIECE_ONLY->CHECK",
+        "cover": 1186264,
+        "pct": 99.9461624,
+        "residual": 639
+      },
+      "F08": {
+        "switch": "CHECK->MOBILE_PIECE_ONLY",
+        "cover": 925137,
+        "pct": 99.762654,
+        "residual": 2201
+      },
+      "F09": {
+        "switch": "CHECK->PAWN_ONLY",
+        "cover": 4603581,
+        "pct": 55.4978492,
+        "residual": 3691481
+      }
+    },
+    "typed_algebra": {
+      "FORCING_equals_CHECK_all_evaluated_arenas": true,
+      "interpretation_forcing": "typed degeneracy under these target/domain contracts, not a universal chess identity; no admissible pre-target capture edge enlarges CHECK",
+      "PAWN_ONLY_equals_CAPTURE_brink_endpoint_arenas": true,
+      "interpretation_pawn": "brink pawns have no internal non-promotion same-domain move; F09 breaks the equivalence because its pawn rank varies and internal pawn pushes exist",
+      "F09_pawn_minus_capture_attr": 822815
+    },
+    "audits": {
+      "filter_rows": 48,
+      "all_fixed_point_and_filter_pivot_exact": true
+    }
+  },
+  "product_proof": {
+    "programme": "G8 Certificate Engine and Re-Ascent",
+    "stage": "G8.6 Product proof calculus",
+    "freeze": "F",
+    "date": "2026-08-11",
+    "verdict": "PASS STRONGLY",
+    "arena": "F02 BB_same_c7_f2",
+    "destination_axis": {
+      "three_way_attr": 612427,
+      "hyperkernel": 1641,
+      "irreducible": 7195,
+      "hyperkernel_closure": 7195,
+      "derived_second_order_attr": 23327
+    },
+    "strategy_axis": {
+      "CHECK": {
+        "cover": 23026,
+        "residual": 301,
+        "pivots": 239
+      },
+      "KING_ONLY": {
+        "cover": 23045,
+        "residual": 282,
+        "pivots": 210
+      },
+      "MOBILE_PIECE_ONLY": {
+        "cover": 23080,
+        "residual": 247,
+        "pivots": 230
+      },
+      "switches": {
+        "CHECK->KING_ONLY": {
+          "cover": 23286,
+          "residual": 41
+        },
+        "CHECK->MOBILE_PIECE_ONLY": {
+          "cover": 23327,
+          "residual": 0
+        },
+        "KING_ONLY->CHECK": {
+          "cover": 23318,
+          "residual": 9
+        },
+        "KING_ONLY->MOBILE_PIECE_ONLY": {
+          "cover": 23319,
+          "residual": 8
+        },
+        "MOBILE_PIECE_ONLY->CHECK": {
+          "cover": 23304,
+          "residual": 23
+        },
+        "MOBILE_PIECE_ONLY->KING_ONLY": {
+          "cover": 23288,
+          "residual": 39
+        }
+      }
+    },
+    "canonical_product_dag": {
+      "path": [
+        "typed material endpoints",
+        "FINITE_N_HYPERKERNEL 1641",
+        "irreducible closure 7195",
+        "STRICT_ATTRACTOR 23327",
+        "MOBILE_PIECE_ONLY filtered phase 23080",
+        "CHECK->MOBILE ordered switch 23327"
+      ],
+      "depth_typed_operations": 5,
+      "final_coverage_pct": 100.0,
+      "outer_residual": 0
+    },
+    "sparse_payloads": {
+      "hyperkernel": {
+        "states": 1641,
+        "bytes": 2135,
+        "sha256": "b1cbcfc21adbc3cb89907a6512d5d118e3826ae2ff9955de2a3b57093709eb3f"
+      },
+      "mobile_pivots": {
+        "states": 230,
+        "bytes": 448,
+        "sha256": "7d35370a44d304dd1d4083579e975040054c8ffd8b1a2ec2b467814682548aed"
+      },
+      "outer_pivots": {
+        "states": 0,
+        "bytes": 16,
+        "sha256": "25b5e9a07bc774a2458b54e2f6bf2954b0ba7102fdd69bd06c04628c2bd7b15e"
+      },
+      "total_bytes": 2599
+    },
+    "independent_verifier": {
+      "output": "{\"arena\":\"F02\",\"full_target_attr\":612427,\"irreducible\":7195,\"hyperkernel\":1641,\"payload_hyper_exact\":true,\"hyper_closure\":7195,\"derived\":23327,\"mobile\":23080,\"check_to_mobile\":23327,\"switch_equals_derived\":true,\"inner_pivots\":230,\"inner_residual\":247,\"inner_recon\":247,\"fixed_bad\":[0,0,0],\"nonwins\":0}",
+      "wall_seconds": 2.3,
+      "peak_rss_kb": 551268,
+      "fixed_bad": [
+        0,
+        0,
+        0
+      ],
+      "nonwins": 0,
+      "mask_hashes_match": true
+    },
+    "producer": {
+      "output": "BASE full=612427 irreducible=7195 HK=1641 HKclosure=7195 derived=23327\nPHASE CHECK cover=23026 residual=301 piv=239 recon=301\nPHASE KING_ONLY cover=23045 residual=282 piv=210 recon=282\nPHASE MOBILE_PIECE_ONLY cover=23080 residual=247 piv=230 recon=247\nSWITCH CHECK->KING_ONLY cover=23286 pct=99.82423801 residual=41\nSWITCH CHECK->MOBILE_PIECE_ONLY cover=23327 pct=100 residual=0\nSWITCH KING_ONLY->CHECK cover=23318 pct=99.9614181 residual=9\nSWITCH KING_ONLY->MOBILE_PIECE_ONLY cover=23319 pct=99.96570498 residual=8\nSWITCH MOBILE_PIECE_ONLY->CHECK cover=23304 pct=99.90140181 residual=23\nSWITCH MOBILE_PIECE_ONLY->KING_ONLY cover=23288 pct=99.83281176 residual=39\nBEST CHECK->MOBILE_PIECE_ONLY inner=23080 switch=23327 AtoInner=23327 outerResidual=0 outerPiv=0 outerRecon=0 innerResidual=247 innerPiv=230 innerRecon=247",
+      "wall_seconds": 21.46,
+      "peak_rss_kb": 557508
+    },
+    "membership_sha256": {
+      "irreducible": "625510feaf87a852d0dfcfa0474677f54853b5ee947c18fbedd04bea080f2c37",
+      "mobile_phase": "9b31ac34735cb02e6878163f371979d1d402c58bd7579c8864368039dcf31882",
+      "final_switch": "f5acff0242dc714680b23306815f8b079e57cb9a66dd9ecc3472dccb08b95477"
+    },
+    "manifest_sha256": "a14584a27149c43e037bd2f24594c1ca260bcce6aa7f1b9a9f414f16354d328f",
+    "classification": "ORDERED_FILTER_SWITCH is promoted as a compiled typed composition schema, not as a chess-specific theorem about any particular language pair."
+  },
+  "prospective_reascent": {
+    "manifest_sha256": "ab1bc28e7feb869d530c06212185cbcdf277886be50c013a5c08d2e0edfc717e",
+    "R01": {
+      "arena": "R01_BB_opp_a7c7e7_b2",
+      "material": "K+B+3P vs K+B+P",
+      "material_signatures": 64,
+      "graph": 88363292,
+      "W": 56874776,
+      "B": 21881735,
+      "D": 9606781,
+      "full": 4420922,
+      "fullW": 2389483,
+      "fullB": 2031430,
+      "fullD": 9,
+      "capture_edges": {
+        "sig31": 194102,
+        "sig47": 220116,
+        "sig55": 138970,
+        "sig59": 188291,
+        "sig61": 186229,
+        "sig62": 873773,
+        "total": 1801481
+      },
+      "producer_wall_s": 19.46,
+      "producer_peak_rss_kb": 81928,
+      "verifier_wall_s": 6.58,
+      "verifier_peak_rss_kb": 55944,
+      "static_mismatches": 0,
+      "bellman_checked": 88363292,
+      "bellman_mismatches": 0,
+      "truth_bytes": 53528332,
+      "truth_sha256": "60039aeba3a414d491d8dbd3ca93e26ad649065b44a84eacce5ee73593e80a67"
+    },
+    "R02": {
+      "arena": "R02_BB_same_a7c7e7_b2",
+      "material": "K+B+3P vs K+B+P",
+      "material_signatures": 64,
+      "graph": 82547870,
+      "W": 51194453,
+      "B": 20346660,
+      "D": 11006757,
+      "full": 3880569,
+      "fullW": 2103731,
+      "fullB": 1776833,
+      "fullD": 5,
+      "capture_edges": {
+        "sig31": 586769,
+        "sig47": 585730,
+        "sig55": 495119,
+        "sig59": 680645,
+        "sig61": 694310,
+        "sig62": 679829,
+        "total": 3722402
+      },
+      "producer_wall_s": 18.64,
+      "producer_peak_rss_kb": 81288,
+      "verifier_wall_s": 6.22,
+      "verifier_peak_rss_kb": 55944,
+      "static_mismatches": 0,
+      "bellman_checked": 82547870,
+      "bellman_mismatches": 0,
+      "truth_bytes": 53528332,
+      "truth_sha256": "db1154781a87187448de0c72b7d12d625027b19ac91e4b48c3b49e53960fa440"
+    }
+  },
+  "economics": {
+    "programme": "G8 Certificate Engine and Re-Ascent",
+    "stage": "G8.8 Economics and adversarial certification",
+    "freeze": "H",
+    "date": "2026-08-11",
+    "verdict": "PASS STRONGLY WITH EXPLICIT NEGATIVE ECONOMICS",
+    "comparisons": [
+      {
+        "arena": "F01",
+        "states": 23728925,
+        "producer_wall_s": 4.46,
+        "verifier_wall_s": 2.12,
+        "verify_over_solve": 0.4753363228699552,
+        "verifier_time_saving_pct": 52.46636771300448,
+        "kind": "compact proof-object verifier",
+        "producer_peak_rss_kb": null,
+        "verifier_peak_rss_kb": 617524,
+        "payload_bytes": 248,
+        "truth_bytes": 8921368,
+        "note": "time win, severe reverse-graph RAM cost"
+      },
+      {
+        "arena": "F02",
+        "states": 22770972,
+        "producer_wall_s": 4.36,
+        "verifier_wall_s": 1.56,
+        "verify_over_solve": 0.35779816513761464,
+        "verifier_time_saving_pct": 64.22018348623854,
+        "kind": "compact proof-object verifier",
+        "producer_peak_rss_kb": null,
+        "verifier_peak_rss_kb": 551280,
+        "payload_bytes": 2599,
+        "truth_bytes": 8921368,
+        "note": "G8.6 product payload; time win, severe reverse-graph RAM cost"
+      },
+      {
+        "arena": "F03",
+        "states": 48028628,
+        "producer_wall_s": 7.81,
+        "verifier_wall_s": 4.58,
+        "verify_over_solve": 0.586427656850192,
+        "verifier_time_saving_pct": 41.35723431498079,
+        "kind": "full-truth Bellman verifier",
+        "producer_peak_rss_kb": 81980,
+        "verifier_peak_rss_kb": 29320,
+        "payload_bytes": null,
+        "truth_bytes": null,
+        "note": ""
+      },
+      {
+        "arena": "F04",
+        "states": 44820777,
+        "producer_wall_s": 9.65,
+        "verifier_wall_s": 5.38,
+        "verify_over_solve": 0.5575129533678757,
+        "verifier_time_saving_pct": 44.248704663212436,
+        "kind": "full-truth Bellman verifier",
+        "producer_peak_rss_kb": 77952,
+        "verifier_peak_rss_kb": 29320,
+        "payload_bytes": null,
+        "truth_bytes": null,
+        "note": ""
+      },
+      {
+        "arena": "F06",
+        "states": 40499052,
+        "producer_wall_s": 12.22,
+        "verifier_wall_s": 6.03,
+        "verify_over_solve": 0.49345335515548283,
+        "verifier_time_saving_pct": 50.654664484451715,
+        "kind": "full-truth Bellman verifier",
+        "producer_peak_rss_kb": 73236,
+        "verifier_peak_rss_kb": 29320,
+        "payload_bytes": null,
+        "truth_bytes": null,
+        "note": ""
+      },
+      {
+        "arena": "F07",
+        "states": 45823238,
+        "producer_wall_s": 10.76,
+        "verifier_wall_s": 4.08,
+        "verify_over_solve": 0.379182156133829,
+        "verifier_time_saving_pct": 62.0817843866171,
+        "kind": "full-truth Bellman verifier",
+        "producer_peak_rss_kb": 55696,
+        "verifier_peak_rss_kb": 29700,
+        "payload_bytes": null,
+        "truth_bytes": 26764172,
+        "note": ""
+      },
+      {
+        "arena": "F08",
+        "states": 43334293,
+        "producer_wall_s": 10.49,
+        "verifier_wall_s": 3.76,
+        "verify_over_solve": 0.35843660629170637,
+        "verifier_time_saving_pct": 64.15633937082936,
+        "kind": "full-truth Bellman verifier",
+        "producer_peak_rss_kb": 54876,
+        "verifier_peak_rss_kb": 29700,
+        "payload_bytes": null,
+        "truth_bytes": 26764172,
+        "note": ""
+      },
+      {
+        "arena": "F09",
+        "states": 16557288,
+        "producer_wall_s": 9.738,
+        "verifier_wall_s": 16.08,
+        "verify_over_solve": 1.6512630930375847,
+        "verifier_time_saving_pct": -65.12630930375846,
+        "kind": "compact proof-object verifier",
+        "producer_peak_rss_kb": 39348,
+        "verifier_peak_rss_kb": 84356,
+        "payload_bytes": 530753,
+        "truth_bytes": 6500387,
+        "note": "negative control: proof verification slower than exact solve"
+      },
+      {
+        "arena": "F10",
+        "states": 33305146,
+        "producer_wall_s": 9.77,
+        "verifier_wall_s": 14.08,
+        "verify_over_solve": 1.4411463664278403,
+        "verifier_time_saving_pct": -44.114636642784035,
+        "kind": "faithful full-truth dependency verifier",
+        "producer_peak_rss_kb": 81208,
+        "verifier_peak_rss_kb": 16648,
+        "payload_bytes": null,
+        "truth_bytes": 13381756,
+        "note": "negative control: independent faithful verifier slower than producer"
+      },
+      {
+        "arena": "R01",
+        "states": 88363292,
+        "producer_wall_s": 19.46,
+        "verifier_wall_s": 6.58,
+        "verify_over_solve": 0.3381294964028777,
+        "verifier_time_saving_pct": 66.18705035971223,
+        "kind": "eight-man full-truth Bellman verifier",
+        "producer_peak_rss_kb": 81928,
+        "verifier_peak_rss_kb": 55944,
+        "payload_bytes": null,
+        "truth_bytes": 53528332,
+        "note": ""
+      },
+      {
+        "arena": "R02",
+        "states": 82547870,
+        "producer_wall_s": 18.64,
+        "verifier_wall_s": 6.22,
+        "verify_over_solve": 0.3336909871244635,
+        "verifier_time_saving_pct": 66.63090128755364,
+        "kind": "eight-man full-truth Bellman verifier",
+        "producer_peak_rss_kb": 81288,
+        "verifier_peak_rss_kb": 55944,
+        "payload_bytes": null,
+        "truth_bytes": 53528332,
+        "note": ""
+      }
+    ],
+    "certificate_storage": {
+      "F01_branch_incremental_payload_bytes": 248,
+      "F02_product_incremental_payload_bytes": 2599,
+      "F09_filter_pivot_incremental_payload_bytes": 530753,
+      "F01_truth_dependency_bytes": 8921368,
+      "F02_truth_dependency_bytes": 8921368,
+      "F09_truth_dependency_bytes": 6500387,
+      "R01_truth_bytes": 53528332,
+      "R02_truth_bytes": 53528332,
+      "interpretation": "Sparse proof payload is far below reusable exact truth dependencies, but dependencies are not free and are always hash-addressed rather than omitted from accounting."
+    },
+    "break_even_findings": [
+      "There is no single state-count break-even. Verification cost is topology- and implementation-dependent.",
+      "Local Bellman verification is materially cheaper than retrograde rediscovery on F03/F04/F06/F07/F08/R01/R02.",
+      "The current compact F01/F02 proof verifier wins wall time but loses badly on peak memory because it materializes reverse graphs.",
+      "F09 and F10 are preserved hostile controls where independent proof/dependency verification is slower than the producer; certificate compactness does not imply computational cheapness.",
+      "At eight-man scale the full-truth verifier remains about one-third of producer wall time and below producer RSS, so local exact certification still scales economically in the new ascent pair."
+    ],
+    "adversarial_controls": {
+      "F09": {
+        "verify_over_solve": 1.6512630930375847,
+        "payload_bytes": 530753,
+        "status": "verification time loses; storage still strongly compressed"
+      },
+      "F10": {
+        "verify_over_solve": 1.4411463664278403,
+        "status": "faithful dependency verification loses wall time; low RSS"
+      },
+      "F02_RAM": {
+        "verifier_peak_rss_kb": 551280,
+        "status": "reverse-edge materialization is current verifier memory floor"
+      }
+    },
+    "stage_conclusion": "Exact certification remains economically useful under ascent, but the programme rejects the stronger claim that compact certificates are always cheaper to verify than exact truth is to recompute."
+  },
+  "stage_bundles": {
+    "G8.1": {
+      "file": "G8_1_Freeze_A_Bundle.tar.gz",
+      "sha256": "8704c7481181ac71d0e7eb3791c4c3408b95967597090afc1a577abf06472dec"
+    },
+    "G8.2": {
+      "file": "G8_2_Certificate_Freeze_B_Bundle.tar.gz",
+      "sha256": "80d09609bee352fe3fa6db73af1ff8b59ab421e08bae3e9946a44aacbea689d7"
+    },
+    "G8.3": {
+      "file": "G8_3_Freeze_C_Bundle.tar.gz",
+      "sha256": "18c3599c61ade195b26c86f814762d5d34ea24c09dee2b90fcfcdc1554d1a1b1"
+    },
+    "G8.4": {
+      "file": "G8_4_Freeze_D_Bundle.tar.gz",
+      "sha256": "1b4acf889c30fc6e2e75265b1a6d0cb6020e59bc479f14740675f7673ae08a82"
+    },
+    "G8.5": {
+      "file": "G8_5_Freeze_E_Bundle.tar.gz",
+      "sha256": "025df6d125a31a55c07c6d55cf4df952540a437a075d17b3f0e2c240c7914780"
+    },
+    "G8.6": {
+      "file": "G8_6_Freeze_F_Bundle.tar.gz",
+      "sha256": "e2d67322a543cbff7b6579d5b9b33add4b193d7c79cc8baf73a98ed5ce35be49"
+    },
+    "G8.7": {
+      "file": "G8_7_Freeze_G_Bundle.tar.gz",
+      "sha256": "b68e08668c3eda2d70b4601fec318377a728ffe37a1ef968b443b0332701519d"
+    },
+    "G8.8": {
+      "file": "G8_8_Freeze_H_Bundle.tar.gz",
+      "sha256": "e4ec5a089b6de435804f5aaa259ad64d0611a795f392bf3dbfdf825175340cca"
+    }
+  },
+  "advance_criteria": [
+    {
+      "n": 1,
+      "status": "MET STRONGLY",
+      "evidence": "F01/F02/F09 exact regression, canonical G8 hashes, exhaustive Bellman checks, G8.2 proof-object replay."
+    },
+    {
+      "n": 2,
+      "status": "EXCEEDED",
+      "evidence": "All five frozen G7 holds F03/F04/F06/F07/F08 recovered unchanged; includes both high-branch controls and both seven-man holds."
+    },
+    {
+      "n": 3,
+      "status": "MET STRONGLY",
+      "evidence": "Material-signature DAG plus packed validity removed repeated legality work; matched runtimes materially improved and >180 s floors collapsed to 9.65/12.22 s."
+    },
+    {
+      "n": 4,
+      "status": "MET STRONGLY",
+      "evidence": "Independent Branch/Hyperkernel/Filter-Pivot certificates; sparse payloads 248 B, 2.1 KB/460 B, 530.8 KB, all far below reusable truth dependencies."
+    },
+    {
+      "n": 5,
+      "status": "EXCEEDED",
+      "evidence": "Six predeclared strategy languages evaluated across eight arenas, 48/48 exact Filter-Pivot audits, no post-hoc predicates."
+    },
+    {
+      "n": 6,
+      "status": "MET STRONGLY",
+      "evidence": "G8.6 F02 product DAG: endpoints -> Hyperkernel -> derived attractor -> MOBILE phase -> CHECK->MOBILE phase, 100% of 23,327-state derived basin."
+    },
+    {
+      "n": 7,
+      "status": "EXCEEDED",
+      "evidence": "Two prospectively frozen restricted-eight-man arenas R01/R02 exactly solved and independently Bellman-verified at 88.36M/82.55M dependency states."
+    },
+    {
+      "n": 8,
+      "status": "MET",
+      "evidence": "F09/F10 preserved as adversarial economic controls where verification is slower than producer; F01/F02 verifier-RSS floor also frozen."
+    },
+    {
+      "n": 9,
+      "status": "MET",
+      "evidence": "Versioned ledgers, source hashes, truth hashes, certificate manifests, replay artifacts and final benchmark manifest frozen."
+    }
+  ],
+  "failure_criteria": [
+    {
+      "n": 1,
+      "status": "NOT TRIGGERED",
+      "evidence": "Speedups preserve arena/terminal semantics and survive independent static/Bellman verification."
+    },
+    {
+      "n": 2,
+      "status": "NOT TRIGGERED",
+      "evidence": "Frozen holds attacked unchanged and all recovered."
+    },
+    {
+      "n": 3,
+      "status": "NOT TRIGGERED",
+      "evidence": "Standalone verifier sources regenerate legality/fixed points; implementation alarms were caught rather than echoed."
+    },
+    {
+      "n": 4,
+      "status": "NOT TRIGGERED",
+      "evidence": "Sparse certificate payloads remain materially below full truth representation before and after product composition."
+    },
+    {
+      "n": 5,
+      "status": "NOT TRIGGERED",
+      "evidence": "Strategy palette frozen semantically before inspection; no square-ID or post-hoc predicate search."
+    },
+    {
+      "n": 6,
+      "status": "NOT TRIGGERED",
+      "evidence": "Scale recovery comes from signature decomposition, packed membership and validity reuse, not parallel brute force."
+    },
+    {
+      "n": 7,
+      "status": "NOT TRIGGERED",
+      "evidence": "Programme re-ascended prospectively to two eight-man exact families after recovery."
+    },
+    {
+      "n": 8,
+      "status": "NOT TRIGGERED",
+      "evidence": "High-branch and seven-man holds are solved; causal bottleneck was repeated legality/monolithic propagation overhead."
+    }
+  ],
+  "final_verdict": "9/9 advance criteria met (several exceeded); 0/8 failure criteria triggered. G8 closed."
+}

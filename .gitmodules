@@ -1,0 +1,6 @@
+[submodule "references/projects/decision-coordinates"]
+	path = references/projects/decision-coordinates
+	url = https://github.com/jball348-svg/chess.git
+[submodule "references/projects/solvingchess-public"]
+	path = references/projects/solvingchess-public
+	url = https://github.com/jball348-svg/SolvingChess.git

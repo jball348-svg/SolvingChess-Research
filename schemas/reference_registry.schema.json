@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solving-chess.local/schemas/reference_registry.schema.json",
+  "title": "Solving Chess reference registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_kind",
+    "generated_at",
+    "default_authority",
+    "projects"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "registry_kind": {
+      "const": "SOLVING_CHESS_REFERENCE_REGISTRY"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "default_authority": {
+      "const": "NON_AUTHORITATIVE_REFERENCE"
+    },
+    "projects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "authority_classification",
+          "source",
+          "reproducibility",
+          "purpose",
+          "approximate_size",
+          "languages_and_file_types",
+          "content_classes",
+          "potentially_relevant_programmes",
+          "known_overlap",
+          "known_non_overlap",
+          "provenance_quality",
+          "licensing",
+          "review",
+          "use_restrictions"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority_classification": {
+            "enum": [
+              "NON_AUTHORITATIVE_REFERENCE",
+              "GOVERNED_IMPORT"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "local_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "repository_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "base_commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "snapshot_manifest_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "repository_url"
+                ]
+              },
+              {
+                "required": [
+                  "local_path"
+                ]
+              }
+            ]
+          },
+          "reproducibility": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "mechanism",
+              "locator",
+              "status"
+            ],
+            "properties": {
+              "mechanism": {
+                "enum": [
+                  "PINNED_EXTERNAL_REPOSITORY",
+                  "GIT_SUBMODULE",
+                  "PINNED_GIT_SUBMODULE",
+                  "PRIVATE_SNAPSHOT_MANIFEST",
+                  "MANIFEST_ONLY"
+                ]
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+        "status": {
+          "enum": [
+            "REPRODUCIBLE",
+            "LOCAL_ONLY",
+            "PENDING_DURABLE_HOSTING",
+            "BROKEN"
+          ]
+        },
+        "availability": {
+          "enum": [
+            "PUBLICLY_RETRIEVABLE",
+            "LOCAL_PRIVATE_ONLY",
+            "UNAVAILABLE"
+          ]
+        },
+              "commit": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "manifest_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+              },
+        "manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "metadata_manifest_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "snapshot_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+              "exclusions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "approximate_size": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "files",
+              "bytes",
+              "basis"
+            ],
+            "properties": {
+              "files": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "languages_and_file_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "content_classes": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "SCIENTIFIC_CLAIMS",
+                "IMPLEMENTATION_IDEAS",
+                "EMPIRICAL_EVIDENCE",
+                "EXACT_FINITE_COMPUTATION",
+                "GENERAL_RESEARCH",
+                "DATASET",
+                "NEGATIVE_RESULTS",
+                "ENGINEERING_PATTERNS"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "potentially_relevant_programmes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "known_overlap": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "known_non_overlap": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "provenance_quality": {
+            "enum": [
+              "HIGH",
+              "MIXED",
+              "LOW",
+              "UNKNOWN"
+            ]
+          },
+          "licensing": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "notes"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "DOCUMENTED",
+                  "PARTIAL",
+                  "UNRESOLVED"
+                ]
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "review": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "scope",
+              "reviewed_at",
+              "notes"
+            ],
+            "properties": {
+              "scope": {
+                "const": "BOUNDED_TRIAGE"
+              },
+              "reviewed_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "use_restrictions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}

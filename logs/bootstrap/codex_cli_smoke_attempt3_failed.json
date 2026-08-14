@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "synthetic_only": true,
+  "programme_routing_used": false,
+  "codex_version": "codex-cli 0.147.0-alpha.6.6",
+  "codex_executable_sha256": "592958896cbffa154709618476fc9c9bf7fe73957e9a4fc12094c5051b6c69b3",
+  "security_mode": "profile-auto-review",
+  "valid": false,
+  "failure_stage": "OUTER_VERIFIER_FILE_READ",
+  "agent_process_result": "PASS",
+  "agent_process_notes": "The production API-admission schema was accepted, the disposable marker was written, https://example.com returned HTTP 200 with Example Domain, the receipt was written, and the structured final completed. The outer verifier then received PermissionError reading two sandbox-created files because this attempt used an external Temp root without the Authenticated Users inheritance present on the real repository.",
+  "errors": [
+    "PermissionError reading marker.txt from the external Temp smoke root",
+    "External Temp ACL did not model the C:/Solving_Chess worktree ACL"
+  ],
+  "process": {
+    "returncode": 0,
+    "timed_out": false,
+    "jsonl_valid": true,
+    "turn_completed": true,
+    "final_schema_valid": true
+  },
+  "evidence": {
+    "events.jsonl": {
+      "bytes": 22363,
+      "sha256": "8636e32323299cea059fe2f91a68d72ab4db93f62a5237b27751f6ea5bb394a9"
+    },
+    "final.json": {
+      "bytes": 926,
+      "sha256": "a4030ab7f4de280b8df2f27a27eebe0144080c6f3bb403098a6913254aab14b3"
+    },
+    "stderr.log": {
+      "bytes": 4463,
+      "sha256": "2dbdc1ac25c7d8ec983379085365fd64a5dd56e262d824a0262e96e257d92033"
+    },
+    "output.schema.json": {
+      "bytes": 2857,
+      "sha256": "0aa510d5555301c1e5feb5e1cfe5deae1134979a36ae1674fd32470dc7eca818"
+    },
+    "prompt.md": {
+      "bytes": 1312,
+      "sha256": "9a7bee8f3aee9e03de8594da5f2b2d6e1ead583adb156ec47b4dae661090b5cf"
+    },
+    "marker.txt": {
+      "bytes": 29,
+      "sha256": null,
+      "read_status": "DENIED_BY_EXTERNAL_TEMP_ACL"
+    },
+    "network_receipt.json": {
+      "bytes": 79,
+      "sha256": null,
+      "read_status": "DENIED_BY_EXTERNAL_TEMP_ACL"
+    }
+  }
+}

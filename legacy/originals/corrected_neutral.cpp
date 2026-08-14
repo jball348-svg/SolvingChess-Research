@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+static inline int F(int s){return s&7;} static inline int R(int s){return s>>3;} static inline int ch(int a,int b){return max(abs(F(a)-F(b)),abs(R(a)-R(b)));} static inline bool patt(int p,int t){return R(t)==R(p)+1&&abs(F(t)-F(p))==1;}
+// ---------- KPK ----------
+static inline int kenc(int wk,int pi,int bk,int st){return (((wk*6+pi)*64+bk)*2+st);} static inline void kdec(int id,int&w,int&p,int&b,int&s){s=id%2;id/=2;b=id%64;id/=64;p=id%6;id/=6;w=id;}
+static inline bool kval(int wk,int p,int bk,int st){if(wk==p||wk==bk||p==bk)return false;if(ch(wk,bk)<=1)return false;if(st==0&&patt(p,bk))return false;return true;}
+static inline void kgen(int wk,int pi,int bk,int st,vector<int>&su,int&tot,bool&prom,bool&cap){su.clear();tot=0;prom=cap=false;int p=15+8*pi;if(st==0){for(int df=-1;df<=1;df++)for(int dr=-1;dr<=1;dr++)if(df||dr){int nf=F(wk)+df,nr=R(wk)+dr;if(nf<0||nf>=8||nr<0||nr>=8)continue;int d=nr*8+nf;if(d==p||d==bk||ch(d,bk)<=1)continue;tot++;if(kval(d,p,bk,1))su.push_back(kenc(d,pi,bk,1));}int r=R(p);if(r==6){if(63!=wk&&63!=bk){tot++;prom=true;}}else{int d=p+8;if(d!=wk&&d!=bk){tot++;if(kval(wk,d,bk,1))su.push_back(kenc(wk,pi+1,bk,1));if(r==1){int d2=p+16;if(d2!=wk&&d2!=bk){tot++;if(kval(wk,d2,bk,1))su.push_back(kenc(wk,pi+2,bk,1));}}}}}else{for(int df=-1;df<=1;df++)for(int dr=-1;dr<=1;dr++)if(df||dr){int nf=F(bk)+df,nr=R(bk)+dr;if(nf<0||nf>=8||nr<0||nr>=8)continue;int d=nr*8+nf;if(d==wk||ch(wk,d)<=1)continue;bool cp=d==p;if(!cp&&patt(p,d))continue;tot++;if(cp){cap=true;continue;}if(kval(wk,p,d,0))su.push_back(kenc(wk,pi,d,0));}}}
+vector<uint8_t> solveKPK(){const int N=64*6*64*2;vector<uint8_t>v(N),stA(N),prA(N),cpA(N),win(N);vector<uint16_t>tot(N),rem;vector<int>ids,su;vector<uint32_t>ind(N);for(int w=0;w<64;w++)for(int pi=0;pi<6;pi++){int p=15+8*pi;for(int b=0;b<64;b++)for(int st=0;st<2;st++){int id=kenc(w,pi,b,st);if(kval(w,p,b,st)){v[id]=1;stA[id]=st;ids.push_back(id);}}}long long edges=0;for(int id:ids){int w,pi,b,st,t;bool pr,cp;kdec(id,w,pi,b,st);kgen(w,pi,b,st,su,t,pr,cp);tot[id]=t;prA[id]=pr;cpA[id]=cp;for(int d:su){ind[d]++;edges++;}}vector<uint32_t>off(N+1),cur;for(int i=0;i<N;i++)off[i+1]=off[i]+ind[i];cur=off;vector<uint32_t>pred(edges);for(int id:ids){int w,pi,b,st,t;bool pr,cp;kdec(id,w,pi,b,st);kgen(w,pi,b,st,su,t,pr,cp);for(int d:su)pred[cur[d]++]=id;}rem=tot;vector<int>L,NX;for(int id:ids)if(stA[id]==0&&prA[id]){win[id]=1;L.push_back(id);}while(!L.empty()){NX.clear();for(int d:L)for(uint32_t k=off[d];k<off[d+1];k++){int p=pred[k];if(win[p])continue;if(stA[p]==0){win[p]=1;NX.push_back(p);}else{if(rem[p])rem[p]--;if(rem[p]==0&&tot[p]>0&&!cpA[p]){win[p]=1;NX.push_back(p);}}}L.swap(NX);}return win;}
+// ---------- Four man ----------
+vector<int>bs;int bix[64];static inline int enc(int wk,int wb,int pi,int bk,int st){return ((((wk*32+bix[wb])*6+pi)*64+bk)*2+st);}static inline void dec(int id,int&w,int&wb,int&pi,int&b,int&st){st=id%2;id/=2;b=id%64;id/=64;pi=id%6;id/=6;int bi=id%32;id/=32;w=id;wb=bs[bi];}
+static inline bool batt(int wb,int t,int wk,int p){int df=F(t)-F(wb),dr=R(t)-R(wb);if(df==0||abs(df)!=abs(dr))return false;int sf=df>0?1:-1,sr=dr>0?1:-1;int f=F(wb)+sf,r=R(wb)+sr;while(f!=F(t)||r!=R(t)){int s=r*8+f;if(s==wk||s==p)return false;f+=sf;r+=sr;}return true;}
+static inline bool val4(int w,int wb,int p,int b,int st){if(w==wb||w==p||w==b||wb==p||wb==b||p==b)return false;if(ch(w,b)<=1)return false;if(st==0){if(patt(p,b)||batt(wb,b,w,p))return false;}return true;}
+struct GRes{int total=0; bool safeExit=false; bool unsafeExit=false;};
+static inline GRes gen4(int w,int wb,int pi,int b,int st,vector<int>&su,const vector<uint8_t>&kwin){su.clear();GRes g;int p=15+8*pi;if(st==0){for(int df=-1;df<=1;df++)for(int dr=-1;dr<=1;dr++)if(df||dr){int nf=F(w)+df,nr=R(w)+dr;if(nf<0||nf>=8||nr<0||nr>=8)continue;int d=nr*8+nf;if(d==wb||d==p||d==b||ch(d,b)<=1)continue;g.total++;if(val4(d,wb,p,b,1))su.push_back(enc(d,wb,pi,b,1));}const int D[4][2]={{1,1},{1,-1},{-1,1},{-1,-1}};for(auto&q:D){int f=F(wb)+q[0],r=R(wb)+q[1];while(f>=0&&f<8&&r>=0&&r<8){int d=r*8+f;if(d==w||d==p||d==b)break;g.total++;if(val4(w,d,p,b,1))su.push_back(enc(w,d,pi,b,1));f+=q[0];r+=q[1];}}int r=R(p);if(r==6){if(63!=w&&63!=wb&&63!=b){g.total++;g.unsafeExit=true;}}else{int d=p+8;if(d!=w&&d!=wb&&d!=b){g.total++;if(val4(w,wb,d,b,1))su.push_back(enc(w,wb,pi+1,b,1));if(r==1){int d2=p+16;if(d2!=w&&d2!=wb&&d2!=b){g.total++;if(val4(w,wb,d2,b,1))su.push_back(enc(w,wb,pi+2,b,1));}}}}}else{for(int df=-1;df<=1;df++)for(int dr=-1;dr<=1;dr++)if(df||dr){int nf=F(b)+df,nr=R(b)+dr;if(nf<0||nf>=8||nr<0||nr>=8)continue;int d=nr*8+nf;if(d==w||ch(w,d)<=1)continue;bool cb=d==wb,cp=d==p;if(!cp&&patt(p,d))continue;if(!cb){int p2=cp?-1:p;int df2=F(d)-F(wb),dr2=R(d)-R(wb);bool ba=false;if(df2!=0&&abs(df2)==abs(dr2)){int sf=df2>0?1:-1,sr=dr2>0?1:-1;int f=F(wb)+sf,r=R(wb)+sr;ba=true;while(f!=F(d)||r!=R(d)){int s=r*8+f;if(s==w||(p2>=0&&s==p2)){ba=false;break;}f+=sf;r+=sr;}}if(ba)continue;}g.total++;if(cp){g.safeExit=true;continue;}if(cb){int kid=kenc(w,pi,d,0);if(!kwin[kid])g.safeExit=true;else g.unsafeExit=true;continue;}if(val4(w,wb,p,d,0))su.push_back(enc(w,wb,pi,d,0));}}return g;}
+int main(){memset(bix,-1,sizeof(bix));for(int s=0;s<64;s++)if(((F(s)+R(s))&1)==1){bix[s]=bs.size();bs.push_back(s);}auto kwin=solveKPK();long long kw=accumulate(kwin.begin(),kwin.end(),0LL);cerr<<"KPK wins="<<kw<<"\n";const int N=64*32*6*64*2;vector<uint8_t>v(N),stA(N),safeX(N),unsafeX(N);vector<uint16_t>tot(N),rem;vector<int>ids,su;for(int w=0;w<64;w++)for(int bi=0;bi<32;bi++){int wb=bs[bi];for(int pi=0;pi<6;pi++){int p=15+8*pi;for(int b=0;b<64;b++)for(int st=0;st<2;st++){int id=((((w*32+bi)*6+pi)*64+b)*2+st);if(val4(w,wb,p,b,st)){v[id]=1;stA[id]=st;ids.push_back(id);}}}}vector<uint32_t>ind(N);long long edges=0, stal=0;for(int id:ids){int w,wb,pi,b,st;dec(id,w,wb,pi,b,st);auto g=gen4(w,wb,pi,b,st,su,kwin);tot[id]=g.total;safeX[id]=g.safeExit;unsafeX[id]=g.unsafeExit;if(g.total==0)stal++;for(int d:su){ind[d]++;edges++;}}cerr<<"valid="<<ids.size()<<" stalemates="<<stal<<" edges="<<edges<<"\n";vector<uint32_t>off(N+1),cur;for(int i=0;i<N;i++)off[i+1]=off[i]+ind[i];cur=off;vector<uint32_t>pred(edges);for(int id:ids){int w,wb,pi,b,st;dec(id,w,wb,pi,b,st);auto g=gen4(w,wb,pi,b,st,su,kwin);for(int d:su)pred[cur[d]++]=id;}
+ vector<int16_t>rank(N,-1);rem=tot;vector<int>L,NX;long long seed=0;for(int id:ids){int w,wb,pi,b,st;dec(id,w,wb,pi,b,st);if(b==63||tot[id]==0){rank[id]=0;L.push_back(id);seed++;}}
+ // Black states with an immediate safe capture are rank1 unless already seed. Add them as initial rank1; then propagate synchronously.
+ long long cum=seed;cout<<"rank 0 "<<seed<<"\n";int r=0;while(true){NX.clear();r++;
+   // direct safe exits only at rank1 (terminal edge rank0 equivalent)
+   if(r==1) for(int id:ids) if(rank[id]<0 && stA[id]==1 && safeX[id]){rank[id]=1;NX.push_back(id);} 
+   for(int d:L)for(uint32_t k=off[d];k<off[d+1];k++){int p=pred[k];if(rank[p]>=0)continue;if(stA[p]==1){rank[p]=r;NX.push_back(p);}else{if(rem[p])rem[p]--; if(rem[p]==0 && tot[p]>0 && !unsafeX[p]){rank[p]=r;NX.push_back(p);}}}
+   if(NX.empty()){cout<<"rank "<<r<<" 0 cumulative "<<cum<<"\n";break;}cum+=NX.size();cout<<"rank "<<r<<" "<<NX.size()<<" cumulative "<<cum<<"\n";L.swap(NX);
+ }
+ cout<<"TOTAL "<<cum<<" maxrank "<<r-1<<"\n";
+
+ // Universal non-bishop geometries and neutralisation attractor
+ const int GN=64*6*64*2; vector<uint16_t> glegal(GN,0), gsafe(GN,0);
+ auto gidof=[](int w,int pi,int b,int st){return (((w*6+pi)*64+b)*2+st);};
+ for(int id:ids){int w,wb,pi,b,st;dec(id,w,wb,pi,b,st);int g=gidof(w,pi,b,st);glegal[g]++;if(rank[id]>=0)gsafe[g]++;}
+ vector<uint8_t> guniv(GN,0); long long ug=0,ust=0;
+ for(int g=0;g<GN;g++) if(glegal[g]>0 && glegal[g]==gsafe[g]){guniv[g]=1;ug++;ust+=glegal[g];}
+ vector<int16_t> nrank(N,-1); vector<uint16_t> nrem=tot; vector<int> NL,NN;
+ long long extraTerm=0;
+ for(int id:ids){if(rank[id]<0)continue;int w,wb,pi,b,st;dec(id,w,wb,pi,b,st);int g=gidof(w,pi,b,st);bool targ=guniv[g] || tot[id]==0; if(targ){nrank[id]=0;NL.push_back(id);if(!guniv[g]&&tot[id]==0)extraTerm++;}}
+ long long ntot=NL.size(); cout<<"neutral target "<<ntot<<" universal_geoms "<<ug<<" universal_states "<<ust<<" extra_terminals "<<extraTerm<<"\n";
+ int nr=0; while(true){NN.clear();nr++;
+   if(nr==1) for(int id:ids) if(rank[id]>=0 && nrank[id]<0 && stA[id]==1 && safeX[id]){nrank[id]=1;NN.push_back(id);}
+   for(int d:NL)for(uint32_t k=off[d];k<off[d+1];k++){int p=pred[k];if(rank[p]<0||nrank[p]>=0)continue;if(stA[p]==1){nrank[p]=nr;NN.push_back(p);}else{if(nrem[p])nrem[p]--;if(nrem[p]==0&&tot[p]>0&&!unsafeX[p]){nrank[p]=nr;NN.push_back(p);}}}
+   if(NN.empty())break;ntot+=NN.size();cout<<"neutral rank "<<nr<<" "<<NN.size()<<" cumulative "<<ntot<<"\n";NL.swap(NN);
+ }
+ cout<<"NEUTRAL TOTAL "<<ntot<<" maxrank "<<nr-1<<"\n";
+ FILE* nf=fopen("/mnt/data/neutral_rank.bin","wb"); fwrite(nrank.data(),sizeof(int16_t),nrank.size(),nf); fclose(nf);
+ FILE* fp=fopen("/mnt/data/corrected_rank.bin","wb"); fwrite(rank.data(),sizeof(int16_t),rank.size(),fp); fclose(fp);
+
+}

@@ -1,0 +1,67 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "handoffs/normalized/G10_Technical_Handoff.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G10_Technical_Handoff.md",
+    "repository_path": "handoffs/normalized/G10_Technical_Handoff.md",
+    "sha256": "9215a8a757a04013d830c53fe21a0717d3eef82de36afd8ea2689cba3b9c0a56",
+    "size": 26407
+  },
+  "footer_text": [
+    "Solving Chess | Frozen closeout | 11 August 2026"
+  ],
+  "header_text": [
+    "G10 Final Chess Ruleset and State-Semantics Contract - Technical Handoff"
+  ],
+  "losses": [
+    {
+      "code": "HEADER_FOOTER_NOT_IN_BODY_MARKDOWN",
+      "count": 2,
+      "detail": "Header/footer visible text is recorded in audit metadata, not repeated in the body derivative.",
+      "severity": "documentary"
+    },
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 254,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G10_Technical_Handoff.docx",
+    "repository_path": "handoffs/originals/G10_Technical_Handoff.docx",
+    "sha256": "41267d308be04d79f078fbc3f41aa47add8d0a085bfe7b9cad1587edca7787be",
+    "size": 51330,
+    "visible_text_sequence_sha256": "1186f2b09ca6c31997d83172d086c1271e7e1ba494124a02b5dd249fa9df6436"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 1,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 28,
+    "hyperlinks": 0,
+    "list_items": 37,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 347,
+    "paragraphs": 361,
+    "pictures": 0,
+    "table_cells": 248,
+    "table_rows": 94,
+    "tables": 14,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

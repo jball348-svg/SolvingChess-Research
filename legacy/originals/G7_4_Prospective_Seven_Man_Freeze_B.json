@@ -1,0 +1,57 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "stage": "G7.4 seven-man / fortress-imbalance wave",
+  "freeze": "Prospective seven-man candidate freeze B",
+  "date": "2026-08-11",
+  "selection_timing": "Frozen after structural sampling and before any accepted W/D/L solve for G7F07/G7F08.",
+  "model": {
+    "material": "K+B+2P vs K+B+P",
+    "white_bishop": "wrong-colour relative to a8 (colour complex C=0 under C=(file+rank) mod 2)",
+    "white_pawns": ["a7", "c7"],
+    "black_pawn": "b2",
+    "pawn_window": "brink-only: pawns are fixed on rank 7/2 and have only legal promotion moves; captures by kings/bishops remove them into an internal optional-material closure",
+    "terminal_semantics": "ordinary mate/stalemate; either-side legal promotion is immediate win for promoting side; no repetition/en-passant/move-count state",
+    "static_validity": "distinct pieces, nonadjacent kings, bishop colour restrictions, side-not-to-move not already in check; same convention as certified G7F01/F02",
+    "purpose": "higher-tree multi-resource transition stress, matched bishop-colour exchange contrast, and an adversarial resource-safe TARGET test with three simultaneous one-move promotion resources"
+  },
+  "families": [
+    {
+      "id": "G7F07",
+      "name": "BB_opp_a7c7_b2",
+      "black_bishop_colour": 1,
+      "raw_encodings": 71368704,
+      "estimated_static_valid": 45971259,
+      "mean_legal_branch": 12.116,
+      "capture_density_pct": 1.818,
+      "checking_density_pct": 4.103,
+      "promotion_available_state_pct": 48.743,
+      "topology": "opposite-colour bishops; bishop-bishop direct exchange suppressed; three brink promotion resources"
+    },
+    {
+      "id": "G7F08",
+      "name": "BB_same_a7c7_b2",
+      "black_bishop_colour": 0,
+      "raw_encodings": 71368704,
+      "estimated_static_valid": 43135245,
+      "mean_legal_branch": 11.939,
+      "capture_density_pct": 4.629,
+      "checking_density_pct": 3.609,
+      "promotion_available_state_pct": 50.320,
+      "topology": "same-colour bishops; direct exchanges enabled; three brink promotion resources"
+    }
+  ],
+  "selection_reasoning": [
+    "a7 retains direct wrong-colour rook-pawn/corner ancestry without selecting on outcome truth.",
+    "c7 adds a second independent White conversion resource and multiple lower-material capture endpoints.",
+    "b2 gives Black an equally advanced opposing promotion resource, making race/resource guards nontrivial rather than automatically satisfied.",
+    "F07/F08 are a matched pair: pawn geometry and White bishop complex are fixed; only Black bishop colour changes.",
+    "The pair is materially seven-man and structurally distinct from merely shifting a G6 pawn file."
+  ],
+  "predeclared_transfer_tests": [
+    "Exact full-material W/D/L and lower-material signature DAG.",
+    "Direct capture endpoint diversity and exchange density.",
+    "Unchanged G6 TARGET_RACE_CLEAR/TARGET_RACE_PATH_CLEAR type/domain audit before any repaired target is proposed.",
+    "G6 strict attractor / branch-hyperkernel operations over exact lower-material endpoints where targets are sound.",
+    "Sanctuary compatibility audit: do not transfer the G6 faithful-fortress BK=a8 theorem across the brink promotion-terminal model without explicit re-certification."
+  ]
+}

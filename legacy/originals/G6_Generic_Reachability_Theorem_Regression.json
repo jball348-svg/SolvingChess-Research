@@ -1,0 +1,11 @@
+{
+  "seed": 608112026,
+  "trials": 100000,
+  "two_target_factorization_mismatches": 0,
+  "two_target_nonzero_cases": 2449,
+  "two_target_max_pure_size": 8,
+  "three_target_factorization_mismatches": 0,
+  "three_target_nonzero_cases": 89,
+  "three_target_max_irreducible_size": 3,
+  "note": "Independent randomized regression over arbitrary finite turn-based total game graphs; supports implementation/general theorem but is not a substitute for the mathematical proof."
+}

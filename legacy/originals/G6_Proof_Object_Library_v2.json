@@ -1,0 +1,223 @@
+{
+  "version": 2,
+  "date": "2026-08-11",
+  "programme": "G6 Grand Programme \u2014 G6.9 synthesis",
+  "type_system": {
+    "required_domain_fields": [
+      "state_universe",
+      "static_validity",
+      "legal_move_semantics",
+      "terminal_semantics",
+      "shortcut_semantics",
+      "player_roles",
+      "dependencies"
+    ],
+    "rule": "No proof object is portable across a change in any required domain field unless it is re-certified or a theorem explicitly quantifies over that field."
+  },
+  "general_graph_theorems": {
+    "STRICT_ATTRACTOR_FIXED_POINT": {
+      "status": "mathematical theorem / generic operation",
+      "statement": "For a finite turn-based game graph and exact target T, Attr(T) is the least fixed point containing T and closed under attacker-existential and defender-universal predecessors, under the declared shortcut semantics encoded in the graph.",
+      "composition_role": "Base reachability object; role-dual gives defender sanctuary attractors."
+    },
+    "BRANCH_KERNEL_FACTORIZATION_2": {
+      "status": "mathematical theorem; chess-machine factorization exact; independent generic regression",
+      "statement": "Let A1=Attr(T1), A2=Attr(T2), B=A1\u222aA2 and P=Attr(T1\u222aT2)\\B. Define K as residual defender states whose legal replies all enter B and whose replies are not contained wholly in A1 or wholly in A2. Then P is exactly the residual backward closure generated from K. Hence P is nonempty iff K is nonempty.",
+      "proof_idea": "Choose a minimum full-union attractor-rank state in nonempty P. It cannot be attacker-owned, because an attacker successor in a constituent basin would put it in that basin and a lower-rank pure successor contradicts minimality. It is therefore defender-owned; all lower-rank successors lie in B, and being outside each constituent requires replies escaping each constituent. This is K. Induction on union-attractor rank gives the full residual closure equality.",
+      "corollaries": [
+        "Attractor subsumption A1\u2286A2 or A2\u2286A1 implies zero pure bridge.",
+        "Defender-controlled alternative choice is the local kernel mechanism; propagation halos are ordinary backward closure."
+      ],
+      "chess_evidence": "Exact across 24 same-side N/B/R file arenas, G3 strict-pure audit, opposing-minor d7/b7, and two-sided race examples.",
+      "generic_regression": {
+        "seed": 608112026,
+        "trials": 100000,
+        "two_target_factorization_mismatches": 0,
+        "two_target_nonzero_cases": 2449,
+        "two_target_max_pure_size": 8,
+        "three_target_factorization_mismatches": 0,
+        "three_target_nonzero_cases": 89,
+        "three_target_max_irreducible_size": 3,
+        "note": "Independent randomized regression over arbitrary finite turn-based total game graphs; supports implementation/general theorem but is not a substitute for the mathematical proof."
+      }
+    },
+    "HYPERKERNEL_FACTORIZATION_N": {
+      "status": "mathematical finite-n theorem; n=3 machine-exact in chess and generic regression",
+      "statement": "For targets {Ti}_{i\u2208I}, define A_J=Attr(\u222a_{j\u2208J}Tj), base B=\u222a_{J\u228aI}A_J (equivalently the union of maximal proper-subunion attractors), and irreducible H=Attr(\u222a_{i\u2208I}Ti)\\B. H is exactly the residual backward closure of defender hyperkernel states whose replies all enter B but are not contained in any maximal proper-subunion attractor. Thus irreducible n-way composition is nonempty iff its hyperkernel is nonempty.",
+      "proof_idea": "The same minimum-rank argument as the two-target case forces a minimum irreducible state to be defender-owned, with all successors in the proper-subunion base and at least one successor outside each maximal proper-subunion basin. Rank induction yields factorization.",
+      "n3_chess_evidence": "Exact b-g N/B/R same-side atlas; e.g. d/e: 2,739 irreducible N states and 6,172 B states, zero R.",
+      "generic_regression": {
+        "seed": 608112026,
+        "trials": 100000,
+        "two_target_factorization_mismatches": 0,
+        "two_target_nonzero_cases": 2449,
+        "two_target_max_pure_size": 8,
+        "three_target_factorization_mismatches": 0,
+        "three_target_nonzero_cases": 89,
+        "three_target_max_irreducible_size": 3,
+        "note": "Independent randomized regression over arbitrary finite turn-based total game graphs; supports implementation/general theorem but is not a substitute for the mathematical proof."
+      }
+    },
+    "ROLE_DUAL_SANCTUARY_ATTRACTOR": {
+      "status": "mathematical role-dual operation; one exact fortress demonstration",
+      "statement": "Swapping existential/universal player roles in strict reachability gives a defender sanctuary attractor with the same fixed-point semantics.",
+      "fortress_evidence": {
+        "direct_sanctuary": 22008,
+        "defender_attractor": 228737,
+        "increment": 206729,
+        "draw_basin": 357171,
+        "draw_coverage_pct": 64.0413,
+        "false_white_wins": 0
+      }
+    }
+  },
+  "finite_chess_theorems": {
+    "RESTORATION_FAR5": {
+      "domain": "all pawn files a-h, pawn ranks2-7, X=N/B/R; projected exact KPK win; not immediate stalemate; BK-pawn Chebyshev distance>=5",
+      "antecedents": 15251718,
+      "violations": 0,
+      "status": "promoted finite theorem"
+    },
+    "RESTORATION_FAR3_SLIDERS": {
+      "domain": "same, X=B/R, BK-pawn distance>=3",
+      "antecedents": 20880614,
+      "violations": 0,
+      "status": "promoted finite theorem"
+    },
+    "RESTORATION_FAR3_KNIGHT_WITH_EXCEPTION": {
+      "antecedents": 11025864,
+      "violations": 96,
+      "exception_biconditional": {
+        "count": 96,
+        "false_positive_exception_states": 0,
+        "failures_outside_exception": 0,
+        "predicate": "pawn rank3; Black to move; knight on rank7 on pawn file; BK rank1 exactly 3 files inward; WK at least 5 files farther inward"
+      },
+      "status": "conditional theorem with exact compact exception"
+    },
+    "WRONG_COLOUR_CORNER_SANCTUARY": {
+      "status": "exact finite theorem under faithful promotion-continuation model",
+      "domain": "wrong-colour K+B+a-pawn vs K, pawn ranks2-7, bishop opposite a8 colour complex, stated G6 faithful terminal semantics",
+      "statement": "BK=a8 implies draw.",
+      "states": 22008,
+      "white_wins": 0
+    }
+  },
+  "reusable_empirical_schemas": {
+    "RESOURCE_SAFE_TARGET_CONSTRUCTOR": {
+      "status": "strong prospective schema; not asserted as universal theorem",
+      "normal_form": "CORE_TARGET \u2227 TERMINAL_SAFE \u2227 CONVERSION_PATH_AVAILABLE \u2227 OPPONENT_RACE_NONDOMINANT \u2227 OPPONENT_ACCESS_OUTSIDE_RELEVANT_CONE, with guards activated only when the arena contains the corresponding resource.",
+      "instances": {
+        "TARGET_SAFE": "zero-counterexample same-side a-h N/B/R rank5-7 and full-rank scans after terminal-stalemate guard",
+        "TARGET_NSAFE": "TARGET_SAFE + enemy knight graph distance to pawn >=4; exact on opposing-minor d7 discovery, b7 and f7 heldouts",
+        "TARGET_RACE_CLEAR": "race target + opponent promotion slower + WK not on own promotion square; exact on BCF discovery, CDG translation heldout and ABE edge heldout",
+        "TARGET_RACE_PATH_CLEAR": "TARGET_RACE_CLEAR + friendly minor not on own promotion square; exact DB-N/DB-B discovery, translated CE N/B, OOD BE N/B, and DB-R original"
+      },
+      "interpretation": "G5's geometric target was not universally wrong; it was an under-typed target whose validity depends on whether terminal, access, race and conversion resources can invalidate the intended semantic conversion."
+    },
+    "LOCALIZATION_LIFT": {
+      "status": "methodological diagnostic, not a chess theorem",
+      "definition": "lift = fraction(mixed residual geometries in slab) \u2212 fraction(all residual geometries in slab)",
+      "rule": "Raw slab coverage is insufficient evidence of a critical manifold when the slab also covers nearly all residual geometry. No universal numeric threshold is claimed.",
+      "atlas": {
+        "opposing_minor_d7": {
+          "mixed": 61027,
+          "one_move": 60908,
+          "mixed_pct": 99.805,
+          "all_residual_pct": 86.909,
+          "lift_pp": 12.896,
+          "off": 119
+        },
+        "opposing_minor_b7": {
+          "mixed": 47682,
+          "one_move": 47554,
+          "mixed_pct": 99.732,
+          "all_residual_pct": 79.379,
+          "lift_pp": 20.353,
+          "off": 128
+        },
+        "opposing_minor_f7": {
+          "mixed": 57751,
+          "one_move": 57610,
+          "mixed_pct": 99.756,
+          "all_residual_pct": 83.988,
+          "lift_pp": 15.768,
+          "off": 141
+        },
+        "fortress_a": {
+          "mixed": 1344,
+          "one_move": 1277,
+          "mixed_pct": 95.015,
+          "all_residual_pct": 69.441,
+          "lift_pp": 25.574,
+          "off": 67
+        },
+        "two_sided_BCF": {
+          "mixed": 13331,
+          "one_move": 13198,
+          "mixed_pct": 99.002,
+          "all_residual_pct": 96.739,
+          "lift_pp": 2.263,
+          "off": 133
+        },
+        "two_sided_CDG": {
+          "mixed": 13697,
+          "one_move": 13547,
+          "mixed_pct": 98.905,
+          "all_residual_pct": 97.512,
+          "lift_pp": 1.393,
+          "off": 150
+        },
+        "two_sided_ABE": {
+          "mixed": 12923,
+          "one_move": 12785,
+          "mixed_pct": 98.932,
+          "all_residual_pct": 95.961,
+          "lift_pp": 2.971,
+          "off": 138
+        },
+        "double_brink_N": {
+          "mixed": 5523,
+          "race_slab_mixed_pct": 100.0,
+          "race_slab_all_pct": 100.0,
+          "contact_one_move_mixed_pct": 86.312,
+          "contact_one_move_all_pct": 87.574
+        },
+        "double_brink_B": {
+          "mixed": 5085,
+          "race_slab_mixed_pct": 100.0,
+          "race_slab_all_pct": 100.0,
+          "contact_one_move_mixed_pct": 70.285,
+          "contact_one_move_all_pct": 71.41
+        }
+      }
+    }
+  },
+  "representation_regimes": {
+    "SELECTIVE_MANIFOLD": "Opposing-minor and faithful fortress: large positive localization lift, then small off-surface tail.",
+    "SATURATED_CLOCKS": "Dense two-sided races and double-brink: raw race-slab coverage near/at 100% but lift near zero, so the surface is not discriminative.",
+    "TRANSFERABLE_LOCAL_GRAMMAR": "Double-brink off-contact tail: 10-leaf exact grammar, no piece-type atom, exact on 133,699 non-vacuous held-out states.",
+    "COMPACT_BUT_NOT_THEOREM_TRANSFER": "Opposing-minor tail: compact grammar, ~99.7% held-out accuracy, but preserved counterexamples prevent theorem promotion.",
+    "LOOKUP_SCALE_FLOOR": "Historical G4/G5 tails: exact leaf/geometry cost near or above predeclared lookup threshold; STOP rather than square patching."
+  },
+  "model_principles": {
+    "TERMINAL_SEMANTICS_IS_TYPED": {
+      "status": "proof-system requirement demonstrated by exact counterfactual",
+      "statement": "Terminal semantics are part of the game graph and therefore part of every proof object's domain. A proof object cannot be transferred across changed terminal semantics without re-certification.",
+      "fortress_demonstration": {
+        "faithful_states": 1182440,
+        "faithful_W": 825269,
+        "faithful_D": 357171,
+        "shortcut_false_extra_W": 274296
+      }
+    }
+  },
+  "historical_taxonomy_corrections": {
+    "G3_bridge": "Historical return increment 2,852 is reproduced, but modern strict pure bridge is 978; the other 1,874 lie in Attr(INHERITS) once the first constituent attractor is computed separately.",
+    "G4_bridge": "Frozen G4 reports a 69,014 union-return increment over direct inheritance plus the independent target attractor. A modern strict-pure recount requires the unavailable implementation-level optional-pawn graph and is therefore not asserted in G6.9."
+  },
+  "certification_open_items": [
+    "Full implementation-level G4 optional-pawn/capture graph reconstruction.",
+    "Historical G5 max-rank labeling convention: frozen N/B=24/21; corrected-v2 membership-equivalent distances=26/22. Terminalized diagnostic explains B=21 but leaves N=25 vs frozen24."
+  ]
+}

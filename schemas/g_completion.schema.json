@@ -1,0 +1,1947 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solving-chess.local/schemas/g_completion.schema.json",
+  "title": "One-G Codex completion record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "programme",
+    "status",
+    "gate_result",
+    "state_transition",
+    "handoff_path",
+    "freeze_manifest_path",
+    "program_state_path",
+    "tests_run",
+    "validation_summary",
+    "blockers",
+    "next_programme",
+    "next_programme_authorized",
+    "human_input_required",
+    "human_input_reason",
+    "final_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "programme": {
+      "$ref": "#/$defs/programme"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "HOLD",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "gate_result": {
+      "enum": [
+        "PASS",
+        "HOLD",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "state_transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": {
+        "from": {
+          "$ref": "#/$defs/programme"
+        },
+        "to": {
+          "$ref": "#/$defs/programme"
+        }
+      }
+    },
+    "handoff_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+    },
+    "freeze_manifest_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+    },
+    "program_state_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+",
+      "const": "state/PROGRAM_STATE.json"
+    },
+    "tests_run": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command",
+          "exit_code",
+          "result"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_code": {
+            "type": "integer"
+          },
+          "result": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_RUN"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "validation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result",
+        "checks"
+      ],
+      "properties": {
+        "result": {
+          "enum": [
+            "PASS",
+            "HOLD",
+            "BLOCKED",
+            "FAILED"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "next_programme": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/programme"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "next_programme_authorized": {
+      "type": "boolean"
+    },
+    "human_input_required": {
+      "type": "boolean"
+    },
+    "human_input_reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "final_summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/programmeTransition"
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "status": {
+              "const": "PASS"
+            },
+            "gate_result": {
+              "const": "PASS"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "HOLD"
+            },
+            "gate_result": {
+              "const": "HOLD"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "BLOCKED"
+            },
+            "gate_result": {
+              "const": "BLOCKED"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "FAILED"
+            },
+            "gate_result": {
+              "const": "FAILED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "$ref": "#/$defs/passSuccessor",
+        "properties": {
+          "validation_summary": {
+            "properties": {
+              "result": {
+                "const": "PASS"
+              }
+            },
+            "required": [
+              "result"
+            ]
+          }
+        }
+      },
+      "else": {
+        "$ref": "#/$defs/stoppedCurrentProgramme"
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "human_input_required": {
+            "const": true
+          }
+        },
+        "required": [
+          "human_input_required"
+        ]
+      },
+      "then": {
+        "properties": {
+          "human_input_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "human_input_reason": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "programme": {
+      "type": "string",
+      "pattern": "^G(?:[1-9]|[1-3][0-9]|4[0-2])$"
+    },
+    "programmeTransition": {
+      "oneOf": [
+        {
+          "properties": {
+            "programme": {
+              "const": "G2"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G1"
+                },
+                "to": {
+                  "const": "G2"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G3"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G2"
+                },
+                "to": {
+                  "const": "G3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G4"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G3"
+                },
+                "to": {
+                  "const": "G4"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G5"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G4"
+                },
+                "to": {
+                  "const": "G5"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G6"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G5"
+                },
+                "to": {
+                  "const": "G6"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G7"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G6"
+                },
+                "to": {
+                  "const": "G7"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G8"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G7"
+                },
+                "to": {
+                  "const": "G8"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G9"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G8"
+                },
+                "to": {
+                  "const": "G9"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G10"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G9"
+                },
+                "to": {
+                  "const": "G10"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G11"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G10"
+                },
+                "to": {
+                  "const": "G11"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G12"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G11"
+                },
+                "to": {
+                  "const": "G12"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G13"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G12"
+                },
+                "to": {
+                  "const": "G13"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G14"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G13"
+                },
+                "to": {
+                  "const": "G14"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G15"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G14"
+                },
+                "to": {
+                  "const": "G15"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G16"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G15"
+                },
+                "to": {
+                  "const": "G16"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G17"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G16"
+                },
+                "to": {
+                  "const": "G17"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G18"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G17"
+                },
+                "to": {
+                  "const": "G18"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G19"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G18"
+                },
+                "to": {
+                  "const": "G19"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G20"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G19"
+                },
+                "to": {
+                  "const": "G20"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G21"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G20"
+                },
+                "to": {
+                  "const": "G21"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G22"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G21"
+                },
+                "to": {
+                  "const": "G22"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G23"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G22"
+                },
+                "to": {
+                  "const": "G23"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G24"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G23"
+                },
+                "to": {
+                  "const": "G24"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G25"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G24"
+                },
+                "to": {
+                  "const": "G25"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G26"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G25"
+                },
+                "to": {
+                  "const": "G26"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G27"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G26"
+                },
+                "to": {
+                  "const": "G27"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G28"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G27"
+                },
+                "to": {
+                  "const": "G28"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G29"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G28"
+                },
+                "to": {
+                  "const": "G29"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G30"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G29"
+                },
+                "to": {
+                  "const": "G30"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G31"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G30"
+                },
+                "to": {
+                  "const": "G31"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G32"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G31"
+                },
+                "to": {
+                  "const": "G32"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G33"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G32"
+                },
+                "to": {
+                  "const": "G33"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G34"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G33"
+                },
+                "to": {
+                  "const": "G34"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G35"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G34"
+                },
+                "to": {
+                  "const": "G35"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G36"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G35"
+                },
+                "to": {
+                  "const": "G36"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G37"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G36"
+                },
+                "to": {
+                  "const": "G37"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G38"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G37"
+                },
+                "to": {
+                  "const": "G38"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G39"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G38"
+                },
+                "to": {
+                  "const": "G39"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G40"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G39"
+                },
+                "to": {
+                  "const": "G40"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G41"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G40"
+                },
+                "to": {
+                  "const": "G41"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G42"
+            },
+            "state_transition": {
+              "properties": {
+                "from": {
+                  "const": "G41"
+                },
+                "to": {
+                  "const": "G42"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "passSuccessor": {
+      "oneOf": [
+        {
+          "properties": {
+            "programme": {
+              "const": "G2"
+            },
+            "next_programme": {
+              "const": "G3"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G3"
+            },
+            "next_programme": {
+              "const": "G4"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G4"
+            },
+            "next_programme": {
+              "const": "G5"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G5"
+            },
+            "next_programme": {
+              "const": "G6"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G6"
+            },
+            "next_programme": {
+              "const": "G7"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G7"
+            },
+            "next_programme": {
+              "const": "G8"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G8"
+            },
+            "next_programme": {
+              "const": "G9"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G9"
+            },
+            "next_programme": {
+              "const": "G10"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G10"
+            },
+            "next_programme": {
+              "const": "G11"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G11"
+            },
+            "next_programme": {
+              "const": "G12"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G12"
+            },
+            "next_programme": {
+              "const": "G13"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G13"
+            },
+            "next_programme": {
+              "const": "G14"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G14"
+            },
+            "next_programme": {
+              "const": "G15"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G15"
+            },
+            "next_programme": {
+              "const": "G16"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G16"
+            },
+            "next_programme": {
+              "const": "G17"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G17"
+            },
+            "next_programme": {
+              "const": "G18"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G18"
+            },
+            "next_programme": {
+              "const": "G19"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G19"
+            },
+            "next_programme": {
+              "const": "G20"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G20"
+            },
+            "next_programme": {
+              "const": "G21"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G21"
+            },
+            "next_programme": {
+              "const": "G22"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G22"
+            },
+            "next_programme": {
+              "const": "G23"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G23"
+            },
+            "next_programme": {
+              "const": "G24"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G24"
+            },
+            "next_programme": {
+              "const": "G25"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G25"
+            },
+            "next_programme": {
+              "const": "G26"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G26"
+            },
+            "next_programme": {
+              "const": "G27"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G27"
+            },
+            "next_programme": {
+              "const": "G28"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G28"
+            },
+            "next_programme": {
+              "const": "G29"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G29"
+            },
+            "next_programme": {
+              "const": "G30"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G30"
+            },
+            "next_programme": {
+              "const": "G31"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G31"
+            },
+            "next_programme": {
+              "const": "G32"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G32"
+            },
+            "next_programme": {
+              "const": "G33"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G33"
+            },
+            "next_programme": {
+              "const": "G34"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G34"
+            },
+            "next_programme": {
+              "const": "G35"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G35"
+            },
+            "next_programme": {
+              "const": "G36"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G36"
+            },
+            "next_programme": {
+              "const": "G37"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G37"
+            },
+            "next_programme": {
+              "const": "G38"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G38"
+            },
+            "next_programme": {
+              "const": "G39"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G39"
+            },
+            "next_programme": {
+              "const": "G40"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G40"
+            },
+            "next_programme": {
+              "const": "G41"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G41"
+            },
+            "next_programme": {
+              "const": "G42"
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G42"
+            },
+            "next_programme": {
+              "type": "null"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        }
+      ]
+    },
+    "stoppedCurrentProgramme": {
+      "oneOf": [
+        {
+          "properties": {
+            "programme": {
+              "const": "G2"
+            },
+            "next_programme": {
+              "const": "G2"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G3"
+            },
+            "next_programme": {
+              "const": "G3"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G4"
+            },
+            "next_programme": {
+              "const": "G4"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G5"
+            },
+            "next_programme": {
+              "const": "G5"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G6"
+            },
+            "next_programme": {
+              "const": "G6"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G7"
+            },
+            "next_programme": {
+              "const": "G7"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G8"
+            },
+            "next_programme": {
+              "const": "G8"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G9"
+            },
+            "next_programme": {
+              "const": "G9"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G10"
+            },
+            "next_programme": {
+              "const": "G10"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G11"
+            },
+            "next_programme": {
+              "const": "G11"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G12"
+            },
+            "next_programme": {
+              "const": "G12"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G13"
+            },
+            "next_programme": {
+              "const": "G13"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G14"
+            },
+            "next_programme": {
+              "const": "G14"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G15"
+            },
+            "next_programme": {
+              "const": "G15"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G16"
+            },
+            "next_programme": {
+              "const": "G16"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G17"
+            },
+            "next_programme": {
+              "const": "G17"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G18"
+            },
+            "next_programme": {
+              "const": "G18"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G19"
+            },
+            "next_programme": {
+              "const": "G19"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G20"
+            },
+            "next_programme": {
+              "const": "G20"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G21"
+            },
+            "next_programme": {
+              "const": "G21"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G22"
+            },
+            "next_programme": {
+              "const": "G22"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G23"
+            },
+            "next_programme": {
+              "const": "G23"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G24"
+            },
+            "next_programme": {
+              "const": "G24"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G25"
+            },
+            "next_programme": {
+              "const": "G25"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G26"
+            },
+            "next_programme": {
+              "const": "G26"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G27"
+            },
+            "next_programme": {
+              "const": "G27"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G28"
+            },
+            "next_programme": {
+              "const": "G28"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G29"
+            },
+            "next_programme": {
+              "const": "G29"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G30"
+            },
+            "next_programme": {
+              "const": "G30"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G31"
+            },
+            "next_programme": {
+              "const": "G31"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G32"
+            },
+            "next_programme": {
+              "const": "G32"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G33"
+            },
+            "next_programme": {
+              "const": "G33"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G34"
+            },
+            "next_programme": {
+              "const": "G34"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G35"
+            },
+            "next_programme": {
+              "const": "G35"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G36"
+            },
+            "next_programme": {
+              "const": "G36"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G37"
+            },
+            "next_programme": {
+              "const": "G37"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G38"
+            },
+            "next_programme": {
+              "const": "G38"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G39"
+            },
+            "next_programme": {
+              "const": "G39"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G40"
+            },
+            "next_programme": {
+              "const": "G40"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G41"
+            },
+            "next_programme": {
+              "const": "G41"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        },
+        {
+          "properties": {
+            "programme": {
+              "const": "G42"
+            },
+            "next_programme": {
+              "const": "G42"
+            },
+            "next_programme_authorized": {
+              "const": false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

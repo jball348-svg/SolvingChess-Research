@@ -1,0 +1,484 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solving-chess.local/schemas/autonomy_state.schema.json",
+  "title": "Solving Chess autonomy state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "orchestrator_state",
+    "updated_at",
+    "current_run",
+    "codex",
+    "retry_count",
+    "guardrails",
+    "last_accepted_freeze",
+    "validation_result",
+    "exit_status",
+    "stop_reason",
+    "real_research_loop_started"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "orchestrator_state": {
+      "enum": [
+        "STOPPED",
+        "RUNNING",
+        "VALIDATING",
+        "RECOVERING"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "current_run": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "programme",
+            "process_attempt",
+            "started_at",
+            "ended_at",
+            "prompt_sha256",
+            "result_sha256",
+            "git_commit_before",
+            "git_commit_after"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "programme": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "process_attempt": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "started_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "ended_at": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "prompt_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "result_sha256": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "git_commit_before": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "git_commit_after": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "codex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "executable_sha256",
+        "sandbox",
+        "approval_policy",
+        "network"
+      ],
+      "properties": {
+        "version": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "executable_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sandbox": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "approval_policy": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "network": {
+          "enum": [
+            "UNKNOWN",
+            "DISABLED",
+            "ENABLED",
+            "CONTROLLED"
+          ]
+        }
+      }
+    },
+    "retry_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "guardrails": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_retries",
+        "max_programmes",
+        "until_programme",
+        "runtime_budget_seconds"
+      ],
+      "properties": {
+        "max_retries": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_programmes": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "until_programme": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "runtime_budget_seconds": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "last_accepted_freeze": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "programme",
+            "commit",
+            "tag",
+            "validation_result"
+          ],
+          "properties": {
+            "programme": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "tag": {
+              "type": "string",
+              "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-(?:frozen|hold|blocked|failed)$"
+            },
+            "validation_result": {
+              "const": "PASS"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "validation_result": {
+      "enum": [
+        "NOT_RUN",
+        "PASS",
+        "HOLD",
+        "FAILED"
+      ]
+    },
+    "exit_status": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stop_reason": {
+      "enum": [
+        "BOOTSTRAP_IN_PROGRESS",
+        "NOT_STARTED",
+        "OPERATOR_STOP",
+        "VALIDATED_BLOCKED",
+        "VALIDATED_HOLD",
+        "VALIDATED_FAILED",
+        "INVALID_FREEZE",
+        "INCONSISTENT_REPOSITORY",
+        "CREDENTIALS_REQUIRED",
+        "EXTERNAL_AUTHORIZATION_REQUIRED",
+        "BUDGET_GUARDRAIL",
+        "MAXIMUM_PROGRAMME_REACHED",
+        "PROJECT_END",
+        "SUBPROCESS_FAILURE",
+        "MALFORMED_RESULT",
+        "NONE"
+      ]
+    },
+    "real_research_loop_started": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "orchestrator_state": {
+            "const": "RUNNING"
+          }
+        },
+        "required": [
+          "orchestrator_state"
+        ]
+      },
+      "then": {
+        "properties": {
+          "current_run": {
+            "type": "object"
+          },
+          "stop_reason": {
+            "const": "NONE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "orchestrator_state": {
+            "const": "STOPPED"
+          }
+        },
+        "required": [
+          "orchestrator_state"
+        ]
+      },
+      "then": {
+        "properties": {
+          "current_run": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

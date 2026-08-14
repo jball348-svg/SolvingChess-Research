@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "orchestrator_state": "STOPPED",
+  "updated_at": "2026-08-14T09:33:22Z",
+  "current_run": null,
+  "codex": {
+    "version": "codex-cli 0.147.0-alpha.6.6",
+    "executable_sha256": "592958896cbffa154709618476fc9c9bf7fe73957e9a4fc12094c5051b6c69b3",
+    "sandbox": "permission-profile:workspace-only; windows-elevated; invoking-controller-SID inheritable ACE on isolated worktree",
+    "approval_policy": "on-request+auto-review",
+    "network": "CONTROLLED"
+  },
+  "retry_count": 0,
+  "guardrails": {
+    "max_retries": 2,
+    "max_programmes": null,
+    "until_programme": null,
+    "runtime_budget_seconds": null
+  },
+  "last_accepted_freeze": null,
+  "validation_result": "PASS",
+  "exit_status": 0,
+  "stop_reason": "NOT_STARTED",
+  "real_research_loop_started": false
+}

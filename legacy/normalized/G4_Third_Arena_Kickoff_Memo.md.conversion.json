@@ -1,0 +1,57 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "legacy/normalized/G4_Third_Arena_Kickoff_Memo.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G4_Third_Arena_Kickoff_Memo.md",
+    "repository_path": "legacy/normalized/G4_Third_Arena_Kickoff_Memo.md",
+    "sha256": "4c25259cf9648274bb8ab66e5e0ec0923bd6512f4e5112660cb24a357a3c01ef",
+    "size": 10468
+  },
+  "footer_text": [],
+  "header_text": [],
+  "losses": [
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 5,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G4_Third_Arena_Kickoff_Memo.docx",
+    "repository_path": "legacy/originals/G4_Third_Arena_Kickoff_Memo.docx",
+    "sha256": "2a1d9ec91e781d98d596b7106046f3984cbe65e44d7e38053349f66defc7226c",
+    "size": 41015,
+    "visible_text_sequence_sha256": "b1eee20105699accb2b0609ec0cc57afa66ddbf974b070b4886263fdb104641f"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 0,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 24,
+    "hyperlinks": 0,
+    "list_items": 30,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 101,
+    "paragraphs": 101,
+    "pictures": 0,
+    "table_cells": 26,
+    "table_rows": 13,
+    "tables": 1,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

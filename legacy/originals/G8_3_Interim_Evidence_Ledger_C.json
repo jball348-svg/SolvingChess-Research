@@ -1,0 +1,101 @@
+{
+  "programme": "G8 Certificate Engine and Re-Ascent",
+  "stage": "G8.3 Recover six-man scale holds",
+  "freeze": "Interim Evidence Freeze C",
+  "date": "2026-08-11",
+  "status": "CLOSED — PASS VERY STRONGLY; F03/F04/F06 all recovered unchanged",
+  "semantics": {
+    "terminal": "ordinary mate/stalemate; promotion by either side immediate win; no repetition/en-passant/move-count state",
+    "captures": "typed transitions to exact lower-material signatures",
+    "arena_changes": "none"
+  },
+  "superseded": {
+    "overbroad_bishop_reconstruction": {
+      "status": "DISCARDED",
+      "reason": "misread bishop colour invariant as unrestricted 64-square bishop; frozen G7 raw width and source prove a single 32-square colour complex",
+      "accepted_truth": false
+    }
+  },
+  "regression_before_frontier": {
+    "F01": {"graph": 23728925, "W": 7282421, "B": 8205091, "D": 8241413, "full": 5105749, "fullW": 2506683, "fullB": 2519613, "fullD": 79453, "wall_s": 4.46},
+    "F02": {"graph": 22770972, "W": 7043319, "B": 7043319, "D": 8684334, "full": 4761076, "fullW": 2321127, "fullB": 2321127, "fullD": 118822, "wall_s": 4.36}
+  },
+  "recoveries": {
+    "F03": {
+      "family": "BN_opp_d7_e2",
+      "material": "K+B+P vs K+N+P",
+      "graph": 48028628,
+      "W": 15988090,
+      "B": 16147057,
+      "D": 15893481,
+      "full": 10631072,
+      "fullW": 5381419,
+      "fullB": 5055467,
+      "fullD": 194186,
+      "capture_edges": {"SIG7": 964540, "SIG11": 1204532, "SIG13": 1108688, "SIG14": 554624, "total": 3832384},
+      "producer_wall_s": 7.81,
+      "producer_peak_rss_kb": 81980,
+      "verifier_wall_s": 4.58,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 48028628,
+      "bellman_mismatches": 0,
+      "truth_sha256": "686bdf95d6d2ec16ed22868fed9269e92c94ab2b4476728341103354ce41ad34"
+    },
+    "F04": {
+      "family": "RB_c7_f2",
+      "material": "K+R+P vs K+B+P",
+      "graph": 44820777,
+      "W": 18876467,
+      "B": 13279606,
+      "D": 12664704,
+      "full": 9956314,
+      "fullW": 5170590,
+      "fullB": 4640695,
+      "fullD": 145029,
+      "capture_edges": {"SIG7": 1204113, "SIG11": 1411402, "SIG13": 485335, "SIG14": 1483432, "total": 4584282},
+      "producer_wall_s": 9.65,
+      "producer_peak_rss_kb": 77952,
+      "g7_runtime_floor_s": 180,
+      "speedup_lower_bound_vs_g7_floor": 18.65,
+      "verifier_wall_s": 5.38,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 44820777,
+      "bellman_mismatches": 0,
+      "truth_sha256": "a9af726992d8ec8eded325ada4d41458edb959d3cfc0967c0535207e863b4717"
+    },
+    "F06": {
+      "family": "QB_d7_e2",
+      "material": "K+Q+P vs K+B+P",
+      "graph": 40499052,
+      "W": 27773901,
+      "B": 8530120,
+      "D": 4195031,
+      "full": 8787241,
+      "fullW": 5210861,
+      "fullB": 3476720,
+      "fullD": 99660,
+      "capture_edges": {"SIG7": 1039257, "SIG11": 1556350, "SIG13": 1380393, "SIG14": 1539467, "total": 5515467},
+      "producer_wall_s": 12.22,
+      "producer_peak_rss_kb": 73236,
+      "g7_runtime_floor_s": 180,
+      "speedup_lower_bound_vs_g7_floor": 14.73,
+      "verifier_wall_s": 6.03,
+      "verifier_peak_rss_kb": 29320,
+      "static_mismatches": 0,
+      "bellman_checked": 40499052,
+      "bellman_mismatches": 0,
+      "truth_sha256": "fa93c352b9a0e489b323612710bc062ef27b25e08c751ce2ef98571f78e6f508"
+    }
+  },
+  "source_hashes": {
+    "producer_cpp": "7f95ba8adc1d9eed7c6c596a8d8d42e2b7990402e6f8771a4e865c8c1291505d",
+    "producer_binary": "f4f0a592187ea3744c07157a3501d0213dd5ea33cb97904dfc362d02343d0645",
+    "dump_producer_cpp": "7717b37d8c71ec41d86e9b66afaaf0b54614676b831112650cc8cf9600e30604",
+    "independent_verifier_cpp": "e2f5002d9d81822677f1720bd82c04e4985c024f5f0974ddfb4bba00355e9948",
+    "independent_verifier_binary": "e67549aae9075a46d69b2e122ade0016cec200c9dab235e394a56600f8a27d79"
+  },
+  "verdict": "PASS VERY STRONGLY",
+  "next_stage": "G8.4 — F07/F08 unchanged seven-man recovery; F10 full faithful table if economical"
+}

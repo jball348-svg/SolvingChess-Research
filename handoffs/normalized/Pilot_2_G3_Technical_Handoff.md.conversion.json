@@ -1,0 +1,57 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "handoffs/normalized/Pilot_2_G3_Technical_Handoff.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "Pilot_2_G3_Technical_Handoff.md",
+    "repository_path": "handoffs/normalized/Pilot_2_G3_Technical_Handoff.md",
+    "sha256": "b3e088bdf89e966aa1c1e1230d78c55a1d29c36b5e4dcf6369e705c183932fa0",
+    "size": 9028
+  },
+  "footer_text": [],
+  "header_text": [],
+  "losses": [
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 14,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "Pilot_2_G3_Technical_Handoff.docx",
+    "repository_path": "handoffs/originals/Pilot_2_G3_Technical_Handoff.docx",
+    "sha256": "117258872ce0066427b5a0787e5cf16da87b6448b946049b7ff688fc913c9b27",
+    "size": 40822,
+    "visible_text_sequence_sha256": "e70541eb75ea1191ca3b140b11fb23433052b5fcb3f066c992d6aead0a7334ef"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 0,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 14,
+    "hyperlinks": 0,
+    "list_items": 20,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 142,
+    "paragraphs": 142,
+    "pictures": 0,
+    "table_cells": 90,
+    "table_rows": 38,
+    "tables": 5,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

@@ -1,0 +1,65 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "legacy/normalized/G8_Certificate_Engine_and_Reascent_Kickoff_Memo.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G8_Certificate_Engine_and_Reascent_Kickoff_Memo.md",
+    "repository_path": "legacy/normalized/G8_Certificate_Engine_and_Reascent_Kickoff_Memo.md",
+    "sha256": "73d4357dd73efb5a6ff2f6013255d816611b83c4816b1673b27eb83f118b7dd1",
+    "size": 16426
+  },
+  "footer_text": [
+    "G8 Certificate Engine and Re-Ascent Programme Memo"
+  ],
+  "header_text": [],
+  "losses": [
+    {
+      "code": "HEADER_FOOTER_NOT_IN_BODY_MARKDOWN",
+      "count": 1,
+      "detail": "Header/footer visible text is recorded in audit metadata, not repeated in the body derivative.",
+      "severity": "documentary"
+    },
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 89,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G8_Certificate_Engine_and_Reascent_Kickoff_Memo.docx",
+    "repository_path": "legacy/originals/G8_Certificate_Engine_and_Reascent_Kickoff_Memo.docx",
+    "sha256": "e833cefd095976feb587d449ffb4870932092c90c77fec4fe480aeba765f770e",
+    "size": 44436,
+    "visible_text_sequence_sha256": "e9a63c4c33d9fe91b534eb7032418150554e402c8c4076b9b6140990a032b7d7"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 0,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 13,
+    "hyperlinks": 0,
+    "list_items": 54,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 156,
+    "paragraphs": 161,
+    "pictures": 0,
+    "table_cells": 81,
+    "table_rows": 31,
+    "tables": 4,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

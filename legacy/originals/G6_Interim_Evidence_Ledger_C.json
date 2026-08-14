@@ -1,0 +1,262 @@
+{
+  "programme": "G6 Grand Programme",
+  "freeze": "G6 synthesis checkpoint C",
+  "date": "2026-08-11",
+  "status": "interim; G6 remains open",
+  "authoritative_history": [
+    "G5_Prospective_Transfer_Benchmark_Technical_Handoff.docx",
+    "G4_Three_Pawn_Compositional_Proof_Technical_Handoff.docx",
+    "Pilot_2_G3_Technical_Handoff.docx",
+    "Pilot_2_K2P_vs_K_Technical_Handoff.docx",
+    "Pilot_1_Symbolic_Backward_Attractor_Technical_Handoff.docx"
+  ],
+  "g6_0": {
+    "G5_membership_regression": "exact counts/membership reproduced by corrected_v2; historical rank labels remain convention-mismatched 24/21 frozen vs 26/22 reconstructed",
+    "G3_bridge_reconstruction": "historical 2852 reproduced; modern strict pure=978",
+    "G4_full_reconstruction": "still open; prose handoff not treated as sufficient to invent optional-pawn/capture implementation; File Library source search endpoint errored during this pass"
+  },
+  "canonical_same_side_harness": {
+    "source": "g6_lab_corrected_v2.cpp",
+    "sha256": "db9db5d957c766298086a2bbfa557c467d88d0cc0ee7a2ea9e0662077b225ae4",
+    "regression": {
+      "KPK": [
+        41358,
+        28853,
+        12505
+      ],
+      "N": [
+        1211042,
+        1106864,
+        104178,
+        214344,
+        366763,
+        1086,
+        131
+      ],
+      "B": [
+        1180148,
+        1094908,
+        85240,
+        208717,
+        373545,
+        1557,
+        395
+      ]
+    }
+  },
+  "bridge_theory": {
+    "branch_kernel_factorization": "necessary-and-sufficient finite strict-reachability theorem; exact machine factorization across 24 same-side file/topology arenas, G3 strict bridge, opposing-minor d7/b7 and two-sided BCF",
+    "hyperkernel_3": "exact three-way irreducible factorization across b-g N/B/R same-side atlas",
+    "max_same_side_example": {
+      "arena": "bishop c-file",
+      "constituent_union": 678338,
+      "kernel": 4302,
+      "pure_bridge": 117430,
+      "union_attractor": 795768,
+      "kernel_amplification": 27.2966
+    },
+    "two_sided": {
+      "BCF": {
+        "pure": 530,
+        "kernel": 86
+      },
+      "CDG": {
+        "pure": 281,
+        "kernel": 33
+      },
+      "ABE": {
+        "pure": 764,
+        "kernel": 140
+      }
+    },
+    "opposing_minor": {
+      "d7": {
+        "pure": 83,
+        "kernel": 83
+      },
+      "b7": {
+        "pure": 2062,
+        "kernel": 1024
+      }
+    }
+  },
+  "restoration_theory": {
+    "far5": {
+      "domain": "all pawn files a-h, pawn ranks2-7, X=N/B/R; projected exact KPK win; not immediate stalemate; BK-pawn Chebyshev distance>=5",
+      "antecedents": 15251718,
+      "violations": 0,
+      "status": "promoted finite theorem"
+    },
+    "medium3_sliders": {
+      "domain": "same, X=B/R, BK-pawn distance>=3",
+      "antecedents": 20880614,
+      "violations": 0,
+      "status": "promoted finite theorem"
+    },
+    "medium3_knight": {
+      "antecedents": 11025864,
+      "violations": 96,
+      "exception_biconditional": {
+        "count": 96,
+        "false_positive_exception_states": 0,
+        "failures_outside_exception": 0,
+        "predicate": "pawn rank3; Black to move; knight on rank7 on pawn file; BK rank1 exactly 3 files inward; WK at least 5 files farther inward"
+      },
+      "status": "conditional theorem with exact compact exception"
+    }
+  },
+  "target_schema_evidence": {
+    "TARGET_SAFE": "zero-counterexample same-side a-h N/B/R rank5-7 and full-rank scans after terminal-stalemate guard",
+    "TARGET_NSAFE": "TARGET_SAFE + enemy knight graph distance to pawn >=4; exact on opposing-minor d7 discovery, b7 and f7 heldouts",
+    "TARGET_RACE_CLEAR": "race target + opponent promotion slower + WK not on own promotion square; exact on BCF discovery, CDG translation heldout and ABE edge heldout",
+    "TARGET_RACE_PATH_CLEAR": "TARGET_RACE_CLEAR + friendly minor not on own promotion square; exact DB-N/DB-B discovery, translated CE N/B, OOD BE N/B, and DB-R original"
+  },
+  "terminal_semantics": {
+    "historical_race_model": "promotion terminal where frozen arena semantics require it",
+    "faithful_fortress_model": {
+      "states": 1182440,
+      "W": 825269,
+      "D": 357171,
+      "BK_a8_draw_states": 22008,
+      "BK_a8_white_wins": 0,
+      "historical_promotion_terminal_false_extra_W": 274296
+    },
+    "typed_semantics_requirement": "terminal model is part of proof-object domain, not an implementation detail"
+  },
+  "defender_sanctuary": {
+    "direct_BK_a8": 22008,
+    "strict_defender_attractor": 228737,
+    "increment": 206729,
+    "draw_basin": 357171,
+    "coverage_pct": 64.0413,
+    "false_white_wins": 0
+  },
+  "critical_manifold_atlas": {
+    "opposing_minor_d7": {
+      "mixed": 61027,
+      "one_move": 60908,
+      "mixed_pct": 99.805,
+      "all_residual_pct": 86.909,
+      "lift_pp": 12.896,
+      "off": 119
+    },
+    "opposing_minor_b7": {
+      "mixed": 47682,
+      "one_move": 47554,
+      "mixed_pct": 99.732,
+      "all_residual_pct": 79.379,
+      "lift_pp": 20.353,
+      "off": 128
+    },
+    "opposing_minor_f7": {
+      "mixed": 57751,
+      "one_move": 57610,
+      "mixed_pct": 99.756,
+      "all_residual_pct": 83.988,
+      "lift_pp": 15.768,
+      "off": 141
+    },
+    "fortress_a": {
+      "mixed": 1344,
+      "one_move": 1277,
+      "mixed_pct": 95.015,
+      "all_residual_pct": 69.441,
+      "lift_pp": 25.574,
+      "off": 67
+    },
+    "two_sided_BCF": {
+      "mixed": 13331,
+      "one_move": 13198,
+      "mixed_pct": 99.002,
+      "all_residual_pct": 96.739,
+      "lift_pp": 2.263,
+      "off": 133
+    },
+    "two_sided_CDG": {
+      "mixed": 13697,
+      "one_move": 13547,
+      "mixed_pct": 98.905,
+      "all_residual_pct": 97.512,
+      "lift_pp": 1.393,
+      "off": 150
+    },
+    "two_sided_ABE": {
+      "mixed": 12923,
+      "one_move": 12785,
+      "mixed_pct": 98.932,
+      "all_residual_pct": 95.961,
+      "lift_pp": 2.971,
+      "off": 138
+    },
+    "double_brink_N": {
+      "mixed": 5523,
+      "race_slab_mixed_pct": 100.0,
+      "race_slab_all_pct": 100.0,
+      "contact_one_move_mixed_pct": 86.312,
+      "contact_one_move_all_pct": 87.574
+    },
+    "double_brink_B": {
+      "mixed": 5085,
+      "race_slab_mixed_pct": 100.0,
+      "race_slab_all_pct": 100.0,
+      "contact_one_move_mixed_pct": 70.285,
+      "contact_one_move_all_pct": 71.41
+    }
+  },
+  "symbolic_discovery": {
+    "opposing_minor": {
+      "d7_coarse_exact_leaves": 29,
+      "d7_to_b7_accuracy_pct": 99.7,
+      "d7b7_relative_exact_leaves": 27,
+      "f7_frozen_accuracy_pct": 99.767,
+      "status": "compact and highly portable, not exact cross-file theorem"
+    },
+    "double_brink": {
+      "training": "d7/f2 N+B off-contact tails",
+      "joint_exact_leaves": 10,
+      "piece_type_atom_needed": false,
+      "translated_c7_e2_N_errors": 0,
+      "translated_c7_e2_B_errors": 0,
+      "OOD_b7_e2_N_errors": 0,
+      "OOD_b7_e2_B_test": "vacuous: one-move contact tail empty",
+      "status": "exact held-out symbolic discovery success on non-vacuous translated N/B and OOD knight"
+    }
+  },
+  "scaling": {
+    "bands": [
+      "5-7",
+      "4-7",
+      "3-7",
+      "2-7"
+    ],
+    "N": {
+      "state_ratio_5to2": 2.0008,
+      "target_attr_exponent": 0.4207,
+      "attr_share_wins_start_pct": 33.135,
+      "attr_share_wins_end_pct": 22.471
+    },
+    "B": {
+      "state_ratio_5to2": 2.0014,
+      "target_attr_exponent": 0.648,
+      "attr_share_wins_start_pct": 34.117,
+      "attr_share_wins_end_pct": 26.884
+    },
+    "R": {
+      "state_ratio_5to2": 2.0003,
+      "target_attr_exponent": 0.9923,
+      "attr_share_wins_start_pct": 90.649,
+      "attr_share_wins_end_pct": 90.706
+    },
+    "interpretation": "description remains constant; rook proof coverage scales almost linearly while new minor-piece wins emerge faster than the fixed attractor"
+  },
+  "supersessions": [
+    "All earlier rank2/full-rank numbers produced before the missing rank2->rank4 reverse predecessor was fixed are superseded.",
+    "Superseded story: huge rank2 restoration phase transition and old >=5 knight edge failures. Corrected exact scans replace them.",
+    "Canonical corrected same-side source is g6_lab_corrected_v2.cpp, SHA256 db9db5...225ae4."
+  ],
+  "open_items": [
+    "Full implementation-level G4 optional-pawn graph reconstruction remains open.",
+    "Historical G5 max-rank label convention remains unresolved though truth membership/counts match.",
+    "G6 final closeout documents/specification/G7 memo not yet produced."
+  ]
+}

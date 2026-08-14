@@ -1,0 +1,2696 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://solving-chess.local/schemas/freeze_manifest.schema.json",
+  "title": "Solving Chess G freeze manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "previous_programme",
+    "programme",
+    "transition",
+    "freeze_status",
+    "gate_result",
+    "authority_inputs",
+    "artifacts",
+    "claims",
+    "negative_results",
+    "tests",
+    "validation",
+    "blockers",
+    "program_state_path",
+    "successor",
+    "git"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "previous_programme": {
+      "type": "string",
+      "enum": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42"
+      ]
+    },
+    "programme": {
+      "type": "string",
+      "enum": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42"
+      ]
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": {
+        "from": {
+          "type": "string",
+          "enum": [
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5",
+            "G6",
+            "G7",
+            "G8",
+            "G9",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G14",
+            "G15",
+            "G16",
+            "G17",
+            "G18",
+            "G19",
+            "G20",
+            "G21",
+            "G22",
+            "G23",
+            "G24",
+            "G25",
+            "G26",
+            "G27",
+            "G28",
+            "G29",
+            "G30",
+            "G31",
+            "G32",
+            "G33",
+            "G34",
+            "G35",
+            "G36",
+            "G37",
+            "G38",
+            "G39",
+            "G40",
+            "G41",
+            "G42"
+          ]
+        },
+        "to": {
+          "type": "string",
+          "enum": [
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5",
+            "G6",
+            "G7",
+            "G8",
+            "G9",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G14",
+            "G15",
+            "G16",
+            "G17",
+            "G18",
+            "G19",
+            "G20",
+            "G21",
+            "G22",
+            "G23",
+            "G24",
+            "G25",
+            "G26",
+            "G27",
+            "G28",
+            "G29",
+            "G30",
+            "G31",
+            "G32",
+            "G33",
+            "G34",
+            "G35",
+            "G36",
+            "G37",
+            "G38",
+            "G39",
+            "G40",
+            "G41",
+            "G42"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/$defs/sequentialTransition"
+        }
+      ]
+    },
+    "freeze_status": {
+      "enum": [
+        "FROZEN",
+        "REJECTED"
+      ]
+    },
+    "gate_result": {
+      "enum": [
+        "PASS",
+        "HOLD",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "authority_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "role"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "role": {
+            "enum": [
+              "ROADMAP",
+              "PREDECESSOR_HANDOFF",
+              "ACTIVE_CONTRACT",
+              "OTHER_FROZEN_AUTHORITY"
+            ]
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "size",
+          "role"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "role": {
+            "enum": [
+              "TECHNICAL_HANDOFF",
+              "FREEZE_MANIFEST",
+              "CERTIFICATE",
+              "TRUTH",
+              "SOURCE",
+              "VALIDATION",
+              "NEGATIVE_RESULT",
+              "LOG",
+              "OTHER"
+            ]
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "classification",
+          "statement",
+          "evidence_paths"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "enum": [
+              "EXACT",
+              "FORMALLY_PROVED",
+              "INDEPENDENTLY_REPLAYED",
+              "EMPIRICAL",
+              "ENGINEERING_TEST",
+              "CONDITIONAL",
+              "SUPERSEDED",
+              "FAILED",
+              "BLOCKED",
+              "NOT_CLAIMED"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_paths": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+            }
+          }
+        }
+      }
+    },
+    "negative_results": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result",
+        "report_path"
+      ],
+      "properties": {
+        "result": {
+          "enum": [
+            "PASS",
+            "HOLD",
+            "BLOCKED",
+            "FAILED"
+          ]
+        },
+        "report_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "program_state_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$)).+"
+    },
+    "successor": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "programme",
+            "authorized"
+          ],
+          "properties": {
+            "programme": {
+              "type": "string",
+              "enum": [
+                "G1",
+                "G2",
+                "G3",
+                "G4",
+                "G5",
+                "G6",
+                "G7",
+                "G8",
+                "G9",
+                "G10",
+                "G11",
+                "G12",
+                "G13",
+                "G14",
+                "G15",
+                "G16",
+                "G17",
+                "G18",
+                "G19",
+                "G20",
+                "G21",
+                "G22",
+                "G23",
+                "G24",
+                "G25",
+                "G26",
+                "G27",
+                "G28",
+                "G29",
+                "G30",
+                "G31",
+                "G32",
+                "G33",
+                "G34",
+                "G35",
+                "G36",
+                "G37",
+                "G38",
+                "G39",
+                "G40",
+                "G41",
+                "G42"
+              ]
+            },
+            "authorized": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "transaction_owner",
+        "planned_tag",
+        "commit",
+        "tag"
+      ],
+      "properties": {
+        "transaction_owner": {
+          "const": "OUTER_CONTROLLER"
+        },
+        "planned_tag": {
+          "type": "string",
+          "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-(?:frozen|hold|blocked|failed)$"
+        },
+        "commit": {
+          "type": "null"
+        },
+        "tag": {
+          "type": "null"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G1"
+            },
+            "programme": {
+              "const": "G2"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G1"
+                },
+                "to": {
+                  "const": "G2"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G3"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G2"
+            },
+            "programme": {
+              "const": "G3"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G2"
+                },
+                "to": {
+                  "const": "G3"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G4"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G3"
+            },
+            "programme": {
+              "const": "G4"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G3"
+                },
+                "to": {
+                  "const": "G4"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G5"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G4"
+            },
+            "programme": {
+              "const": "G5"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G4"
+                },
+                "to": {
+                  "const": "G5"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G6"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G5"
+            },
+            "programme": {
+              "const": "G6"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G5"
+                },
+                "to": {
+                  "const": "G6"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G7"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G6"
+            },
+            "programme": {
+              "const": "G7"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G6"
+                },
+                "to": {
+                  "const": "G7"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G8"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G7"
+            },
+            "programme": {
+              "const": "G8"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G7"
+                },
+                "to": {
+                  "const": "G8"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G9"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G8"
+            },
+            "programme": {
+              "const": "G9"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G8"
+                },
+                "to": {
+                  "const": "G9"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G10"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G9"
+            },
+            "programme": {
+              "const": "G10"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G9"
+                },
+                "to": {
+                  "const": "G10"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G11"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G10"
+            },
+            "programme": {
+              "const": "G11"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G10"
+                },
+                "to": {
+                  "const": "G11"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G12"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G11"
+            },
+            "programme": {
+              "const": "G12"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G11"
+                },
+                "to": {
+                  "const": "G12"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G13"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G12"
+            },
+            "programme": {
+              "const": "G13"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G12"
+                },
+                "to": {
+                  "const": "G13"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G14"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G13"
+            },
+            "programme": {
+              "const": "G14"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G13"
+                },
+                "to": {
+                  "const": "G14"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G15"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G14"
+            },
+            "programme": {
+              "const": "G15"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G14"
+                },
+                "to": {
+                  "const": "G15"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G16"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G15"
+            },
+            "programme": {
+              "const": "G16"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G15"
+                },
+                "to": {
+                  "const": "G16"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G17"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G16"
+            },
+            "programme": {
+              "const": "G17"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G16"
+                },
+                "to": {
+                  "const": "G17"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G18"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G17"
+            },
+            "programme": {
+              "const": "G18"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G17"
+                },
+                "to": {
+                  "const": "G18"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G19"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G18"
+            },
+            "programme": {
+              "const": "G19"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G18"
+                },
+                "to": {
+                  "const": "G19"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G20"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G19"
+            },
+            "programme": {
+              "const": "G20"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G19"
+                },
+                "to": {
+                  "const": "G20"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G21"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G20"
+            },
+            "programme": {
+              "const": "G21"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G20"
+                },
+                "to": {
+                  "const": "G21"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G22"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G21"
+            },
+            "programme": {
+              "const": "G22"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G21"
+                },
+                "to": {
+                  "const": "G22"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G23"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G22"
+            },
+            "programme": {
+              "const": "G23"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G22"
+                },
+                "to": {
+                  "const": "G23"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G24"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G23"
+            },
+            "programme": {
+              "const": "G24"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G23"
+                },
+                "to": {
+                  "const": "G24"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G25"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G24"
+            },
+            "programme": {
+              "const": "G25"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G24"
+                },
+                "to": {
+                  "const": "G25"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G26"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G25"
+            },
+            "programme": {
+              "const": "G26"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G25"
+                },
+                "to": {
+                  "const": "G26"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G27"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G26"
+            },
+            "programme": {
+              "const": "G27"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G26"
+                },
+                "to": {
+                  "const": "G27"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G28"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G27"
+            },
+            "programme": {
+              "const": "G28"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G27"
+                },
+                "to": {
+                  "const": "G28"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G29"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G28"
+            },
+            "programme": {
+              "const": "G29"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G28"
+                },
+                "to": {
+                  "const": "G29"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G30"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G29"
+            },
+            "programme": {
+              "const": "G30"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G29"
+                },
+                "to": {
+                  "const": "G30"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G31"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G30"
+            },
+            "programme": {
+              "const": "G31"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G30"
+                },
+                "to": {
+                  "const": "G31"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G32"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G31"
+            },
+            "programme": {
+              "const": "G32"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G31"
+                },
+                "to": {
+                  "const": "G32"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G33"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G32"
+            },
+            "programme": {
+              "const": "G33"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G32"
+                },
+                "to": {
+                  "const": "G33"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G34"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G33"
+            },
+            "programme": {
+              "const": "G34"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G33"
+                },
+                "to": {
+                  "const": "G34"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G35"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G34"
+            },
+            "programme": {
+              "const": "G35"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G34"
+                },
+                "to": {
+                  "const": "G35"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G36"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G35"
+            },
+            "programme": {
+              "const": "G36"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G35"
+                },
+                "to": {
+                  "const": "G36"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G37"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G36"
+            },
+            "programme": {
+              "const": "G37"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G36"
+                },
+                "to": {
+                  "const": "G37"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G38"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G37"
+            },
+            "programme": {
+              "const": "G38"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G37"
+                },
+                "to": {
+                  "const": "G38"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G39"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G38"
+            },
+            "programme": {
+              "const": "G39"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G38"
+                },
+                "to": {
+                  "const": "G39"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G40"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G39"
+            },
+            "programme": {
+              "const": "G40"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G39"
+                },
+                "to": {
+                  "const": "G40"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G41"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G40"
+            },
+            "programme": {
+              "const": "G41"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G40"
+                },
+                "to": {
+                  "const": "G41"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "properties": {
+                "programme": {
+                  "const": "G42"
+                }
+              },
+              "required": [
+                "programme"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "previous_programme": {
+              "const": "G41"
+            },
+            "programme": {
+              "const": "G42"
+            },
+            "transition": {
+              "properties": {
+                "from": {
+                  "const": "G41"
+                },
+                "to": {
+                  "const": "G42"
+                }
+              },
+              "required": [
+                "from",
+                "to"
+              ]
+            },
+            "successor": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "gate_result": {
+              "const": "PASS"
+            },
+            "freeze_status": {
+              "const": "FROZEN"
+            },
+            "validation": {
+              "properties": {
+                "result": {
+                  "const": "PASS"
+                }
+              },
+              "required": [
+                "result"
+              ]
+            },
+            "git": {
+              "properties": {
+                "planned_tag": {
+                  "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-frozen$"
+                }
+              },
+              "required": [
+                "planned_tag"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "gate_result": {
+              "const": "HOLD"
+            },
+            "freeze_status": {
+              "const": "FROZEN"
+            },
+            "validation": {
+              "properties": {
+                "result": {
+                  "const": "HOLD"
+                }
+              },
+              "required": [
+                "result"
+              ]
+            },
+            "git": {
+              "properties": {
+                "planned_tag": {
+                  "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-hold$"
+                }
+              },
+              "required": [
+                "planned_tag"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "gate_result": {
+              "const": "BLOCKED"
+            },
+            "freeze_status": {
+              "const": "FROZEN"
+            },
+            "validation": {
+              "properties": {
+                "result": {
+                  "const": "BLOCKED"
+                }
+              },
+              "required": [
+                "result"
+              ]
+            },
+            "git": {
+              "properties": {
+                "planned_tag": {
+                  "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-blocked$"
+                }
+              },
+              "required": [
+                "planned_tag"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "gate_result": {
+              "const": "FAILED"
+            },
+            "freeze_status": {
+              "const": "FROZEN"
+            },
+            "validation": {
+              "properties": {
+                "result": {
+                  "const": "FAILED"
+                }
+              },
+              "required": [
+                "result"
+              ]
+            },
+            "git": {
+              "properties": {
+                "planned_tag": {
+                  "pattern": "^g(?:[1-9]|[1-3][0-9]|4[0-2])-failed$"
+                }
+              },
+              "required": [
+                "planned_tag"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "sequentialTransition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G1"
+            },
+            "to": {
+              "const": "G2"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G2"
+            },
+            "to": {
+              "const": "G3"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G3"
+            },
+            "to": {
+              "const": "G4"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G4"
+            },
+            "to": {
+              "const": "G5"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G5"
+            },
+            "to": {
+              "const": "G6"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G6"
+            },
+            "to": {
+              "const": "G7"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G7"
+            },
+            "to": {
+              "const": "G8"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G8"
+            },
+            "to": {
+              "const": "G9"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G9"
+            },
+            "to": {
+              "const": "G10"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G10"
+            },
+            "to": {
+              "const": "G11"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G11"
+            },
+            "to": {
+              "const": "G12"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G12"
+            },
+            "to": {
+              "const": "G13"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G13"
+            },
+            "to": {
+              "const": "G14"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G14"
+            },
+            "to": {
+              "const": "G15"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G15"
+            },
+            "to": {
+              "const": "G16"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G16"
+            },
+            "to": {
+              "const": "G17"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G17"
+            },
+            "to": {
+              "const": "G18"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G18"
+            },
+            "to": {
+              "const": "G19"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G19"
+            },
+            "to": {
+              "const": "G20"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G20"
+            },
+            "to": {
+              "const": "G21"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G21"
+            },
+            "to": {
+              "const": "G22"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G22"
+            },
+            "to": {
+              "const": "G23"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G23"
+            },
+            "to": {
+              "const": "G24"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G24"
+            },
+            "to": {
+              "const": "G25"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G25"
+            },
+            "to": {
+              "const": "G26"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G26"
+            },
+            "to": {
+              "const": "G27"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G27"
+            },
+            "to": {
+              "const": "G28"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G28"
+            },
+            "to": {
+              "const": "G29"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G29"
+            },
+            "to": {
+              "const": "G30"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G30"
+            },
+            "to": {
+              "const": "G31"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G31"
+            },
+            "to": {
+              "const": "G32"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G32"
+            },
+            "to": {
+              "const": "G33"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G33"
+            },
+            "to": {
+              "const": "G34"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G34"
+            },
+            "to": {
+              "const": "G35"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G35"
+            },
+            "to": {
+              "const": "G36"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G36"
+            },
+            "to": {
+              "const": "G37"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G37"
+            },
+            "to": {
+              "const": "G38"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G38"
+            },
+            "to": {
+              "const": "G39"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G39"
+            },
+            "to": {
+              "const": "G40"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G40"
+            },
+            "to": {
+              "const": "G41"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from",
+            "to"
+          ],
+          "properties": {
+            "from": {
+              "const": "G41"
+            },
+            "to": {
+              "const": "G42"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

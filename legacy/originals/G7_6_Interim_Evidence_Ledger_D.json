@@ -1,0 +1,51 @@
+{
+  "programme": "G7 Higher-Tree Position Discovery",
+  "stage": "G7.6",
+  "freeze": "Interim Evidence Freeze D",
+  "date": "2026-08-11",
+  "verdict": "PASS STRONGLY: strategy-filtered reachability and Filter-Pivot Factorization promoted as new G7 proof-language candidates; multiple tempting candidates reduced or falsified under subsumption discipline.",
+  "new_objects": {
+    "G7.FILTERED_ATTRACTOR.v0.1": {
+      "classification": "derived universal operator / new proof-language strategy-filter contract",
+      "check_corridor": {
+        "F01": {"ordinary_full": 146068, "filtered_full": 146044, "share_pct": 99.9836},
+        "F02": {"ordinary_full": 612427, "filtered_full": 582247, "share_pct": 95.0721},
+        "F09": {"ordinary": 8295062, "filtered": 2461867, "share_pct": 29.6787, "audit_member_bad": 0, "audit_outside_qual": 0}
+      },
+      "F02_hyperkernel_overlap": {"irreducible": 7195, "in_check_corridor": 1235, "pct": 17.1647}
+    },
+    "G7.FILTER_PIVOT.v0.1": {
+      "classification": "universal/mathematical derived factorization; new G7 composition object",
+      "F01": {"difference": 24, "kernel": 24, "amplification": 1.0, "closure": 24, "missing": 0, "extra": 0},
+      "F02": {"difference": 30180, "kernel": 19890, "amplification": 1.51735, "closure": 30180, "missing": 0, "extra": 0},
+      "F09": {"difference": 5833195, "kernel": 517120, "amplification": 11.28015741, "closure": 5833195, "missing": 0, "extra": 0},
+      "generic_regression": {"graphs": 100000, "factorization_mismatches": 0, "nonempty_equivalence_failures": 0, "nontrivial_graphs": 19214}
+    }
+  },
+  "subsumed_or_existing_type": {
+    "MULTIPROJ_CONVERSION_SAFE_v1": {
+      "initial_exact": {"F01": 2114676, "F02": 1904795, "errors": 0},
+      "subsumed_by_single_projection_guarded_restore": {"F01": 2119202, "F02": 1921464, "errors": 0},
+      "verdict": "REJECT AS NEW OBJECT; second projection narrows rather than strengthens theorem."
+    },
+    "G7.RESTORE.CONVERSION_SAFE_WHITE_MOBILE.v0.1": {
+      "classification": "conditional finite theorem under existing G6 RESTORE/INHERITS type",
+      "guard": "restored White mobile piece not on own promotion square and not in opponent pawn immediate promotion-capture cone",
+      "F01": {"antecedent": 2119202, "errors": 0},
+      "F02": {"antecedent": 1921464, "errors": 0}
+    },
+    "EXCHANGE_FUNNEL": "reduces to G6 Branch-Kernel when material endpoints are targets",
+    "TRANSITION_HYPERKERNEL": "reduces to G6 finite-n Hyperkernel"
+  },
+  "falsifications_and_holds": {
+    "F09_broad_projection_consensus": {"both_projection_wins": 11245091, "full_draw_failures": 3011, "immediate_stalemates": 2055},
+    "F10_sanctuary_access": {"static_valid": 33305146, "full_WDL": "scale hold", "BK_h8_states": 586893, "immediate_checkmates": 3578, "universal_BK_h8_draw": "FALSIFIED"},
+    "F11_F12_multiproj_holdouts": "retired before outcome evaluation because candidate was subsumed by simpler G6 RESTORE form; F11 incomplete solve emitted no WDL",
+    "strategy_palette_sweep": "execution-budget hold; emitted no certified result and is excluded from evidence"
+  },
+  "pivot_semantics": {
+    "F01": {"kernel": 24, "king_only": 24, "bishop_only": 0},
+    "F02": {"kernel": 19890, "king_only": 1721, "bishop_only": 18169},
+    "F09": {"kernel": 517120, "king_only": 215588, "bishop_only": 9965, "pawn_only": 196613, "king_bishop": 6084, "king_pawn": 83120, "bishop_pawn": 818, "all_three": 4932}
+  }
+}

@@ -1,0 +1,19 @@
+[project]
+name = "solving-chess-research"
+version = "0.1.0"
+description = "Auditable research-programme migration and autonomous execution infrastructure"
+requires-python = ">=3.11"
+dependencies = [
+  "filelock==3.20.3",
+  "jsonschema==4.26.0",
+  "psutil==7.2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+

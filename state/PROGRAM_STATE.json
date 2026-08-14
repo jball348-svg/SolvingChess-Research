@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "solving-chess",
+  "generated_at": "2026-08-14T09:33:22Z",
+  "permanent_roadmap": {
+    "path": "roadmap/normalized/G9_G10_Onwards_Long_Range_Plan.md",
+    "original_path": "roadmap/originals/G9_G10_Onwards_Long_Range_Plan.docx",
+    "sha256": "2ccb06fad1d9cbe42631e40861f8982bffdeefe8c981ecda5b7c2f470fdd77b9",
+    "identity_status": "VERIFIED",
+    "role": "PERMANENT_STRATEGIC_AUTHORITY"
+  },
+  "latest_completed_programme": {
+    "programme": "G13",
+    "number": 13,
+    "title": "Distributed and Checkpointed Exact-Compute Platform",
+    "research_status": "COMPLETED",
+    "core_result": "PASS",
+    "roadmap_gate": "HOLD",
+    "notes": "The deterministic/checkpointed engineering platform passed its own engineering workload. The mandatory replay of the exact G12 reference bundle remains NOT_PERFORMED, so the full roadmap advance gate did not pass."
+  },
+  "latest_frozen_handoff": {
+    "programme": "G13",
+    "path": "handoffs/normalized/G13_Technical_Handoff.md",
+    "original_path": "handoffs/originals/G13_Technical_Handoff.docx",
+    "sha256": "34cc4caea8fdf9902bd04f14701660f5942c6f12ef3901d50164523330302194",
+    "identity_status": "VERIFIED"
+  },
+  "next_programme": {
+    "programme": "G14",
+    "number": 14,
+    "title": "Proof Store and Content-Addressed Dependency Graph",
+    "sequentially_permitted": true,
+    "authorized": true,
+    "started": false,
+    "launch_status": "NOT_STARTED",
+    "authorization_reason": "G14 is the authorized next sequential programme after bootstrap acceptance. It remains not started and may be launched only by a later explicit outer-controller --start; the bootstrap process itself is prohibited from invoking it."
+  },
+  "routing_transition": {
+    "from": "G13",
+    "to": "G14"
+  },
+  "active_contracts": {
+    "rules": {
+      "id": "G10.RULES.v1.0",
+      "kind": "RULES",
+      "status": "ACTIVE",
+      "authority_path": "handoffs/normalized/G10_Technical_Handoff.md",
+      "original_authority_path": "handoffs/originals/G10_Technical_Handoff.docx",
+      "sha256": "41267d308be04d79f078fbc3f41aa47add8d0a085bfe7b9cad1587edca7787be",
+      "notes": "Semantic chess-rules authority. Later serialization contracts do not rewrite it."
+    },
+    "state_serialization": {
+      "id": "G12.STATE.SERIAL.v2",
+      "kind": "STATE_SERIALIZATION",
+      "status": "ACTIVE",
+      "authority_path": "handoffs/normalized/G12_Technical_Handoff.md",
+      "original_authority_path": "handoffs/originals/G12_Technical_Handoff.docx",
+      "sha256": "958367f224467efc439217ac7a546249915e7a596717e8ad0c2131349e50eff3",
+      "notes": "Forward canonical full-state and repetition serialization profile."
+    },
+    "compute": {
+      "id": "G13.COMPUTE.CONTRACT.v1",
+      "kind": "COMPUTE",
+      "status": "ACTIVE",
+      "authority_path": "handoffs/normalized/G13_Technical_Handoff.md",
+      "original_authority_path": "handoffs/originals/G13_Technical_Handoff.docx",
+      "sha256": "34cc4caea8fdf9902bd04f14701660f5942c6f12ef3901d50164523330302194",
+      "notes": "Execution and provenance interface. Engineering validation is not chess truth."
+    },
+    "proof_certificate_contracts": [
+      {
+        "id": "G12.CLEAN-RANK-SAFETY",
+        "kind": "PROOF_CERTIFICATE",
+        "status": "ACTIVE",
+        "authority_path": "handoffs/normalized/G12_Technical_Handoff.md",
+        "original_authority_path": "handoffs/originals/G12_Technical_Handoff.docx",
+        "sha256": "958367f224467efc439217ac7a546249915e7a596717e8ad0c2131349e50eff3",
+        "notes": "Forward certificate/replay contract inherited by later programmes."
+      }
+    ]
+  },
+  "frozen_exceptions": [
+    {
+      "id": "G10_ORIGINAL_MACHINE_IDENTITY_CHAIN",
+      "status": "OPEN",
+      "description": "At the G11 freeze the original G10 machine payload was unavailable. Exact G10_Semantics_Contract_Bundle.zip bytes are now recovered and their internal rules/vectors and frozen SHA-256 pass integrity checks. The required original conformance replay is still NOT_PERFORMED. G12.STATE.SERIAL.v2 remains a distinct versioned forward identity and must never be aliased to G10.",
+      "implications": [
+        "Historical G11 remains HOLD as frozen; current recovery does not retroactively rewrite its verdict.",
+        "A later governed replay may close the operational conformance gap without merging G10 and G12 identities."
+      ],
+      "expected_sha256": "a0c5c2df8f8f61d8f6365ae8750491e3d64df821d060f9d24edb6ad9342b0793",
+      "observed_sha256": "a0c5c2df8f8f61d8f6365ae8750491e3d64df821d060f9d24edb6ad9342b0793",
+      "bytes_status": "RECOVERED_EXACT_BYTES",
+      "integrity_status": "VERIFIED",
+      "replay_status": "NOT_PERFORMED"
+    },
+    {
+      "id": "G11_CONFORMANCE_BUNDLE_RECOVERY",
+      "status": "OPEN",
+      "description": "Exact G11_Conformance_Bundle.zip bytes are recovered at the frozen identity. This preserves the historical evidence but does not by itself perform the pending original G10-to-G11 conformance replay.",
+      "implications": [
+        "Historical G11 HOLD remains unchanged.",
+        "The recovered G11 bytes are available to a later governed replay."
+      ],
+      "expected_sha256": "874c69b11d6e2d1aa5d4f5de96c3ef96a8e9307c49cd5f53e7b5c4a3849aab5c",
+      "observed_sha256": "874c69b11d6e2d1aa5d4f5de96c3ef96a8e9307c49cd5f53e7b5c4a3849aab5c",
+      "bytes_status": "RECOVERED_EXACT_BYTES",
+      "integrity_status": "VERIFIED",
+      "replay_status": "NOT_PERFORMED"
+    },
+    {
+      "id": "G12_BUNDLE_G13_ACCEPTANCE_REPLAY",
+      "status": "OPEN",
+      "description": "Exact G12_Final_Rules_Reference_Bundle.zip bytes have been recovered during migration and match the frozen expected SHA-256. The mandatory G13 kill/restart/repartition acceptance replay has not been performed.",
+      "implications": [
+        "G13 core engineering remains PASS but its roadmap advance gate remains HOLD.",
+        "G17 remains blocked.",
+        "Recovery of bytes alone is not an independently replayed chess result."
+      ],
+      "expected_sha256": "7641e0f8a4e621efb90b75cd3ce99b44e96c07a2f3541114611126a076d5695c",
+      "observed_sha256": "7641e0f8a4e621efb90b75cd3ce99b44e96c07a2f3541114611126a076d5695c",
+      "bytes_status": "RECOVERED_EXACT_BYTES",
+      "integrity_status": "VERIFIED",
+      "replay_status": "NOT_PERFORMED"
+    }
+  ],
+  "live_blockers": [
+    {
+      "id": "G13_MANDATORY_G12_REPLAY_OPEN",
+      "status": "OPEN",
+      "description": "The recovered exact G12 bundle has not been replayed through the G13 acceptance campaign.",
+      "blocks": [
+        "G15",
+        "G17"
+      ],
+      "required_resolution": "Run the frozen G13 adapter/campaign against the exact recovered G12 bundle and reproduce the required truth, certificate and canonical artifact hashes under the mandated failure/repartition regimes."
+    },
+    {
+      "id": "G14_NOT_COMPLETED",
+      "status": "OPEN",
+      "description": "G14 has not started and therefore has not supplied the proof-store dependency required by G15.",
+      "blocks": [
+        "G15"
+      ],
+      "required_resolution": "Complete and freeze G14 under its legitimate gate after a separately authorized research run."
+    }
+  ],
+  "broken_historical_chains": [
+    {
+      "id": "G10_UNAVAILABLE_AT_G11_FREEZE",
+      "status": "BROKEN_PRESERVED",
+      "description": "The original G10 machine payload was unavailable at the historical G11 freeze. Exact bytes are now recovered and verified, but the historical record remains preserved and the original conformance replay is not yet performed. The authorized G12 v2 branch remains a distinct identity."
+    }
+  ],
+  "completed_gates": [
+    {
+      "programme": "G12",
+      "gate": "AUTHORISED_SUPERSEDING_ARTIFACT_BRANCH",
+      "result": "PASS",
+      "notes": "Forward state/certificate profile frozen without rewriting the G10 historical break."
+    },
+    {
+      "programme": "G13",
+      "gate": "CORE_ENGINEERING_PLATFORM",
+      "result": "PASS",
+      "notes": "Synthetic engineering workload only; not chess truth."
+    }
+  ],
+  "held_gates": [
+    {
+      "programme": "G11",
+      "gate": "HISTORICAL_ORIGINAL_G10_PAYLOAD_CONFORMANCE",
+      "result": "HOLD",
+      "reason": "Original G10 machine payload unavailable; G12 created an explicitly versioned forward branch."
+    },
+    {
+      "programme": "G13",
+      "gate": "ROADMAP_ADVANCE",
+      "result": "HOLD",
+      "reason": "Mandatory exact G12 reference-bundle replay remains NOT_PERFORMED."
+    }
+  ],
+  "blocked_downstream_programmes": [
+    {
+      "programme": "G15",
+      "status": "BLOCKED",
+      "reasons": [
+        "G14 has not started or passed.",
+        "The open G13 mandatory G12 replay exception remains binding."
+      ]
+    },
+    {
+      "programme": "G17",
+      "status": "BLOCKED",
+      "reasons": [
+        "The G13 roadmap advance gate remains HOLD until the mandatory exact G12 replay passes.",
+        "Required foundation stages G14 and G15 are incomplete."
+      ]
+    }
+  ],
+  "registries": {
+    "artifact_registry_path": "state/ARTIFACT_REGISTRY.json",
+    "artifact_registry_sha256": "482199338b76d8c3e0a67f162cfb7324e0b7186508cfdc929651dd1f21cf476c",
+    "reference_registry_path": "state/REFERENCE_REGISTRY.json",
+    "reference_registry_sha256": "6507a501831c7498c8cadb2c2afb68627668feafbe64d36e67a8b0eb23142fe1"
+  },
+  "repository_bootstrap": {
+    "version": "1.0.0",
+    "completion_status": "COMPLETE",
+    "autonomous_loop_readiness": "READY",
+    "real_loop_running": false,
+    "validation_summary": "Bootstrap acceptance PASS: migration, governance schemas, repository validation, orchestration tests and the preferred-profile real-CLI synthetic smoke passed. G14 remains not started; no real research loop or new chess research has run."
+  },
+  "last_frozen_git": {
+    "status": "NOT_FROZEN",
+    "commit": null,
+    "tag": null
+  },
+  "claim_boundary": {
+    "bootstrap_is_research": false,
+    "g14_research_progress": "NONE",
+    "new_chess_truth_claimed": false
+  }
+}

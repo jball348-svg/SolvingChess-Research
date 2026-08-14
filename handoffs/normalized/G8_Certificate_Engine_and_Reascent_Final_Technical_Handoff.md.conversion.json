@@ -1,0 +1,67 @@
+{
+  "audit_kind": "DOCX_TO_MARKDOWN_CONVERSION",
+  "audit_path": "handoffs/normalized/G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.md.conversion.json",
+  "conversion": {
+    "method": "solving-chess-stdlib-ooxml-to-markdown",
+    "timestamp": "2026-08-13T00:00:00Z",
+    "tool_version": "1.0.0"
+  },
+  "derivative": {
+    "authority": "NON_AUTHORITATIVE_DERIVATIVE",
+    "filename": "G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.md",
+    "repository_path": "handoffs/normalized/G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.md",
+    "sha256": "b0375f6fba391cb295eca8aaef4bd1143b38bfd794b2d8f2aeb2387d5a34dcd9",
+    "size": 21956
+  },
+  "footer_text": [
+    "Frozen closeout - 11 August 2026"
+  ],
+  "header_text": [
+    "G8 Certificate Engine and Re-Ascent - Final Technical Handoff"
+  ],
+  "losses": [
+    {
+      "code": "HEADER_FOOTER_NOT_IN_BODY_MARKDOWN",
+      "count": 2,
+      "detail": "Header/footer visible text is recorded in audit metadata, not repeated in the body derivative.",
+      "severity": "documentary"
+    },
+    {
+      "code": "RUN_FORMATTING_SIMPLIFIED",
+      "count": 435,
+      "detail": "Character-level Word formatting is simplified; visible text and block semantics are retained.",
+      "severity": "documentary"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "authority": "CONTROLLING_IMMUTABLE_ORIGINAL",
+    "filename": "G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.docx",
+    "repository_path": "handoffs/originals/G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.docx",
+    "sha256": "093093c84748cb9ce7a99efd499e6e58acee041e6f7d38b532d5af81267dbf36",
+    "size": 50635,
+    "visible_text_sequence_sha256": "5d77e31e473dac105f1b548d7ec2f997abd62dcd3789a14cae77b79ace8ca73e"
+  },
+  "statistics": {
+    "callouts": 0,
+    "code_paragraphs": 4,
+    "content_controls": 0,
+    "drawings": 0,
+    "headings": 20,
+    "hyperlinks": 0,
+    "list_items": 18,
+    "math_objects": 0,
+    "merged_table_cells": 0,
+    "nested_tables": 0,
+    "nonempty_paragraphs": 508,
+    "paragraphs": 528,
+    "pictures": 0,
+    "table_cells": 431,
+    "table_rows": 101,
+    "tables": 18,
+    "tracked_deletions": 0,
+    "tracked_insertions": 0,
+    "unsupported_body_elements": 0
+  },
+  "status": "LOSS_AUDITED_WITH_LIMITATIONS"
+}

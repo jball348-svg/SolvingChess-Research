@@ -1,0 +1,1612 @@
+{
+  "programme": "G8 Certificate Engine and Re-Ascent",
+  "stage": "G8.5 Strategy-language algebra",
+  "freeze": "Interim Evidence Freeze E",
+  "date": "2026-08-11",
+  "status": "CLOSED \u2014 PASS VERY STRONGLY",
+  "contract": {
+    "palette": [
+      "CHECK",
+      "CAPTURE",
+      "FORCING",
+      "KING_ONLY",
+      "PAWN_ONLY",
+      "MOBILE_PIECE_ONLY"
+    ],
+    "forcing_definition": "CHECK \u222a CAPTURE",
+    "target_entry_exemption": true,
+    "switch_definition": "S(F\u2192G)=Attr_F(C_G), with C_G=Attr_G(T) as the next-phase target and target-entry exemption",
+    "no_posthoc_filters": true,
+    "check_or_promotion_threat": "NOT INSTANTIATED \u2014 no exact move-local prospective definition frozen before evaluation",
+    "targets": {
+      "F01-F06": "frozen G7 three exact material endpoint targets SIG7,SIG11,SIG14",
+      "F07-F08": "direct seven-man single-resource endpoint analogue SIG15,SIG23,SIG30, frozen before filter results",
+      "F09": "frozen faithful safe-conversion TARGET"
+    },
+    "F10": "not strategy-swept; no strategy TARGET contract was prospectively frozen for F10 in G8.5"
+  },
+  "ordinary": {
+    "F01": 146068,
+    "F02": 612427,
+    "F03": 623638,
+    "F04": 3089492,
+    "F06": 4896620,
+    "F07": 1186903,
+    "F08": 927338,
+    "F09": 8295062
+  },
+  "single_language": {
+    "F01": {
+      "CHECK": {
+        "attr": 146044,
+        "retention": 99.9835693,
+        "q": 24,
+        "piv": 24,
+        "amp": 1,
+        "fixedBad": 0,
+        "recon": 24,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.745
+      },
+      "CAPTURE": {
+        "attr": 143710,
+        "retention": 98.3856833803,
+        "q": 2358,
+        "piv": 2309,
+        "amp": 1.0212213079,
+        "fixedBad": 0,
+        "recon": 2358,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.78
+      },
+      "FORCING": {
+        "attr": 146044,
+        "retention": 99.9835692965,
+        "q": 24,
+        "piv": 24,
+        "amp": 1.0,
+        "fixedBad": 0,
+        "recon": 24,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.754
+      },
+      "KING_ONLY": {
+        "attr": 144179,
+        "retention": 98.7067667114,
+        "q": 1889,
+        "piv": 1849,
+        "amp": 1.0216333153,
+        "fixedBad": 0,
+        "recon": 1889,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.751
+      },
+      "PAWN_ONLY": {
+        "attr": 143710,
+        "retention": 98.3856833803,
+        "q": 2358,
+        "piv": 2309,
+        "amp": 1.0212213079,
+        "fixedBad": 0,
+        "recon": 2358,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.74
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 145599,
+        "retention": 99.6789166689,
+        "q": 469,
+        "piv": 460,
+        "amp": 1.0195652174,
+        "fixedBad": 0,
+        "recon": 469,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.747
+      }
+    },
+    "F02": {
+      "CHECK": {
+        "attr": 582247,
+        "retention": 95.07206573,
+        "q": 30180,
+        "piv": 19890,
+        "amp": 1.5173454,
+        "fixedBad": 0,
+        "recon": 30180,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.755
+      },
+      "CAPTURE": {
+        "attr": 557375,
+        "retention": 91.0108470071,
+        "q": 55052,
+        "piv": 43693,
+        "amp": 1.2599729934,
+        "fixedBad": 0,
+        "recon": 55052,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.75
+      },
+      "FORCING": {
+        "attr": 582247,
+        "retention": 95.0720657319,
+        "q": 30180,
+        "piv": 19890,
+        "amp": 1.5173453997,
+        "fixedBad": 0,
+        "recon": 30180,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.746
+      },
+      "KING_ONLY": {
+        "attr": 560379,
+        "retention": 91.5013544471,
+        "q": 52048,
+        "piv": 45342,
+        "amp": 1.1478981959,
+        "fixedBad": 0,
+        "recon": 52048,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.767
+      },
+      "PAWN_ONLY": {
+        "attr": 557375,
+        "retention": 91.0108470071,
+        "q": 55052,
+        "piv": 43693,
+        "amp": 1.2599729934,
+        "fixedBad": 0,
+        "recon": 55052,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.76
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 603816,
+        "retention": 98.5939548714,
+        "q": 8611,
+        "piv": 3856,
+        "amp": 2.2331431535,
+        "fixedBad": 0,
+        "recon": 8611,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.772
+      }
+    },
+    "F03": {
+      "CHECK": {
+        "attr": 581914,
+        "retention": 93.30958024,
+        "q": 41724,
+        "piv": 19293,
+        "amp": 2.162649666,
+        "fixedBad": 0,
+        "recon": 41724,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.395
+      },
+      "CAPTURE": {
+        "attr": 568146,
+        "retention": 91.101889237,
+        "q": 55492,
+        "piv": 32128,
+        "amp": 1.7272161355,
+        "fixedBad": 0,
+        "recon": 55492,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.382
+      },
+      "FORCING": {
+        "attr": 581914,
+        "retention": 93.3095802373,
+        "q": 41724,
+        "piv": 19293,
+        "amp": 2.1626496657,
+        "fixedBad": 0,
+        "recon": 41724,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.39
+      },
+      "KING_ONLY": {
+        "attr": 586792,
+        "retention": 94.0917647738,
+        "q": 36846,
+        "piv": 21554,
+        "amp": 1.7094738796,
+        "fixedBad": 0,
+        "recon": 36846,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.365
+      },
+      "PAWN_ONLY": {
+        "attr": 568146,
+        "retention": 91.101889237,
+        "q": 55492,
+        "piv": 32128,
+        "amp": 1.7272161355,
+        "fixedBad": 0,
+        "recon": 55492,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.365
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 594708,
+        "retention": 95.3610908893,
+        "q": 28930,
+        "piv": 20680,
+        "amp": 1.3989361702,
+        "fixedBad": 0,
+        "recon": 28930,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.389
+      }
+    },
+    "F04": {
+      "CHECK": {
+        "attr": 2484665,
+        "retention": 80.42309221,
+        "q": 604827,
+        "piv": 309005,
+        "amp": 1.95733726,
+        "fixedBad": 0,
+        "recon": 604827,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.201
+      },
+      "CAPTURE": {
+        "attr": 1761987,
+        "retention": 57.0316090801,
+        "q": 1327505,
+        "piv": 708744,
+        "amp": 1.8730387841,
+        "fixedBad": 0,
+        "recon": 1327505,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.166
+      },
+      "FORCING": {
+        "attr": 2484665,
+        "retention": 80.4230922106,
+        "q": 604827,
+        "piv": 309005,
+        "amp": 1.9573372599,
+        "fixedBad": 0,
+        "recon": 604827,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.969
+      },
+      "KING_ONLY": {
+        "attr": 1816124,
+        "retention": 58.7839036321,
+        "q": 1273368,
+        "piv": 807831,
+        "amp": 1.5762801873,
+        "fixedBad": 0,
+        "recon": 1273368,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.948
+      },
+      "PAWN_ONLY": {
+        "attr": 1761987,
+        "retention": 57.0316090801,
+        "q": 1327505,
+        "piv": 708744,
+        "amp": 1.8730387841,
+        "fixedBad": 0,
+        "recon": 1327505,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.954
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 2877371,
+        "retention": 93.1341139579,
+        "q": 212121,
+        "piv": 39107,
+        "amp": 5.4241184443,
+        "fixedBad": 0,
+        "recon": 212121,
+        "miss": 0,
+        "extra": 0,
+        "sec": 1.913
+      }
+    },
+    "F06": {
+      "CHECK": {
+        "attr": 4843717,
+        "retention": 98.91960168,
+        "q": 52903,
+        "piv": 29522,
+        "amp": 1.791985638,
+        "fixedBad": 0,
+        "recon": 52903,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.266
+      },
+      "CAPTURE": {
+        "attr": 2357434,
+        "retention": 48.14410757,
+        "q": 2539186,
+        "piv": 1392149,
+        "amp": 1.823932639,
+        "fixedBad": 0,
+        "recon": 2539186,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.49
+      },
+      "FORCING": {
+        "attr": 4843717,
+        "retention": 98.91960168,
+        "q": 52903,
+        "piv": 29522,
+        "amp": 1.791985638,
+        "fixedBad": 0,
+        "recon": 52903,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.255
+      },
+      "KING_ONLY": {
+        "attr": 2385133,
+        "retention": 48.70978348,
+        "q": 2511487,
+        "piv": 1390547,
+        "amp": 1.806114428,
+        "fixedBad": 0,
+        "recon": 2511487,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.479
+      },
+      "PAWN_ONLY": {
+        "attr": 2357434,
+        "retention": 48.14410757,
+        "q": 2539186,
+        "piv": 1392149,
+        "amp": 1.823932639,
+        "fixedBad": 0,
+        "recon": 2539186,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.555
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 4846005,
+        "retention": 98.96632779,
+        "q": 50615,
+        "piv": 32657,
+        "amp": 1.549897419,
+        "fixedBad": 0,
+        "recon": 50615,
+        "miss": 0,
+        "extra": 0,
+        "sec": 2.321
+      }
+    },
+    "F07": {
+      "CHECK": {
+        "attr": 1093512,
+        "retention": 92.13153897,
+        "q": 93391,
+        "piv": 58000,
+        "amp": 1.610189655,
+        "fixedBad": 0,
+        "recon": 93391,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.783
+      },
+      "CAPTURE": {
+        "attr": 983658,
+        "retention": 82.8760227247,
+        "q": 203245,
+        "piv": 166144,
+        "amp": 1.2233062885,
+        "fixedBad": 0,
+        "recon": 203245,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.806
+      },
+      "FORCING": {
+        "attr": 1093512,
+        "retention": 92.1315389716,
+        "q": 93391,
+        "piv": 58000,
+        "amp": 1.6101896552,
+        "fixedBad": 0,
+        "recon": 93391,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.795
+      },
+      "KING_ONLY": {
+        "attr": 1000035,
+        "retention": 84.2558321952,
+        "q": 186868,
+        "piv": 178855,
+        "amp": 1.044801655,
+        "fixedBad": 0,
+        "recon": 186868,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.808
+      },
+      "PAWN_ONLY": {
+        "attr": 983658,
+        "retention": 82.8760227247,
+        "q": 203245,
+        "piv": 166144,
+        "amp": 1.2233062885,
+        "fixedBad": 0,
+        "recon": 203245,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.795
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 1149297,
+        "retention": 96.831586069,
+        "q": 37606,
+        "piv": 8585,
+        "amp": 4.3804309843,
+        "fixedBad": 0,
+        "recon": 37606,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.79
+      }
+    },
+    "F08": {
+      "CHECK": {
+        "attr": 883585,
+        "retention": 95.28187133,
+        "q": 43753,
+        "piv": 25734,
+        "amp": 1.700202067,
+        "fixedBad": 0,
+        "recon": 43753,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.701
+      },
+      "CAPTURE": {
+        "attr": 799827,
+        "retention": 86.249781633,
+        "q": 127511,
+        "piv": 108453,
+        "amp": 1.1757258905,
+        "fixedBad": 0,
+        "recon": 127511,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.705
+      },
+      "FORCING": {
+        "attr": 883585,
+        "retention": 95.2818713349,
+        "q": 43753,
+        "piv": 25734,
+        "amp": 1.7002020673,
+        "fixedBad": 0,
+        "recon": 43753,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.709
+      },
+      "KING_ONLY": {
+        "attr": 804157,
+        "retention": 86.7167095493,
+        "q": 123181,
+        "piv": 107500,
+        "amp": 1.1458697674,
+        "fixedBad": 0,
+        "recon": 123181,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.715
+      },
+      "PAWN_ONLY": {
+        "attr": 799827,
+        "retention": 86.249781633,
+        "q": 127511,
+        "piv": 108453,
+        "amp": 1.1757258905,
+        "fixedBad": 0,
+        "recon": 127511,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.718
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 913843,
+        "retention": 98.5447593003,
+        "q": 13495,
+        "piv": 9852,
+        "amp": 1.369772635,
+        "fixedBad": 0,
+        "recon": 13495,
+        "miss": 0,
+        "extra": 0,
+        "sec": 0.71
+      }
+    },
+    "F09": {
+      "CHECK": {
+        "attr": 2461867,
+        "retention": 29.67870523,
+        "q": 5833195,
+        "piv": 517120,
+        "amp": 11.28015741,
+        "fixedBad": 0,
+        "recon": 5833195,
+        "miss": 0,
+        "extra": 0,
+        "sec": 7.066
+      },
+      "CAPTURE": {
+        "attr": 2460362,
+        "retention": 29.66056191,
+        "q": 5834700,
+        "piv": 518625,
+        "amp": 11.25032538,
+        "fixedBad": 0,
+        "recon": 5834700,
+        "miss": 0,
+        "extra": 0,
+        "sec": 7.134
+      },
+      "FORCING": {
+        "attr": 2461867,
+        "retention": 29.67870523,
+        "q": 5833195,
+        "piv": 517120,
+        "amp": 11.28015741,
+        "fixedBad": 0,
+        "recon": 5833195,
+        "miss": 0,
+        "extra": 0,
+        "sec": 6.933
+      },
+      "KING_ONLY": {
+        "attr": 3288923,
+        "retention": 39.64916718,
+        "q": 5006139,
+        "piv": 396862,
+        "amp": 12.61430674,
+        "fixedBad": 0,
+        "recon": 5006139,
+        "miss": 0,
+        "extra": 0,
+        "sec": 7.108
+      },
+      "PAWN_ONLY": {
+        "attr": 3283177,
+        "retention": 39.57989705,
+        "q": 5011885,
+        "piv": 472379,
+        "amp": 10.60988105,
+        "fixedBad": 0,
+        "recon": 5011885,
+        "miss": 0,
+        "extra": 0,
+        "sec": 7.307
+      },
+      "MOBILE_PIECE_ONLY": {
+        "attr": 2502224,
+        "retention": 30.1652236,
+        "q": 5792838,
+        "piv": 527998,
+        "amp": 10.97132565,
+        "fixedBad": 0,
+        "recon": 5792838,
+        "miss": 0,
+        "extra": 0,
+        "sec": 7.125
+      }
+    }
+  },
+  "nesting": {
+    "F01": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 144155,
+        "a_only": 1889,
+        "b_only": 24,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 143710,
+        "a_only": 2334,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 145599,
+        "a_only": 445,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 143710,
+        "a_only": 469,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 143710,
+        "a_only": 469,
+        "b_only": 1889,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 143710,
+        "a_only": 0,
+        "b_only": 1889,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F02": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 557673,
+        "a_only": 24574,
+        "b_only": 2706,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 557375,
+        "a_only": 24872,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 581972,
+        "a_only": 275,
+        "b_only": 21844,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 557375,
+        "a_only": 3004,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 557405,
+        "a_only": 2974,
+        "b_only": 46411,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 557375,
+        "a_only": 0,
+        "b_only": 46441,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F03": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 569930,
+        "a_only": 11984,
+        "b_only": 16862,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 568146,
+        "a_only": 13768,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 580411,
+        "a_only": 1503,
+        "b_only": 14297,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 568146,
+        "a_only": 18646,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 568431,
+        "a_only": 18361,
+        "b_only": 26277,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 568146,
+        "a_only": 0,
+        "b_only": 26562,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F04": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 1766345,
+        "a_only": 718320,
+        "b_only": 49779,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 1761987,
+        "a_only": 722678,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2477754,
+        "a_only": 6911,
+        "b_only": 399617,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 1761987,
+        "a_only": 54137,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 1769141,
+        "a_only": 46983,
+        "b_only": 1108230,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 1761987,
+        "a_only": 0,
+        "b_only": 1115384,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F06": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 2363141,
+        "a_only": 2480576,
+        "b_only": 21992,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 2357434,
+        "a_only": 2486283,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 4837903,
+        "a_only": 5814,
+        "b_only": 8102,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 2357434,
+        "a_only": 27699,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2362111,
+        "a_only": 23022,
+        "b_only": 2483894,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2357434,
+        "a_only": 0,
+        "b_only": 2488571,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F07": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 984379,
+        "a_only": 109133,
+        "b_only": 15656,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 983658,
+        "a_only": 109854,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 1093073,
+        "a_only": 439,
+        "b_only": 56224,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 983658,
+        "a_only": 16377,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 985284,
+        "a_only": 14751,
+        "b_only": 164013,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 983658,
+        "a_only": 0,
+        "b_only": 165639,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F08": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 800211,
+        "a_only": 83374,
+        "b_only": 3946,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 799827,
+        "a_only": 83758,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 883242,
+        "a_only": 343,
+        "b_only": 30601,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 799827,
+        "a_only": 4330,
+        "b_only": 0,
+        "a_sub_b": 0,
+        "b_sub_a": 1
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 799873,
+        "a_only": 4284,
+        "b_only": 113970,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 799827,
+        "a_only": 0,
+        "b_only": 114016,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      }
+    ],
+    "F09": [
+      {
+        "a": "CHECK",
+        "b": "KING_ONLY",
+        "inter": 2461867,
+        "a_only": 0,
+        "b_only": 827056,
+        "a_sub_b": 1,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "PAWN_ONLY",
+        "inter": 2461381,
+        "a_only": 486,
+        "b_only": 821796,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "CHECK",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2460362,
+        "a_only": 1505,
+        "b_only": 41862,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "PAWN_ONLY",
+        "inter": 2611899,
+        "a_only": 677024,
+        "b_only": 671278,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "KING_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2478934,
+        "a_only": 809989,
+        "b_only": 23290,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      },
+      {
+        "a": "PAWN_ONLY",
+        "b": "MOBILE_PIECE_ONLY",
+        "inter": 2472376,
+        "a_only": 810801,
+        "b_only": 29848,
+        "a_sub_b": 0,
+        "b_sub_a": 0
+      }
+    ]
+  },
+  "switching": {
+    "F01": {
+      "KING_ONLY->CHECK": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 0,
+        "handoff": 24,
+        "outside_target": 24,
+        "amp": 1
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 24,
+        "handoff": 24,
+        "outside_target": 24,
+        "amp": 1
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 24,
+        "handoff": 24,
+        "outside_target": 24,
+        "amp": 1
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 0,
+        "handoff": 1849,
+        "outside_target": 1889,
+        "amp": 1.02163332
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 24,
+        "handoff": 460,
+        "outside_target": 469,
+        "amp": 1.01956522
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 146068,
+        "pct": 100,
+        "gain_union": 24,
+        "handoff": 2309,
+        "outside_target": 2358,
+        "amp": 1.02122131
+      }
+    },
+    "F02": {
+      "KING_ONLY->CHECK": {
+        "cover": 605508,
+        "pct": 98.8702327,
+        "gain_union": 20555,
+        "handoff": 19890,
+        "outside_target": 23261,
+        "amp": 1.16948215
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 610443,
+        "pct": 99.676043,
+        "gain_union": 6352,
+        "handoff": 19890,
+        "outside_target": 28196,
+        "amp": 1.41759678
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 604729,
+        "pct": 98.7430339,
+        "gain_union": 22482,
+        "handoff": 19890,
+        "outside_target": 22482,
+        "amp": 1.13031674
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 608024,
+        "pct": 99.2810572,
+        "gain_union": 23071,
+        "handoff": 45342,
+        "outside_target": 47645,
+        "amp": 1.05079176
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 608917,
+        "pct": 99.4268705,
+        "gain_union": 4826,
+        "handoff": 3856,
+        "outside_target": 5101,
+        "amp": 1.32287344
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 604513,
+        "pct": 98.7077644,
+        "gain_union": 22266,
+        "handoff": 43693,
+        "outside_target": 47138,
+        "amp": 1.07884558
+      }
+    },
+    "F03": {
+      "KING_ONLY->CHECK": {
+        "cover": 618377,
+        "pct": 99.1564016,
+        "gain_union": 19601,
+        "handoff": 19293,
+        "outside_target": 36463,
+        "amp": 1.88996009
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 615003,
+        "pct": 98.6153826,
+        "gain_union": 18792,
+        "handoff": 19293,
+        "outside_target": 33089,
+        "amp": 1.71507801
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 610588,
+        "pct": 97.9074399,
+        "gain_union": 28674,
+        "handoff": 19293,
+        "outside_target": 28674,
+        "amp": 1.48623853
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 617802,
+        "pct": 99.0642007,
+        "gain_union": 19026,
+        "handoff": 21554,
+        "outside_target": 31010,
+        "amp": 1.43871207
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 617227,
+        "pct": 98.9719998,
+        "gain_union": 21016,
+        "handoff": 20680,
+        "outside_target": 22519,
+        "amp": 1.0889265
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 611296,
+        "pct": 98.0209673,
+        "gain_union": 29382,
+        "handoff": 32128,
+        "outside_target": 43150,
+        "amp": 1.34306524
+      }
+    },
+    "F04": {
+      "KING_ONLY->CHECK": {
+        "cover": 2922173,
+        "pct": 94.5842553,
+        "gain_union": 387729,
+        "handoff": 309005,
+        "outside_target": 437508,
+        "amp": 1.41586058
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 3082437,
+        "pct": 99.7716453,
+        "gain_union": 198155,
+        "handoff": 309005,
+        "outside_target": 597772,
+        "amp": 1.93450591
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 2904674,
+        "pct": 94.0178515,
+        "gain_union": 420009,
+        "handoff": 309005,
+        "outside_target": 420009,
+        "amp": 1.35923043
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 3077963,
+        "pct": 99.6268319,
+        "gain_union": 543519,
+        "handoff": 807831,
+        "outside_target": 1261839,
+        "amp": 1.56200864
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 2983405,
+        "pct": 96.5661992,
+        "gain_union": 99123,
+        "handoff": 39107,
+        "outside_target": 106034,
+        "amp": 2.71138159
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 2944745,
+        "pct": 95.3148608,
+        "gain_union": 460080,
+        "handoff": 708744,
+        "outside_target": 1182758,
+        "amp": 1.66880848
+      }
+    },
+    "F06": {
+      "KING_ONLY->CHECK": {
+        "cover": 4895156,
+        "pct": 99.9701018,
+        "gain_union": 29447,
+        "handoff": 29522,
+        "outside_target": 51439,
+        "amp": 1.7423955
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 4895464,
+        "pct": 99.9763919,
+        "gain_union": 43645,
+        "handoff": 29522,
+        "outside_target": 51747,
+        "amp": 1.7528284
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 4894000,
+        "pct": 99.9464937,
+        "gain_union": 50283,
+        "handoff": 29522,
+        "outside_target": 50283,
+        "amp": 1.70323826
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 4877806,
+        "pct": 99.6157758,
+        "gain_union": 12097,
+        "handoff": 1390547,
+        "outside_target": 2492673,
+        "amp": 1.7925845
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 4895768,
+        "pct": 99.9826002,
+        "gain_union": 43949,
+        "handoff": 32657,
+        "outside_target": 49763,
+        "amp": 1.52380807
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 4876855,
+        "pct": 99.5963542,
+        "gain_union": 33138,
+        "handoff": 1392149,
+        "outside_target": 2519421,
+        "amp": 1.80973516
+      }
+    },
+    "F07": {
+      "KING_ONLY->CHECK": {
+        "cover": 1165076,
+        "pct": 98.1610123,
+        "gain_union": 55908,
+        "handoff": 58000,
+        "outside_target": 71564,
+        "amp": 1.23386207
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 1186264,
+        "pct": 99.9461624,
+        "gain_union": 36528,
+        "handoff": 58000,
+        "outside_target": 92752,
+        "amp": 1.59917241
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 1163920,
+        "pct": 98.063616,
+        "gain_union": 70408,
+        "handoff": 58000,
+        "outside_target": 70408,
+        "amp": 1.21393103
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 1186164,
+        "pct": 99.9377371,
+        "gain_union": 76996,
+        "handoff": 178855,
+        "outside_target": 186129,
+        "amp": 1.04066982
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 1165833,
+        "pct": 98.2247917,
+        "gain_union": 16097,
+        "handoff": 8585,
+        "outside_target": 16536,
+        "amp": 1.92615026
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 1164583,
+        "pct": 98.1194756,
+        "gain_union": 71071,
+        "handoff": 166144,
+        "outside_target": 180925,
+        "amp": 1.08896499
+      }
+    },
+    "F08": {
+      "KING_ONLY->CHECK": {
+        "cover": 924904,
+        "pct": 99.7375283,
+        "gain_union": 37373,
+        "handoff": 25734,
+        "outside_target": 41319,
+        "amp": 1.60561903
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 920667,
+        "pct": 99.2806291,
+        "gain_union": 6481,
+        "handoff": 25734,
+        "outside_target": 37082,
+        "amp": 1.44097303
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 918117,
+        "pct": 99.0056484,
+        "gain_union": 34532,
+        "handoff": 25734,
+        "outside_target": 34532,
+        "amp": 1.34188233
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 920460,
+        "pct": 99.2583071,
+        "gain_union": 32929,
+        "handoff": 107500,
+        "outside_target": 116303,
+        "amp": 1.08188837
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 925137,
+        "pct": 99.762654,
+        "gain_union": 10951,
+        "handoff": 9852,
+        "outside_target": 11294,
+        "amp": 1.14636622
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 918255,
+        "pct": 99.0205297,
+        "gain_union": 34670,
+        "handoff": 108453,
+        "outside_target": 118428,
+        "amp": 1.09197533
+      }
+    },
+    "F09": {
+      "KING_ONLY->CHECK": {
+        "cover": 4519076,
+        "pct": 54.4791106,
+        "gain_union": 1230153,
+        "handoff": 517120,
+        "outside_target": 2057209,
+        "amp": 3.97820429
+      },
+      "MOBILE_PIECE_ONLY->CHECK": {
+        "cover": 3777561,
+        "pct": 45.5398766,
+        "gain_union": 1273832,
+        "handoff": 517120,
+        "outside_target": 1315694,
+        "amp": 2.54427212
+      },
+      "PAWN_ONLY->CHECK": {
+        "cover": 4569444,
+        "pct": 55.0863152,
+        "gain_union": 1285781,
+        "handoff": 517120,
+        "outside_target": 2107577,
+        "amp": 4.07560528
+      },
+      "CHECK->KING_ONLY": {
+        "cover": 4271891,
+        "pct": 51.4992052,
+        "gain_union": 982968,
+        "handoff": 396862,
+        "outside_target": 982968,
+        "amp": 2.4768509
+      },
+      "CHECK->MOBILE_PIECE_ONLY": {
+        "cover": 3564903,
+        "pct": 42.9762068,
+        "gain_union": 1061174,
+        "handoff": 527998,
+        "outside_target": 1062679,
+        "amp": 2.01265724
+      },
+      "CHECK->PAWN_ONLY": {
+        "cover": 4603581,
+        "pct": 55.4978492,
+        "gain_union": 1319918,
+        "handoff": 472379,
+        "outside_target": 1320404,
+        "amp": 2.79522163
+      }
+    }
+  },
+  "best_single": {
+    "F01": {
+      "filter": "CHECK",
+      "attr": 146044,
+      "retention_pct": 99.9835693
+    },
+    "F02": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 603816,
+      "retention_pct": 98.5939548714
+    },
+    "F03": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 594708,
+      "retention_pct": 95.3610908893
+    },
+    "F04": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 2877371,
+      "retention_pct": 93.1341139579
+    },
+    "F06": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 4846005,
+      "retention_pct": 98.96632779
+    },
+    "F07": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 1149297,
+      "retention_pct": 96.831586069
+    },
+    "F08": {
+      "filter": "MOBILE_PIECE_ONLY",
+      "attr": 913843,
+      "retention_pct": 98.5447593003
+    },
+    "F09": {
+      "filter": "KING_ONLY",
+      "attr": 3288923,
+      "retention_pct": 39.64916718
+    }
+  },
+  "best_one_switch": {
+    "F01": {
+      "switch": "KING_ONLY->CHECK",
+      "cover": 146068,
+      "pct": 100,
+      "residual": 0
+    },
+    "F02": {
+      "switch": "MOBILE_PIECE_ONLY->CHECK",
+      "cover": 610443,
+      "pct": 99.676043,
+      "residual": 1984
+    },
+    "F03": {
+      "switch": "KING_ONLY->CHECK",
+      "cover": 618377,
+      "pct": 99.1564016,
+      "residual": 5261
+    },
+    "F04": {
+      "switch": "MOBILE_PIECE_ONLY->CHECK",
+      "cover": 3082437,
+      "pct": 99.7716453,
+      "residual": 7055
+    },
+    "F06": {
+      "switch": "CHECK->MOBILE_PIECE_ONLY",
+      "cover": 4895768,
+      "pct": 99.9826002,
+      "residual": 852
+    },
+    "F07": {
+      "switch": "MOBILE_PIECE_ONLY->CHECK",
+      "cover": 1186264,
+      "pct": 99.9461624,
+      "residual": 639
+    },
+    "F08": {
+      "switch": "CHECK->MOBILE_PIECE_ONLY",
+      "cover": 925137,
+      "pct": 99.762654,
+      "residual": 2201
+    },
+    "F09": {
+      "switch": "CHECK->PAWN_ONLY",
+      "cover": 4603581,
+      "pct": 55.4978492,
+      "residual": 3691481
+    }
+  },
+  "audits": {
+    "filter_rows": 48,
+    "all_fixed_point_and_filter_pivot_exact": true
+  },
+  "typed_algebra": {
+    "FORCING_equals_CHECK_all_evaluated_arenas": true,
+    "interpretation_forcing": "typed degeneracy under these target/domain contracts, not a universal chess identity; no admissible pre-target capture edge enlarges CHECK",
+    "PAWN_ONLY_equals_CAPTURE_brink_endpoint_arenas": true,
+    "interpretation_pawn": "brink pawns have no internal non-promotion same-domain move; F09 breaks the equivalence because its pawn rank varies and internal pawn pushes exist",
+    "F09_pawn_minus_capture_attr": 822815
+  },
+  "scientific_summary": {
+    "best_one_switch_newly_recovered_pct": {
+      "F03": 99.1564016,
+      "F04": 99.7716453,
+      "F06": 99.9826002,
+      "F07": 99.9461624,
+      "F08": 99.762654
+    },
+    "F09_best_one_switch": {
+      "switch": "CHECK->PAWN_ONLY",
+      "cover": 4603581,
+      "pct": 55.4978492,
+      "residual": 3691481
+    },
+    "interpretation": "Reusable switching structure is extremely strong in recovered brink/seven-man arenas but not sufficient in the faithful fortress control."
+  },
+  "source_sha256": {
+    "g8_5_brink.cpp": "79676d7df7ffc3271cf1806d7a1011b91b7b3048945252daa03cf10184a3199c",
+    "g8_5_brink_one.cpp": "e7e941c375fe79fa809e57b797cd9dd7e1e3e3a984580a79dfc6bbab2d2aae32",
+    "g8_5_brink_switch.cpp": "95539d9c58b6ceab6c7318588009288cd065713bd82e6a7d19d7bbb91402440d",
+    "g8_5_seven.cpp": "a30e81fea44bd8101feeeddb5157911e0a66db7e114207bd702427a501c842b9",
+    "g8_5_seven_switch.cpp": "8c64f82cbc1a5a21108300f976b59ef760605ee414072d3a3491f30f0f9d3d5e",
+    "g8_5_f09.cpp": "b440b2ecd32c3ad4fd1c8e7f51025caef30f2104e2d7a498919d00350fa57c1a",
+    "g8_5_f09_switch.cpp": "9f640045101064d72f2c269cd5ecd90394a196c85a612274cb84a1db99497fe7"
+  }
+}
