@@ -4,8 +4,8 @@
 
 **Bootstrap result:** PASS
 
-**Frozen commit/tag:** assigned by the final two-stage bootstrap freeze; the content tag is
-bootstrap-v1.0.0
+**Frozen content commit/tag:**
+`08faa1ffdf5cbb492d3fffab89d7bbf07cd177a7` / `bootstrap-v1.0.0`
 
 **Completed at:** 2026-08-14T09:33:22Z
 
@@ -144,9 +144,9 @@ routing and did not invoke the autonomous loop.
 - G17 is not unlocked.
 - The structural reference snapshot has unresolved project-wide licensing and no durable
   private host.
-- Private-remote creation and the two-stage bootstrap Git freeze remain controller-owned
-  publication operations. They assign identity to this already accepted content without
-  changing its scientific or bootstrap result.
+- Private-remote publication and the metadata commit remain controller-owned publication
+  operations. The content identity above is frozen and does not change the scientific or
+  bootstrap result.
 
 ## Final acceptance declaration
 

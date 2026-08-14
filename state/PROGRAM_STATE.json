@@ -212,9 +212,9 @@
     "validation_summary": "Bootstrap acceptance PASS: migration, governance schemas, repository validation, orchestration tests and the preferred-profile real-CLI synthetic smoke passed. G14 remains not started; no real research loop or new chess research has run."
   },
   "last_frozen_git": {
-    "status": "NOT_FROZEN",
-    "commit": null,
-    "tag": null
+    "status": "FROZEN",
+    "commit": "08faa1ffdf5cbb492d3fffab89d7bbf07cd177a7",
+    "tag": "bootstrap-v1.0.0"
   },
   "claim_boundary": {
     "bootstrap_is_research": false,

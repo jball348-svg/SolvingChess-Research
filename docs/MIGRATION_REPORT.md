@@ -10,8 +10,8 @@ solving-chess-stdlib-ooxml-to-markdown 1.0.0
 
 **Source root:** the verified 129-file flat staging set at C:\Solving_Chess
 
-**Destination commit:** assigned by the final bootstrap content freeze; the byte identities
-below do not depend on that Git identifier
+**Destination content commit:** `08faa1ffdf5cbb492d3fffab89d7bbf07cd177a7`
+(`bootstrap-v1.0.0`); the byte identities below do not depend on that Git identifier
 
 This report is derived from state/ARTIFACT_REGISTRY.json, the per-document conversion
 audits and independent post-relocation checks. File movement has no scientific effect.
@@ -158,7 +158,8 @@ the repository validator and full test suite before creating the immutable Git t
 - The structural snapshot lacks project-wide redistribution authority and durable private
   hosting.
 - Required G10/G11 conformance and G12-through-G13 acceptance replays remain NOT_PERFORMED.
-- The final bootstrap commit/tag identity is supplied after this content is accepted.
+- The accepted bootstrap content is frozen at commit
+  `08faa1ffdf5cbb492d3fffab89d7bbf07cd177a7`, tag `bootstrap-v1.0.0`.
 
 ## Claim boundary
 
