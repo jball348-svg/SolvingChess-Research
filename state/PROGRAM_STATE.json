@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "solving-chess",
-  "generated_at": "2026-08-14T09:33:22Z",
+  "generated_at": "2026-08-21T07:50:31Z",
   "permanent_roadmap": {
     "path": "roadmap/normalized/G9_G10_Onwards_Long_Range_Plan.md",
     "original_path": "roadmap/originals/G9_G10_Onwards_Long_Range_Plan.docx",
@@ -10,34 +10,34 @@
     "role": "PERMANENT_STRATEGIC_AUTHORITY"
   },
   "latest_completed_programme": {
-    "programme": "G13",
-    "number": 13,
-    "title": "Distributed and Checkpointed Exact-Compute Platform",
-    "research_status": "COMPLETED",
-    "core_result": "PASS",
-    "roadmap_gate": "HOLD",
-    "notes": "The deterministic/checkpointed engineering platform passed its own engineering workload. The mandatory replay of the exact G12 reference bundle remains NOT_PERFORMED, so the full roadmap advance gate did not pass."
-  },
-  "latest_frozen_handoff": {
-    "programme": "G13",
-    "path": "handoffs/normalized/G13_Technical_Handoff.md",
-    "original_path": "handoffs/originals/G13_Technical_Handoff.docx",
-    "sha256": "34cc4caea8fdf9902bd04f14701660f5942c6f12ef3901d50164523330302194",
-    "identity_status": "VERIFIED"
-  },
-  "next_programme": {
     "programme": "G14",
     "number": 14,
     "title": "Proof Store and Content-Addressed Dependency Graph",
-    "sequentially_permitted": true,
-    "authorized": true,
+    "research_status": "COMPLETED",
+    "core_result": "PASS",
+    "roadmap_gate": "PASS",
+    "notes": "G14 passed all 14 prospectively frozen positive checks, rejected all 30 hostile mutations, and passed structurally separate offline verification. The result is engineering/preservation only; the inherited G13 mandatory G12 acceptance replay remains NOT_PERFORMED and continues to block G15/G17."
+  },
+  "latest_frozen_handoff": {
+    "programme": "G14",
+    "path": "research/G14/G14_Technical_Handoff.md",
+    "original_path": "research/G14/G14_Technical_Handoff.md",
+    "sha256": "028d344d1a90222f8f47479ac500d6119e8b2deb1089daf56799a6a7f69fec53",
+    "identity_status": "VERIFIED"
+  },
+  "next_programme": {
+    "programme": "G15",
+    "number": 15,
+    "title": "Verifier Hardening and Formal Core",
+    "sequentially_permitted": false,
+    "authorized": false,
     "started": false,
     "launch_status": "NOT_STARTED",
-    "authorization_reason": "G14 is the authorized next sequential programme after bootstrap acceptance. It remains not started and may be launched only by a later explicit outer-controller --start; the bootstrap process itself is prohibited from invoking it."
+    "authorization_reason": "G14 passed its own engineering/preservation gate, but the inherited G13 mandatory exact G12 acceptance replay remains NOT_PERFORMED and explicitly blocks G15. G15 is not authorized or started."
   },
   "routing_transition": {
-    "from": "G13",
-    "to": "G14"
+    "from": "G14",
+    "to": "G15"
   },
   "active_contracts": {
     "rules": {
@@ -111,10 +111,10 @@
     {
       "id": "G12_BUNDLE_G13_ACCEPTANCE_REPLAY",
       "status": "OPEN",
-      "description": "Exact G12_Final_Rules_Reference_Bundle.zip bytes have been recovered during migration and match the frozen expected SHA-256. The mandatory G13 kill/restart/repartition acceptance replay has not been performed.",
+      "description": "Exact G12_Final_Rules_Reference_Bundle.zip bytes are recovered at the frozen SHA-256 and its complete internal hash ledger verifies. G14's input-integrity pre-gate found no executable G12 workload hook, shard/checkpoint interface or G12 merge path in the frozen G13 adapter/campaign, so the mandatory G13 kill/restart/repartition acceptance replay remains NOT_PERFORMED.",
       "implications": [
         "G13 core engineering remains PASS but its roadmap advance gate remains HOLD.",
-        "G17 remains blocked.",
+        "G15 and G17 remain blocked.",
         "Recovery of bytes alone is not an independently replayed chess result."
       ],
       "expected_sha256": "7641e0f8a4e621efb90b75cd3ce99b44e96c07a2f3541114611126a076d5695c",
@@ -128,21 +128,12 @@
     {
       "id": "G13_MANDATORY_G12_REPLAY_OPEN",
       "status": "OPEN",
-      "description": "The recovered exact G12 bundle has not been replayed through the G13 acceptance campaign.",
+      "description": "The recovered exact G12 bundle has not been replayed through the G13 acceptance campaign. G14 verified that the frozen adapter checks only bundle/member integrity and the frozen campaign is hard-wired to a synthetic workload, so no frozen executable command can perform the required replay.",
       "blocks": [
         "G15",
         "G17"
       ],
-      "required_resolution": "Run the frozen G13 adapter/campaign against the exact recovered G12 bundle and reproduce the required truth, certificate and canonical artifact hashes under the mandated failure/repartition regimes."
-    },
-    {
-      "id": "G14_NOT_COMPLETED",
-      "status": "OPEN",
-      "description": "G14 has not started and therefore has not supplied the proof-store dependency required by G15.",
-      "blocks": [
-        "G15"
-      ],
-      "required_resolution": "Complete and freeze G14 under its legitimate gate after a separately authorized research run."
+      "required_resolution": "Create and govern an explicitly versioned G12-specific G13 execution adapter/campaign with shard, checkpoint/resume, deterministic merge and failure/repartition semantics; then replay the exact recovered G12 bundle in a Linux/GCC-compatible environment and reproduce the seven canonical outputs under the mandated regimes without modifying frozen originals."
     }
   ],
   "broken_historical_chains": [
@@ -164,6 +155,12 @@
       "gate": "CORE_ENGINEERING_PLATFORM",
       "result": "PASS",
       "notes": "Synthetic engineering workload only; not chess truth."
+    },
+    {
+      "programme": "G14",
+      "gate": "PROOF_STORE_AND_CONTENT_ADDRESSED_DEPENDENCY_GRAPH",
+      "result": "PASS",
+      "notes": "Engineering/preservation scope only: 14/14 positive checks, 30/30 hostile rejections, deterministic portable closure and structurally separate offline verification. No chess truth or G13 acceptance replay is claimed."
     }
   ],
   "held_gates": [
@@ -185,8 +182,8 @@
       "programme": "G15",
       "status": "BLOCKED",
       "reasons": [
-        "G14 has not started or passed.",
-        "The open G13 mandatory G12 replay exception remains binding."
+        "G14 passed its engineering/preservation gate and supplied the required proof-store reference.",
+        "The open G13 mandatory G12 replay exception remains binding and explicitly blocks G15."
       ]
     },
     {
@@ -194,7 +191,7 @@
       "status": "BLOCKED",
       "reasons": [
         "The G13 roadmap advance gate remains HOLD until the mandatory exact G12 replay passes.",
-        "Required foundation stages G14 and G15 are incomplete."
+        "G14 is complete, but required foundation stage G15 remains blocked and incomplete."
       ]
     }
   ],
@@ -209,7 +206,7 @@
     "completion_status": "COMPLETE",
     "autonomous_loop_readiness": "READY",
     "real_loop_running": false,
-    "validation_summary": "Bootstrap acceptance PASS: migration, governance schemas, repository validation, orchestration tests and the preferred-profile real-CLI synthetic smoke passed. G14 remains not started; no real research loop or new chess research has run."
+    "validation_summary": "Bootstrap acceptance PASS: migration, governance schemas, repository validation, orchestration tests and the preferred-profile real-CLI synthetic smoke passed. At the bootstrap boundary G14 was not started. A later separately authorized G14 run has now completed; bootstrap-era claim_boundary.g14_research_progress remains schema-frozen as NONE and is not used as current research routing state."
   },
   "last_frozen_git": {
     "status": "FROZEN",

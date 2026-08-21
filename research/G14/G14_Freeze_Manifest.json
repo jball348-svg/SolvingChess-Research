@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "G14-a01-d02c7f5da9fe",
+  "created_at": "2026-08-21T08:02:00Z",
+  "previous_programme": "G13",
+  "programme": "G14",
+  "transition": {
+    "from": "G13",
+    "to": "G14"
+  },
+  "freeze_status": "FROZEN",
+  "gate_result": "PASS",
+  "authority_inputs": [
+    {
+      "path": "roadmap/originals/G9_G10_Onwards_Long_Range_Plan.docx",
+      "sha256": "2ccb06fad1d9cbe42631e40861f8982bffdeefe8c981ecda5b7c2f470fdd77b9",
+      "role": "ROADMAP"
+    },
+    {
+      "path": "handoffs/originals/G13_Technical_Handoff.docx",
+      "sha256": "34cc4caea8fdf9902bd04f14701660f5942c6f12ef3901d50164523330302194",
+      "role": "PREDECESSOR_HANDOFF"
+    },
+    {
+      "path": "handoffs/originals/G10_Technical_Handoff.docx",
+      "sha256": "41267d308be04d79f078fbc3f41aa47add8d0a085bfe7b9cad1587edca7787be",
+      "role": "ACTIVE_CONTRACT"
+    },
+    {
+      "path": "handoffs/originals/G12_Technical_Handoff.docx",
+      "sha256": "958367f224467efc439217ac7a546249915e7a596717e8ad0c2131349e50eff3",
+      "role": "ACTIVE_CONTRACT"
+    },
+    {
+      "path": "handoffs/originals/G13_Technical_Handoff.docx",
+      "sha256": "34cc4caea8fdf9902bd04f14701660f5942c6f12ef3901d50164523330302194",
+      "role": "ACTIVE_CONTRACT"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "research/G14/G14_Technical_Handoff.md",
+      "sha256": "028d344d1a90222f8f47479ac500d6119e8b2deb1089daf56799a6a7f69fec53",
+      "size": 16469,
+      "role": "TECHNICAL_HANDOFF"
+    },
+    {
+      "path": "research/G14/README.md",
+      "sha256": "d9526c01ad73d983badd66010be72c6bc8c493a7a057f6f73f0e05b7065e9129",
+      "size": 1857,
+      "role": "OTHER"
+    },
+    {
+      "path": "research/G14/G14_Proof_Store_Contract_v1.json",
+      "sha256": "d0d36fd32cdc7470642c4f91a4f894891cad9e5c4291fb5348fa2be0da729825",
+      "size": 16415,
+      "role": "OTHER"
+    },
+    {
+      "path": "research/G14/G14_Prospective_Acceptance_v1.json",
+      "sha256": "3bc06d60462044169cd396433ee174bf1d2a365f850de14bb51d83aa46fedcd5",
+      "size": 6808,
+      "role": "OTHER"
+    },
+    {
+      "path": "research/G14/g14_proof_store.py",
+      "sha256": "fca4b222e356e5d7795005bfc51b921c5d862ca86026409189c496b201ebac9c",
+      "size": 57145,
+      "role": "SOURCE"
+    },
+    {
+      "path": "research/G14/g14_reference_campaign.py",
+      "sha256": "8175b046c00ee57106a36485c46803291e360a99347aaba104732bc316581f59",
+      "size": 49879,
+      "role": "SOURCE"
+    },
+    {
+      "path": "research/G14/g14_independent_verifier.py",
+      "sha256": "887eca1987c4c1c2f60147486a5e94313f38b61b9a35c52bf011411d0718d128",
+      "size": 73721,
+      "role": "SOURCE"
+    },
+    {
+      "path": "research/G14/g14_g13_replay_pregate.py",
+      "sha256": "33645426fb2dcd82078aad06a6fdc232f6b8c67746ab9c3178eab0a107872f23",
+      "size": 21561,
+      "role": "SOURCE"
+    },
+    {
+      "path": "research/G14/test_g14_proof_store.py",
+      "sha256": "2e4a69e013e6b3eaedd20a75f0b77556dd0c2267546041268a480c0e26775eff",
+      "size": 12725,
+      "role": "SOURCE"
+    },
+    {
+      "path": "tests/test_governance_schemas.py",
+      "sha256": "9607c4a9547fa76323588bb4bd3dd24748e9aa0c3c701387a76465a998e434cc",
+      "size": 9180,
+      "role": "VALIDATION"
+    },
+    {
+      "path": "research/G14/G14_Portable_Proof_Store_Bundle.zip",
+      "sha256": "2b2a80269211e8b87bfd2b076f79ffe7f41b4582acf0dfeaf6865fd267b96269",
+      "size": 2390623,
+      "role": "OTHER"
+    },
+    {
+      "path": "research/G14/G14_Reference_Campaign_Ledger.json",
+      "sha256": "7a2b6c42223ebf7f6982ecaa0675f692cb7e001ab98ec5e1ae4d171b7e556bf9",
+      "size": 4123,
+      "role": "VALIDATION"
+    },
+    {
+      "path": "research/G14/G14_Hostile_Mutation_Ledger.json",
+      "sha256": "8d3d7f0d177d1ba8bc3263cfa330efcd6a584d4c81b45c0e1e26b0f483a18aab",
+      "size": 6014,
+      "role": "NEGATIVE_RESULT"
+    },
+    {
+      "path": "research/G14/G14_Independent_Verification_Ledger.json",
+      "sha256": "eb8296e54e4f708d2b85ab680cd031f17114dd061c7b278988518061d1823083",
+      "size": 1860,
+      "role": "VALIDATION"
+    },
+    {
+      "path": "research/G14/G14_G13_G12_PreGate_Ledger.json",
+      "sha256": "03bd9dcb7d45fc5ef9cc85ab5469d016c41e4e1863b7e60ddd4b128c00128e41",
+      "size": 14444,
+      "role": "NEGATIVE_RESULT"
+    },
+    {
+      "path": "research/G14/G14_Validation_Report.json",
+      "sha256": "b0c5abf306a86708f9841b818aaa0ac02d504a4b96b6196957f4feaca8d4f0be",
+      "size": 6245,
+      "role": "VALIDATION"
+    },
+    {
+      "path": "research/G14/G14_SHA256SUMS.txt",
+      "sha256": "d8dd2cf045ab55b75b46a73dfb5e878a90e7efab005b141fc632b45b8535ce78",
+      "size": 1894,
+      "role": "VALIDATION"
+    },
+    {
+      "path": "state/PROGRAM_STATE.json",
+      "sha256": "264de5ab9b4ece64054cb0d739ee98b89892771670a2300ca7826c8f93d01770",
+      "size": 10934,
+      "role": "OTHER"
+    },
+    {
+      "path": "state/OPEN_BLOCKERS.md",
+      "sha256": "a00dc13ada8bde24dce493b022f3b6a03693d6fa564e011a78b43f7ffbf458dd",
+      "size": 2363,
+      "role": "NEGATIVE_RESULT"
+    }
+  ],
+  "claims": [
+    {
+      "id": "G14.C1",
+      "classification": "ENGINEERING_TEST",
+      "statement": "The G14 reference proof store passed all 14 frozen positive checks for its declared engineering/preservation fixture.",
+      "evidence_paths": [
+        "research/G14/G14_Reference_Campaign_Ledger.json"
+      ]
+    },
+    {
+      "id": "G14.C2",
+      "classification": "ENGINEERING_TEST",
+      "statement": "All 30 prospectively declared hostile mutations were rejected.",
+      "evidence_paths": [
+        "research/G14/G14_Hostile_Mutation_Ledger.json"
+      ]
+    },
+    {
+      "id": "G14.C3",
+      "classification": "INDEPENDENTLY_REPLAYED",
+      "statement": "The structurally separate verifier passed all 10 obligations on the exact bundle and a fresh process reproduced its ledger bytes.",
+      "evidence_paths": [
+        "research/G14/G14_Independent_Verification_Ledger.json",
+        "research/G14/G14_Portable_Proof_Store_Bundle.zip"
+      ]
+    },
+    {
+      "id": "G14.C4",
+      "classification": "EXACT",
+      "statement": "Two complete empty-store campaign runs reproduced the exact bundle and ledger byte identities.",
+      "evidence_paths": [
+        "research/G14/G14_SHA256SUMS.txt",
+        "research/G14/G14_Validation_Report.json"
+      ]
+    },
+    {
+      "id": "G14.C5",
+      "classification": "ENGINEERING_TEST",
+      "statement": "Seventeen targeted regressions reject defects found during hostile review, including non-retroactive snapshot coexistence.",
+      "evidence_paths": [
+        "research/G14/test_g14_proof_store.py",
+        "research/G14/G14_Validation_Report.json"
+      ]
+    },
+    {
+      "id": "G14.C6",
+      "classification": "BLOCKED",
+      "statement": "The mandatory exact G12-through-G13 kill/restart/repartition replay remains NOT_PERFORMED because the frozen G13 bundle has no executable G12 workload path.",
+      "evidence_paths": [
+        "research/G14/G14_G13_G12_PreGate_Ledger.json"
+      ]
+    },
+    {
+      "id": "G14.C7",
+      "classification": "NOT_CLAIMED",
+      "statement": "The synthetic G13 fixture is not chess truth; no initial-position reachability, pending replay completion or G15 progress is claimed.",
+      "evidence_paths": [
+        "research/G14/G14_Technical_Handoff.md",
+        "research/G14/G14_Proof_Store_Contract_v1.json"
+      ]
+    }
+  ],
+  "negative_results": [
+    "The frozen G13 adapter validates recovered G12 input integrity but cannot execute a G12 workload through G13 shard/checkpoint/repartition machinery.",
+    "Two pre-PASS campaign defects and a later verifier counterexample were preserved, corrected without weakening acceptance, and followed by complete empty-store reruns.",
+    "G14.PROOFSTORE.v1 is a frozen current-status snapshot; a later successful replay status requires a new versioned contract and release rather than mutation.",
+    "No new chess truth, start-position reachability, production-scale remote CAS or automatic deletion is established."
+  ],
+  "tests": [
+    "python -B research/G14/g14_g13_replay_pregate.py --out research/G14/G14_G13_G12_PreGate_Ledger.json",
+    "python -B research/G14/g14_reference_campaign.py --output-dir research/G14 --work-parent .run/g14-campaign-work --verifier research/G14/g14_independent_verifier.py",
+    "repeat the full campaign from empty stores and compare bundle plus three ledger hashes",
+    "python -B research/G14/test_g14_proof_store.py",
+    "python -B research/G14/g14_independent_verifier.py research/G14/G14_Portable_Proof_Store_Bundle.zip --ledger .run/G14_Independent_Replay.json --expected-contract-sha256 d0d36fd32cdc7470642c4f91a4f894891cad9e5c4291fb5348fa2be0da729825",
+    "python -B research/G14/g14_proof_store.py inspect-bundle research/G14/G14_Portable_Proof_Store_Bundle.zip",
+    "Draft 2020-12 schema validation of state/PROGRAM_STATE.json and this manifest",
+    "scripts/validation/validate_g_completion.py closeout validation against the base before-state"
+  ],
+  "validation": {
+    "result": "PASS",
+    "report_path": "research/G14/G14_Validation_Report.json"
+  },
+  "blockers": [
+    "G13_MANDATORY_G12_REPLAY_OPEN remains binding and blocks G15 and G17."
+  ],
+  "program_state_path": "state/PROGRAM_STATE.json",
+  "successor": {
+    "programme": "G15",
+    "authorized": false
+  },
+  "git": {
+    "transaction_owner": "OUTER_CONTROLLER",
+    "planned_tag": "g14-frozen",
+    "commit": null,
+    "tag": null
+  }
+}

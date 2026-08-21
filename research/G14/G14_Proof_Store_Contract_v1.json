@@ -1,0 +1,621 @@
+{
+  "canonical_json": {
+    "encoding": "UTF-8",
+    "final_byte": "LF",
+    "format_id": "G14.CANONICAL.JSON.v1",
+    "key_order": "UNICODE_CODEPOINT_ASCENDING",
+    "normalization": "NFC_REQUIRED_NO_IMPLICIT_REWRITE",
+    "number_policy": "SIGNED_INTEGERS_ONLY",
+    "prohibited": [
+      "DUPLICATE_KEYS",
+      "FLOATS",
+      "NAN_OR_INFINITY",
+      "NON_NFC_STRINGS",
+      "UNKNOWN_FIELDS",
+      "NON_MINIMAL_WHITESPACE"
+    ],
+    "separators": [
+      ",",
+      ":"
+    ]
+  },
+  "claim_boundary": {
+    "g14_result_class": "ENGINEERING_TEST",
+    "initial_position_reachability_claimed": false,
+    "new_chess_truth_claimed": false,
+    "stored_bytes_are_accepted_proof": false,
+    "synthetic_workloads_are_chess_truth": false
+  },
+  "contract_id": "G14.PROOFSTORE.v1",
+  "dependency_rules": {
+    "accepted_reference_form": {
+      "additional_fields": false,
+      "fields": [
+        "algorithm",
+        "digest",
+        "size",
+        "expected_kind"
+      ],
+      "algorithm": "sha256",
+      "digest_pattern": "^[0-9a-f]{64}$",
+      "size_minimum": 0
+    },
+    "arbitrary_hash_strings_are_edges": false,
+    "cycles": "REJECT",
+    "duplicate_edges": "REJECT",
+    "logical_aliases_as_dependencies": "REJECT",
+    "missing_objects": "REJECT",
+    "order": "ROLE_THEN_DIGEST_ASCENDING",
+    "typed_kind_mismatch": "REJECT",
+    "unresolved_digest_claims": "PRESERVE_AS_CLAIMS_BUT_NEVER_TREAT_AS_RESOLVED_EDGES"
+  },
+  "garbage_and_retention": {
+    "admitted_release_closure": "PERMANENTLY_RETAIN",
+    "automatic_deletion": false,
+    "dry_run_plan_required": true,
+    "gc_plan_policy_token": "DRY_RUN_ONLY",
+    "failed_or_staging_objects": "CANDIDATE_ONLY_IF_UNREACHABLE_FROM_EVERY_ADMITTED_RELEASE_AND_RETENTION_ROOT",
+    "lineage_subjects": "PERMANENTLY_RETAIN",
+    "reference_implementation_mode": "DRY_RUN_ONLY",
+    "release_retention_policy_token": "RETAIN_ALL_ADMITTED_CLOSURE",
+    "shared_dependencies": "PERMANENTLY_RETAIN_WHILE_ANY_ADMITTED_RELEASE_REACHES_THEM",
+    "superseded_objects": "RETAIN"
+  },
+  "hash_identity": {
+    "address_algorithm": "SHA-256",
+    "address_format": "sha256:<64-lowercase-hex>",
+    "collision_rule": "FATAL_REJECT_NEVER_OVERWRITE",
+    "duplicate_insert_rule": "ACCEPT_ONLY_AFTER_EXACT_BYTE_COMPARISON",
+    "equality_authority": "EXACT_RAW_BYTES",
+    "path_layout": "objects/sha256/<first-two-hex>/<remaining-sixty-two-hex>"
+  },
+  "identity_layers": [
+    {
+      "id": "RAW_CAS_OBJECT",
+      "identity": "SHA256_OF_EXACT_RAW_BYTES"
+    },
+    {
+      "id": "SEMANTIC_MODEL_AND_ARENA",
+      "identity": "CANONICAL_RECORD_CONTENT_ID"
+    },
+    {
+      "id": "SOLUTION_CORE",
+      "excludes": [
+        "EXECUTION_PLAN",
+        "PARTITION_COUNT",
+        "WORKER_ID",
+        "CHECKPOINT_ID",
+        "COMPLETION_ORDER",
+        "PRODUCER_OCCURRENCE"
+      ],
+      "includes": [
+        "ACTUAL_MODEL",
+        "ARENA_OR_PROBLEM",
+        "SOURCE_SET",
+        "TRUTH",
+        "CERTIFICATE",
+        "CERTIFICATE_CONTRACT",
+        "TYPED_DEPENDENCIES",
+        "CLAIM_CLASS",
+        "DOMAIN",
+        "REACHABILITY_TYPE"
+      ],
+      "identity": "CANONICAL_SOLUTION_CORE_RECORD_CONTENT_ID"
+    },
+    {
+      "id": "ATTESTATION",
+      "identity": "CANONICAL_EXECUTION_AND_VERIFICATION_PROVENANCE_RECORD_CONTENT_ID"
+    },
+    {
+      "id": "RELEASE",
+      "identity": "CANONICAL_ADMITTED_ROOT_RECORD_CONTENT_ID"
+    }
+  ],
+  "lineage_and_supersession": {
+    "active_resolution": "PINNED_CATALOG_SNAPSHOT_ONLY",
+    "event_types": [
+      "SUPERSEDES",
+      "BYTES_RECOVERED",
+      "REPLAY_STATUS_CHANGED",
+      "WITHDRAWN"
+    ],
+    "historical_direct_lookup": "PERMITTED_BY_IMMUTABLE_CONTENT_ID",
+    "historical_effect_token": "NON_RETROACTIVE",
+    "mutation_of_old_object": "PROHIBITED",
+    "non_retroactivity_required": true,
+    "replacement_aliasing": "PROHIBITED",
+    "reuse_of_superseded_dependency_by_default": "REJECT",
+    "self_or_cyclic_supersession": "REJECT"
+  },
+  "nested_shapes": {
+    "attestation_gate_status": {
+      "additional_fields": false,
+      "fields": [
+        "core_result",
+        "frozen_input_status",
+        "mandatory_replay_status",
+        "roadmap_gate"
+      ],
+      "required_values": {
+        "core_result": "PASS",
+        "frozen_input_status": "BLOCKED_INPUT_UNAVAILABLE",
+        "mandatory_replay_status": "NOT_PERFORMED",
+        "roadmap_gate": "HOLD"
+      }
+    },
+    "bundle_inventory_entry": {
+      "additional_fields": false,
+      "fields": [
+        "path",
+        "ref"
+      ],
+      "order": "PATH_ASCENDING",
+      "path_must_equal": "objects/sha256/<ref.digest[0:2]>/<ref.digest[2:64]>"
+    },
+    "bundle_limits": {
+      "additional_fields": false,
+      "fields": [
+        "max_entries",
+        "max_entry_bytes",
+        "max_total_bytes"
+      ],
+      "integer_minimum": 1
+    },
+    "bundle_manifest": {
+      "additional_fields": false,
+      "fields": [
+        "schema_version",
+        "format",
+        "contract",
+        "roots",
+        "inventory",
+        "limits"
+      ],
+      "required_values": {
+        "format": "G14.PORTABLE.BUNDLE.v1",
+        "schema_version": "1.0.0"
+      },
+      "root_order": "EXPECTED_KIND_THEN_DIGEST_ASCENDING"
+    },
+    "catalog_entry": {
+      "additional_fields": false,
+      "fields": [
+        "logical_name",
+        "active_target",
+        "status"
+      ],
+      "order": "LOGICAL_NAME_ASCENDING",
+      "required_values": {
+        "status": "ACTIVE"
+      }
+    },
+    "dependency_edge": {
+      "additional_fields": false,
+      "fields": [
+        "role",
+        "target",
+        "expected_model",
+        "allow_superseded"
+      ],
+      "order": "ROLE_THEN_TARGET_DIGEST_ASCENDING",
+      "required_values": {
+        "allow_superseded": false
+      }
+    },
+    "digest_claim": {
+      "additional_fields": false,
+      "fields": [
+        "algorithm",
+        "digest",
+        "label",
+        "resolution_status"
+      ],
+      "order": "LABEL_THEN_DIGEST_ASCENDING",
+      "required_values": {
+        "algorithm": "sha256",
+        "resolution_status": "UNRESOLVED_BYTES"
+      }
+    },
+    "gc_candidate_digest_claim": {
+      "additional_fields": false,
+      "fields": [
+        "algorithm",
+        "digest",
+        "label",
+        "reason"
+      ],
+      "order": "LABEL_THEN_DIGEST_ASCENDING",
+      "required_values": {
+        "algorithm": "sha256"
+      }
+    },
+    "open_exception": {
+      "additional_fields": false,
+      "fields": [
+        "exception_id",
+        "status",
+        "bytes_status",
+        "replay_status",
+        "blocks"
+      ],
+      "order": "EXCEPTION_ID_ASCENDING",
+      "required_values": {
+        "bytes_status": "RECOVERED_EXACT_BYTES",
+        "exception_id": "G13_MANDATORY_G12_REPLAY_OPEN",
+        "replay_status": "NOT_PERFORMED",
+        "status": "OPEN"
+      }
+    },
+    "proof_node": {
+      "additional_fields": false,
+      "depends_on_order": "NODE_ID_ASCENDING",
+      "fields": [
+        "node_id",
+        "depends_on",
+        "solution"
+      ],
+      "order": "NODE_ID_ASCENDING"
+    },
+    "release_claim_boundary": {
+      "additional_fields": false,
+      "fields": [
+        "claim_class",
+        "initial_position_reachability_claimed",
+        "new_chess_truth_claimed"
+      ],
+      "required_values": {
+        "claim_class": "ENGINEERING_TEST",
+        "initial_position_reachability_claimed": false,
+        "new_chess_truth_claimed": false
+      }
+    },
+    "source_mapping_entry": {
+      "additional_fields": false,
+      "fields": [
+        "source_field",
+        "target_field",
+        "treatment",
+        "value_state"
+      ],
+      "order": "SOURCE_FIELD_ASCENDING",
+      "treatment_enum": [
+        "OBJECT_REF",
+        "DIGEST_CLAIM",
+        "LITERAL"
+      ],
+      "value_state_enum": [
+        "PRESENT_VALUE",
+        "PRESENT_EMPTY",
+        "PRESENT_NULL",
+        "ABSENT"
+      ]
+    }
+  },
+  "object_kinds": {
+    "ARENA": {
+      "optional": [
+        "digest_claims"
+      ],
+      "references": [
+        "model"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "arena_id",
+        "model",
+        "declaration",
+        "reachability"
+      ]
+    },
+    "ATTESTATION": {
+      "optional": [
+        "checkpoint_refs",
+        "digest_claims"
+      ],
+      "references": [
+        "solution",
+        "compute_contract",
+        "source_set",
+        "execution_plan",
+        "merge_evidence",
+        "verification_evidence"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "attestation_id",
+        "solution",
+        "compute_contract",
+        "source_set",
+        "execution_plan",
+        "merge_evidence",
+        "verification_evidence",
+        "source_mapping",
+        "gate_status"
+      ]
+    },
+    "AUTHORITY": {
+      "optional": [
+        "notes"
+      ],
+      "references": [
+        "content"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "authority_id",
+        "authority_role",
+        "content"
+      ]
+    },
+    "CATALOG": {
+      "optional": [],
+      "references": [
+        "entries[].active_target",
+        "lineage_events[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "catalog_id",
+        "entries",
+        "lineage_events"
+      ]
+    },
+    "GC_PLAN": {
+      "optional": [],
+      "references": [
+        "release",
+        "protected_objects[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "plan_id",
+        "release",
+        "protected_objects",
+        "candidate_digest_claims",
+        "deletion_performed",
+        "policy"
+      ]
+    },
+    "LINEAGE_EVENT": {
+      "optional": [
+        "replacement"
+      ],
+      "references": [
+        "subject",
+        "replacement",
+        "authority",
+        "evidence[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "event_id",
+        "event_type",
+        "scope",
+        "subject",
+        "authority",
+        "evidence",
+        "status",
+        "historical_effect"
+      ]
+    },
+    "MODEL": {
+      "optional": [],
+      "references": [
+        "authority_context[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "model_id",
+        "rules_profile",
+        "state_profile",
+        "semantic_profile",
+        "serialization_profile",
+        "domain",
+        "authority_context"
+      ]
+    },
+    "OCCURRENCE": {
+      "optional": [],
+      "references": [
+        "content",
+        "source_container"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "occurrence_id",
+        "content",
+        "source_container",
+        "member_path",
+        "programme",
+        "historical_availability",
+        "current_availability"
+      ]
+    },
+    "PROOF": {
+      "optional": [],
+      "references": [
+        "model",
+        "nodes[].solution"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "proof_id",
+        "model",
+        "nodes",
+        "roots",
+        "claim_class",
+        "domain"
+      ]
+    },
+    "RELEASE": {
+      "optional": [],
+      "references": [
+        "catalog",
+        "roots[]",
+        "attestations[]",
+        "lineage_events[]",
+        "occurrences[]",
+        "authorities[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "release_id",
+        "catalog",
+        "roots",
+        "attestations",
+        "lineage_events",
+        "occurrences",
+        "authorities",
+        "open_exceptions",
+        "claim_boundary",
+        "retention_policy"
+      ]
+    },
+    "SOLUTION_CORE": {
+      "optional": [],
+      "prohibited": [
+        "execution_plan",
+        "partition_count",
+        "worker_id",
+        "checkpoint_id",
+        "completion_order",
+        "attestation"
+      ],
+      "references": [
+        "model",
+        "arena",
+        "source_set",
+        "truth",
+        "certificate",
+        "certificate_contract",
+        "dependencies[].target",
+        "dependencies[].expected_model"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "solution_label",
+        "model",
+        "arena",
+        "source_set",
+        "truth",
+        "certificate",
+        "certificate_contract",
+        "dependencies",
+        "claim_class",
+        "domain",
+        "reachability"
+      ]
+    },
+    "SOURCE_SET": {
+      "optional": [],
+      "references": [
+        "sources[]"
+      ],
+      "required": [
+        "schema_version",
+        "kind",
+        "source_set_id",
+        "sources"
+      ]
+    }
+  },
+  "portable_bundle": {
+    "archive_format": "ZIP_STORED",
+    "case_colliding_names": "REJECT",
+    "duplicate_names": "REJECT",
+    "entry_order": "BYTEWISE_PATH_ASCENDING",
+    "extra_entries": "REJECT",
+    "fixed_external_attributes": "REGULAR_FILE_0644",
+    "fixed_timestamp": "1980-01-01T00:00:00",
+    "manifest_format": "G14.PORTABLE.BUNDLE.v1",
+    "manifest_name": "bundle_manifest.json",
+    "object_entry_layout": "objects/sha256/<first-two-hex>/<remaining-sixty-two-hex>",
+    "path_policy": "RELATIVE_POSIX_NO_EMPTY_DOT_DOT_ABSOLUTE_DRIVE_BACKSLASH_OR_SYMLINK",
+    "publish_rule": "ATOMIC_RENAME_AFTER_COMPLETE_OFFLINE_VALIDATION",
+    "size_limits_required": true,
+    "unlisted_entries": "REJECT"
+  },
+  "record_field_semantics": {
+    "human_id_fields": [
+      "arena_id",
+      "attestation_id",
+      "authority_id",
+      "catalog_id",
+      "event_id",
+      "model_id",
+      "occurrence_id",
+      "plan_id",
+      "proof_id",
+      "release_id",
+      "solution_label",
+      "source_set_id"
+    ],
+    "human_ids_equal_cas_ids": false,
+    "record_cas_identity": "COMPUTED_FROM_COMPLETE_CANONICAL_RECORD_BYTES_AND_NEVER_STORED_INSIDE_THE_RECORD",
+    "schema_version_value": "G14.OBJECT.v1"
+  },
+  "reference_target_kinds": {
+    "ARENA.model": ["MODEL"],
+    "ATTESTATION.checkpoint_refs[]": ["RAW"],
+    "ATTESTATION.compute_contract": ["AUTHORITY"],
+    "ATTESTATION.execution_plan": ["RAW"],
+    "ATTESTATION.merge_evidence": ["RAW"],
+    "ATTESTATION.solution": ["SOLUTION_CORE"],
+    "ATTESTATION.source_set": ["SOURCE_SET"],
+    "ATTESTATION.verification_evidence": ["RAW"],
+    "AUTHORITY.content": ["RAW"],
+    "CATALOG.entries[].active_target": ["SOLUTION_CORE", "PROOF"],
+    "CATALOG.lineage_events[]": ["LINEAGE_EVENT"],
+    "GC_PLAN.release": ["RELEASE"],
+    "GC_PLAN.protected_objects[]": ["ARENA", "ATTESTATION", "AUTHORITY", "CATALOG", "LINEAGE_EVENT", "MODEL", "OCCURRENCE", "PROOF", "RAW", "RELEASE", "SOLUTION_CORE", "SOURCE_SET"],
+    "LINEAGE_EVENT.authority": ["AUTHORITY"],
+    "LINEAGE_EVENT.evidence[]": ["RAW"],
+    "LINEAGE_EVENT.replacement": ["SOLUTION_CORE"],
+    "LINEAGE_EVENT.subject": ["RAW", "SOLUTION_CORE"],
+    "MODEL.authority_context[]": ["AUTHORITY"],
+    "OCCURRENCE.content": ["RAW"],
+    "OCCURRENCE.source_container": ["RAW"],
+    "PROOF.model": ["MODEL"],
+    "PROOF.nodes[].solution": ["SOLUTION_CORE"],
+    "RELEASE.attestations[]": ["ATTESTATION"],
+    "RELEASE.authorities[]": ["AUTHORITY"],
+    "RELEASE.catalog": ["CATALOG"],
+    "RELEASE.lineage_events[]": ["LINEAGE_EVENT"],
+    "RELEASE.occurrences[]": ["OCCURRENCE"],
+    "RELEASE.roots[]": ["PROOF", "SOLUTION_CORE"],
+    "SOLUTION_CORE.arena": ["ARENA"],
+    "SOLUTION_CORE.certificate": ["RAW"],
+    "SOLUTION_CORE.certificate_contract": ["AUTHORITY"],
+    "SOLUTION_CORE.dependencies[].expected_model": ["MODEL"],
+    "SOLUTION_CORE.dependencies[].target": ["SOLUTION_CORE"],
+    "SOLUTION_CORE.model": ["MODEL"],
+    "SOLUTION_CORE.source_set": ["SOURCE_SET"],
+    "SOLUTION_CORE.truth": ["RAW"],
+    "SOURCE_SET.sources[]": ["RAW"]
+  },
+  "record_schema_version": "G14.OBJECT.v1",
+  "references": {
+    "external_projects_imported": [],
+    "selection_rationale": "Frozen G10-G13 authorities and exact recovered native bundles provide directly governed fixtures; no external reference is materially necessary."
+  },
+  "schema_version": "1.0.0",
+  "status_rules": {
+    "historical_g10_g11_chain_break": "PRESERVE",
+    "historical_g13_verdict": "CORE_ENGINEERING_PASS_ROADMAP_GATE_HOLD",
+    "recovered_g12_bytes": "RECOVERED_EXACT_BYTES",
+    "recovered_input_implies_replay": false,
+    "replay_status": "NOT_PERFORMED",
+    "status_change_requires_new_event_and_new_release": true
+  }
+}

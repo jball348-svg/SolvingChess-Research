@@ -239,15 +239,34 @@ def test_programme_state_frozen_git_identity_is_coherent() -> None:
     assert list(validator.iter_errors(state))
 
 
-def test_bootstrap_contains_no_g14_research_artifact() -> None:
-    files = sorted(
+def test_research_tree_matches_programme_state() -> None:
+    files = {
         path.relative_to(PROJECT).as_posix()
         for path in (PROJECT / "research" / "G14").rglob("*")
         if path.is_file()
-    )
-    assert files == ["research/G14/README.md"]
+    }
+    state = load_json("state/PROGRAM_STATE.json")
+    latest = state["latest_completed_programme"]["number"]
+    if latest < 14:
+        assert files == {"research/G14/README.md"}
+    else:
+        assert {
+            "research/G14/README.md",
+            "research/G14/G14_Completion.json",
+            "research/G14/G14_Freeze_Manifest.json",
+            "research/G14/G14_Technical_Handoff.md",
+        } <= files
+    assert not (PROJECT / "research" / "G15").exists()
 
 
-def test_repository_acceptance_validator_passes_candidate_tree() -> None:
+def test_repository_acceptance_validator_matches_launch_authorization() -> None:
     result = repository_validator()(PROJECT, require_clean=False)
-    assert result["valid"], "\n".join(result["errors"])
+    state = load_json("state/PROGRAM_STATE.json")
+    next_programme = state["next_programme"]
+    if next_programme["authorized"]:
+        assert result["valid"], "\n".join(result["errors"])
+    else:
+        assert not result["valid"]
+        assert result["errors"] == [
+            f"{next_programme['programme']} is not authorized"
+        ]

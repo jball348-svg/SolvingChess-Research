@@ -1,40 +1,31 @@
-# G14 — Proof Store and Content-Addressed Dependency Graph
+# G14 - Proof Store and Content-Addressed Dependency Graph
 
-Status:
+G14 closed with an engineering/preservation PASS. Its content-addressed reference store
+resolves typed immutable dependencies, retains superseded bytes, separates model and
+solution identity from execution attestations, and exports a deterministic portable
+closure for offline verification.
 
-~~~text
-SEQUENTIALLY_PERMITTED = true
-AUTHORIZED_AFTER_BOOTSTRAP = true
-STARTED = false
-RESEARCH_PROGRESS = NONE
-~~~
+The result is deliberately bounded:
 
-G14 is the next programme named by the permanent roadmap and the frozen G13 successor
-contract. Its authorization applies only to a later explicit outer-controller --start
-after bootstrap acceptance. Bootstrap itself must not invoke the runner.
+- the G13 fixture remains `G13.TEST.SEMANTICS.v1`, an `ENGINEERING_TEST`, not chess;
+- G10 and G12 remain inherited authority context, not the fixture's solved model;
+- no initial-position reachability or new chess truth is claimed;
+- the exact G12-through-G13 kill/restart/repartition replay remains `NOT_PERFORMED`;
+- G15 and G17 remain blocked by that inherited G13 gate.
 
-This directory is an infrastructure placeholder only. It is not a G14 substage, design,
-proof store, artifact, handoff or claim.
+Primary artifacts:
 
-During bootstrap, do not add:
+- `G14_Proof_Store_Contract_v1.json` - frozen storage, identity, lineage and bundle contract;
+- `G14_Prospective_Acceptance_v1.json` - pre-outcome 14-positive/30-hostile acceptance set;
+- `g14_proof_store.py` - standard-library producer/importer reference implementation;
+- `g14_independent_verifier.py` - structurally separate offline verifier;
+- `g14_reference_campaign.py` - deterministic producer, replay and hostile campaign;
+- `test_g14_proof_store.py` - regression tests for defects found during hostile review;
+- `G14_Portable_Proof_Store_Bundle.zip` - deterministic, self-contained portable closure;
+- `G14_Reference_Campaign_Ledger.json` - positive campaign ledger;
+- `G14_Hostile_Mutation_Ledger.json` - hostile mutation ledger;
+- `G14_Independent_Verification_Ledger.json` - independent offline verification ledger;
+- `G14_G13_G12_PreGate_Ledger.json` - inherited replay pre-gate diagnostic;
+- `G14_Technical_Handoff.md` and `G14_Freeze_Manifest.json` - closeout authorities.
 
-- proof-store schemas chosen to satisfy the G14 scientific/engineering gate;
-- content-addressed dependency implementations;
-- G14 experiments or evaluation;
-- G14_Technical_Handoff.md;
-- G14_Freeze_Manifest.json;
-- claims of G14 progress.
-
-G14 inherits:
-
-- G10.RULES.v1.0;
-- G12.STATE.SERIAL.v2;
-- G13.COMPUTE.CONTRACT.v1;
-- the exact recovered G10/G11/G12 bytes and their still-NOT_PERFORMED required replays;
-- G13 core engineering PASS and roadmap gate HOLD;
-- the requirement to keep semantic identity distinct from execution-plan identity;
-- every frozen blocker and historical provenance distinction.
-
-When a later controller starts G14, it must generate the prompt from programme state, use
-a fresh Codex process, follow docs/RESEARCH_PROTOCOL.md and stop before G15.
-
+Replay commands and exact interpretation are frozen in `G14_Technical_Handoff.md`.

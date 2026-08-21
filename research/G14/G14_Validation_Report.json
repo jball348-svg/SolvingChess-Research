@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "G14-a01-d02c7f5da9fe",
+  "programme": "G14",
+  "generated_at": "2026-08-21T08:00:10Z",
+  "result": "PASS",
+  "base_commit": "ce50d28f552b91b0441e6eea701d87ac6501d512",
+  "prompt_sha256": "a74546731d81b829b63e01491bed789701404ec7a664efddd0b493de9fa79584",
+  "environment": {
+    "python": "CPython 3.12.13",
+    "platform": "Windows",
+    "network_used_by_campaign": false,
+    "external_runtime_dependencies": []
+  },
+  "authority_preflight": {
+    "repository_validation_before_research": "PASS",
+    "base_commit_matched": true,
+    "authorized_programme": "G14",
+    "predecessor": "G13",
+    "successor_started": false
+  },
+  "checks": [
+    {
+      "id": "V01",
+      "command": "python -B research/G14/g14_g13_replay_pregate.py --out research/G14/G14_G13_G12_PreGate_Ledger.json",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/G14_G13_G12_PreGate_Ledger.json",
+      "summary": "Both recovered archive identities, all 15 G12 ledger entries and all 22 G13 ledger entries verified; adapter readiness is integrity-only and mandatory acceptance remains NOT_PERFORMED."
+    },
+    {
+      "id": "V02",
+      "command": "python -B research/G14/g14_reference_campaign.py --output-dir research/G14 --work-parent .run/g14-campaign-work --verifier research/G14/g14_independent_verifier.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/G14_Reference_Campaign_Ledger.json",
+      "summary": "14/14 prospectively frozen positive checks passed within the 300-second offline bound."
+    },
+    {
+      "id": "V03",
+      "command": "repeat V02 from two empty stores and compare four output SHA-256 identities",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/G14_Reference_Campaign_Ledger.json",
+      "summary": "Bundle, campaign ledger, hostile ledger and independent-verifier ledger were byte-identical across complete reruns."
+    },
+    {
+      "id": "V04",
+      "command": "python -B research/G14/test_g14_proof_store.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/test_g14_proof_store.py",
+      "summary": "17/17 producer-side regression tests passed."
+    },
+    {
+      "id": "V05",
+      "command": "python -B research/G14/g14_independent_verifier.py research/G14/G14_Portable_Proof_Store_Bundle.zip --ledger .run/G14_Independent_Replay.json --expected-contract-sha256 d0d36fd32cdc7470642c4f91a4f894891cad9e5c4291fb5348fa2be0da729825",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/G14_Independent_Verification_Ledger.json",
+      "summary": "10/10 independent checks passed; the fresh output was byte-identical to the frozen ledger."
+    },
+    {
+      "id": "V06",
+      "command": "python -B research/G14/g14_proof_store.py inspect-bundle research/G14/G14_Portable_Proof_Store_Bundle.zip",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14/G14_Portable_Proof_Store_Bundle.zip",
+      "summary": "Strict producer-side offline inspection resolved 75 exact objects and both roots."
+    },
+    {
+      "id": "V07",
+      "command": "compile every research/G14/*.py source with CPython 3.12.13",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14",
+      "summary": "All five Python sources compiled without syntax error."
+    },
+    {
+      "id": "V08",
+      "command": "Draft202012Validator(schemas/program_state.schema.json).validate(state/PROGRAM_STATE.json)",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "state/PROGRAM_STATE.json",
+      "summary": "Updated programme state conforms to its checked-in schema and routes G14 to unauthorized, unstarted G15."
+    },
+    {
+      "id": "V09",
+      "command": "git diff --check -- research/G14 state/PROGRAM_STATE.json",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "research/G14",
+      "summary": "No whitespace-error diff was reported."
+    }
+  ],
+  "scientific_evidence": {
+    "contract_sha256": "d0d36fd32cdc7470642c4f91a4f894891cad9e5c4291fb5348fa2be0da729825",
+    "acceptance_sha256": "3bc06d60462044169cd396433ee174bf1d2a365f850de14bb51d83aa46fedcd5",
+    "bundle_sha256": "2b2a80269211e8b87bfd2b076f79ffe7f41b4582acf0dfeaf6865fd267b96269",
+    "campaign_ledger_sha256": "7a2b6c42223ebf7f6982ecaa0675f692cb7e001ab98ec5e1ae4d171b7e556bf9",
+    "hostile_ledger_sha256": "8d3d7f0d177d1ba8bc3263cfa330efcd6a584d4c81b45c0e1e26b0f483a18aab",
+    "independent_ledger_sha256": "eb8296e54e4f708d2b85ab680cd031f17114dd061c7b278988518061d1823083",
+    "positive_checks": 14,
+    "hostile_rejections": 30,
+    "independent_checks": 10,
+    "regression_tests": 17,
+    "bundle_objects": 75,
+    "bundle_records": 34
+  },
+  "resolved_development_failures": [
+    "A noncanonical catalog order stopped the first development campaign before evidence publication.",
+    "The first real independent-verifier run rejected three acceptance-bound authorities omitted from the release closure.",
+    "A package-style unittest invocation failed to resolve sibling modules; the documented direct script invocation passed.",
+    "One regression constant initially confused the G13 baseline-status hash with the fresh-reproduction hash; the corrected frozen member hash passed.",
+    "Post-run review found that the verifier initially missed a superseded solution hidden inside a catalog-active proof; PASS was paused, the verifier was hardened, the hostile counterexample rejected, and the full campaign was rerun twice."
+  ],
+  "claim_boundary": {
+    "classification": "ENGINEERING_TEST",
+    "new_chess_truth": "NOT_CLAIMED",
+    "initial_position_reachability": "NOT_CLAIMED",
+    "g13_g12_acceptance_replay": "NOT_PERFORMED",
+    "g15_progress": "NOT_CLAIMED"
+  },
+  "remaining_blockers": [
+    "G13_MANDATORY_G12_REPLAY_OPEN blocks G15 and G17; the frozen G13 bundle has no executable G12 workload/checkpoint/repartition path."
+  ],
+  "state_sha256": "264de5ab9b4ece64054cb0d739ee98b89892771670a2300ca7826c8f93d01770",
+  "handoff_sha256": "028d344d1a90222f8f47479ac500d6119e8b2deb1089daf56799a6a7f69fec53",
+  "successor": {
+    "programme": "G15",
+    "authorized": false,
+    "started": false
+  }
+}

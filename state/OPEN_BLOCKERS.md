@@ -16,27 +16,25 @@ Observed and expected SHA-256:
 The frozen G13 acceptance replay is still NOT_PERFORMED. Byte recovery does not turn
 G13's roadmap gate into PASS and does not create an independent chess replay claim.
 
-Required closure: run the G13 adapter/campaign against those exact bytes and reproduce
-the frozen truth, certificate and canonical artifact identities under the required
-kill/restart/retry/repartition conditions.
+Required closure: create and govern a new, explicitly versioned G12-specific G13
+execution adapter/campaign with shard, checkpoint/resume, deterministic-merge and
+failure/repartition semantics. Then replay those exact bytes in a Linux/GCC-compatible
+environment and reproduce the seven canonical outputs without modifying frozen originals.
 
 Blocks:
 
 - G15 while the foundation acceptance exception remains open.
 - G17 directly; G17 was never unlocked by G13.
 
-## G14 not complete
+## G14 complete; G15 remains blocked
 
-G14 is the next sequential programme and is authorized only for a later explicit
-outer-controller start after bootstrap acceptance. It has not started. Bootstrap
-scaffolding is not G14 work, and bootstrap must not invoke the controller's live start.
+G14 has completed its own engineering and preservation gate with PASS. Its versioned
+proof-store contract, deterministic portable bundle, dependency closure, hostile campaign
+and structurally separate verifier are frozen G14 evidence. G14 claims no new chess truth
+and does not repair the inherited G13 acceptance exception.
 
-Required closure: after bootstrap acceptance, a later explicit outer-controller --start
-must execute, validate and freeze the authorized one-G run.
-
-Blocks:
-
-- G15, which depends on G10 through G14.
+G15 is not authorized and has not started. Its remaining blocker is the mandatory exact
+G12-through-G13 acceptance replay described above, not missing G14 proof-store work.
 
 ## Preserved historical G10 chain break
 
