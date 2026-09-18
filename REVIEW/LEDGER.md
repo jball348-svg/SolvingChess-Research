@@ -111,3 +111,142 @@ See the four R0 artifacts above plus expanded machine-readable claim/dependency 
 
 **End state:** **R0 COMPLETE — REVIEW REMAINS OPEN — R1 NOT STARTED.**
 
+
+
+## R1 — Scaling and Lifting Audit — 2026-09-18
+
+### Session ID
+`R1`
+
+### Question
+Does the G6→G8 ascent contain a repeatable mechanism for exact truth production and proof leverage as material rises and restrictions weaken, or does it reduce to successful hand-restricted finite computation?
+
+### Candidate bridge/scaling proposition
+A repeatable ascent/lifting mechanism is latent in material-signature decomposition plus the existing semantic target / graph-proof stack, such that prospectively increasing material and relaxing restrictions can produce new exact truth while combined discovery, solve and verification burden grows materially slower than naive state-space expansion.
+
+The exact proposition, ladder, hostile controls, target, move languages, metrics, resource budget and pass/fail rules were prospectively frozen in `REVIEW/R1_SCALING_HYPOTHESIS.md` at commit `29d3946a056ca6033f3be58fd2e152286aca8d20` before new R1 outcome truth was inspected.
+
+### Inherited facts allowed
+- G5 common semantic target and prospective transfer/lookup-floor results.
+- G6 strict attractor, Branch/Hyperkernel, resource-safe target schema and nested scaling evidence.
+- G7 F01/F02/F09 exact truth, F03/F04/F06/F07/F08 scale holds, material-endpoint composition and Filter-Pivot.
+- G8 matched hold recovery, material-signature solver, sparse certificate semantics, frozen one-switch palette, R01/R02 restricted eight-man truth and verifier economics.
+- R0 claim/dependency/negative-evidence reconstruction.
+
+### Attack plan
+Run a prospectively fixed P0→P3 material/restriction ladder, then H1/H2 hostile controls. Measure exact dependency-state growth, active-signature size, runtime/RSS, separate verifier economics, unchanged target coverage, frozen one-switch strategy coverage and unexplained residual. Do not rescue failures by shrinking arenas or adding predicates.
+
+### Work performed
+Created:
+- `REVIEW/R1_SCALING_HYPOTHESIS.md`
+- `REVIEW/R1_ASCENT_EVIDENCE_RECONSTRUCTION.md`
+- `REVIEW/R1_RESTRICTION_PROFILE.md`
+- `REVIEW/R1_SCALING_RESULTS.md`
+- `REVIEW/R1_SCALING_AUDIT.md`
+- `REVIEW/R1_NEGATIVE_EVIDENCE.md`
+
+Updated:
+- `REVIEW/REVIEW_STATUS.json`
+- `REVIEW/CLAIM_INVENTORY.md`
+- `REVIEW/machine_readable/claims.json`
+- `REVIEW/machine_readable/dependencies.json`
+- `REVIEW/OPEN_OBLIGATIONS.md`
+- `REVIEW/AUDIT_ISSUES.md`
+- this ledger
+
+The final R1 producer used material-signature least-fixed-point solving with exact lower-material capture dependencies. A separate-process rank/Bellman verifier checked every accepted state. The final harness source hash was `dcf4260e4779d6274a07013541714b475760ef6c49694b8405fcb1c6c54af245`; executable hash `47c9248e6385ff0b772c5241cd66b1ee0a6712797bc2ab683ff2cbabd0171a9d`.
+
+A reverse-predecessor performance defect in the first review harness was repaired without changing any arena or metric. The direct inverse generator was accepted only after exact reproduction of the historical G5 bishop checksum and equality with already-completed pre-repair outputs. The abandoned wrapper timeouts are not counted as chess evidence.
+
+### Result
+`PARTIAL`
+
+- Truth-production scaling: **SURVIVED** at tested scope.
+- Fixed semantic target transfer: **SURVIVED** at tested scope.
+- Main bishop-ladder frozen one-switch transfer: **SURVIVED**.
+- Hostile H1: **SURVIVED**.
+- Hostile H2 strategy-language transfer: **FAILED** — best frozen one-switch coverage 43.504% versus 75% preregistered threshold.
+
+### Scope
+Established:
+- material-signature exact solving is repeatable under controlled material ascent and rank-band relaxation in the R1 one-sided board-only family;
+- producer/verifier cost is approximately proportional to dependency-state count over 1.6M–29.7M tested dependency states;
+- the unchanged G5 semantic target remains exact across all six R1 arenas;
+- the fixed strategy-language palette is not robust to the H2 rook topology.
+
+Not established:
+- automatic target discovery;
+- automatic strategy-language discovery;
+- shrinking residual raw truth;
+- opposing-mobile-material scaling;
+- full history-state scaling;
+- middlegame relevance;
+- START_REACHABLE connectivity;
+- any full-chess scaling law.
+
+### Obligations retired / created
+Partially retired:
+- quantitative G7→G8 / material-signature scaling-law audit at bounded scope;
+- whether inherited semantic targets can transfer prospectively under controlled restriction relaxation.
+
+Still open / sharpened:
+- topology-adaptive proof discovery;
+- lookup/raw residual behavior;
+- opposing-material bridge domains;
+- automatic target/language discovery.
+
+Created for R2:
+- test outcome-independent target/strategy discovery on a prospectively frozen transition-rich arena with opposing mobile material.
+
+### Strike
+`NO`.
+
+R1 attacked a central falsifiable scaling claim, preserved a genuine hostile failure, and retired a meaningful part of the exact-compute uncertainty. H2 prevents SURVIVED but does not show that the whole lift collapses into raw enumeration. Strike count remains 0.
+
+### Next discriminating step
+R2 should attack one bridge question only:
+
+**Can an outcome-independent discovery procedure generate or select exact semantic targets and strategy languages that survive a prospectively frozen transition-rich arena with opposing mobile material, without square-level exception fitting or first solving essentially all of the arena as raw truth?**
+
+### Source/provenance updates
+See all R1 artifacts above. Frozen research snapshot remains `c2f0fa0530a3183df7e300d0bcbbeac554362895`; R1 files are review evidence, not rewrites of historical G authority.
+
+### R1 closeout questions
+
+1. **What precise scaling/lifting mechanism was tested?**  
+   Material-signature dependency decomposition + unchanged G5 semantic target/strict attraction + frozen semantic one-switch strategy languages + separate exact rank/Bellman replay.
+
+2. **What was frozen prospectively before outcome inspection?**  
+   Proposition, rules model, P0–P3 ladder, H1/H2 hostile controls, target, four move languages, metrics, 300 s / 3 GiB budget and pass/fail thresholds.
+
+3. **Did exact truth-production scaling survive?**  
+   **Yes, at R1 scope.** All six final arenas solve and verify; P0–P3 passes every truth-production gate.
+
+4. **Did proof/discovery leverage survive separately?**  
+   **Partially.** Target transfer and main bishop-ladder strategy transfer survive; H2 falsifies robust fixed-palette transfer. Automatic discovery remains open.
+
+5. **Did restrictions become meaningfully weaker at each ascent?**  
+   **Not at each material step.** P0→P1 and P1→P2 add fixed brink material; P2→P3 and P3→H1 genuinely relax pawn bands; H2 changes mobility/checking topology.
+
+6. **Did verifier economics improve, remain stable or deteriorate?**  
+   **Improved/stayed controlled in R1.** V/P declines from 0.871× to roughly 0.64–0.68× on larger points; historical G8 reversal controls remain valid.
+
+7. **Did residual lookup dependence improve, remain stable or worsen?**  
+   **Stable/mixed, not improving monotonically.** Main-ladder unexplained wins remain roughly 66–68%; H1 is 70.4%; H2 target residual improves but strategy residual worsens sharply.
+
+8. **Did hostile controls support or falsify the mechanism?**  
+   **Mixed.** H1 supports it. H2 supports exact solving and target transfer but falsifies frozen strategy-language transfer.
+
+9. **Can any defensible scaling law now be stated?**  
+   **Only a bounded engineering law:** in the R1 one-sided family, producer/verifier cost is approximately proportional to dependency-state count across the tested range. No full-chess extrapolation is justified.
+
+10. **Does R1 change the status of the first open dependency identified by R0?**  
+    **It narrows but does not close it.** Exact scaling is less doubtful; topology-adaptive proof discovery across opposing material is now the sharper open edge.
+
+11. **Did R1 create a review strike?**  
+    **No.** Strike count remains 0.
+
+12. **What single question should R2 attack next?**  
+    **Can an outcome-independent discovery procedure produce exact reusable targets/strategy languages on a transition-rich opposing-material hostile domain without square fitting or essentially complete raw truth first?**
+
+**End state:** **R1 COMPLETE — REVIEW REMAINS OPEN — R2 NOT STARTED.**
