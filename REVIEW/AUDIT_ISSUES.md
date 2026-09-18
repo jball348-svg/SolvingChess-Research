@@ -22,3 +22,15 @@ These are questions, not findings.
 | A16 | Reboot candidate | Can existing universal game-graph operators become a falsifiable lifting theorem with a hostile higher-material test? |
 | A17 | External benchmark | How does claimed scale compare with current public solving/tablebase frontiers on like-for-like restrictions/hardware? |
 | A18 | Decision integrity | What evidence would cause each verdict, fixed before decisive tests? |
+
+
+## R1 updates — 2026-09-18
+
+- **A02 Restricted scale:** partially answered. Controlled rank-band relaxation remains exactly tractable, but the new arenas are still one-sided and ARENA_ADMISSIBLE.
+- **A03 Discovery vs compression:** sharpened. Fixed target reuse is real; fixed strategy-language usefulness is topology-dependent and fails H2's hostile threshold.
+- **A04 Scaling law:** bounded answer only. A near-linear dependency-state runtime trend exists in R1's finite harness; no defensible unrestricted-chess law exists.
+- **A05 Lookup floors:** unresolved globally. R1's unexplained full-win residual remains roughly stable rather than shrinking.
+- **A07 Target discovery:** still open; R1 transfers an inherited target rather than inventing one automatically.
+- **A08 Middlegame topology:** still open and becomes the direct R2 focus; R1 adds checking/mobility hostility but not opposing mobile material.
+- **A12 Verification economics:** favorable in the R1 harness, historically mixed because G8 F09/F10 remain verifier-reversal controls.
+- **A16 Reboot candidate:** partially supported on exact-compute + fixed-target reuse, but hostile strategy transfer failure prevents promotion to a surviving general lift.
