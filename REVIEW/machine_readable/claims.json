@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.0.0",
-  "review_session": "R0",
+  "schema_version": "2.1.0",
+  "review_session": "R1",
   "reviewed_repository_head": "ebd4709dec356bde5b2276f244ea8832dc31eca2",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-18",
-  "status": "R0_RECONSTRUCTED_REVIEW_OPEN",
+  "status": "R1_PARTIAL_REVIEW_OPEN",
   "interpretation": "SUPPORTED_AT_STATED_SCOPE is documentary/proposition-level R0 support, not an automatic fresh rerun.",
   "claims": [
     {
@@ -821,6 +821,83 @@
       ],
       "caveat": "No viability verdict, strike change or G-programme authorization is implied.",
       "r0_status": "SUPPORTED_AT_STATED_SCOPE"
+    },
+    {
+      "id": "C33",
+      "proposition": "R1 prospectively demonstrates repeatable exact material-signature solving and separate rank/Bellman replay across a controlled material/restriction ladder up to 29,734,058 dependency states, with producer/verifier cost approximately proportional to dependency-state count at this scope.",
+      "hypotheses": [
+        "R1_SCALING_HYPOTHESIS prospective freeze",
+        "board-only ARENA_ADMISSIBLE semantics",
+        "final semantics-preserving inverse-predecessor harness"
+      ],
+      "domain": "R1 P0-P3 plus H1/H2 one-sided finite arenas",
+      "rules_state_model": "Historical board-only finite state; no repetition/halfmove/castling/en-passant history",
+      "reachability": "ARENA_ADMISSIBLE only",
+      "claim_class": "EXACT_FINITE",
+      "producer_evidence": [
+        "REVIEW/R1_SCALING_RESULTS.md",
+        "REVIEW/R1_RESTRICTION_PROFILE.md"
+      ],
+      "verifier_evidence": [
+        "Separate rank/Bellman verifier over every accepted R1 state"
+      ],
+      "downstream_consumers": [
+        "C35"
+      ],
+      "caveat": "The measured approximately linear cost is a bounded engineering observation, not an extrapolation to opposing-material or full-rule chess.",
+      "r0_status": "NOT_APPLICABLE_POST_R0",
+      "r1_status": "SUPPORTED_AT_R1_SCOPE"
+    },
+    {
+      "id": "C34",
+      "proposition": "The unchanged G5 semantic target remains exact across all six R1 arenas, but the prospectively frozen one-switch strategy palette fails the H2 hostile transfer threshold: best coverage is 43.504% versus the required 75%.",
+      "hypotheses": [
+        "unchanged G5 d-pawn target",
+        "frozen CHECK/KING_ONLY/PAWN_ONLY/MOBILE_PIECE_ONLY palette",
+        "H2 rook hostile control"
+      ],
+      "domain": "R1 prospective ladder and hostile controls",
+      "rules_state_model": "R1 board-only strict target-attractor semantics",
+      "reachability": "ARENA_ADMISSIBLE only",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R1_SCALING_RESULTS.md",
+        "REVIEW/R1_NEGATIVE_EVIDENCE.md"
+      ],
+      "verifier_evidence": [
+        "Exact truth/rank replay plus independently regenerated attractor membership"
+      ],
+      "downstream_consumers": [
+        "C35"
+      ],
+      "caveat": "This falsifies robust transfer of the supplied strategy vocabulary, not the mathematical FILTERED_ATTRACTOR/FILTER_PIVOT operators.",
+      "r0_status": "NOT_APPLICABLE_POST_R0",
+      "r1_status": "SUPPORTED_AT_R1_SCOPE"
+    },
+    {
+      "id": "C35",
+      "proposition": "R1 classifies the tested scaling/lifting proposition PARTIAL: exact-compute scaling and fixed-target transfer survive, while topology-adaptive proof discovery remains open and no full-chess scaling law follows.",
+      "hypotheses": [
+        "C33",
+        "C34",
+        "R1 prospective pass/fail criteria"
+      ],
+      "domain": "Independent viability review",
+      "rules_state_model": "Cross-programme scaling interpretation",
+      "reachability": "No START_REACHABLE claim",
+      "claim_class": "NOT_CLAIMED",
+      "producer_evidence": [
+        "REVIEW/R1_SCALING_AUDIT.md"
+      ],
+      "verifier_evidence": [
+        "R1 prospective gates applied without post-outcome weakening"
+      ],
+      "downstream_consumers": [
+        "R2"
+      ],
+      "caveat": "R1 does not file a viability verdict and does not authorize G15.",
+      "r0_status": "NOT_APPLICABLE_POST_R0",
+      "r1_status": "SUPPORTED_AT_R1_SCOPE"
     }
   ]
 }
