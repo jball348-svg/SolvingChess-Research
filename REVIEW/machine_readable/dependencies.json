@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0.0",
-  "review_session": "R0",
+  "schema_version": "2.1.0",
+  "review_session": "R1",
   "reviewed_repository_head": "690d1b7e2992b86bcd42266afb41d7eb913e3f7d",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-18",
@@ -62,8 +62,11 @@
       "id": "N05",
       "name": "SCALABLE_TRUTH_DISCOVERY_OR_LIFT",
       "proposition": "A repeatable mechanism should lift lower exact truth through less restricted, materially higher domains with discovery cost substantially below near-complete enumeration.",
-      "evidence": [],
-      "status": "OPEN"
+      "evidence": [
+        "R1 P0-P3/H1/H2 scaling audit"
+      ],
+      "status": "OPEN",
+      "r1_note": "Exact material-signature scaling and inherited target transfer survived at bounded scope; H2 falsified robust fixed-palette strategy transfer. Open edge narrowed to topology-adaptive proof discovery across opposing material."
     },
     {
       "id": "N06",
@@ -160,7 +163,7 @@
       "from": "N02",
       "to": "N05",
       "status": "OPEN",
-      "why": "R01/R02 demonstrate one restricted eight-man ascent, but fixed geometry and lack of a repeated less-restricted scaling sequence leave global discovery economics unestablished."
+      "why": "R1 adds repeatable bounded exact scaling and fixed-target transfer under controlled relaxation, but H2 breaks the frozen strategy palette and no opposing-material/full-rule scaling law exists."
     },
     {
       "id": "E06",
@@ -250,5 +253,11 @@
     "discovery_leverage": "Mechanisms that reduce the cost of discovering truth/targets",
     "proof_certificate_compression": "Mechanisms that compactly represent/replay already-established truth",
     "global_connectivity": "Certified START_REACHABLE route and all-opponent-reply closure"
+  },
+  "r1_update": {
+    "result": "PARTIAL",
+    "first_open_dependency": "N05_SCALABLE_TRUTH_DISCOVERY_OR_LIFT_REMAINS_OPEN",
+    "narrowed_question": "SCALABLE_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL",
+    "strikes": 0
   }
 }
