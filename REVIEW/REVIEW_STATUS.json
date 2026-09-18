@@ -7,7 +7,7 @@
   "mode": "INDEPENDENT_VIABILITY_REVIEW",
   "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
   "g_programme_execution_authorized": false,
-  "independent_claim_status": "NOT_YET_AUDITED",
+  "independent_claim_status": "R0_RECONSTRUCTED",
   "allowed_verdicts": [
     "CONTINUE_CURRENT_ROADMAP",
     "REBOOT",
@@ -23,5 +23,17 @@
     "R5_VERDICT"
   ],
   "strikes": 0,
-  "verdict": null
+  "verdict": null,
+  "last_completed_phase": "R0_CLAIMS",
+  "next_phase": "R1_SCALE",
+  "r0_complete": true,
+  "last_review_update": "2026-09-18",
+  "r0_summary": {
+    "first_open_strategic_dependency": "RESTRICTED_EXACT_TRUTH_TO_SCALABLE_LIFTING_DISCOVERY",
+    "start_side_open_dependency": "START_REACHABLE_FORWARD_DOMAIN_AND_ALL_REPLY_CLOSURE",
+    "g13_replay_blocker_class": "ENGINEERING_ACCEPTANCE_NOT_STRATEGIC_BRIDGE",
+    "g4_provenance": "DEPENDENCY_BROKEN",
+    "verdict_changed": false,
+    "strikes_changed": false
+  }
 }
