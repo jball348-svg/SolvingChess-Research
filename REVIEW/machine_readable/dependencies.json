@@ -1,56 +1,254 @@
 {
-  "schema_version": "1.0.0",
-  "snapshot_commit": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
+  "schema_version": "2.0.0",
+  "review_session": "R0",
+  "reviewed_repository_head": "690d1b7e2992b86bcd42266afb41d7eb913e3f7d",
+  "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
+  "generated_date": "2026-09-18",
   "nodes": [
-    "FULL_RULES_STATE_IDENTITY",
-    "TRUSTED_COMPUTE_AND_VERIFICATION",
-    "RESTRICTED_LOWER_TREE_TRUTH",
-    "SCALABLE_LIFTING_OR_DISCOVERY",
-    "MIDDLEGAME_CERTIFIED_NETWORK",
-    "START_REACHABLE_ALL_REPLY_CONNECTOR",
-    "INITIAL_POSITION_CERTIFICATE",
-    "WHITE_NON_LOSS_THEOREM"
-  ],
-  "edges": [
     {
-      "from": "FULL_RULES_STATE_IDENTITY",
-      "to": "TRUSTED_COMPUTE_AND_VERIFICATION",
-      "status": "PARTIALLY_ESTABLISHED"
+      "id": "N00",
+      "name": "FULL_RULES_GAME_AND_STATE_DEFINED",
+      "proposition": "The weak-solution game, full state identity, claim actions and terminal semantics are unambiguously specified.",
+      "evidence": [
+        "G10.RULES.v1.0",
+        "G12.STATE.SERIAL.v2"
+      ],
+      "status": "ESTABLISHED"
     },
     {
-      "from": "TRUSTED_COMPUTE_AND_VERIFICATION",
-      "to": "RESTRICTED_LOWER_TREE_TRUTH",
-      "status": "ESTABLISHED_AT_RESTRICTED_SCOPE"
+      "id": "N01",
+      "name": "SMALL_FULL_RULES_TRUTH_ANCHORS",
+      "proposition": "Exact full-rule W/D truth and exact DEAD semantics are demonstrated on small replayed reference arenas.",
+      "evidence": [
+        "G12 KQK/KRK/a-file KPK",
+        "G12 same-colour K+2B vs K DEAD"
+      ],
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE"
     },
     {
-      "from": "RESTRICTED_LOWER_TREE_TRUTH",
-      "to": "SCALABLE_LIFTING_OR_DISCOVERY",
+      "id": "N02",
+      "name": "RESTRICTED_HIGHER_TREE_TRUTH",
+      "proposition": "Exact/replayed truth exists for selected restricted six-, seven- and eight-man arenas.",
+      "evidence": [
+        "G7 F01/F02/F09",
+        "G8 F03/F04/F06/F07/F08/F10/R01/R02"
+      ],
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE"
+    },
+    {
+      "id": "N03",
+      "name": "FINITE_GRAPH_COMPOSITION_CORE",
+      "proposition": "Strict attractor, Branch/Hyperkernel and Filter-Pivot operations can compose or factor exact finite-game basins once exact targets/dependencies are supplied.",
+      "evidence": [
+        "G6",
+        "G7",
+        "G8"
+      ],
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE"
+    },
+    {
+      "id": "N04",
+      "name": "TRUSTED_COMPUTE_CERTIFICATE_AND_STORE",
+      "proposition": "There is substantial deterministic solve/replay/certificate/store infrastructure, subject to the open G12-through-G13 distributed acceptance replay.",
+      "evidence": [
+        "G8",
+        "G12",
+        "G13",
+        "G14"
+      ],
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE"
+    },
+    {
+      "id": "N05",
+      "name": "SCALABLE_TRUTH_DISCOVERY_OR_LIFT",
+      "proposition": "A repeatable mechanism should lift lower exact truth through less restricted, materially higher domains with discovery cost substantially below near-complete enumeration.",
+      "evidence": [],
       "status": "OPEN"
     },
     {
-      "from": "SCALABLE_LIFTING_OR_DISCOVERY",
-      "to": "MIDDLEGAME_CERTIFIED_NETWORK",
+      "id": "N06",
+      "name": "BROAD_ENDGAME_BASIN_NETWORK",
+      "proposition": "The programme should possess broad connected lower-tree basins covering diverse endgame/transition structures rather than isolated restricted arenas.",
+      "evidence": [],
+      "status": "PLANNED"
+    },
+    {
+      "id": "N07",
+      "name": "CERTIFIED_MIDDLEGAME_NETWORK",
+      "proposition": "Certified basins should extend through materially richer middlegame structures with enough connectivity to receive start-reachable play.",
+      "evidence": [],
       "status": "OPEN"
     },
     {
-      "from": "MIDDLEGAME_CERTIFIED_NETWORK",
-      "to": "START_REACHABLE_ALL_REPLY_CONNECTOR",
+      "id": "N08",
+      "name": "START_REACHABLE_FORWARD_DOMAIN",
+      "proposition": "A nontrivial domain rooted at the standard initial full state should be certified as legally START_REACHABLE under exact full-rule history semantics.",
+      "evidence": [
+        "G11 reachable fuzz is only engineering evidence"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "id": "N09",
+      "name": "START_TO_BASIN_CONNECTOR",
+      "proposition": "Certified start-reachable play should intersect compatible certified middlegame/lower basins with exact state/history identity.",
+      "evidence": [],
       "status": "OPEN"
     },
     {
-      "from": "START_REACHABLE_ALL_REPLY_CONNECTOR",
-      "to": "INITIAL_POSITION_CERTIFICATE",
+      "id": "N10",
+      "name": "ALL_OPPONENT_REPLY_CLOSURE",
+      "proposition": "For each certified White strategy choice on the start-connected route, every legal Black reply must remain in the proof or enter an already-certified non-loss basin.",
+      "evidence": [
+        "Finite attractor semantics establish the logical closure rule only at restricted finite scope"
+      ],
       "status": "OPEN"
     },
     {
-      "from": "INITIAL_POSITION_CERTIFICATE",
-      "to": "WHITE_NON_LOSS_THEOREM",
+      "id": "N11",
+      "name": "INITIAL_POSITION_CERTIFICATE",
+      "proposition": "A machine-checkable certificate rooted at the standard initial position should close every legal Black reply and establish White non-loss.",
+      "evidence": [],
+      "status": "OPEN"
+    },
+    {
+      "id": "N12",
+      "name": "WHITE_NON_LOSS_THEOREM",
+      "proposition": "The standard initial position has outcome WHITE_WIN or DRAW under perfect legal play.",
+      "evidence": [],
       "status": "OPEN"
     }
   ],
+  "edges": [
+    {
+      "id": "E00",
+      "from": "N00",
+      "to": "N01",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "G12 instantiates full-rule semantics on small exact reference arenas."
+    },
+    {
+      "id": "E01",
+      "from": "N02",
+      "to": "N03",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "G6–G8 repeatedly apply exact graph composition/factorization to restricted arenas."
+    },
+    {
+      "id": "E02",
+      "from": "N04",
+      "to": "N01",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "G12 has producer/verifier replay; G14 store is engineering-only and the G13 distributed acceptance seam remains open."
+    },
+    {
+      "id": "E03",
+      "from": "N04",
+      "to": "N02",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "G8 independently replays selected restricted truth; later G13/G14 infrastructure does not add chess truth."
+    },
+    {
+      "id": "E04",
+      "from": "N01",
+      "to": "N05",
+      "status": "OPEN",
+      "why": "No theorem/scaling law shows repeated ascent from full-rule small anchors into broad higher material."
+    },
+    {
+      "id": "E05",
+      "from": "N02",
+      "to": "N05",
+      "status": "OPEN",
+      "why": "R01/R02 demonstrate one restricted eight-man ascent, but fixed geometry and lack of a repeated less-restricted scaling sequence leave global discovery economics unestablished."
+    },
+    {
+      "id": "E06",
+      "from": "N03",
+      "to": "N05",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "Composition algebra can amplify known basins, but it does not supply or discover constituent basins; therefore it supports but does not close N05."
+    },
+    {
+      "id": "E07",
+      "from": "N05",
+      "to": "N06",
+      "status": "PLANNED",
+      "why": "G16–G22 are intended to build broad truth/basin coverage if scalable lifting/discovery succeeds."
+    },
+    {
+      "id": "E08",
+      "from": "N06",
+      "to": "N07",
+      "status": "OPEN",
+      "why": "G29–G34 describe transition-rich and middlegame bridge work but no established mechanism guarantees the transition."
+    },
+    {
+      "id": "E09",
+      "from": "N00",
+      "to": "N08",
+      "status": "PLANNED",
+      "why": "G35 is intended to build the start-position forward canonicalizer; G11 reachable fuzz is not a certificate."
+    },
+    {
+      "id": "E10",
+      "from": "N07",
+      "to": "N09",
+      "status": "OPEN",
+      "why": "No certified middlegame basin network currently exists to receive start play."
+    },
+    {
+      "id": "E11",
+      "from": "N08",
+      "to": "N09",
+      "status": "OPEN",
+      "why": "No certified intersection or entry edge from the start-reachable domain into a solved basin exists."
+    },
+    {
+      "id": "E12",
+      "from": "N03",
+      "to": "N10",
+      "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
+      "why": "Existential/universal predecessor semantics are mathematically available, but global all-reply closure economics and discovery remain unproved."
+    },
+    {
+      "id": "E13",
+      "from": "N09",
+      "to": "N10",
+      "status": "OPEN",
+      "why": "A connector alone is insufficient unless every adversarial reply is closed."
+    },
+    {
+      "id": "E14",
+      "from": "N10",
+      "to": "N11",
+      "status": "OPEN",
+      "why": "No root-connected complete all-reply proof DAG exists."
+    },
+    {
+      "id": "E15",
+      "from": "N11",
+      "to": "N12",
+      "status": "ESTABLISHED",
+      "why": "If a valid machine-checkable initial-position certificate closes every legal Black reply under exact rules, White non-loss follows by definition."
+    }
+  ],
+  "first_genuinely_open_strategic_edge": [
+    "E04",
+    "E05"
+  ],
+  "start_side_first_open_edge": "E09",
   "routing_blocker": {
     "id": "G13_MANDATORY_G12_REPLAY_OPEN",
+    "status": "BLOCKED",
     "type": "ENGINEERING_ACCEPTANCE",
-    "strategic_bridge_status": "DOES_NOT_BY_ITSELF_CLOSE_ANY_OPEN_GLOBAL_EDGE"
+    "strategic_bridge_status": "DOES_NOT_BY_ITSELF_CLOSE_E04_E05_E08_E10_E11_OR_E13",
+    "note": "R0 did not repair this blocker."
+  },
+  "required_separation": {
+    "solved_state_scale": "Large exact restricted state counts",
+    "discovery_leverage": "Mechanisms that reduce the cost of discovering truth/targets",
+    "proof_certificate_compression": "Mechanisms that compactly represent/replay already-established truth",
+    "global_connectivity": "Certified START_REACHABLE route and all-opponent-reply closure"
   }
 }
