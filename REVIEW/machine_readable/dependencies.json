@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_commit": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
+  "nodes": [
+    "FULL_RULES_STATE_IDENTITY",
+    "TRUSTED_COMPUTE_AND_VERIFICATION",
+    "RESTRICTED_LOWER_TREE_TRUTH",
+    "SCALABLE_LIFTING_OR_DISCOVERY",
+    "MIDDLEGAME_CERTIFIED_NETWORK",
+    "START_REACHABLE_ALL_REPLY_CONNECTOR",
+    "INITIAL_POSITION_CERTIFICATE",
+    "WHITE_NON_LOSS_THEOREM"
+  ],
+  "edges": [
+    {
+      "from": "FULL_RULES_STATE_IDENTITY",
+      "to": "TRUSTED_COMPUTE_AND_VERIFICATION",
+      "status": "PARTIALLY_ESTABLISHED"
+    },
+    {
+      "from": "TRUSTED_COMPUTE_AND_VERIFICATION",
+      "to": "RESTRICTED_LOWER_TREE_TRUTH",
+      "status": "ESTABLISHED_AT_RESTRICTED_SCOPE"
+    },
+    {
+      "from": "RESTRICTED_LOWER_TREE_TRUTH",
+      "to": "SCALABLE_LIFTING_OR_DISCOVERY",
+      "status": "OPEN"
+    },
+    {
+      "from": "SCALABLE_LIFTING_OR_DISCOVERY",
+      "to": "MIDDLEGAME_CERTIFIED_NETWORK",
+      "status": "OPEN"
+    },
+    {
+      "from": "MIDDLEGAME_CERTIFIED_NETWORK",
+      "to": "START_REACHABLE_ALL_REPLY_CONNECTOR",
+      "status": "OPEN"
+    },
+    {
+      "from": "START_REACHABLE_ALL_REPLY_CONNECTOR",
+      "to": "INITIAL_POSITION_CERTIFICATE",
+      "status": "OPEN"
+    },
+    {
+      "from": "INITIAL_POSITION_CERTIFICATE",
+      "to": "WHITE_NON_LOSS_THEOREM",
+      "status": "OPEN"
+    }
+  ],
+  "routing_blocker": {
+    "id": "G13_MANDATORY_G12_REPLAY_OPEN",
+    "type": "ENGINEERING_ACCEPTANCE",
+    "strategic_bridge_status": "DOES_NOT_BY_ITSELF_CLOSE_ANY_OPEN_GLOBAL_EDGE"
+  }
+}
