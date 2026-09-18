@@ -7,7 +7,7 @@
   "mode": "INDEPENDENT_VIABILITY_REVIEW",
   "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
   "g_programme_execution_authorized": false,
-  "independent_claim_status": "R0_RECONSTRUCTED",
+  "independent_claim_status": "R1_SCALING_PARTIAL",
   "allowed_verdicts": [
     "CONTINUE_CURRENT_ROADMAP",
     "REBOOT",
@@ -24,8 +24,8 @@
   ],
   "strikes": 0,
   "verdict": null,
-  "last_completed_phase": "R0_CLAIMS",
-  "next_phase": "R1_SCALE",
+  "last_completed_phase": "R1_SCALE",
+  "next_phase": "R2_BRIDGE",
   "r0_complete": true,
   "last_review_update": "2026-09-18",
   "r0_summary": {
@@ -33,6 +33,17 @@
     "start_side_open_dependency": "START_REACHABLE_FORWARD_DOMAIN_AND_ALL_REPLY_CLOSURE",
     "g13_replay_blocker_class": "ENGINEERING_ACCEPTANCE_NOT_STRATEGIC_BRIDGE",
     "g4_provenance": "DEPENDENCY_BROKEN",
+    "verdict_changed": false,
+    "strikes_changed": false
+  },
+  "r1_complete": true,
+  "r1_summary": {
+    "result": "PARTIAL",
+    "truth_production_scaling": "SURVIVED_AT_TESTED_SCOPE",
+    "fixed_target_transfer": "SURVIVED_AT_TESTED_SCOPE",
+    "main_ladder_strategy_transfer": "SURVIVED_AT_TESTED_SCOPE",
+    "hostile_strategy_transfer": "FAILED_H2_43_504_PERCENT_VS_75_PERCENT_THRESHOLD",
+    "first_open_dependency_status": "OPEN_NARROWED_TO_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL",
     "verdict_changed": false,
     "strikes_changed": false
   }
