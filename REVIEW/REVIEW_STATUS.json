@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "opened_on": "2026-09-18",
+  "snapshot_commit": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
+  "frozen_g14_content_commit": "e57958749adb9d0cc17fab84702a366febcf7e0f",
+  "status": "OPEN",
+  "mode": "INDEPENDENT_VIABILITY_REVIEW",
+  "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
+  "g_programme_execution_authorized": false,
+  "independent_claim_status": "NOT_YET_AUDITED",
+  "allowed_verdicts": [
+    "CONTINUE_CURRENT_ROADMAP",
+    "REBOOT",
+    "STOP_CURRENT_METHOD",
+    "INCONCLUSIVE"
+  ],
+  "review_phases": [
+    "R0_CLAIMS",
+    "R1_SCALE",
+    "R2_BRIDGE",
+    "R3_START_REACHABILITY",
+    "R4_REBOOT_ATTACK",
+    "R5_VERDICT"
+  ],
+  "strikes": 0,
+  "verdict": null
+}
