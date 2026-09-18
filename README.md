@@ -1,3 +1,5 @@
+> **Independent REVIEW open (2026-09-18).** New G-programme execution is paused at operator level while the repository is audited for current-method viability and possible reboot. Start with [`REVIEW/README.md`](REVIEW/README.md). This does not rewrite frozen programme state or historical claims.
+
 # Solving Chess
 
 Solving Chess is a repository-native continuation of a long-running exact symbolic-chess
