@@ -7,6 +7,18 @@ machine-checkable weak solution of chess under the declared frozen rules contrac
 
 Scientific correctness, provenance and reproducibility outrank apparent progress.
 
+## Independent REVIEW hold
+
+If `REVIEW/REVIEW_STATUS.json` exists with status `OPEN`, that user-authorized review overrides normal new-G execution:
+
+- do not start G15 or any successor G;
+- do not repair a blocker merely to unlock the old sequential roadmap;
+- do not modify frozen historical authorities;
+- perform viability/audit work under `REVIEW/` unless the user explicitly overrides the hold;
+- treat `REVIEW/VERDICT.md` as OPEN until the review process earns a verdict under `REVIEW/REBOOT_CRITERIA.md`.
+
+The review hold is an operator policy, not a scientific claim and not a rewrite of `state/PROGRAM_STATE.json`.
+
 ## Start-of-run authority
 
 Before research:
