@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_commit": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
+  "default_independent_status": "NOT_YET_AUDITED",
+  "claims": [
+    {
+      "id": "C00",
+      "kind": "OBJECTIVE",
+      "scope": "GLOBAL",
+      "source": "roadmap/normalized/G9_G10_Onwards_Long_Range_Plan.md"
+    },
+    {
+      "id": "C01",
+      "kind": "RESTRICTED_EXACT",
+      "scope": "G6_DECLARED_DOMAINS",
+      "source": "handoffs/normalized/G6_Final_Technical_Handoff.md"
+    },
+    {
+      "id": "C02",
+      "kind": "RESTRICTED_EXACT",
+      "scope": "G7_DECLARED_ARENAS",
+      "source": "handoffs/normalized/G7_Higher_Tree_Position_Discovery_Technical_Handoff.md"
+    },
+    {
+      "id": "C03",
+      "kind": "RESTRICTED_EXACT",
+      "scope": "G8_RESTRICTED_EIGHT_MAN",
+      "source": "handoffs/normalized/G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.md"
+    },
+    {
+      "id": "C04",
+      "kind": "NEGATIVE_ECONOMIC",
+      "scope": "G8_VERIFIER_CONTROLS",
+      "source": "handoffs/normalized/G8_Certificate_Engine_and_Reascent_Final_Technical_Handoff.md"
+    },
+    {
+      "id": "C05",
+      "kind": "PLANNING_ASSESSMENT",
+      "scope": "PROGRAMME_READINESS",
+      "source": "roadmap/normalized/G9_Road_to_100_Assessment.md"
+    },
+    {
+      "id": "C06",
+      "kind": "OPEN_GAP",
+      "scope": "MIDDLEGAME_AND_INITIAL_CONNECTION",
+      "source": "roadmap/normalized/G9_Road_to_100_Assessment.md"
+    },
+    {
+      "id": "C09",
+      "kind": "EXACT_FINITE_REPLAY",
+      "scope": "G12_SMALL_FULL_RULE_ARENAS",
+      "source": "handoffs/normalized/G12_Technical_Handoff.md"
+    },
+    {
+      "id": "C11",
+      "kind": "ENGINEERING_TEST",
+      "scope": "G13_SYNTHETIC_FIXTURE",
+      "source": "handoffs/normalized/G13_Technical_Handoff.md"
+    },
+    {
+      "id": "C12",
+      "kind": "ENGINEERING_PRESERVATION",
+      "scope": "G14",
+      "source": "research/G14/G14_Technical_Handoff.md"
+    },
+    {
+      "id": "C13",
+      "kind": "BLOCKED",
+      "scope": "G15_G17",
+      "source": "state/PROGRAM_STATE.json"
+    },
+    {
+      "id": "C16",
+      "kind": "REVIEW_QUESTION",
+      "scope": "BRIDGE_VIABILITY",
+      "source": "REVIEW/GLOBAL_PROOF_ARCHITECTURE.md"
+    },
+    {
+      "id": "C17",
+      "kind": "REVIEW_QUESTION",
+      "scope": "PROGRAMME_VERDICT",
+      "source": "REVIEW/REBOOT_CRITERIA.md"
+    }
+  ]
+}
