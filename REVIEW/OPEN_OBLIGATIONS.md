@@ -13,3 +13,12 @@
 11. Construct the strongest plausible reboot architecture using only supported mechanisms or a small falsifiable survival test.
 12. Attack that reboot with counterexamples, scaling estimates and hostile domains.
 13. File one allowed verdict and name exactly which obligations caused it.
+
+
+## R1 disposition — 2026-09-18
+
+- Obligation 3 is **partially retired**: R1 reconstructs the G7→G8 scale transition and adds a prospectively frozen 1.6M–29.7M dependency-state ladder. Material-signature producer/verifier cost is approximately proportional to dependency-state count in the new one-sided board-only family. No full-chess scaling law is inferred.
+- Obligation 4 is **partially retired / sharpened**: unchanged semantic target transfer survives, but H2 falsifies robust fixed-palette strategy transfer (43.504% versus the frozen 75% hostile threshold). Automatic target/language discovery remains open.
+- Obligation 5 remains **open**: the main-ladder unexplained win residual stays roughly 66–68% rather than shrinking.
+- Obligation 6 remains **open** at global scale: R1 did not need the raw-truth fallback to complete its tested arenas, but that says little about opposing-material bridge domains.
+- New sharpened obligation for R2: test whether an outcome-independent discovery procedure can generate/select exact targets and strategy languages on a prospectively frozen transition-rich arena with opposing mobile material, without square-level fitting or first acquiring essentially complete raw truth.
