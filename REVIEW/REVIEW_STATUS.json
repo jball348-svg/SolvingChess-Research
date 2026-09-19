@@ -7,7 +7,7 @@
   "mode": "INDEPENDENT_VIABILITY_REVIEW",
   "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
   "g_programme_execution_authorized": false,
-  "independent_claim_status": "R1_SCALING_PARTIAL",
+  "independent_claim_status": "R2_DISCOVERY_PARTIAL",
   "allowed_verdicts": [
     "CONTINUE_CURRENT_ROADMAP",
     "REBOOT",
@@ -24,10 +24,10 @@
   ],
   "strikes": 0,
   "verdict": null,
-  "last_completed_phase": "R1_SCALE",
-  "next_phase": "R2_BRIDGE",
+  "last_completed_phase": "R2_BRIDGE",
+  "next_phase": "R3_START_REACHABILITY",
   "r0_complete": true,
-  "last_review_update": "2026-09-18",
+  "last_review_update": "2026-09-19",
   "r0_summary": {
     "first_open_strategic_dependency": "RESTRICTED_EXACT_TRUTH_TO_SCALABLE_LIFTING_DISCOVERY",
     "start_side_open_dependency": "START_REACHABLE_FORWARD_DOMAIN_AND_ALL_REPLY_CLOSURE",
@@ -46,5 +46,23 @@
     "first_open_dependency_status": "OPEN_NARROWED_TO_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL",
     "verdict_changed": false,
     "strikes_changed": false
+  },
+  "r2_complete": true,
+  "r2_summary": {
+    "result": "PARTIAL",
+    "discovery_mechanism": "ZERO_TOP_LABEL_SEMANTIC_TARGET_AND_ONE_SWITCH_STRATEGY_MINING",
+    "truth_leakage_ratio": 0,
+    "d1_target_false_positives": 0,
+    "d1_composite_win_coverage_percent": 99.9527,
+    "d1_strategy_coverage_percent": 99.7451,
+    "h1_target_false_positives": 0,
+    "h1_composite_win_coverage_percent": 99.8919,
+    "h1_strategy_coverage_percent": 99.5773,
+    "d1_residual_raw_truth_percent": 0.0473208,
+    "discovery_cost_ratio": 1.278,
+    "discovery_economics": "FAILED_FROZEN_LE_1_0_GATE",
+    "first_open_dependency_status": "OPEN_NARROWED_DISCOVERY_EXISTS_BUT_SCALABLE_FAVOURABLE_ECONOMICS_UNESTABLISHED",
+    "strike": false,
+    "verdict_changed": false
   }
 }
