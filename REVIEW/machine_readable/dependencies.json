@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.4.0",
-  "review_session": "R4",
+  "schema_version": "2.5.0",
+  "review_session": "R5",
   "reviewed_repository_head": "ad6a67d09b50c7f1aaf67930d51e32b72d4a21d4",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
@@ -92,9 +92,10 @@
         "G11 reachable fuzz is only engineering evidence",
         "R3 exact start-rooted full-state forward domains through ply 5"
       ],
-      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R4_SCOPE",
+      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R5_SCOPE",
       "r3_note": "Exact legal START_REACHABLE state production and canonical full-state merging are demonstrated on prospectively frozen D/H start branches through ply 5. This does not establish non-loss proof closure.",
-      "r4_note": "R4 extends exact full-rule START_REACHABLE semantic-policy generation to ply 6 on king-pawn discovery and knight-first hostile families. This remains structural reachability, not non-loss proof closure."
+      "r4_note": "R4 extends exact full-rule START_REACHABLE semantic-policy generation to ply 6 on king-pawn discovery and knight-first hostile families. This remains structural reachability, not non-loss proof closure.",
+      "r5_note": "R5 extends exact start-rooted full-state generation to much broader ply-6 semantic-policy frontiers: 3,903,222 D and 3,004,564 H theorem states. Structural reachability is established only at bounded scope."
     },
     {
       "id": "N09",
@@ -103,7 +104,8 @@
       "evidence": [],
       "status": "OPEN",
       "r3_note": "R3 reaches no existing compatible exact basin; START_TO_BASIN_CONNECTOR remains OPEN.",
-      "r4_note": "R4 finds no terminal/draw/current-G12 target entry. Tested cohorts retain 30-32 pieces and only five local plies, so existing 3-4-piece G12 dependencies are materially unreachable. The connector remains OPEN and is narrowed toward a nonterminal exact intermediate target."
+      "r4_note": "R4 finds no terminal/draw/current-G12 target entry. Tested cohorts retain 30-32 pieces and only five local plies, so existing 3-4-piece G12 dependencies are materially unreachable. The connector remains OPEN and is narrowed toward a nonterminal exact intermediate target.",
+      "r5_note": "R5 supplies a genuine high-material exact nonterminal target (FERL-4), but it certifies only 0.4883% D / 0.6836% H and creates no material connector to lower certified basins. Node remains OPEN."
     },
     {
       "id": "N10",
@@ -114,7 +116,8 @@
       ],
       "status": "OPEN",
       "r3_note": "R3 represents 100% of legal Black replies at every expanded Black layer while semantic White restriction sharply reduces the shallow unresolved frontier, but no retained White policy is yet certified non-losing and the horizon frontier is not closed. Node remains OPEN.",
-      "r4_note": "R4 exact certification produces zero certified cohort roots on both D and H. Universal Black-node semantics remain exact, but no nonempty all-reply proof object is created. Node remains OPEN."
+      "r4_note": "R4 exact certification produces zero certified cohort roots on both D and H. Universal Black-node semantics remain exact, but no nonempty all-reply proof object is created. Node remains OPEN.",
+      "r5_note": "R5 produces a nonempty exact all-reply local proof object with 100% Black closure for accepted FERL-4 certificates, but material start-side closure remains absent. Node remains OPEN."
     },
     {
       "id": "N11",
@@ -199,9 +202,10 @@
       "id": "E09",
       "from": "N00",
       "to": "N08",
-      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R4_SCOPE",
+      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R5_SCOPE",
       "why": "R3 and R4 explicitly generate/canonicalize exact full-rule states from the standard initial position, now through ply 6 on prospectively frozen R4 families. Deep/scalable forward-domain economics remain unproved.",
-      "r4_note": "Exact START_REACHABLE production survives structurally; certification does not."
+      "r4_note": "Exact START_REACHABLE production survives structurally; certification does not.",
+      "r5_note": "Exact START_REACHABLE production survives on broader R5 ply-6 semantic-policy domains; history burden rises materially."
     },
     {
       "id": "E10",
@@ -216,7 +220,8 @@
       "to": "N09",
       "status": "OPEN",
       "why": "No certified intersection or entry edge from the start-reachable domain into a solved basin exists.",
-      "r4_note": "R4's current exact lower targets are provably unreachable from the 30-32-piece cohorts inside the five-ply local certification budget. Edge remains OPEN; a nonterminal intermediate exact target is the sharpened requirement."
+      "r4_note": "R4's current exact lower targets are provably unreachable from the 30-32-piece cohorts inside the five-ply local certification budget. Edge remains OPEN; a nonterminal intermediate exact target is the sharpened requirement.",
+      "r5_note": "FERL-4 creates high-material exact intermediate targets but only sub-1% cohort certification and no material lower-basin connection; edge remains OPEN."
     },
     {
       "id": "E12",
@@ -225,7 +230,8 @@
       "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
       "why": "Existential/universal predecessor semantics are mathematically available, but global all-reply closure economics and discovery remain unproved.",
       "r3_note": "Universal Black-reply expansion is exact on every expanded R3 Black layer, but proof-theoretic closure still requires certified White choices/typed leaves.",
-      "r4_note": "R4 retains universal Black closure in the certification rule, but zero policy roots certify. Logical closure machinery survives; useful start-side instantiation does not."
+      "r4_note": "R4 retains universal Black closure in the certification rule, but zero policy roots certify. Logical closure machinery survives; useful start-side instantiation does not.",
+      "r5_note": "R5 instantiates exact universal Black closure on a nonempty high-material target, but the certified set is negligible and does not establish scalable/economical closure."
     },
     {
       "id": "E13",
@@ -233,7 +239,8 @@
       "to": "N10",
       "status": "OPEN",
       "why": "A connector alone is insufficient unless every adversarial reply is closed.",
-      "r3_note": "No start-to-basin connector is established in R3; edge remains OPEN."
+      "r3_note": "No start-to-basin connector is established in R3; edge remains OPEN.",
+      "r5_note": "No material start-to-basin connector is established. Sparse FERL-4 local draw contracts do not close this edge."
     },
     {
       "id": "E14",
@@ -242,7 +249,8 @@
       "status": "OPEN",
       "why": "No root-connected complete all-reply proof DAG exists.",
       "r3_note": "R3 is not an initial-position certificate; unresolved horizon leaves remain.",
-      "r4_note": "R4 produces no nonempty certified start proof object; no initial-position certificate follows."
+      "r4_note": "R4 produces no nonempty certified start proof object; no initial-position certificate follows.",
+      "r5_note": "R5 produces only sparse local certified roots, not a root-connected complete proof DAG. Edge remains OPEN."
     },
     {
       "id": "E15",
@@ -288,8 +296,8 @@
     "strikes": 0,
     "next_phase": "R3_START_REACHABILITY"
   },
-  "status": "R4_FAILED_REVIEW_OPEN",
-  "start_side_open_dependency": "NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION",
+  "status": "R5_FAILED_REVIEW_OPEN",
+  "start_side_open_dependency": "MATERIAL_REPEATABLE_START_SIDE_CERTIFICATION_MECHANISM_NOT_DEMONSTRATED",
   "r4_update": {
     "result": "FAILED",
     "architecture": "BIDIRECTIONAL_CERTIFIED_FRONTIER_REBOOT",
@@ -305,5 +313,23 @@
     "strikes_total": 0,
     "next_phase": "R5_HOSTILE_SYNTHESIS",
     "final_decision_phase": "R6_FINAL_SURVIVAL_DECISION"
+  },
+  "r5_update": {
+    "result": "FAILED",
+    "target": "FORCED_EXACT_REPETITION_LOCK_FERL4",
+    "target_exactness_violations": 0,
+    "local_truth_leakage": 0,
+    "D_certified_policy_coverage": 0.0048828125,
+    "H_certified_policy_coverage": 0.0068359375,
+    "D_certification_cost_ratio": 0.8084090244,
+    "H_certification_cost_ratio": 0.8358657001,
+    "D_history_multiplier_ply6": 2.50730178796,
+    "H_history_multiplier_ply6": 2.34487182889,
+    "baseline_root_counts_match_policy": true,
+    "dependency_retired": false,
+    "repeatable_progress_mechanism": false,
+    "strike": false,
+    "strikes_total": 0,
+    "next_phase": "R6_FINAL_SURVIVAL_DECISION"
   }
 }
