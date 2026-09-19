@@ -620,3 +620,229 @@ The R3 source/result boundary is documented in the nine R3 review reports plus `
     **Can R3's prospectively frozen semantic White-choice compression be converted into exact non-loss certification / typed-target entry on a start-rooted all-reply DAG without near-complete outcome acquisition or loss of the sub-tree frontier advantage?**
 
 **End state:** **R3 COMPLETE — REVIEW REMAINS OPEN — R4 NOT STARTED.**
+
+
+## R4 — Reboot Candidate Construction and Survival Attack — 2026-09-19
+
+### Session ID
+`R4`
+
+### Question
+Can the R3 semantic White-choice frontier be converted from structural branching compression into exact non-loss proof compression by a prospectively frozen typed-target mechanism without near-complete local outcome truth or loss of the sub-tree advantage?
+
+### Candidate bridge/scaling proposition
+The **Bidirectional Certified Frontier Reboot** can maintain a lower exact certified frontier and a standard-start exact certified frontier, and can make progress by retiring one exact bridge obligation at a time. Its first R4 test is whether an R3-derived semantic White program can certify a material fraction of exact START_REACHABLE White-policy states into self-certifying terminal/draw/current exact dependency targets with universal Black closure, low truth leakage, favorable economics and unchanged held-out transfer.
+
+The architecture was frozen in `REVIEW/R4_REBOOT_ARCHITECTURE.md` at commit `400f4d90a39ffb5b9ba86c6f8f6711520e867cb6`.
+
+The survival hypothesis was frozen in `REVIEW/R4_REBOOT_SURVIVAL_HYPOTHESIS.md` at commit `d812bd912225215128eb470ce785596eda23cbe3` before decisive certification/baseline inspection.
+
+### Inherited facts allowed
+R4 uses:
+
+- G10 full-rule semantic state;
+- G12.STATE.SERIAL.v2 exact forward identity;
+- G12 exact KQK/KRK/KPK/DEAD dependencies only at their declared scope;
+- exact finite-game existential White / universal Black closure;
+- Branch / Hyperkernel / Filter-Pivot as exact composition operators at their established scopes;
+- R2's zero-top-label semantic discovery result and its failed discovery-economic gate;
+- R3's exact START_REACHABLE full-state generation, `ANSWER_CHECK OR CENTER_PAWN` semantic policy, all-Black-reply structural expansion and adverse history-state measurements.
+
+No G stage was resumed. Frozen historical sources were not modified.
+
+### Attack plan
+1. Freeze one reboot architecture rather than alternatives.
+2. Freeze a two-phase R3-derived White program and a self-certifying exact target grammar.
+3. Test exact START_REACHABLE ply-6 D states from the king-pawn first-move family.
+4. Select a deterministic 1,024-state cohort with forcing/quiet balance and no outcome labels.
+5. Attempt exact certification at remaining depths 1, 3 and 5.
+6. Apply the selected depth and unchanged mechanism to a knight-first hostile START_REACHABLE family.
+7. Compare against a competent all-White exact bounded target-reachability baseline under the same state model, target and cohort.
+8. Preserve zero coverage, target scarcity, history burden and resource failures without post-hoc repair.
+
+### Work performed
+Created:
+
+- `REVIEW/R4_REBOOT_ARCHITECTURE.md`
+- `REVIEW/R4_REBOOT_SURVIVAL_HYPOTHESIS.md`
+- `REVIEW/R4_START_POLICY_CERTIFICATION_RESULTS.md`
+- `REVIEW/R4_TYPED_TARGET_RESULTS.md`
+- `REVIEW/R4_CERTIFICATION_ECONOMICS.md`
+- `REVIEW/R4_HELDOUT_RESULTS.md`
+- `REVIEW/R4_NEGATIVE_EVIDENCE.md`
+- `REVIEW/R4_IMPLEMENTATION_PROVENANCE.md`
+- `REVIEW/R4_REBOOT_AUDIT.md`
+- `REVIEW/provenance/R4_RUN_SUMMARY.json`
+
+No `R4_REBOOT_PROTOCOL.md` was created because the candidate did not survive sufficiently to justify adoption.
+
+Accepted audit-local implementation:
+
+- source SHA-256: `b4344cd2ab3502c3efb87c855267a75853aa5f0f5a55a793e55124dd9fab169a`;
+- executable SHA-256: `d4d68185246ec82b81ca719da55829536c25c529e18250d7324846fd6242cd49`;
+- compiler: g++ 14.2.0;
+- flags: `-O3 -std=c++20 -march=native`.
+
+Regression:
+
+- standard-start perft reproduced 20 / 400 / 8,902 / 197,281 / 4,865,609 at depths 1–5;
+- frozen R3 D replay reproduced **38,824 paths / 13,064 exact full states** at ply 5;
+- frozen R3 H queen-pawn replay reproduced **38,916 / 13,181**.
+
+### Result
+`FAILED`
+
+Discovery D:
+
+- ply-6 full states: **158,947**;
+- board placements: **118,093**;
+- history multiplier: **1.34595x**;
+- cohort: **1,024**;
+- direct exact targets: **0**;
+- certified depth 1: **0 / 1,024**;
+- certified depth 3: **0 / 1,024**;
+- certified depth 5: **0 / 1,024**;
+- `CERTIFIED_POLICY_COVERAGE = 0.0000%`;
+- `LOCAL_TRUTH_LEAKAGE = 0%`.
+
+Held-out H knight-first:
+
+- ply-6 full states: **449,623**;
+- board placements: **303,288**;
+- history multiplier: **1.48250x**;
+- cohort: **1,024**;
+- direct exact targets: **0**;
+- unchanged depth-5 certification: **0 / 1,024**.
+
+Competent exact all-White bounded baselines:
+
+- D: `std::bad_alloc` at **69.06 s**, peak RSS **2,081,320 KiB**, complete bounded truth not acquired;
+- H: `std::bad_alloc` at **71.58 s**, peak RSS **2,024,280 KiB**, complete bounded truth not acquired.
+
+An exact certification-cost ratio is therefore unavailable. The cheap semantic computations receive no positive economic credit because they certify zero states.
+
+### Scope
+Established:
+
+- a coherent one-candidate reboot architecture can be frozen and falsified;
+- R3's exact start-side generator/policy counts reproduce in the R4 implementation;
+- exact START_REACHABLE semantic-policy construction extends to ply 6 on D and knight-first H;
+- the frozen terminal/draw/current-G12 target grammar gives zero start-side certification on both prospectively selected cohorts;
+- current G12 lower targets are materially unreachable inside the local R4 depth budget;
+- brute-force bounded target truth breaches the declared memory budget;
+- exact history continues to impose material state multiplication.
+
+Not established:
+
+- that any tested state is losing;
+- impossibility of richer nonterminal exact intermediate targets;
+- impossibility of every bidirectional-frontier method;
+- a reboot operating protocol;
+- an initial-position certificate;
+- a viability verdict.
+
+### Obligations retired / created
+Completed as an audit construction task:
+
+- construct one strongest plausible reboot architecture and make it falsifiable.
+
+Sharply narrowed, not retired:
+
+- `EXACT_CERTIFICATION_OF_SEMANTIC_WHITE_CHOICES_IN_A_START_ROOTED_ALL_REPLY_DAG`.
+
+Still open:
+
+- `START_TO_BASIN_CONNECTOR`;
+- scalable topology-adaptive lower-frontier discovery;
+- useful exact all-reply start closure.
+
+New decisive dependency:
+
+- `NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION`.
+
+### Strike
+`NO`.
+
+The candidate failed, but R4 was a prospectively frozen, central, strongly discriminating bridge experiment. It did not rename G35–G39, launder raw truth into discovery, present branching compression as proof, or finish with only a disconnected local result.
+
+Strike count remains **0**.
+
+### Next discriminating step
+R5 must attack:
+
+**Can any prospectively defined nonterminal exact intermediate target — exact for reasons stronger than “this state is non-losing,” and obtained without complete surrounding W/D/L — certify a material fraction of an exact START_REACHABLE semantic White-policy frontier with 100% Black-reply closure, unchanged hostile transfer and genuinely favorable proof economics/payload?**
+
+R5 is not started by this entry.
+
+### Source/provenance updates
+Primary R4 evidence is in the nine R4 review documents plus `REVIEW/provenance/R4_RUN_SUMMARY.json`. REVIEW routing is extended through R6 under the user's bounded audit instruction. Frozen historical handoffs remain unchanged.
+
+### R4 closeout questions
+
+1. **What exact reboot architecture was constructed?**  
+   **Bidirectional Certified Frontier Reboot.** It maintains exact lower and start certified surfaces and credits progress only when a bounded experiment retires or sharply narrows a named bridge obligation through typed exact targets and replayable proof objects.
+
+2. **In what precise way is it different from the old G15–G42 roadmap?**  
+   Progress is not G-stage completion. Each session freezes one bridge proposition, attacks it prospectively, requires exact certification plus hostile transfer and economic/payload accounting, and can terminate the method. “Build forward search, find an intersection, then close replies” does not count unless a specific bridge obligation is actually retired.
+
+3. **What exact R3-derived START_REACHABLE White-policy domain was tested?**  
+   D starts from e2-e3/e2-e4 and H from a prospectively held-out White knight move from b1/g1. Both are generated legally from the standard full-rule root through ply 6 using a two-phase R3-derived semantic program. Deterministic cohorts contain **1,024 exact theorem states per branch**.
+
+4. **What exact typed target/certification mechanism was prospectively frozen?**  
+   Direct targets were exact White-win terminal states, exact legally forceable/claimable draw states, exact compatible G12 KQK/KRK/KPK/DEAD entries, plus recursive existential-White / universal-Black certification into those targets. White used the frozen two-phase semantic program; Black was universal.
+
+5. **How much complete local outcome truth was consumed before target/policy freeze?**  
+   **Zero complete local W/D/L-labelled states.**
+
+6. **What was the local truth-leakage ratio?**  
+   **0%.**
+
+7. **What fraction of tested White-policy states became exact non-loss-certified?**  
+   D: **0 / 1,024 = 0.0000%**. H: **0 / 1,024 = 0.0000%**.
+
+8. **Were all legal Black replies represented at every certified Black node?**  
+   The exact certification rule is universal over every legal Black reply, but **there are no certified Black proof nodes because the certified root set is empty**. In the structural START_REACHABLE prefixes every generated Black legal reply is represented and no Black pruning occurs. Vacuous proof-level closure is not counted as a positive gate.
+
+9. **What fraction of the tested domain remained unresolved?**  
+   D: **100.0000%**. H: **100.0000%**.
+
+10. **How much full raw local truth was required for validation?**  
+    Complete bounded raw target truth was **not acquired**. Both competent all-White depth-5 baselines exhausted the frozen 2 GiB memory budget before completion.
+
+11. **What was the certification cost ratio versus complete local exact truth?**  
+    **Unavailable**, because the competent baseline denominator did not complete. Time-to-budget-failure only gives policy-process upper bounds below 0.0516 (D) and 0.1270 (H), but these are not positive evidence because certified coverage is zero.
+
+12. **How large was the resulting proof object versus the full local truth table?**  
+    The accepted non-loss proof object is **empty**. A payload ratio is therefore **not meaningful and is not credited** against the <=25% gate.
+
+13. **Did exact history-state identity materially degrade the result?**  
+    It imposed a material but not catastrophic bounded burden: ply-6 full-state/board multipliers are **1.34595x D** and **1.48250x H**, with up to 15 theorem states per board. History does not explain the zero target coverage, but it consumes transposition margin and remains a scaling risk.
+
+14. **Did the held-out START_REACHABLE control survive unchanged?**  
+    The mechanism transferred unchanged, but the **positive survival claim did not**: H also certified **0 / 1,024**. This is unchanged transfer of failure.
+
+15. **Was any engine pruning, opening-line memorisation, square patch or unsafe merge required?**  
+    **No.** None was used.
+
+16. **Did R4 actually convert strategy compression into proof compression?**  
+    **No.**
+
+17. **Does the bidirectional certified-frontier reboot now have a concrete repeatable progress mechanism?**  
+    It has a concrete fail-fast experimental mechanic, but **no demonstrated repeatable successful bridge mechanism**. Its first start-side certification bridge failed.
+
+18. **Which review obligations did R4 retire or sharply narrow?**  
+    It completes the obligation to construct/test one concrete reboot candidate and sharply narrows start-side certification: terminal/draw/current-G12 target attraction is insufficient on the tested start frontier. The surviving exact dependency is **NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION**.
+
+19. **Did R4 create a review strike?**  
+    **No.** Strike count remains 0.
+
+20. **Does R4 currently support, weaken or leave unresolved the case for a "REBOOT" verdict?**  
+    **It materially weakens the case.** A coherent architecture exists, but its first exact survival mechanism fails completely. R4 alone does not force the final stop verdict because one sharply defined nonterminal-target escape hatch remains for hostile R5 testing.
+
+21. **What exact hostile question must R5 attack?**  
+    **Can a prospectively defined nonterminal exact intermediate target be proved exact without complete surrounding W/D/L or restating “non-losing,” and then certify a material START_REACHABLE policy fraction with universal Black closure, unchanged hostile transfer and favorable cost/payload?**
+
+22. **What evidence would R6 need in order to justify keeping the project alive under the reboot rather than closing the method?**  
+    R6 would need affirmative evidence for a **specific** bridge mechanism: a prospectively exact nonterminal target or materially different bridge object; nontrivial START_REACHABLE certification; 100% Black closure; hostile unchanged transfer; safe full-history identity; materially favorable certification/payload economics versus competent raw truth; and at least one genuinely retired bridge obligation with evidence the mechanism can repeat. Without that, continued research potential is insufficient.
+
+**End state:** **R4 COMPLETE — REBOOT CANDIDATE FAILED — REVIEW REMAINS OPEN — R5 NOT STARTED.**
