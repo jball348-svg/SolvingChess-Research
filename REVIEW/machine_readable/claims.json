@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.2.0",
-  "review_session": "R2",
-  "reviewed_repository_head": "3a597fe64c1bc98e22e791f4953b9b81f30ec1a9",
+  "schema_version": "2.3.0",
+  "review_session": "R3",
+  "reviewed_repository_head": "ff26f8668f6a9f264004dba9668ff7733e013063",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
-  "status": "R2_PARTIAL_REVIEW_OPEN",
+  "status": "R3_PARTIAL_REVIEW_OPEN",
   "interpretation": "SUPPORTED_AT_STATED_SCOPE is documentary/proposition-level R0 support, not an automatic fresh rerun.",
   "claims": [
     {
@@ -971,6 +971,98 @@
       "downstream_consumers": [],
       "caveat": "No viability verdict follows; R3 is not started by R2.",
       "r2_status": "SUPPORTED_AT_R2_SCOPE"
+    },
+    {
+      "id": "C39",
+      "proposition": "R3 prospectively generates bounded exact full-rule START_REACHABLE forward domains from the standard initial state and represents every legal Black reply at every expanded Black layer.",
+      "hypotheses": [
+        "G10.RULES.v1.0 semantics",
+        "G12.STATE.SERIAL.v2 full-state identity",
+        "R3 prospectively frozen D/H branch definitions and plies 3-5"
+      ],
+      "domain": "R3 D king-pawn and held-out H queen-pawn start branches through ply 5",
+      "rules_state_model": "Full theorem state: board, turn, castling rights, effective EP, halfmove, repetition-count map",
+      "reachability": "START_REACHABLE by explicit legal forward generation from standard root",
+      "claim_class": "EXACT_FINITE",
+      "producer_evidence": [
+        "REVIEW/R3_FORWARD_EXPANSION_RESULTS.md",
+        "REVIEW/R3_ALL_REPLY_CLOSURE_RESULTS.md"
+      ],
+      "verifier_evidence": [
+        "G11 perft anchors reproduced; deterministic clean reruns reproduced R3 counts"
+      ],
+      "downstream_consumers": [
+        "C42"
+      ],
+      "caveat": "This is structural forward/reply completeness only; retained White choices are not proven non-losing.",
+      "r3_status": "SUPPORTED_AT_R3_SCOPE"
+    },
+    {
+      "id": "C40",
+      "proposition": "Full theorem history materially reduces transposition merging relative to board-only placement by ply 5 in both R3 branches.",
+      "hypotheses": [
+        "Same R3 full-state model"
+      ],
+      "domain": "R3 D/H raw forward frontiers",
+      "rules_state_model": "Exact full-state identity",
+      "reachability": "START_REACHABLE",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R3_HISTORY_STATE_AUDIT.md"
+      ],
+      "verifier_evidence": [
+        "Deterministic clean rerun"
+      ],
+      "downstream_consumers": [
+        "C42"
+      ],
+      "caveat": "Five plies is shallow; no long-run exponent is inferred.",
+      "r3_status": "SUPPORTED_AT_R3_SCOPE"
+    },
+    {
+      "id": "C41",
+      "proposition": "A prospectively selected one-phase semantic White move class produces a materially sub-tree unresolved frontier while every expanded Black reply remains explicit, and the compression transfers unchanged from D to held-out H.",
+      "hypotheses": [
+        "Frozen policy ANSWER_CHECK OR CENTER_PAWN",
+        "No outcome labels or engine pruning",
+        "Exact full-state merging only"
+      ],
+      "domain": "R3 D/H through ply 5",
+      "rules_state_model": "G10/G12 full-rule state",
+      "reachability": "START_REACHABLE structural prefix",
+      "claim_class": "EXACT_FINITE",
+      "producer_evidence": [
+        "REVIEW/R3_START_CLOSURE_HYPOTHESIS.md",
+        "REVIEW/R3_FORWARD_EXPANSION_RESULTS.md",
+        "REVIEW/provenance/R3_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "Deterministic clean reruns"
+      ],
+      "downstream_consumers": [
+        "C42"
+      ],
+      "caveat": "Branching compression does not certify policy soundness.",
+      "r3_status": "SUPPORTED_AT_R3_SCOPE"
+    },
+    {
+      "id": "C42",
+      "proposition": "R3 is PARTIAL: start-rooted structural all-reply expansion is sharply more compact than raw search at the tested shallow horizons, but no exact non-loss certification or basin connection is established.",
+      "hypotheses": [
+        "R3 frozen result vocabulary"
+      ],
+      "domain": "Independent viability review",
+      "rules_state_model": "Full-rule",
+      "reachability": "START_REACHABLE structure only",
+      "claim_class": "NOT_CLAIMED",
+      "producer_evidence": [
+        "REVIEW/R3_START_CLOSURE_AUDIT.md",
+        "REVIEW/R3_NEGATIVE_EVIDENCE.md"
+      ],
+      "verifier_evidence": [],
+      "downstream_consumers": [],
+      "caveat": "Does not establish ROOTED_CLOSED_DOMAIN, BASIN_CONNECTED, INITIAL_POSITION_CERTIFICATE or viability verdict.",
+      "r3_status": "SUPPORTED_AT_R3_SCOPE"
     }
   ]
 }
