@@ -92,3 +92,31 @@ R4 does not claim the tested states are losing. The exact negative is failure of
 | C48 | R5 is **FAILED**: a genuine nonterminal exact intermediate target exists and transfers, but no material/economically favorable certified start-frontier growth, bridge-dependency retirement or repeatable successful progress mechanism is demonstrated. R6 must make the final viability decision. | `NOT_CLAIMED` | Review synthesis over full-rule START_REACHABLE evidence | **SUPPORTED_AT_R5_SCOPE** | `REVIEW/R5_REBOOT_AUDIT.md`<br>`REVIEW/R5_ADVERSARIAL_SYNTHESIS.md`<br>`REVIEW/R5_R6_DECISION_PACKET.md` |
 
 R5 does not claim the uncertified states are losing, does not prove all possible high-material targets are sparse, and does not file the final viability verdict.
+
+## R6 final-review claims — 2026-09-19
+
+### C49 — Final current-method viability verdict
+**Status:** SUPPORTED AT REVIEW SCOPE  
+**Claim:** The R0–R5 record supports `STOP_CURRENT_METHOD`: the current method has no demonstrated material, economical, repeatable bridge from restricted exact truth / shallow START_REACHABLE structure to a root-connected certified network.  
+**Evidence:** `R6_DECISION_MATRIX.md`, `R6_UNRESOLVED_DEPENDENCIES.md`, `R6_ADVERSARIAL_VERDICT_CHECK.md`, `VERDICT.md`.  
+**Scope caveat:** This is a viability/governance conclusion, not a theorem that chess cannot be weakly solved.
+
+### C50 — Bidirectional Certified Frontier disposition
+**Status:** SUPPORTED AT REVIEW SCOPE  
+**Claim:** The R4 architecture remains logically coherent as proof organization and falsification process, but R4–R5 do not instantiate its missing material certified-growth operation; it is not an authorized reboot.  
+**Evidence:** `R6_REBOOT_ARCHITECTURE_ASSESSMENT.md`.
+
+### C51 — Central dependencies remain open
+**Status:** SUPPORTED AT REVIEW SCOPE  
+**Claim:** Scalable truth lifting, certified middlegame connectivity, START_TO_BASIN_CONNECTOR, material semantic-White certification, scalable universal Black closure, full-history scaling and the initial-position certificate remain open, with no demonstrated current-method closing mechanism.  
+**Evidence:** `R6_UNRESOLVED_DEPENDENCIES.md`.
+
+### C52 — Valid restricted assets survive closure
+**Status:** SUPPORTED AT REVIEW SCOPE  
+**Claim:** The stop verdict does not demote valid restricted mathematics, exact computations or infrastructure; they remain reusable strictly at their established scope.  
+**Evidence:** `R6_SURVIVING_ASSETS.md`, `CURRENT_METHOD_CLOSEOUT.md`.
+
+### C53 — Future restart is conditional, not automatic
+**Status:** SUPPORTED AS GOVERNANCE  
+**Claim:** G15–G42 may not resume automatically. A future restart requires materially different affirmative bridge evidence satisfying `CURRENT_METHOD_CLOSEOUT.md` plus explicit authorization.  
+**Evidence:** `VERDICT.md`, `CURRENT_METHOD_CLOSEOUT.md`, `REVIEW_STATUS.json`.
