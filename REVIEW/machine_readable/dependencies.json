@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.5.0",
-  "review_session": "R5",
+  "schema_version": "2.6.0",
+  "review_session": "R6",
   "reviewed_repository_head": "ad6a67d09b50c7f1aaf67930d51e32b72d4a21d4",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
@@ -68,21 +68,24 @@
       ],
       "status": "OPEN",
       "r1_note": "Exact material-signature scaling and inherited target transfer survived at bounded scope; H2 falsified robust fixed-palette strategy transfer. Open edge narrowed to topology-adaptive proof discovery across opposing material.",
-      "r2_note": "Zero-top-label target and strategy-program discovery succeeded with exact held-out opposing-bishop transfer and tiny residual raw truth, but accepted discovery cost exceeded full exact-truth acquisition (1.2780x) and the objects are conversion-dominated. Scalable favourable discovery remains unestablished."
+      "r2_note": "Zero-top-label target and strategy-program discovery succeeded with exact held-out opposing-bishop transfer and tiny residual raw truth, but accepted discovery cost exceeded full exact-truth acquisition (1.2780x) and the objects are conversion-dominated. Scalable favourable discovery remains unestablished.",
+      "r6_note": "R6: remains logically OPEN. No repeatable economically favorable multi-ascent truth-discovery/lifting mechanism is demonstrated; current method closed."
     },
     {
       "id": "N06",
       "name": "BROAD_ENDGAME_BASIN_NETWORK",
       "proposition": "The programme should possess broad connected lower-tree basins covering diverse endgame/transition structures rather than isolated restricted arenas.",
       "evidence": [],
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "r6_note": "R6: broad endgame basin network remains unbuilt; historical plan is not active authority."
     },
     {
       "id": "N07",
       "name": "CERTIFIED_MIDDLEGAME_NETWORK",
       "proposition": "Certified basins should extend through materially richer middlegame structures with enough connectivity to receive start-reachable play.",
       "evidence": [],
-      "status": "OPEN"
+      "status": "OPEN",
+      "r6_note": "R6: certified middlegame network remains OPEN with no demonstrated current-method mechanism."
     },
     {
       "id": "N08",
@@ -95,7 +98,8 @@
       "status": "ESTABLISHED_ONLY_AT_BOUNDED_R5_SCOPE",
       "r3_note": "Exact legal START_REACHABLE state production and canonical full-state merging are demonstrated on prospectively frozen D/H start branches through ply 5. This does not establish non-loss proof closure.",
       "r4_note": "R4 extends exact full-rule START_REACHABLE semantic-policy generation to ply 6 on king-pawn discovery and knight-first hostile families. This remains structural reachability, not non-loss proof closure.",
-      "r5_note": "R5 extends exact start-rooted full-state generation to much broader ply-6 semantic-policy frontiers: 3,903,222 D and 3,004,564 H theorem states. Structural reachability is established only at bounded scope."
+      "r5_note": "R5 extends exact start-rooted full-state generation to much broader ply-6 semantic-policy frontiers: 3,903,222 D and 3,004,564 H theorem states. Structural reachability is established only at bounded scope.",
+      "r6_note": "R6: shallow structural START_REACHABLE generation is established only at bounded scope; not material proof closure."
     },
     {
       "id": "N09",
@@ -105,7 +109,8 @@
       "status": "OPEN",
       "r3_note": "R3 reaches no existing compatible exact basin; START_TO_BASIN_CONNECTOR remains OPEN.",
       "r4_note": "R4 finds no terminal/draw/current-G12 target entry. Tested cohorts retain 30-32 pieces and only five local plies, so existing 3-4-piece G12 dependencies are materially unreachable. The connector remains OPEN and is narrowed toward a nonterminal exact intermediate target.",
-      "r5_note": "R5 supplies a genuine high-material exact nonterminal target (FERL-4), but it certifies only 0.4883% D / 0.6836% H and creates no material connector to lower certified basins. Node remains OPEN."
+      "r5_note": "R5 supplies a genuine high-material exact nonterminal target (FERL-4), but it certifies only 0.4883% D / 0.6836% H and creates no material connector to lower certified basins. Node remains OPEN.",
+      "r6_note": "R6: START_TO_BASIN_CONNECTOR remains OPEN. R4 certifies zero into existing targets; R5 FERL-4 is sparse and does not connect to a lower certified network."
     },
     {
       "id": "N10",
@@ -117,14 +122,16 @@
       "status": "OPEN",
       "r3_note": "R3 represents 100% of legal Black replies at every expanded Black layer while semantic White restriction sharply reduces the shallow unresolved frontier, but no retained White policy is yet certified non-losing and the horizon frontier is not closed. Node remains OPEN.",
       "r4_note": "R4 exact certification produces zero certified cohort roots on both D and H. Universal Black-node semantics remain exact, but no nonempty all-reply proof object is created. Node remains OPEN.",
-      "r5_note": "R5 produces a nonempty exact all-reply local proof object with 100% Black closure for accepted FERL-4 certificates, but material start-side closure remains absent. Node remains OPEN."
+      "r5_note": "R5 produces a nonempty exact all-reply local proof object with 100% Black closure for accepted FERL-4 certificates, but material start-side closure remains absent. Node remains OPEN.",
+      "r6_note": "R6: local universal Black closure is exact, including accepted FERL-4 certificates, but material root-connected all-reply closure remains OPEN."
     },
     {
       "id": "N11",
       "name": "INITIAL_POSITION_CERTIFICATE",
       "proposition": "A machine-checkable certificate rooted at the standard initial position should close every legal Black reply and establish White non-loss.",
       "evidence": [],
-      "status": "OPEN"
+      "status": "OPEN",
+      "r6_note": "R6: no initial-position certificate exists."
     },
     {
       "id": "N12",
@@ -168,14 +175,16 @@
       "from": "N01",
       "to": "N05",
       "status": "OPEN",
-      "why": "R2 shows a bounded zero-top-label discovery mechanism can select exact proof objects over exact lower-material truth, but does not establish favorable multi-ascent discovery economics or a full-rule lift."
+      "why": "R2 shows a bounded zero-top-label discovery mechanism can select exact proof objects over exact lower-material truth, but does not establish favorable multi-ascent discovery economics or a full-rule lift.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E05",
       "from": "N02",
       "to": "N05",
       "status": "OPEN",
-      "why": "R1 established bounded exact scaling but fixed-palette failure; R2 then achieved exact zero-top-label target/strategy discovery with held-out opposing-material transfer, yet discovery cost exceeded complete truth acquisition and the arena remained conversion-rich. The edge stays OPEN."
+      "why": "R1 established bounded exact scaling but fixed-palette failure; R2 then achieved exact zero-top-label target/strategy discovery with held-out opposing-material transfer, yet discovery cost exceeded complete truth acquisition and the arena remained conversion-rich. The edge stays OPEN.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E06",
@@ -196,7 +205,8 @@
       "from": "N06",
       "to": "N07",
       "status": "OPEN",
-      "why": "G29–G34 describe transition-rich and middlegame bridge work but no established mechanism guarantees the transition."
+      "why": "G29–G34 describe transition-rich and middlegame bridge work but no established mechanism guarantees the transition.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E09",
@@ -212,7 +222,8 @@
       "from": "N07",
       "to": "N09",
       "status": "OPEN",
-      "why": "No certified middlegame basin network currently exists to receive start play."
+      "why": "No certified middlegame basin network currently exists to receive start play.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E11",
@@ -221,7 +232,8 @@
       "status": "OPEN",
       "why": "No certified intersection or entry edge from the start-reachable domain into a solved basin exists.",
       "r4_note": "R4's current exact lower targets are provably unreachable from the 30-32-piece cohorts inside the five-ply local certification budget. Edge remains OPEN; a nonterminal intermediate exact target is the sharpened requirement.",
-      "r5_note": "FERL-4 creates high-material exact intermediate targets but only sub-1% cohort certification and no material lower-basin connection; edge remains OPEN."
+      "r5_note": "FERL-4 creates high-material exact intermediate targets but only sub-1% cohort certification and no material lower-basin connection; edge remains OPEN.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E12",
@@ -240,7 +252,8 @@
       "status": "OPEN",
       "why": "A connector alone is insufficient unless every adversarial reply is closed.",
       "r3_note": "No start-to-basin connector is established in R3; edge remains OPEN.",
-      "r5_note": "No material start-to-basin connector is established. Sparse FERL-4 local draw contracts do not close this edge."
+      "r5_note": "No material start-to-basin connector is established. Sparse FERL-4 local draw contracts do not close this edge.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E14",
@@ -250,7 +263,8 @@
       "why": "No root-connected complete all-reply proof DAG exists.",
       "r3_note": "R3 is not an initial-position certificate; unresolved horizon leaves remain.",
       "r4_note": "R4 produces no nonempty certified start proof object; no initial-position certificate follows.",
-      "r5_note": "R5 produces only sparse local certified roots, not a root-connected complete proof DAG. Edge remains OPEN."
+      "r5_note": "R5 produces only sparse local certified roots, not a root-connected complete proof DAG. Edge remains OPEN.",
+      "r6_note": "R6: edge remains logically open; no demonstrated current-method mechanism closes it. STOP_CURRENT_METHOD filed."
     },
     {
       "id": "E15",
@@ -296,8 +310,8 @@
     "strikes": 0,
     "next_phase": "R3_START_REACHABILITY"
   },
-  "status": "R5_FAILED_REVIEW_OPEN",
-  "start_side_open_dependency": "MATERIAL_REPEATABLE_START_SIDE_CERTIFICATION_MECHANISM_NOT_DEMONSTRATED",
+  "status": "R6_COMPLETE_STOP_CURRENT_METHOD_REVIEW_CLOSED",
+  "start_side_open_dependency": "OPEN_BUT_CURRENT_METHOD_CLOSED_NO_DEMONSTRATED_MATERIAL_REPEATABLE_START_SIDE_CERTIFICATION_MECHANISM",
   "r4_update": {
     "result": "FAILED",
     "architecture": "BIDIRECTIONAL_CERTIFIED_FRONTIER_REBOOT",
@@ -331,5 +345,20 @@
     "strike": false,
     "strikes_total": 0,
     "next_phase": "R6_FINAL_SURVIVAL_DECISION"
+  },
+  "r6_update": {
+    "result": "STOP_CURRENT_METHOD",
+    "review_closed": true,
+    "central_reason": "NO_DEMONSTRATED_MATERIAL_ECONOMICAL_REPEATABLE_BRIDGE_MECHANISM",
+    "scalable_truth_discovery_or_lift": "OPEN_CURRENT_METHOD_CLOSED",
+    "certified_middlegame_network": "OPEN_CURRENT_METHOD_CLOSED",
+    "start_to_basin_connector": "OPEN_CURRENT_METHOD_CLOSED",
+    "all_opponent_reply_closure": "OPEN_AT_MATERIAL_ROOT_CONNECTED_SCOPE",
+    "initial_position_certificate": "OPEN",
+    "repeatable_progress_mechanism": false,
+    "reboot_authorized": false,
+    "g_programme_execution_authorized": false,
+    "strikes_total": 0,
+    "restart_rule": "MATERIALLY_DIFFERENT_AFFIRMATIVE_BRIDGE_EVIDENCE_PLUS_EXPLICIT_AUTHORIZATION"
   }
 }
