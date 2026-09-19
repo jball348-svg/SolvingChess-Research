@@ -7,7 +7,7 @@
   "mode": "INDEPENDENT_VIABILITY_REVIEW",
   "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
   "g_programme_execution_authorized": false,
-  "independent_claim_status": "R3_START_CLOSURE_PARTIAL",
+  "independent_claim_status": "R4_REBOOT_CANDIDATE_FAILED",
   "allowed_verdicts": [
     "CONTINUE_CURRENT_ROADMAP",
     "REBOOT",
@@ -20,12 +20,13 @@
     "R2_BRIDGE",
     "R3_START_REACHABILITY",
     "R4_REBOOT_ATTACK",
-    "R5_VERDICT"
+    "R5_HOSTILE_SYNTHESIS",
+    "R6_FINAL_SURVIVAL_DECISION"
   ],
   "strikes": 0,
   "verdict": null,
-  "last_completed_phase": "R3_START_REACHABILITY",
-  "next_phase": "R4_REBOOT_ATTACK",
+  "last_completed_phase": "R4_REBOOT_ATTACK",
+  "next_phase": "R5_HOSTILE_SYNTHESIS",
   "r0_complete": true,
   "last_review_update": "2026-09-19",
   "r0_summary": {
@@ -86,6 +87,28 @@
     "nonloss_policy_certified": false,
     "start_side_status": "OPEN_NARROWED_TO_EXACT_CERTIFICATION_OF_SEMANTIC_WHITE_CHOICES_IN_START_ROOTED_ALL_REPLY_DAG",
     "strike": false,
+    "verdict_changed": false
+  },
+  "r4_complete": true,
+  "r4_summary": {
+    "result": "FAILED",
+    "architecture": "BIDIRECTIONAL_CERTIFIED_FRONTIER_REBOOT",
+    "architecture_freeze_commit": "400f4d90a39ffb5b9ba86c6f8f6711520e867cb6",
+    "hypothesis_freeze_commit": "d812bd912225215128eb470ce785596eda23cbe3",
+    "local_truth_leakage_ratio": 0,
+    "discovery_certified_policy_coverage_percent": 0,
+    "heldout_certified_policy_coverage_percent": 0,
+    "discovery_certification_residual_percent": 100,
+    "heldout_certification_residual_percent": 100,
+    "discovery_history_multiplier_ply6": 1.34595,
+    "heldout_history_multiplier_ply6": 1.4825,
+    "discovery_raw_baseline": "RESOURCE_BUDGET_FAILED_2GIB",
+    "heldout_raw_baseline": "RESOURCE_BUDGET_FAILED_2GIB",
+    "proof_payload": "EMPTY_NO_POSITIVE_CREDIT",
+    "certification_cost_ratio": "UNAVAILABLE_BASELINE_DID_NOT_COMPLETE",
+    "reboot_protocol_created": false,
+    "strike": false,
+    "narrowed_dependency": "NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION",
     "verdict_changed": false
   }
 }
