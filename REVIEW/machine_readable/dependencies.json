@@ -1,9 +1,9 @@
 {
-  "schema_version": "2.1.0",
-  "review_session": "R1",
-  "reviewed_repository_head": "690d1b7e2992b86bcd42266afb41d7eb913e3f7d",
+  "schema_version": "2.2.0",
+  "review_session": "R2",
+  "reviewed_repository_head": "3a597fe64c1bc98e22e791f4953b9b81f30ec1a9",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
-  "generated_date": "2026-09-18",
+  "generated_date": "2026-09-19",
   "nodes": [
     {
       "id": "N00",
@@ -63,10 +63,12 @@
       "name": "SCALABLE_TRUTH_DISCOVERY_OR_LIFT",
       "proposition": "A repeatable mechanism should lift lower exact truth through less restricted, materially higher domains with discovery cost substantially below near-complete enumeration.",
       "evidence": [
-        "R1 P0-P3/H1/H2 scaling audit"
+        "R1 P0-P3/H1/H2 scaling audit",
+        "R2 zero-label target/strategy discovery and hostile transfer audit"
       ],
       "status": "OPEN",
-      "r1_note": "Exact material-signature scaling and inherited target transfer survived at bounded scope; H2 falsified robust fixed-palette strategy transfer. Open edge narrowed to topology-adaptive proof discovery across opposing material."
+      "r1_note": "Exact material-signature scaling and inherited target transfer survived at bounded scope; H2 falsified robust fixed-palette strategy transfer. Open edge narrowed to topology-adaptive proof discovery across opposing material.",
+      "r2_note": "Zero-top-label target and strategy-program discovery succeeded with exact held-out opposing-bishop transfer and tiny residual raw truth, but accepted discovery cost exceeded full exact-truth acquisition (1.2780x) and the objects are conversion-dominated. Scalable favourable discovery remains unestablished."
     },
     {
       "id": "N06",
@@ -156,14 +158,14 @@
       "from": "N01",
       "to": "N05",
       "status": "OPEN",
-      "why": "No theorem/scaling law shows repeated ascent from full-rule small anchors into broad higher material."
+      "why": "R2 shows a bounded zero-top-label discovery mechanism can select exact proof objects over exact lower-material truth, but does not establish favorable multi-ascent discovery economics or a full-rule lift."
     },
     {
       "id": "E05",
       "from": "N02",
       "to": "N05",
       "status": "OPEN",
-      "why": "R1 adds repeatable bounded exact scaling and fixed-target transfer under controlled relaxation, but H2 breaks the frozen strategy palette and no opposing-material/full-rule scaling law exists."
+      "why": "R1 established bounded exact scaling but fixed-palette failure; R2 then achieved exact zero-top-label target/strategy discovery with held-out opposing-material transfer, yet discovery cost exceeded complete truth acquisition and the arena remained conversion-rich. The edge stays OPEN."
     },
     {
       "id": "E06",
@@ -259,5 +261,17 @@
     "first_open_dependency": "N05_SCALABLE_TRUTH_DISCOVERY_OR_LIFT_REMAINS_OPEN",
     "narrowed_question": "SCALABLE_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL",
     "strikes": 0
+  },
+  "r2_update": {
+    "result": "PARTIAL",
+    "first_open_dependency": "N05_SCALABLE_TRUTH_DISCOVERY_OR_LIFT_REMAINS_OPEN",
+    "narrowed_status": "ZERO_TOP_LABEL_DISCOVERY_EXISTS_BUT_FAVOURABLE_SCALING_ECONOMICS_UNESTABLISHED",
+    "truth_leakage": 0,
+    "discovery_cost_ratio": 1.278,
+    "d1_composite_win_coverage": 0.999527,
+    "h1_composite_win_coverage": 0.998919,
+    "held_out_transfer": "SURVIVED_AT_TESTED_SCOPE",
+    "strikes": 0,
+    "next_phase": "R3_START_REACHABILITY"
   }
 }
