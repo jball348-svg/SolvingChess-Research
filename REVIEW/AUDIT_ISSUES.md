@@ -54,3 +54,16 @@ These are questions, not findings.
 - **A12 Verification economics:** policy construction is cheaper than the competent raw exact-forward baseline in the audit-local harness (0.345x / 0.392x wall), but R3 did not build a structurally independent policy verifier, so independent replay economics remain unresolved.
 - **A15 Roadmap semantics:** G35–G39 are confirmed to be mostly desired deliverables/research questions rather than an already-supported compression mechanism. R3 supplies one bounded candidate mechanism but not a proof connector.
 - **A18 Decision integrity:** the frozen SURVIVED threshold is not met because retained White choices lack exact non-loss certification and no basin is reached; R3 is PARTIAL despite passing the structural frontier gates.
+
+
+## R4 updates — 2026-09-19
+
+- **A03 Discovery vs compression:** materially adverse. R3's branching compression does not convert into proof compression under the frozen R4 target grammar: D and H both certify **0 / 1,024** policy states. Cheap empty certification is not credited as favorable economics.
+- **A08 Middlegame topology:** remains open. R4's failure occurs much earlier, at the absence of a usable exact nonterminal target near 30–32-piece START_REACHABLE states.
+- **A09 Reachability:** bounded evidence extends to exact ply-6 R4 frontiers on king-pawn and knight-first families. This remains a structural reachability result, not non-loss certification.
+- **A10 All replies:** structural Black expansion remains exact, but no nonempty certified all-reply proof object is produced. Universal closure therefore remains open in the proof-theoretic sense.
+- **A11 History state:** adverse evidence persists: full-state/board multipliers are **1.34595x** (D) and **1.48250x** (H) at the R4 ply-6 frontiers.
+- **A12 Verification economics:** exact `CERTIFICATION_COST_RATIO` is unavailable because both competent all-White bounded baselines breach the 2 GiB cap before completion. The small policy-side cost cannot be scored positively because coverage is zero.
+- **A15 Roadmap semantics:** R4's reboot is materially different from G35–G39 in operating mechanics, but its first concrete certification bridge fails.
+- **A16 Reboot candidate:** a coherent candidate exists, so `NO_CANDIDATE` is rejected; however the R4 survival test is **FAILED**. The remaining escape hatch is a prospectively exact **nonterminal intermediate target**.
+- **A18 Decision integrity:** the preregistered D >=25% and H >=15% certification gates fail at 0% / 0%. No thresholds, cohort sizes, depths or grammars were relaxed. R4 records **FAILED, no strike** and leaves the final verdict to R6.
