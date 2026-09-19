@@ -32,3 +32,14 @@
 - Obligation 7 remains **open**: R2's six-piece conversion-rich pair is not a certified middlegame network and does not retire the endgame-to-middlegame bridge.
 - Obligation 8 becomes the next high-information review target under the fixed scaffold: test whether a nontrivial `START_REACHABLE` full-rule domain can be expanded with all-opponent-reply closure without degenerating into raw game-tree enumeration.
 - R2-specific discovery obligation is **narrowed, not retired**: automatic semantic discovery exists at tested scope, but favourable discovery economics, multi-ascent scaling and non-conversion topology remain unresolved.
+
+
+## R3 disposition — 2026-09-19
+
+- Obligation 8 is **partially retired / sharply narrowed**: R3 demonstrates exact bounded START_REACHABLE full-state forward generation and 100% representation of expanded Black replies on prospectively frozen king-pawn and held-out queen-pawn branches. A frozen semantic White language yields ply-5 unresolved-frontier ratios of 1.6161% and 1.9095% of the competent raw leaf counts. The remaining obligation is not ordinary forward enumeration; it is exact certification that retained White choices are non-losing / enter typed exact targets as the horizon grows.
+- Obligation 9 is **strengthened and preserved**: R3 quantifies why board placement is unsafe as a merge identity. At ply 5, full-state/board HISTORY_MULTIPLIER is 1.7886x (D) and 1.7318x (H).
+- A09 Reachability is **partially answered at bounded scope**: every R3 state has an explicit legal path from the standard root. Deep/scalable reachability remains open.
+- A10 All replies is **narrowed**: opponent pruning is not required to obtain strong shallow structural compression, but proof closure remains open because White-policy soundness and typed horizon leaves are unproved.
+- A11 History state is **partially answered negatively**: history multiplication is already material by ply 5 and must remain in scaling budgets.
+- `START_TO_BASIN_CONNECTOR` remains open: R3 records zero certified entries into current G12 exact basins.
+- New sharpened obligation for R4: determine whether the R3 semantic White-choice compression can be upgraded to exact non-loss certification / typed-target entry without near-complete outcome acquisition or loss of the sub-tree frontier advantage.
