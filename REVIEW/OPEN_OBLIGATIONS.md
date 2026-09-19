@@ -56,3 +56,16 @@
 - New sharpened obligation for R5: **NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION** — determine whether a prospectively defined nonterminal target can be exact without complete surrounding W/D/L or restating “non-losing”, while certifying a material START_REACHABLE fraction with 100% Black closure, held-out transfer and favorable proof economics.
 - R4 creates **no strike**. The frozen candidate failed cleanly and materially discriminated the architecture.
 - R4 does **not** justify a reboot protocol or a viability verdict. R6 remains the bounded final survival decision.
+
+
+## R5 disposition — 2026-09-19
+
+- Obligation 12 / hostile attack of the strongest surviving reboot case is **completed as an audit task**. R5 prospectively freezes, proves and tests FERL-4, a genuinely nonterminal high-material exact target.
+- The narrower conceptual question “can a proof-relevant nonterminal exact target exist at 30–32 pieces without surrounding W/D/L?” is **answered YES at the tested scope**.
+- The controlling bridge dependency is **not retired**. FERL-4 certifies only **5/1,024 D (0.4883%)** and **7/1,024 H (0.6836%)**, far below the frozen material thresholds.
+- Obligation 8 / start-side closure remains **OPEN strategically**. R5 has nonempty exact local all-reply certificates, but no material certified start frontier.
+- Obligation 9 / exact history is further **strengthened as adverse evidence**: R5 ply-6 full-state/board multipliers are **2.50730x D / 2.34487x H**, with up to 264 / 217 theorem states per board.
+- Obligation 4 / discovery-versus-compression remains adverse: R5 certificates are tiny after discovery, but certification costs **0.8084x / 0.8359x** the competent same-proposition baseline while covering under 0.7%.
+- `START_TO_BASIN_CONNECTOR` remains **OPEN**. FERL-4 is a local high-material draw contract, not a material connector into the lower certified network.
+- R5 demonstrates **no repeatable successful proof-progress mechanism** and retires **no central bridge obligation**.
+- Obligation 13 now becomes controlling: **R6 must file the final viability verdict** under the frozen criteria. R5 does not begin R6 and does not modify `REVIEW/VERDICT.md`.
