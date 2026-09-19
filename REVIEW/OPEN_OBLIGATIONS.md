@@ -22,3 +22,13 @@
 - Obligation 5 remains **open**: the main-ladder unexplained win residual stays roughly 66–68% rather than shrinking.
 - Obligation 6 remains **open** at global scale: R1 did not need the raw-truth fallback to complete its tested arenas, but that says little about opposing-material bridge domains.
 - New sharpened obligation for R2: test whether an outcome-independent discovery procedure can generate/select exact targets and strategy languages on a prospectively frozen transition-rich arena with opposing mobile material, without square-level fitting or first acquiring essentially complete raw truth.
+
+
+## R2 disposition — 2026-09-19
+
+- Obligation 4 is **further partially retired / sharply narrowed**: R2 demonstrates a coherent zero-top-label mechanism that automatically selects an exact semantic target and exact one-switch strategy program, and both survive unchanged on a held-out opposing-bishop topology. What remains open is whether this discovery scales economically and beyond conversion-dominated brink arenas.
+- Obligation 5 is **locally answered but globally open**: R2's composite unexplained White-win residual falls to 0.0473% on D1 and 0.1081% on H1, so a lookup-like residual is not inevitable in this topology. Historical G3–G6 lookup floors and broader-topology risk remain first-class evidence.
+- Obligation 6 remains **open at strategic scale**: raw fallback is barely needed in D1/H1, but R2 does not show that this remains true in non-brink, higher-material or history-aware domains.
+- Obligation 7 remains **open**: R2's six-piece conversion-rich pair is not a certified middlegame network and does not retire the endgame-to-middlegame bridge.
+- Obligation 8 becomes the next high-information review target under the fixed scaffold: test whether a nontrivial `START_REACHABLE` full-rule domain can be expanded with all-opponent-reply closure without degenerating into raw game-tree enumeration.
+- R2-specific discovery obligation is **narrowed, not retired**: automatic semantic discovery exists at tested scope, but favourable discovery economics, multi-ascent scaling and non-conversion topology remain unresolved.
