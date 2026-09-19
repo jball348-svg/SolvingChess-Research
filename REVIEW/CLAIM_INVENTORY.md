@@ -81,3 +81,14 @@ R0 replaces the scaffold's `NOT_YET_AUDITED` summary with proposition-level inde
 | C45 | R4 is **FAILED**: a coherent reboot architecture is formulated and prospectively falsified, but terminal/draw/current-G12 typed targets do not convert R3 semantic branching compression into any exact non-loss proof coverage. The surviving review question is whether a nonterminal exact intermediate target can do so without complete local W/D/L or restating non-loss. | `NOT_CLAIMED` | START_REACHABLE start-side bridge under full-rule identity | **SUPPORTED_AT_R4_SCOPE** | `REVIEW/R4_REBOOT_ARCHITECTURE.md`<br>`REVIEW/R4_REBOOT_AUDIT.md`<br>`REVIEW/R4_NEGATIVE_EVIDENCE.md` |
 
 R4 does not claim the tested states are losing. The exact negative is failure of the frozen certification mechanism. No reboot protocol or project viability verdict is created.
+
+
+## R5 updates — 2026-09-19
+
+| ID | Compact proposition | Claim class | Reachability | R5 status | Primary source(s) |
+|---|---|---|---|---|---|
+| C46 | R5 prospectively freezes and verifies FERL-4, a nonterminal high-material exact repetition-lock target whose proof relevance follows from a four-ply universal exact repetition-return theorem rather than surrounding W/D/L. On the frozen START_REACHABLE cohorts it has zero observed target-exactness violations and zero pre-freeze W/D/L leakage. | `EXACT_FINITE` | START_REACHABLE exact full-state cohorts | **SUPPORTED_AT_R5_SCOPE** | `REVIEW/R5_NONTERMINAL_TARGET_HYPOTHESIS.md`<br>`REVIEW/R5_TARGET_EXACTNESS_RESULTS.md`<br>`REVIEW/provenance/R5_RUN_SUMMARY.json` |
+| C47 | FERL-4 is too sparse/economically weak to provide the required material bridge: D certifies 5/1,024 (0.4883%) and unchanged H 7/1,024 (0.6836%); unrestricted-White baselines certify the same roots; wall certification-cost ratios are 0.8084 and 0.8359 versus the frozen <=0.75 gate; exact history multiplication reaches 2.5073x and 2.3449x. | `NEGATIVE_RESULT` | START_REACHABLE high-material cohorts | **SUPPORTED_AT_R5_SCOPE** | `REVIEW/R5_START_CERTIFICATION_RESULTS.md`<br>`REVIEW/R5_HELDOUT_RESULTS.md`<br>`REVIEW/R5_CERTIFICATION_ECONOMICS.md`<br>`REVIEW/R5_HISTORY_AND_STATE_AUDIT.md` |
+| C48 | R5 is **FAILED**: a genuine nonterminal exact intermediate target exists and transfers, but no material/economically favorable certified start-frontier growth, bridge-dependency retirement or repeatable successful progress mechanism is demonstrated. R6 must make the final viability decision. | `NOT_CLAIMED` | Review synthesis over full-rule START_REACHABLE evidence | **SUPPORTED_AT_R5_SCOPE** | `REVIEW/R5_REBOOT_AUDIT.md`<br>`REVIEW/R5_ADVERSARIAL_SYNTHESIS.md`<br>`REVIEW/R5_R6_DECISION_PACKET.md` |
+
+R5 does not claim the uncertified states are losing, does not prove all possible high-material targets are sparse, and does not file the final viability verdict.
