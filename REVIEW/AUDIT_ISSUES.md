@@ -34,3 +34,13 @@ These are questions, not findings.
 - **A08 Middlegame topology:** still open and becomes the direct R2 focus; R1 adds checking/mobility hostility but not opposing mobile material.
 - **A12 Verification economics:** favorable in the R1 harness, historically mixed because G8 F09/F10 remain verifier-reversal controls.
 - **A16 Reboot candidate:** partially supported on exact-compute + fixed-target reuse, but hostile strategy transfer failure prevents promotion to a surviving general lift.
+
+
+## R2 updates — 2026-09-19
+
+- **A03 Discovery vs compression:** materially advanced. R2 selects target/program before complete top W/D/L and validates them afterwards, so the result is not merely post-hoc compression. However discovery wall time is 1.2780× complete exact-truth acquisition, so economic advantage is not established.
+- **A05 Lookup floors:** locally positive, globally unresolved. D1/H1 composite residual raw truth is only 0.0473% / 0.1081%, but the arenas are conversion-dominated and do not erase historical lookup-floor regimes.
+- **A07 Target discovery:** partially answered. A zero-top-label semantic target miner and move-language miner both produce exact held-out objects. Scaling, theorem synthesis and economic superiority remain open.
+- **A08 Middlegame topology:** still open. Opposing mobile bishops and mutual captures are a meaningful step beyond R1, but fixed brink pawns and six-piece material remain far from ordinary middlegame topology.
+- **A09 Reachability / A10 All replies:** unchanged by R2 and now the direct R3 focus under the review scaffold.
+- **A16 Reboot candidate:** strengthened but not closed. Existing graph operators can consume automatically selected semantic inputs, yet the discovery-cost gate fails, preventing a strong survival verdict.
