@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "session": "R3",
+  "date": "2026-09-19",
+  "result": "PARTIAL",
+  "hypothesis_commit": "e76bd5d2e0a4d6bb10b66d4a09c26985708eb879",
+  "state_model": "G10.RULES.v1.0 semantics + G12.STATE.SERIAL.v2 full-state identity",
+  "selected_white_policy": "ANSWER_CHECK OR CENTER_PAWN",
+  "discovery_branch": "KING_PAWN:e2-e3|e2-e4",
+  "heldout_branch": "QUEEN_PAWN:d2-d3|d2-d4",
+  "horizons": [
+    3,
+    4,
+    5
+  ],
+  "training": {
+    "white_states": 40,
+    "white_legal_edges": 1199,
+    "candidates": [
+      [
+        "ANSWER_CHECK OR DEVELOP_MINOR",
+        398,
+        1199,
+        0
+      ],
+      [
+        "ANSWER_CHECK OR CENTER_PAWN",
+        281,
+        1199,
+        0
+      ],
+      [
+        "ANSWER_CHECK OR DEVELOP_MINOR OR CENTER_PAWN",
+        679,
+        1199,
+        0
+      ],
+      [
+        "ANSWER_CHECK OR DEVELOP_MINOR OR CASTLE",
+        398,
+        1199,
+        0
+      ],
+      [
+        "ANSWER_CHECK OR DEVELOP_MINOR OR CENTER_PAWN OR CASTLE",
+        679,
+        1199,
+        0
+      ],
+      [
+        "BROAD_SIX_ATOM_UNION",
+        685,
+        1199,
+        0
+      ]
+    ]
+  },
+  "D": {
+    "raw": {
+      "paths": [
+        1,
+        2,
+        40,
+        1199,
+        26294,
+        808373
+      ],
+      "unique_full": [
+        1,
+        2,
+        40,
+        1199,
+        19839,
+        496086
+      ],
+      "wall_s": 9.282723401,
+      "peak_rss_kib": 738716
+    },
+    "policy": {
+      "paths": [
+        1,
+        2,
+        40,
+        281,
+        6243,
+        38824
+      ],
+      "unique_full": [
+        1,
+        2,
+        40,
+        281,
+        4714,
+        13064
+      ],
+      "wall_s": 3.2053479,
+      "peak_rss_kib": 192688
+    },
+    "history_ply5": {
+      "board_placements": 277360,
+      "full_states": 496086,
+      "multiplier": 1.7885996538794346,
+      "split_castling": 537,
+      "split_ep": 626,
+      "split_halfmove": 123631,
+      "split_repetition": 142373,
+      "max_states_per_board": 59
+    },
+    "black_edges_represented": 6283,
+    "black_edges_total": 6283,
+    "frontier_ratio_ply5": 0.01616085643632333
+  },
+  "H": {
+    "raw": {
+      "paths": [
+        1,
+        2,
+        40,
+        1099,
+        24394,
+        690301
+      ],
+      "unique_full": [
+        1,
+        2,
+        40,
+        1099,
+        18377,
+        411566
+      ],
+      "wall_s": 7.884059692,
+      "peak_rss_kib": 644688
+    },
+    "policy": {
+      "paths": [
+        1,
+        2,
+        40,
+        281,
+        6248,
+        38916
+      ],
+      "unique_full": [
+        1,
+        2,
+        40,
+        281,
+        4719,
+        13181
+      ],
+      "wall_s": 3.0939767,
+      "peak_rss_kib": 189100
+    },
+    "history_ply5": {
+      "board_placements": 237652,
+      "full_states": 411566,
+      "multiplier": 1.7318011209667918,
+      "split_castling": 529,
+      "split_ep": 587,
+      "split_halfmove": 104909,
+      "split_repetition": 115069,
+      "max_states_per_board": 51
+    },
+    "black_edges_represented": 6288,
+    "black_edges_total": 6288,
+    "frontier_ratio_ply5": 0.019094568890962057
+  },
+  "heldout_degradation_x": 1.1815319915870846,
+  "closure_cost_ratio": {
+    "D": 0.345302532659758,
+    "H": 0.3924344590058692
+  },
+  "basin_entries": 0,
+  "nonloss_certified": false,
+  "engine_pruning": false,
+  "strike": false,
+  "next_question": "Can R3 semantic White-choice compression be upgraded to exact non-loss certification on a start-rooted all-reply DAG without near-complete outcome truth or loss of sub-tree frontier advantage?"
+}
