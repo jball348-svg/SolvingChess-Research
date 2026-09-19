@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.4.0",
-  "review_session": "R4",
+  "schema_version": "2.5.0",
+  "review_session": "R5",
   "reviewed_repository_head": "dd9a868c4b9ab3d74c01471c8cfbf353f49e9d75",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
-  "status": "R4_FAILED_REVIEW_OPEN",
+  "status": "R5_FAILED_REVIEW_OPEN",
   "interpretation": "SUPPORTED_AT_STATED_SCOPE is documentary/proposition-level R0 support, not an automatic fresh rerun.",
   "claims": [
     {
@@ -1140,6 +1140,83 @@
       "downstream_consumers": [],
       "caveat": "R4 files no viability verdict, creates no reboot protocol, and does not prove that richer nonterminal exact targets are impossible.",
       "r4_status": "SUPPORTED_AT_R4_SCOPE"
+    },
+    {
+      "id": "C46",
+      "proposition": "R5 prospectively freezes and verifies FERL-4, a nonterminal high-material exact repetition-lock target whose proof relevance follows from a four-ply universal exact repetition-return theorem rather than surrounding W/D/L; target exactness violations are zero at the tested scope and pre-freeze W/D/L leakage is zero.",
+      "hypotheses": [
+        "R5_NONTERMINAL_TARGET_HYPOTHESIS.md frozen at commit 305b154642f99e5a8c52e8248743615acfb6a956 before decisive target inspection",
+        "Exact full-rule theorem state and REP identity",
+        "Four-ply exists/forall/exists/forall repetition-return contract",
+        "No engine evaluation, W/D/L outcome target atom, square/state-ID patch or post-hoc repair"
+      ],
+      "domain": "R5 D king-pawn and H knight-first START_REACHABLE ply-6 exact cohorts, 1,024 states each",
+      "rules_state_model": "G10.RULES.v1.0 semantics + G12.STATE.SERIAL.v2 full-state identity",
+      "reachability": "START_REACHABLE by explicit legal forward generation",
+      "claim_class": "EXACT_FINITE",
+      "producer_evidence": [
+        "REVIEW/R5_TARGET_EXACTNESS_RESULTS.md",
+        "REVIEW/R5_IMPLEMENTATION_PROVENANCE.md",
+        "REVIEW/provenance/R5_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "Separate bottom-up FERL quantifier/certification replay reproduced D 1/5/5 and H 6/7/7",
+        "Standard-start perft reproduced 20/400/8902/197281/4865609"
+      ],
+      "downstream_consumers": [
+        "C47",
+        "C48"
+      ],
+      "caveat": "The replay shares the audit-local legal move generator/state parser; this is not an organizationally independent second chess implementation.",
+      "r5_status": "SUPPORTED_AT_R5_SCOPE"
+    },
+    {
+      "id": "C47",
+      "proposition": "FERL-4 does not provide a material or economically favorable R5 bridge: D certifies 5/1,024 and H 7/1,024, unrestricted-White baselines certify the same counts, certification-cost ratios are 0.8084/0.8359 versus the <=0.75 gate, and exact history multiplication rises to 2.5073x/2.3449x.",
+      "hypotheses": [
+        "Same frozen R5 target, cohorts, one-pair attraction proposition and resource budget",
+        "Competent baseline allows all legal White attraction moves and every Black reply"
+      ],
+      "domain": "R5 D/H high-material START_REACHABLE cohorts and same-proposition exact baselines",
+      "rules_state_model": "Full-rule exact theorem state",
+      "reachability": "START_REACHABLE cohort roots",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R5_START_CERTIFICATION_RESULTS.md",
+        "REVIEW/R5_HELDOUT_RESULTS.md",
+        "REVIEW/R5_CERTIFICATION_ECONOMICS.md",
+        "REVIEW/R5_HISTORY_AND_STATE_AUDIT.md",
+        "REVIEW/R5_NEGATIVE_EVIDENCE.md"
+      ],
+      "verifier_evidence": [
+        "Separate FERL replay reproduced direct/policy/baseline counts",
+        "Both exact same-proposition baselines completed inside the frozen memory budget"
+      ],
+      "downstream_consumers": [
+        "C48"
+      ],
+      "caveat": "This falsifies FERL-4 as a material bridge at the frozen scope; it does not prove every conceivable high-material exact target is sparse.",
+      "r5_status": "SUPPORTED_AT_R5_SCOPE"
+    },
+    {
+      "id": "C48",
+      "proposition": "R5 is FAILED: a genuine nonterminal exact intermediate target exists and transfers unchanged, but no material/economically favorable certified start-frontier growth, bridge-dependency retirement or repeatable successful progress mechanism is demonstrated; R6 remains the final viability decision.",
+      "hypotheses": [
+        "R5 frozen thresholds and classification vocabulary"
+      ],
+      "domain": "Independent viability review session R5",
+      "rules_state_model": "Review synthesis over full-rule START_REACHABLE R0-R5 evidence",
+      "reachability": "START_REACHABLE start-side bridge",
+      "claim_class": "NOT_CLAIMED",
+      "producer_evidence": [
+        "REVIEW/R5_REBOOT_AUDIT.md",
+        "REVIEW/R5_ADVERSARIAL_SYNTHESIS.md",
+        "REVIEW/R5_R6_DECISION_PACKET.md"
+      ],
+      "verifier_evidence": [],
+      "downstream_consumers": [],
+      "caveat": "R5 does not file REVIEW/VERDICT.md and does not begin R6.",
+      "r5_status": "SUPPORTED_AT_R5_SCOPE"
     }
   ]
 }
