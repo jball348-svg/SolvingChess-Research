@@ -846,3 +846,163 @@ Primary R4 evidence is in the nine R4 review documents plus `REVIEW/provenance/R
     R6 would need affirmative evidence for a **specific** bridge mechanism: a prospectively exact nonterminal target or materially different bridge object; nontrivial START_REACHABLE certification; 100% Black closure; hostile unchanged transfer; safe full-history identity; materially favorable certification/payload economics versus competent raw truth; and at least one genuinely retired bridge obligation with evidence the mechanism can repeat. Without that, continued research potential is insufficient.
 
 **End state:** **R4 COMPLETE — REBOOT CANDIDATE FAILED — REVIEW REMAINS OPEN — R5 NOT STARTED.**
+
+
+## R5 — Hostile Synthesis and Nonterminal Bridge Attack — 2026-09-19
+
+### Session ID
+`R5`
+
+### Question
+Can any prospectively defined nonterminal exact intermediate target — exact without complete surrounding W/D/L and without restating “non-losing” — certify a material fraction of an exact START_REACHABLE semantic White-policy frontier with 100% Black-reply closure, unchanged hostile transfer and favorable proof economics/payload?
+
+### Prospective candidate
+**FORCED_EXACT_REPETITION_LOCK (FERL-4).**
+
+The hypothesis, exact state model, one-phase six-literal White program, D/H domains, cohort selection, four-ply target theorem, two-ply attraction depth, same-proposition baseline, budgets, thresholds and strike rules were frozen at commit:
+
+`305b154642f99e5a8c52e8248743615acfb6a956`
+
+before decisive target-membership inspection.
+
+### Result
+`FAILED`
+
+FERL-4 is exact and nonempty, but it is not a material bridge.
+
+Discovery D:
+- ply-6 exact frontier: **3,903,222** theorem states / **1,556,742** boards;
+- history multiplier: **2.50730178796x**;
+- cohort: **1,024**;
+- direct FERL-4: **1**;
+- exact certified after one attraction pair: **5 / 1,024 = 0.48828125%**;
+- exact unrestricted-White same-proposition baseline: **5 / 1,024**;
+- certification-cost ratio: **0.8084090244**.
+
+Held-out H:
+- frontier: **3,004,564** / **1,281,334** boards;
+- history multiplier: **2.34487182889x**;
+- direct FERL-4: **6**;
+- exact certified unchanged: **7 / 1,024 = 0.68359375%**;
+- unrestricted baseline: **7 / 1,024**;
+- cost ratio: **0.8358657001**.
+
+Target exactness:
+- W/D/L leakage before freeze: **0%**;
+- target exactness violations: **0**;
+- accepted-certificate Black closure: **100%**;
+- separate FERL quantifier replay reproduced D **1/5/5** and H **6/7/7**.
+
+No review dependency is retired. No repeatable successful frontier-growth mechanism is demonstrated.
+
+### Strike
+`NO`
+
+R5 is a prospectively frozen, central, exact and discriminating failure. Strike count remains **0**.
+
+### R5 closeout questions
+
+1. **What nonterminal exact intermediate target was prospectively proposed?**  
+   **FORCED_EXACT_REPETITION_LOCK (FERL-4):** a four-ply exact repetition-return contract under an `exists White / forall Black / exists White / forall Black` quantifier structure.
+
+2. **What exact theorem makes target membership proof-relevant rather than merely correlated with non-loss?**  
+   Every Black branch either reaches an exact draw or returns after four plies to the identical FIDE repetition identity without a repetition barrier. Replaying the same certified response relation forces a third occurrence and hence a legal threefold repetition claim, or an earlier automatic/claimable draw.
+
+3. **Was target exactness established without complete surrounding W/D/L?**  
+   **Yes.** It is a structural legal-move/repetition theorem; no complete surrounding W/D/L was used.
+
+4. **What outcome-labelled truth was consumed before target freeze?**  
+   **0 states.**
+
+5. **What was the truth-leakage ratio?**  
+   **0%.**
+
+6. **What START_REACHABLE D domain was tested?**  
+   Exact standard-start descendants with first White move e2-e3/e2-e4, generated under the frozen R5 semantic program to ply 6: **3,903,222** exact theorem states. The deterministic D test cohort was 1,024 states.
+
+7. **What hostile H domain was tested?**  
+   Exact standard-start descendants with a first White knight move from b1/g1, unchanged mechanism to ply 6: **3,004,564** exact theorem states; 1,024-state cohort.
+
+8. **What White strategy program was frozen?**  
+   One phase: `ANSWER_CHECK OR REVERSIBLE_QUIET_NONPAWN OR CENTER_PAWN OR CASTLE OR CAPTURE OR GIVES_CHECK`.
+
+9. **What was the target description complexity?**  
+   One formally stated four-ply invariant with `exists/forall/exists/forall` response structure and exact REP-return/draw conditions; no square/state exceptions. It satisfies the frozen comparable-invariant complexity ceiling.
+
+10. **What fraction of D policy states became exact non-loss-certified?**  
+    **5 / 1,024 = 0.48828125%.**
+
+11. **What fraction of H states became exact non-loss-certified unchanged?**  
+    **7 / 1,024 = 0.68359375%.**
+
+12. **Were all legal Black replies closed at every certified Black node?**  
+    **Yes. 100%** by the target/certification quantifiers; an escaping reply kills membership.
+
+13. **Were any target-exactness counterexamples found?**  
+    **No accepted-certificate counterexample.** Many candidate branches failed because hostile legal replies crossed repetition barriers or prevented exact return; those candidates were rejected rather than patched.
+
+14. **Did exact history split or invalidate the target?**  
+    It did **not invalidate FERL-4**, but it materially split the frontier: D history multiplier **2.50730178796x**, H **2.34487182889x**, with max 264 / 217 theorem states per board.
+
+15. **What was the certification residual?**  
+    D **99.51171875%**; H **99.31640625%**.
+
+16. **What competent raw baseline was used?**  
+    The **same direct/one-pair FERL-4 proposition** on the identical cohorts, with every legal White attraction move and every legal Black reply under identical exact state identity.
+
+17. **Did that baseline complete?**  
+    **Yes**, on both D and H inside the frozen resource budget.
+
+18. **What was the certification cost ratio?**  
+    D **0.8084090244**; H **0.8358657001** by wall time. Both fail the <=0.75 strong-survival gate.
+
+19. **What was the proof payload ratio?**  
+    The exact preregistered unique-state-burden ratio is **not available in a comparable instrumentation unit** and is not fabricated. The conservative witness-edge / baseline-examined-edge proxy is **0.0001603774% D** and **0.0000899537% H**, showing very small accepted certificates but not a formal pass of the frozen state-ratio gate.
+
+20. **Did the target require any square/state-ID exceptions?**  
+    **No.**
+
+21. **Did R5 materially reduce semantic distance between the start and lower certified frontiers?**  
+    **No.** It creates a genuine exact high-material target, but sub-1% coverage is not a material bridge and it does not connect to the lower basin network.
+
+22. **Did R5 retire an actual review dependency?**  
+    **No.** It narrows the nonterminal-target question by proving existence but falsifying FERL-4 as a material bridge at the frozen scope.
+
+23. **Did R5 demonstrate a repeatable progress mechanism?**  
+    **No.** FERL checking is repeatable; material certified-frontier growth is not demonstrated.
+
+24. **Does the R4 reboot architecture remain the best surviving architecture, require material amendment, or effectively collapse?**  
+    As a proof-organization/fail-fast framework it remains coherent. As a **demonstrated successful reboot mechanism**, its central missing operation effectively remains absent and the survival case is severely weakened; no material amendment with evidence is identified in R5.
+
+25. **Did R5 create a review strike?**  
+    **No.** Strike count remains 0.
+
+26. **What is now the strongest evidence for a `REBOOT` verdict?**  
+    Exact high-material nonterminal targets are possible: FERL-4 is prospectively defined, zero-W/D/L, all-reply exact, nonempty on D/H and has tiny accepted certificates. The bounded hostile-review process itself also works well as a scientific method.
+
+27. **What is now the strongest evidence for `STOP_CURRENT_METHOD`?**  
+    The cumulative R0–R5 pattern: no repeatable favorable lifting mechanism; R2 discovery economics fail; R3 compression lacks proof soundness; R4 certifies zero; R5's strongest clean high-material target certifies under 0.7%, gains nothing from unrestricted White, misses the economic gate, sharply expands frontier/history burden and retires no dependency.
+
+28. **Is `CONTINUE_CURRENT_ROADMAP` still scientifically defensible?**  
+    R5 finds it **effectively unsupported by the current review evidence**. The old G sequence remains a research plan, not an established bridge mechanism.
+
+29. **Is `INCONCLUSIVE` still scientifically defensible?**  
+    It remains formally available, but R5 gives it only a **narrow** basis if R6 genuinely cannot distinguish reboot from stop from the existing record. R5 identifies no materially different evidence-supported next target experiment; “try another target” alone is not a scientific basis for inconclusive continuation.
+
+30. **What exact decision must R6 make?**  
+    File one frozen allowed verdict and decide whether the demonstrated exact assets plus FERL-4's nonzero high-material target are sufficient for a **specific bounded reboot**, or whether the cumulative absence of a material economical bridge requires closing the current method.
+
+31. **What minimum evidence would be required for R6 to keep the method alive?**  
+    Evidence already demonstrating a specific prospectively exact high-material bridge with **material START_REACHABLE coverage**, 100% Black closure, unchanged hostile transfer, safe exact history, favorable cost/payload, retirement of a central bridge obligation and evidence of repeatability.
+
+32. **If that evidence is absent, what exact reason should cause R6 to close the method?**  
+    The strongest surviving bridge candidates repeatedly fail to produce **material, economically favorable, repeatable certified progress**: they either require raw/exact exploration, remain structurally sparse, or move/expand the frontier without retiring the start-to-certified-network obligation.
+
+### R6 handoff
+Primary decision packet:
+
+`REVIEW/R5_R6_DECISION_PACKET.md`
+
+R6 is not started by this ledger entry.
+
+**End state:** **R5 COMPLETE — NO MATERIAL REBOOT SURVIVAL MECHANISM DEMONSTRATED — REVIEW REMAINS OPEN — R6 FINAL DECISION NOT STARTED.**
