@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.2.0",
-  "review_session": "R2",
-  "reviewed_repository_head": "3a597fe64c1bc98e22e791f4953b9b81f30ec1a9",
+  "schema_version": "2.3.0",
+  "review_session": "R3",
+  "reviewed_repository_head": "a8cef202c8f93cc23fbf17bfbba082e356fa18de",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
   "nodes": [
@@ -89,16 +89,19 @@
       "name": "START_REACHABLE_FORWARD_DOMAIN",
       "proposition": "A nontrivial domain rooted at the standard initial full state should be certified as legally START_REACHABLE under exact full-rule history semantics.",
       "evidence": [
-        "G11 reachable fuzz is only engineering evidence"
+        "G11 reachable fuzz is only engineering evidence",
+        "R3 exact start-rooted full-state forward domains through ply 5"
       ],
-      "status": "PLANNED"
+      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R3_SCOPE",
+      "r3_note": "Exact legal START_REACHABLE state production and canonical full-state merging are demonstrated on prospectively frozen D/H start branches through ply 5. This does not establish non-loss proof closure."
     },
     {
       "id": "N09",
       "name": "START_TO_BASIN_CONNECTOR",
       "proposition": "Certified start-reachable play should intersect compatible certified middlegame/lower basins with exact state/history identity.",
       "evidence": [],
-      "status": "OPEN"
+      "status": "OPEN",
+      "r3_note": "R3 reaches no existing compatible exact basin; START_TO_BASIN_CONNECTOR remains OPEN."
     },
     {
       "id": "N10",
@@ -107,7 +110,8 @@
       "evidence": [
         "Finite attractor semantics establish the logical closure rule only at restricted finite scope"
       ],
-      "status": "OPEN"
+      "status": "OPEN",
+      "r3_note": "R3 represents 100% of legal Black replies at every expanded Black layer while semantic White restriction sharply reduces the shallow unresolved frontier, but no retained White policy is yet certified non-losing and the horizon frontier is not closed. Node remains OPEN."
     },
     {
       "id": "N11",
@@ -192,8 +196,8 @@
       "id": "E09",
       "from": "N00",
       "to": "N08",
-      "status": "PLANNED",
-      "why": "G35 is intended to build the start-position forward canonicalizer; G11 reachable fuzz is not a certificate."
+      "status": "ESTABLISHED_ONLY_AT_BOUNDED_R3_SCOPE",
+      "why": "R3 explicitly generates and canonicalizes exact full-rule states from the standard initial state on two prospectively frozen branches through ply 5. Deep/scalable forward-domain economics remain unproved."
     },
     {
       "id": "E10",
@@ -214,21 +218,24 @@
       "from": "N03",
       "to": "N10",
       "status": "ESTABLISHED_ONLY_AT_RESTRICTED_SCOPE",
-      "why": "Existential/universal predecessor semantics are mathematically available, but global all-reply closure economics and discovery remain unproved."
+      "why": "Existential/universal predecessor semantics are mathematically available, but global all-reply closure economics and discovery remain unproved.",
+      "r3_note": "Universal Black-reply expansion is exact on every expanded R3 Black layer, but proof-theoretic closure still requires certified White choices/typed leaves."
     },
     {
       "id": "E13",
       "from": "N09",
       "to": "N10",
       "status": "OPEN",
-      "why": "A connector alone is insufficient unless every adversarial reply is closed."
+      "why": "A connector alone is insufficient unless every adversarial reply is closed.",
+      "r3_note": "No start-to-basin connector is established in R3; edge remains OPEN."
     },
     {
       "id": "E14",
       "from": "N10",
       "to": "N11",
       "status": "OPEN",
-      "why": "No root-connected complete all-reply proof DAG exists."
+      "why": "No root-connected complete all-reply proof DAG exists.",
+      "r3_note": "R3 is not an initial-position certificate; unresolved horizon leaves remain."
     },
     {
       "id": "E15",
