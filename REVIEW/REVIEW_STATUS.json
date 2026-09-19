@@ -3,11 +3,11 @@
   "opened_on": "2026-09-18",
   "snapshot_commit": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "frozen_g14_content_commit": "e57958749adb9d0cc17fab84702a366febcf7e0f",
-  "status": "OPEN",
+  "status": "CLOSED",
   "mode": "INDEPENDENT_VIABILITY_REVIEW",
-  "operator_policy": "DO_NOT_START_NEW_G_WHILE_REVIEW_OPEN",
+  "operator_policy": "CURRENT_METHOD_CLOSED_DO_NOT_AUTOSTART_G_PROGRAMME",
   "g_programme_execution_authorized": false,
-  "independent_claim_status": "R5_NONTERMINAL_BRIDGE_FAILED",
+  "independent_claim_status": "R6_STOP_CURRENT_METHOD",
   "allowed_verdicts": [
     "CONTINUE_CURRENT_ROADMAP",
     "REBOOT",
@@ -24,9 +24,9 @@
     "R6_FINAL_SURVIVAL_DECISION"
   ],
   "strikes": 0,
-  "verdict": null,
-  "last_completed_phase": "R5_HOSTILE_SYNTHESIS",
-  "next_phase": "R6_FINAL_SURVIVAL_DECISION",
+  "verdict": "STOP_CURRENT_METHOD",
+  "last_completed_phase": "R6_FINAL_SURVIVAL_DECISION",
+  "next_phase": null,
   "r0_complete": true,
   "last_review_update": "2026-09-19",
   "r0_summary": {
@@ -136,5 +136,29 @@
     "reboot_protocol_created": false,
     "strike": false,
     "verdict_changed": false
+  },
+  "r6_complete": true,
+  "review_closed_on": "2026-09-19",
+  "reboot_authorized": false,
+  "current_method_closed": true,
+  "final_strike_count": 0,
+  "exact_next_permissible_action": "PRESERVATION_OR_VERIFICATION_ONLY_UNLESS_A_MATERIALLY_DIFFERENT_BRIDGE_MECHANISM_SATISFIES_CURRENT_METHOD_CLOSEOUT_AND_RECEIVES_EXPLICIT_AUTHORIZATION",
+  "r6_summary": {
+    "result": "STOP_CURRENT_METHOD",
+    "decision_basis": "NO_DEMONSTRATED_MATERIAL_ECONOMICAL_REPEATABLE_BRIDGE_MECHANISM",
+    "continue_current_roadmap": "REJECTED",
+    "reboot": "REJECTED",
+    "stop_current_method": "SELECTED",
+    "inconclusive": "REJECTED_NO_SMALLEST_EVIDENCE_SUPPORTED_MATERIALLY_DIFFERENT_DISCRIMINATOR",
+    "scalable_truth_lift": "OPEN_NO_DEMONSTRATED_CURRENT_METHOD_MECHANISM",
+    "start_to_basin_connector": "OPEN_NO_DEMONSTRATED_CURRENT_METHOD_MECHANISM",
+    "material_all_reply_start_closure": false,
+    "initial_position_certificate": false,
+    "repeatable_progress_mechanism": false,
+    "g15_authorized": false,
+    "r7_authorized": false,
+    "reboot_authorized": false,
+    "strike_count": 0,
+    "review_closed": true
   }
 }
