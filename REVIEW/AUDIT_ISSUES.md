@@ -78,3 +78,18 @@ These are questions, not findings.
 - **A12 Verification economics:** same-proposition baselines complete, giving exact wall ratios 0.8084 / 0.8359; both fail the frozen <=0.75 strong-survival gate.
 - **A16 Reboot candidate:** FERL-4 demonstrates that exact high-material nonterminal targets are possible, but falsifies this strongest clean target as a material reboot bridge at the frozen scope. No alternative evidence-supported material bridge is identified.
 - **A18 Decision integrity:** thresholds were not relaxed after inspection. R5 records **FAILED, no strike**; `CONTINUE_CURRENT_ROADMAP` is effectively unsupported by the review evidence; R6 must decide among the allowed verdicts without treating “try another target” as survival evidence.
+
+## R6 final dispositions — 2026-09-19
+
+- **A03 Discovery vs compression:** closed for current-method viability. Compact proof objects are genuine, but R2/R5 show that compact payload does not establish favorable discovery economics.
+- **A04 Scaling law:** no global law is established. R1's bounded engineering law remains valid only at its frozen scope.
+- **A06 Raw fallback:** adverse for the bridge case; R4's competent bounded baseline exceeds 2 GiB and no evidence shows raw fallback scales to the global route.
+- **A08 Middlegame topology:** remains logically open; the current method has no demonstrated certified middlegame-network mechanism.
+- **A09 Reachability:** shallow structural reachability is established; scalable proof-carrying reachability is not.
+- **A10 All replies:** local exact Black closure is established, including nonempty FERL-4 certificates, but material root-connected closure is not.
+- **A11 History state:** adverse and unresolved at scale; R5 strengthens multiplication evidence to 2.5073x / 2.3449x.
+- **A15 Roadmap semantics:** the old G roadmap is not reauthorized; its future stages remain desired capabilities rather than a demonstrated bridge route.
+- **A16 Reboot candidate:** final disposition is negative. Bidirectional Certified Frontier is coherent but lacks a demonstrated material growth operation; no reboot is authorized.
+- **A18 Decision integrity:** completed. All four verdicts were evaluated under frozen criteria without threshold repair. Final verdict: `STOP_CURRENT_METHOD`.
+
+No open audit issue now authorizes additional R-series research. Remaining scientific questions are preserved outside an active current-method programme.
