@@ -1006,3 +1006,157 @@ Primary decision packet:
 R6 is not started by this ledger entry.
 
 **End state:** **R5 COMPLETE — NO MATERIAL REBOOT SURVIVAL MECHANISM DEMONSTRATED — REVIEW REMAINS OPEN — R6 FINAL DECISION NOT STARTED.**
+
+## R6 — Final Survival Decision — 2026-09-19
+
+### Session ID
+`R6`
+
+### Record boundary
+R0–R5 evidence only. No new chess search, depth increase, target family, FERL tuning, engine evaluation or lower-frontier expansion was performed.
+
+### Final verdict
+`STOP_CURRENT_METHOD`
+
+### Core reason
+The current method has not demonstrated a material, economical, repeatable certified bridge from restricted exact truth / shallow START_REACHABLE structure into a broad compatible certified network. R4's first concrete bridge certifies zero; R5's exact high-material escape hatch remains under 0.7%, gains nothing from unrestricted White, misses the economic gate, worsens history burden and retires no central dependency.
+
+### R6 closeout questions
+
+1. **What exact final verdict was selected?**  
+   `STOP_CURRENT_METHOD`.
+
+2. **What is the single strongest reason for that verdict?**  
+   After R0–R5 there is still **no demonstrated repeatable material bridge operation**: neither scalable truth lifting nor material certified start-frontier growth retires a central connector dependency.
+
+3. **What is the strongest evidence against that verdict?**  
+   The repository has substantial exact assets; R2 shows prospective semantic discovery; R3 shows strong shallow structural compression; and R5 proves a real high-material exact nonterminal target with 100% Black closure and tiny accepted certificates.
+
+4. **Why was CONTINUE_CURRENT_ROADMAP accepted or rejected?**  
+   Rejected. G15–G42 remain a sequence of planned capabilities without a demonstrated bridge mechanism connecting restricted truth, middlegame structure, start reachability and universal closure.
+
+5. **Why was REBOOT accepted or rejected?**  
+   Rejected. Bidirectional Certified Frontier is coherent as architecture/process, but R4 and R5 do not demonstrate material/economical/repeatable certified-surface growth or retire a central dependency.
+
+6. **Why was STOP_CURRENT_METHOD accepted or rejected?**  
+   Accepted because the strongest supported bridge candidates repeatedly fail the substantive survival gates and no materially different evidence-supported current-method candidate remains.
+
+7. **Why was INCONCLUSIVE accepted or rejected?**  
+   Rejected. No single smallest materially different evidence-supported discriminator remains; another target search would be a new speculative programme.
+
+8. **What did R0 establish about the global dependency graph?**  
+   It is discontinuous: restricted exact truth, composition and infrastructure are separated from scalable lifting, middlegame connectivity, start-to-basin connection and all-reply closure by genuinely open edges.
+
+9. **What did R1 add to the survival case?**  
+   Exact material-signature producer/verifier scaling and inherited target transfer survive at the tested restricted scope.
+
+10. **What did R1 add to the negative case?**  
+    H2 breaks the frozen strategy-language hostile threshold and unexplained residual truth does not systematically shrink; no unrestricted scaling law emerges.
+
+11. **What did R2 add to the survival case?**  
+    Zero-top-label exact semantic target/program discovery is possible and transfers strongly on a held-out opposing-material topology.
+
+12. **What did R2 add to the negative case?**  
+    Discovery costs 1.278x complete exact truth, relies heavily on exact lower truth and remains conversion-dominated.
+
+13. **What did R3 add to the survival case?**  
+    Exact shallow START_REACHABLE full-state generation, complete Black expansion and strong semantic White branching compression are practical.
+
+14. **What did R3 leave unproved?**  
+    Non-loss of retained White choices, typed basin entry, deep scaling and proof-theoretic closure.
+
+15. **What did R4 establish about the Bidirectional Certified Frontier architecture?**  
+    It is materially different from the old G-stage process, logically coherent and falsifiable, with exact prospective bridge tests and competent baselines.
+
+16. **Why did the R4 concrete mechanism fail?**  
+    Terminal/draw/current-G12 targets certify 0/1,024 on both D and H; lower exact targets are materially too distant and the unrestricted bounded baseline breaches 2 GiB.
+
+17. **What did FERL-4 establish positively?**  
+    A genuinely nonterminal 30–32-piece exact target can be theorem-driven without surrounding W/D/L, with zero observed exactness violations, 100% Black closure, unchanged hostile transfer and compact witnesses.
+
+18. **Why did FERL-4 fail as a material reboot bridge?**  
+    Coverage is only 0.48828125% D / 0.68359375% H, unrestricted White gives the same 5/7 roots, cost ratios miss <=0.75, history/frontier burden expands and no central dependency is retired.
+
+19. **Did unrestricted-White R5 baselines materially improve FERL-4 coverage?**  
+    No. They certify exactly 5 D and 7 H roots, identical to policy certification.
+
+20. **What does R5 imply about target scarcity near the start?**  
+    It provides direct evidence that at least the strongest clean frozen local exact target is sparse near the tested shallow start frontiers; it does not prove all possible targets are sparse.
+
+21. **What does R0–R5 imply about exact-history cost?**  
+    History is a persistent adverse scaling variable. Board-only merging is unsafe, and R5 reaches 2.5073x / 2.3449x full-state/board multiplication with max 264/217 theorem states per board.
+
+22. **What does R0–R5 imply about certificate compression versus discovery cost?**  
+    Compact certificates can coexist with expensive truth/target discovery. Payload compression is real but is not evidence of economical discovery.
+
+23. **Is there a demonstrated repeatable truth-lifting mechanism?**  
+    No.
+
+24. **Is there a demonstrated repeatable certified start-frontier growth mechanism?**  
+    No.
+
+25. **Has START_TO_BASIN_CONNECTOR been retired?**  
+    No; it remains OPEN.
+
+26. **Has material all-reply start closure been demonstrated?**  
+    No. Local accepted FERL certificates close all Black replies, but material root-connected closure is absent.
+
+27. **Is there currently an initial-position certificate?**  
+    No.
+
+28. **What valid mathematical results survive the verdict?**  
+    Exact finite-game attractor logic, Branch/Hyperkernel, Filter-Pivot/filtered attractors, valid restricted exact results, exact full-rule state semantics and FERL-4's exact target theorem at frozen scope.
+
+29. **What valid computational results survive the verdict?**  
+    Audited restricted producer/verifier results, R1 scaling within scope, R2 zero-label discovery within scope, R3–R5 shallow exact START_REACHABLE generation and verified R5 FERL counts.
+
+30. **What infrastructure remains reusable?**  
+    Deterministic generators/solvers, exact state identity, replay/verifier tooling, typed certificates, proof-store/CAS infrastructure, cohort/provenance tooling and the REVIEW fail-fast methodology.
+
+31. **What strategic assumptions are now rejected or unsupported?**  
+    Automatic extrapolation from restricted scale, certificate-size-as-discovery-leverage, shallow branching compression as proof compression, easy lower/start meeting, negligible history cost, sequential G completion as proof progress, and “another target might work” as reboot evidence.
+
+32. **What is the final review strike count?**  
+    0.
+
+33. **Did strike count determine the verdict, or did the substantive evidence?**  
+    Substantive evidence. Zero strikes indicate disciplined review execution, not method viability.
+
+34. **What is now authorized?**  
+    Preservation, provenance, independent verification of frozen claims, documentation/publication work, and evaluation of genuinely new external/mathematical methods. A future restart requires the closeout conditions plus explicit authorization.
+
+35. **What is now prohibited?**  
+    Automatic G15–G42 resumption, R7, adoption of Bidirectional Certified Frontier as an active reboot, repair work whose purpose is merely to resume the old roadmap, and open-ended new target search under the closed method.
+
+36. **Can G15 start automatically after R6?**  
+    No.
+
+37. **If not, what exact condition would permit future work?**  
+    A materially different affirmative bridge mechanism must satisfy `CURRENT_METHOD_CLOSEOUT.md`, including precise proposition, prior support, exact/full-history compatibility, universal closure where relevant, frozen bounded hostile qualification, material dependency retirement, repeatability evidence and explicit user authorization.
+
+38. **If the current method is stopped, what does that statement not claim?**  
+    It does not claim chess is impossible to weakly solve, that valid restricted mathematics is wrong, that every high-material exact target is sparse, or that future unrelated methods cannot succeed.
+
+39. **If a reboot is authorized, what exact demonstrated mechanism justifies it?**  
+    Not applicable: no reboot is authorized because no such demonstrated mechanism exists in R0–R5.
+
+40. **If the result is inconclusive, what single bounded discriminator remains?**  
+    Not applicable: the result is not inconclusive. No qualifying evidence-supported discriminator remains.
+
+41. **Is another open-ended target search scientifically justified by the current evidence?**  
+    No.
+
+42. **Has the independent REVIEW now completed?**  
+    Yes.
+
+### Operational state
+
+- review status: **CLOSED**
+- final verdict: **STOP_CURRENT_METHOD**
+- strike count: **0**
+- G-programme execution authorized: **false**
+- reboot authorized: **false**
+- current method closed: **true**
+- next permissible action: preservation/verification only, or explicit qualification of a materially different future method under `CURRENT_METHOD_CLOSEOUT.md`
+
+**End state:** **R6 COMPLETE — FINAL VIABILITY VERDICT FILED — INDEPENDENT REVIEW CLOSED.**
