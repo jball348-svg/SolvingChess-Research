@@ -44,3 +44,13 @@ These are questions, not findings.
 - **A08 Middlegame topology:** still open. Opposing mobile bishops and mutual captures are a meaningful step beyond R1, but fixed brink pawns and six-piece material remain far from ordinary middlegame topology.
 - **A09 Reachability / A10 All replies:** unchanged by R2 and now the direct R3 focus under the review scaffold.
 - **A16 Reboot candidate:** strengthened but not closed. Existing graph operators can consume automatically selected semantic inputs, yet the discovery-cost gate fails, preventing a strong survival verdict.
+
+
+## R3 updates — 2026-09-19
+
+- **A09 Reachability:** partially answered at bounded scope. Exact full-rule START_REACHABLE generation from the standard root is practical through the frozen ply-5 branches and every admitted state has a legal ancestor path.
+- **A10 All replies:** materially narrowed. The frozen semantic White policy retains 100% of expanded Black legal edges while leaving only 1.6161% / 1.9095% of raw leaf counts as unique unresolved ply-5 frontier states. This is structural compression, not certified non-loss closure.
+- **A11 History state:** clear early adverse evidence. Raw full-state/board multipliers reach 1.7886x (D) and 1.7318x (H) by ply 5; board-only transpositions substantially overstate exact merging.
+- **A12 Verification economics:** policy construction is cheaper than the competent raw exact-forward baseline in the audit-local harness (0.345x / 0.392x wall), but R3 did not build a structurally independent policy verifier, so independent replay economics remain unresolved.
+- **A15 Roadmap semantics:** G35–G39 are confirmed to be mostly desired deliverables/research questions rather than an already-supported compression mechanism. R3 supplies one bounded candidate mechanism but not a proof connector.
+- **A18 Decision integrity:** the frozen SURVIVED threshold is not met because retained White choices lack exact non-loss certification and no basin is reached; R3 is PARTIAL despite passing the structural frontier gates.
