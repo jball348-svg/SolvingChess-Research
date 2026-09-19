@@ -67,3 +67,14 @@ These are questions, not findings.
 - **A15 Roadmap semantics:** R4's reboot is materially different from G35–G39 in operating mechanics, but its first concrete certification bridge fails.
 - **A16 Reboot candidate:** a coherent candidate exists, so `NO_CANDIDATE` is rejected; however the R4 survival test is **FAILED**. The remaining escape hatch is a prospectively exact **nonterminal intermediate target**.
 - **A18 Decision integrity:** the preregistered D >=25% and H >=15% certification gates fail at 0% / 0%. No thresholds, cohort sizes, depths or grammars were relaxed. R4 records **FAILED, no strike** and leaves the final verdict to R6.
+
+
+## R5 updates — 2026-09-19
+
+- **A03 Discovery vs compression:** further adverse. FERL-4 accepted certificates are extremely compact, but discovery/certification still requires millions of exact reply checks and misses the <=0.75 cost gate. Compact payload is again not discovery leverage.
+- **A09 Reachability:** bounded exact START_REACHABLE generation survives on substantially broader R5 ply-6 policy frontiers (3.90M D / 3.00M H full states).
+- **A10 All replies:** R5 finally produces a **nonempty** exact high-material all-reply proof object, but coverage is only 0.4883% / 0.6836%; universal closure exists locally without becoming material proof closure.
+- **A11 History state:** adverse evidence strengthens. Full-state/board multiplication is 2.5073x D / 2.3449x H with max same-board theorem multiplicity 264 / 217.
+- **A12 Verification economics:** same-proposition baselines complete, giving exact wall ratios 0.8084 / 0.8359; both fail the frozen <=0.75 strong-survival gate.
+- **A16 Reboot candidate:** FERL-4 demonstrates that exact high-material nonterminal targets are possible, but falsifies this strongest clean target as a material reboot bridge at the frozen scope. No alternative evidence-supported material bridge is identified.
+- **A18 Decision integrity:** thresholds were not relaxed after inspection. R5 records **FAILED, no strike**; `CONTINUE_CURRENT_ROADMAP` is effectively unsupported by the review evidence; R6 must decide among the allowed verdicts without treating “try another target” as survival evidence.
