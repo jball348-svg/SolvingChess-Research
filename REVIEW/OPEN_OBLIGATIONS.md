@@ -69,3 +69,15 @@
 - `START_TO_BASIN_CONNECTOR` remains **OPEN**. FERL-4 is a local high-material draw contract, not a material connector into the lower certified network.
 - R5 demonstrates **no repeatable successful proof-progress mechanism** and retires **no central bridge obligation**.
 - Obligation 13 now becomes controlling: **R6 must file the final viability verdict** under the frozen criteria. R5 does not begin R6 and does not modify `REVIEW/VERDICT.md`.
+
+## R6 disposition — 2026-09-19
+
+- Obligation 13 is **COMPLETED**: R6 files `STOP_CURRENT_METHOD`.
+- Obligations concerning scalable truth lifting, middlegame connectivity, start-to-basin connection, material all-reply closure and full-history scaling remain **logically OPEN**, but the current method is **CLOSED** because it has no demonstrated repeatable mechanism for retiring them.
+- Obligation 11's reboot architecture remains preserved as a coherent concept; it is **not authorized** as a reboot because R4/R5 do not demonstrate material/economical/repeatable certified growth.
+- Obligation 12 is **COMPLETED as hostile audit work**: FERL-4 positively establishes existence of one exact high-material target class but falsifies it as a material bridge at frozen scope.
+- No R7 or new target-family search is authorized.
+- G15–G42 are archived and may not resume automatically.
+- Future work requires the materially different affirmative bridge evidence and explicit authorization specified in `CURRENT_METHOD_CLOSEOUT.md`.
+
+**Final review state:** R6 COMPLETE — `STOP_CURRENT_METHOD` — REVIEW CLOSED — strike count 0.
