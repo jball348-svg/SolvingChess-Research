@@ -250,3 +250,175 @@ See all R1 artifacts above. Frozen research snapshot remains `c2f0fa0530a3183df7
     **Can an outcome-independent discovery procedure produce exact reusable targets/strategy languages on a transition-rich opposing-material hostile domain without square fitting or essentially complete raw truth first?**
 
 **End state:** **R1 COMPLETE — REVIEW REMAINS OPEN — R2 NOT STARTED.**
+
+
+## R2 — Topology-Adaptive Proof Discovery Audit — 2026-09-19
+
+### Session ID
+`R2`
+
+### Question
+Can useful exact chess-semantic targets and strategy languages be generated or selected prospectively on a transition-rich arena with opposing mobile material, without square fitting or first acquiring essentially complete raw outcome truth?
+
+### Candidate bridge/scaling proposition
+There exists an outcome-independent discovery mechanism, compatible with the existing strict-attractor / Branch / Hyperkernel / Filter-Pivot algebra, that can generate or select compact exact targets and strategy languages on opposing-mobile-material topology with low truth leakage, useful exact coverage, held-out transfer and discovery cost competitive with complete exact truth acquisition.
+
+The proposition, D1/H1 arenas, atom grammars, candidate limits, zero-label budget, maximum one-switch strategy depth and pass/fail thresholds were frozen in `REVIEW/R2_DISCOVERY_HYPOTHESIS.md` and `REVIEW/R2_DISCOVERY_IMPLEMENTATION_FREEZE.md` before complete D1/H1 top-signature W/D/L inspection.
+
+The selected target and strategy program were then frozen separately in `REVIEW/R2_SELECTED_OBJECTS_FREEZE.md` before validation truth was produced.
+
+### Inherited facts allowed
+- R0 claim/dependency/negative-evidence reconstruction.
+- R1 PARTIAL result: exact material-signature scaling and inherited target transfer survive, while H2 fixed-palette strategy transfer fails at 43.504% against the 75% hostile threshold.
+- Historical G5–G8 distinction between semantic vocabulary, outcome-informed selection, post-hoc interpretation and universal finite-graph operators.
+- Existing exact lower-material dependencies and strict-attractor / Filter-Pivot / ordered-filter semantics.
+
+### Attack plan
+Use a prospectively frozen six-piece opposing-mobile-material discovery arena, K+B+f7P vs K+B+d2P with same-colour bishops, and a held-out opposite-colour-bishop arena. Withhold complete top-signature W/D/L during discovery. Generate target predicates from frozen relative/resource atoms and strategy classes from frozen move-effect atoms. Freeze the selected object, then solve exact truth and test false positives, exact coverage, residual raw truth, unchanged held-out transfer and discovery/full-solve economics.
+
+### Work performed
+Created:
+- `REVIEW/R2_DISCOVERY_HYPOTHESIS.md`
+- `REVIEW/R2_DISCOVERY_IMPLEMENTATION_FREEZE.md`
+- `REVIEW/R2_SELECTED_OBJECTS_FREEZE.md`
+- `REVIEW/R2_HISTORICAL_DISCOVERY_RECONSTRUCTION.md`
+- `REVIEW/R2_DISCOVERY_ARENA_PROFILE.md`
+- `REVIEW/R2_TARGET_DISCOVERY_RESULTS.md`
+- `REVIEW/R2_STRATEGY_DISCOVERY_RESULTS.md`
+- `REVIEW/R2_DISCOVERY_COST_AUDIT.md`
+- `REVIEW/R2_NEGATIVE_EVIDENCE.md`
+- `REVIEW/R2_DISCOVERY_AUDIT.md`
+- `REVIEW/provenance/R2_RUN_SUMMARY.json`
+
+Prospective freeze commits:
+- hypothesis: `178881488a803071cf08be9220fbc8fd7fdc2b6a`
+- concrete implementation freeze: `b7193664b05f2b030b6de7e5cfd9ba234165643d`
+- selected-object freeze: `0cccef06de965f5ca5e72c8ae153e8e7040ff9e4`
+
+Accepted harness:
+- source SHA-256 `047b354ce4d7f863a291f34cead28d8c0d4db60b8424ec7d1d8ef93943f649d8`
+- executable SHA-256 `6c8dfad8eca6df10f6c35e07b1008b557d1576c84240cb46a309cc38d8420aef`
+- g++ 14.2.0, `-O3 -std=c++17 -march=native`
+
+An initial validity-loop implementation was too slow and was replaced before accepted discovery output by a logically equivalent pairwise-overlap implementation. No arena, atom, threshold, candidate order or scientific budget changed.
+
+### Result
+`PARTIAL`
+
+Positive:
+- top-domain truth leakage during discovery: **0.000000%**;
+- automatically selected exact D1 target: `LOWER_WINNING_CAPTURE_EXIT OR (WHITE_TO_MOVE AND WHITE_PROMOTION_LEGAL)`;
+- automatically selected strategy program: `GIVES_CHECK -> ATTACKS_BLACK_PAWN_AFTER_MOVE`;
+- D1 composite coverage: **2,376,263 / 2,377,388 = 99.9527%** of exact White wins, zero false positives;
+- D1 residual raw truth: **1,125 wins = 0.0473208%**;
+- D1 strategy coverage: **99.7451%** of composite basin;
+- H1 unchanged composite coverage: **2,470,802 / 2,473,475 = 99.8919%**, zero false positives;
+- H1 residual raw truth: **0.108067%**;
+- H1 unchanged strategy coverage: **99.5773%**;
+- no square/state-ID patches and no post-validation grammar changes.
+
+Negative:
+- accepted D1 discovery wall: **33.9099 s**;
+- complete D1 exact-truth acquisition: **26.5349 s**;
+- `DISCOVERY_COST_RATIO = 1.2780`, failing the frozen <=1.0 economic gate;
+- discovery consumes 18,293,044 exact lower-material dependency states;
+- the selected target is conversion/brink-resource dominated;
+- no multi-ascent, full-rule, middlegame or START_REACHABLE scaling law follows.
+
+### Scope
+Established:
+- a coherent zero-top-label proof-object discovery mechanism can be formulated from current programme assets;
+- exact semantic target and strategy-program selection need not be purely post-hoc;
+- selected objects can transfer unchanged across a meaningful opposing-bishop topology change;
+- automatically selected objects can compose with existing exact graph machinery;
+- raw residual truth can become tiny in this topology.
+
+Not established:
+- discovery cheaper than exact solving;
+- multi-ascent discovery scaling;
+- non-conversion-dominated target discovery;
+- ordinary middlegame proof discovery;
+- full-history rules scaling;
+- START_REACHABLE connectivity;
+- all-opponent-reply closure;
+- viability verdict.
+
+### Obligations retired / created
+Partially retired:
+- the strongest form of A07 / obligation 4 that useful target/strategy discovery necessarily requires complete top-domain truth or post-hoc hand interpretation.
+
+Locally answered:
+- lookup-like residual is not inevitable in the R2 brink/opposing-bishop topology.
+
+Still open / sharpened:
+- favorable discovery economics;
+- discovery under non-brink and materially richer topology;
+- reliance on large exact lower-material dependency layers;
+- middlegame bridge;
+- START_REACHABLE all-reply closure.
+
+### Strike
+`NO`.
+
+R2 genuinely tested the central discovery proposition, preserved the failed economic gate and materially sharpened the dependency. It does not meet the reboot criteria for a strike.
+
+Strike count remains **0**.
+
+### Next discriminating step
+R3 should attack the independent start-side risk:
+
+**Can a nontrivial START_REACHABLE domain rooted at the standard initial full-rule state be expanded by a prospectively frozen certified mechanism that closes every opponent reply and reaches an already compatible certified basin before the frontier degenerates into raw game-tree enumeration?**
+
+R3 is not started by this entry.
+
+### Source/provenance updates
+Primary R2 evidence is in the ten R2 review artifacts and `REVIEW/provenance/R2_RUN_SUMMARY.json`. Frozen research history remains unchanged. No G15 work or G13 replay repair was performed.
+
+### R2 closeout questions
+
+1. **What exact proof-discovery mechanism was tested?**  
+   Exact lower-material dependencies -> <=4-ply certified promotion/capture-exit basin -> zero-top-label semantic target enumeration/ranking -> strict/composite attractor -> move-effect class enumeration -> exact filtered-attractor ranking -> one ordered strategy switch -> held-out unchanged application -> complete W/D/L validation.
+
+2. **What semantic information was available before outcome truth?**  
+   Legal graph structure, material/signature identity, relative promotion geometry, attack/defence relations, checks, captures, mobility, promotion legality, and exact lower-material dependency truth. Complete D1/H1 top-signature W/D/L was withheld.
+
+3. **How much outcome-labelled truth, if any, was consumed during discovery?**  
+   **Zero complete top-signature labelled states.** Discovery did consume exact lower-material truth as an explicitly allowed typed dependency.
+
+4. **What was the truth-leakage ratio?**  
+   **0 / 5,004,008 = 0.000000%.**
+
+5. **Did the mechanism discover an exact semantic target?**  
+   **Yes.** `WHITE_CERTIFIED_LOWER_CAPTURE_EXIT_EXISTS OR (WHITE_TO_MOVE AND WHITE_PROMOTION_LEGAL)`, with zero D1 and zero H1 false positives.
+
+6. **Did it discover an exact useful strategy language or finite strategy program?**  
+   **Yes.** `GIVES_CHECK -> ATTACKS_BLACK_PAWN_AFTER_MOVE`; exact graph semantics, 99.7451% D1 composite-basin coverage and 99.5773% unchanged H1 coverage.
+
+7. **How much exact truth did the discovered objects certify?**  
+   D1 composite object: **99.9527% of exact White wins**; H1 unchanged: **99.8919%**. The frozen strategy program covers 99.7451% / 99.5773% of those composite basins.
+
+8. **Did the residual raw-truth fraction improve relative to R1?**  
+   **Yes at tested scope.** D1 residual is **0.0473208%** and H1 **0.108067%**, versus roughly 67% unexplained on the R1 main ladder. This is not promoted as a universal trend.
+
+9. **Did description cost remain materially below lookup scale?**  
+   **Yes.** Target = 3 literals / 2 clauses; strategy = 2 move literals / 1 switch; no exception list.
+
+10. **Did discovery cost remain competitive with simply solving the arena?**  
+    **No under the frozen gate.** Discovery 33.9099 s versus exact acquisition 26.5349 s gives **1.2780×**, above the <=1.0 requirement.
+
+11. **Did the held-out opposing-material/topology test survive unchanged?**  
+    **Yes.** H1 used the D1 formula and strategy program unchanged, with zero false positives, 99.8919% composite White-win coverage and 99.5773% strategy coverage.
+
+12. **Was any square-level or arena-specific patching required?**  
+    **No.** No square/state-ID exception, predicate extension, retraining or new phase was added after freeze.
+
+13. **Does R2 retire, narrow or falsify `SCALABLE_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL`?**  
+    **NARROWS it.** R2 shows topology-adaptive zero-top-label discovery exists at tested scope, but does not establish the `SCALABLE` or economically favourable part.
+
+14. **Did R2 create a review strike?**  
+    **No.** Strike count remains 0.
+
+15. **What single question should R3 attack next?**  
+    **Can a nontrivial START_REACHABLE full-rule domain achieve prospectively frozen all-opponent-reply expansion into a compatible certified basin without degenerating into raw game-tree enumeration?**
+
+**End state:** **R2 COMPLETE — REVIEW REMAINS OPEN — R3 NOT STARTED.**
