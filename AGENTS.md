@@ -19,6 +19,19 @@ If `REVIEW/REVIEW_STATUS.json` exists with status `OPEN`, that user-authorized r
 
 The review hold is an operator policy, not a scientific claim and not a rewrite of `state/PROGRAM_STATE.json`.
 
+## Post-REVIEW closure gate
+
+If `REVIEW/REVIEW_STATUS.json` records `status: CLOSED` with verdict `STOP_CURRENT_METHOD`:
+
+- do not interpret closure of the REVIEW hold as authorization to resume the old G programme;
+- do not start G15 or any G15–G42 successor automatically;
+- do not start R7;
+- treat `REVIEW/VERDICT.md` and `REVIEW/CURRENT_METHOD_CLOSEOUT.md` as active execution authority for the closed method;
+- only preservation, verification, documentation/publication or explicit evaluation of a materially different future method is authorized by default;
+- research execution may restart only when the future-restart conditions in `REVIEW/CURRENT_METHOD_CLOSEOUT.md` are satisfied and the user explicitly authorizes reopening/new-method execution.
+
+This post-review gate overrides normal one-G sequential routing for the closed current method.
+
 ## Start-of-run authority
 
 Before research:
