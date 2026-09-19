@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.1.0",
-  "review_session": "R1",
-  "reviewed_repository_head": "ebd4709dec356bde5b2276f244ea8832dc31eca2",
+  "schema_version": "2.2.0",
+  "review_session": "R2",
+  "reviewed_repository_head": "3a597fe64c1bc98e22e791f4953b9b81f30ec1a9",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
-  "generated_date": "2026-09-18",
-  "status": "R1_PARTIAL_REVIEW_OPEN",
+  "generated_date": "2026-09-19",
+  "status": "R2_PARTIAL_REVIEW_OPEN",
   "interpretation": "SUPPORTED_AT_STATED_SCOPE is documentary/proposition-level R0 support, not an automatic fresh rerun.",
   "claims": [
     {
@@ -898,6 +898,79 @@
       "caveat": "R1 does not file a viability verdict and does not authorize G15.",
       "r0_status": "NOT_APPLICABLE_POST_R0",
       "r1_status": "SUPPORTED_AT_R1_SCOPE"
+    },
+    {
+      "id": "C36",
+      "proposition": "R2 prospectively selects an exact semantic target and one-switch strategy program without consuming any complete top-signature W/D/L labels; on D1 the composite proof object certifies 99.9527% of exact White wins with zero false positives, and the unchanged H1 held-out application certifies 99.8919% with zero false positives.",
+      "hypotheses": [
+        "R2_DISCOVERY_HYPOTHESIS.md and R2_DISCOVERY_IMPLEMENTATION_FREEZE.md frozen before complete D1/H1 top-signature W/D/L inspection",
+        "Historical board-state finite-game semantics",
+        "Exact lower-material dependencies permitted",
+        "No square/state-ID exceptions"
+      ],
+      "domain": "R2D1_BB_SAME_F7_D2 and held-out R2H1_BB_OPP_F7_D2",
+      "rules_state_model": "Historical board-only finite arena with promotion/mate wins, stalemate/unresolved cycles draw, capture-closed lower signatures",
+      "reachability": "ARENA_ADMISSIBLE only",
+      "claim_class": "EXACT_FINITE",
+      "producer_evidence": [
+        "REVIEW/R2_SELECTED_OBJECTS_FREEZE.md",
+        "REVIEW/R2_TARGET_DISCOVERY_RESULTS.md",
+        "REVIEW/R2_STRATEGY_DISCOVERY_RESULTS.md",
+        "REVIEW/provenance/R2_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "Zero target/program graph-rank violations reported before W/D/L validation",
+        "Complete D1/H1 Bellman verification reports zero mismatches"
+      ],
+      "downstream_consumers": [
+        "C38"
+      ],
+      "caveat": "Strong held-out transfer occurs inside a narrow six-piece brink-pawn family and depends on exact lower-material truth.",
+      "r2_status": "SUPPORTED_AT_R2_SCOPE"
+    },
+    {
+      "id": "C37",
+      "proposition": "R2 does not establish favourable proof-discovery economics: accepted D1 discovery costs 33.9099 seconds versus 26.5349 seconds for complete exact-truth acquisition, giving DISCOVERY_COST_RATIO 1.2780 against a prospectively frozen <=1.0 gate.",
+      "hypotheses": [
+        "Accepted R2 timing/accounting definitions",
+        "Same D1 arena and hardware/runtime context",
+        "Discovery includes lower-signature truth and semantic search; acquisition includes lower signatures plus complete top W/D/L"
+      ],
+      "domain": "R2 D1 cost audit",
+      "rules_state_model": "R2 historical finite-arena harness",
+      "reachability": "Not a reachability claim",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R2_DISCOVERY_COST_AUDIT.md",
+        "REVIEW/R2_NEGATIVE_EVIDENCE.md",
+        "REVIEW/provenance/R2_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "Later replay narrows timing gap but does not overturn the prospectively scored failure"
+      ],
+      "downstream_consumers": [
+        "C38"
+      ],
+      "caveat": "Timing is implementation/hardware specific; the supported conclusion is failure of the frozen R2 economic gate, not a universal lower bound.",
+      "r2_status": "SUPPORTED_AT_R2_SCOPE"
+    },
+    {
+      "id": "C38",
+      "proposition": "R2 is PARTIAL: zero-top-label target/strategy discovery and unchanged held-out opposing-material transfer survive, but the mechanism is not cheaper than exact solving and remains conversion-dominated; SCALABLE_TOPOLOGY_ADAPTIVE_PROOF_DISCOVERY_ACROSS_OPPOSING_MATERIAL remains open.",
+      "hypotheses": [
+        "R2 frozen classification rules"
+      ],
+      "domain": "Independent viability review session R2",
+      "rules_state_model": "Review synthesis across R2 evidence",
+      "reachability": "No START_REACHABLE claim",
+      "claim_class": "NOT_CLAIMED",
+      "producer_evidence": [
+        "REVIEW/R2_DISCOVERY_AUDIT.md"
+      ],
+      "verifier_evidence": [],
+      "downstream_consumers": [],
+      "caveat": "No viability verdict follows; R3 is not started by R2.",
+      "r2_status": "SUPPORTED_AT_R2_SCOPE"
     }
   ]
 }
