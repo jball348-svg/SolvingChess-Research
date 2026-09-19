@@ -33,8 +33,11 @@ While `REVIEW/REVIEW_STATUS.json` is `OPEN`, do not start a new G programme or r
 - R2: audit the endgame-to-middlegame bridge.
 - R3: audit start reachability and all-reply closure.
 - R4: construct and attack the strongest reboot candidate.
-- R5: adversarial synthesis and verdict.
+- R5: hostile/adversarial synthesis against the surviving reboot case.
+- R6: final survival decision — justify continued work under a specific reboot, or close the current method.
 
 Allowed verdicts: `CONTINUE_CURRENT_ROADMAP`, `REBOOT`, `STOP_CURRENT_METHOD`, or `INCONCLUSIVE`.
+
+The user-authorized review budget now runs through R6. R4's candidate test FAILED without a strike; R5 must attack the remaining nonterminal-intermediate-target survival case, and R6 must make the final survival decision. A reboot verdict at R6 requires affirmative evidence for a specific bounded mechanism, not merely further research potential.
 
 A verdict about the current method is not a theorem about whether chess can be weakly solved by some future method.
