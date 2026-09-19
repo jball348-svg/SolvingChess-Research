@@ -43,3 +43,16 @@
 - A11 History state is **partially answered negatively**: history multiplication is already material by ply 5 and must remain in scaling budgets.
 - `START_TO_BASIN_CONNECTOR` remains open: R3 records zero certified entries into current G12 exact basins.
 - New sharpened obligation for R4: determine whether the R3 semantic White-choice compression can be upgraded to exact non-loss certification / typed-target entry without near-complete outcome acquisition or loss of the sub-tree frontier advantage.
+
+
+## R4 disposition — 2026-09-19
+
+- Obligation 8 / the start-side closure problem is **further narrowed but not retired**. R4 extends exact START_REACHABLE policy generation to ply 6 on king-pawn discovery and knight-first hostile families, but the frozen exact target recursion certifies **0 / 1,024** tested White-policy states on D and **0 / 1,024** on H.
+- Obligation 9 / exact history remains **adverse and open at scale**. Ply-6 full-state/board multipliers are **1.34595x** on D and **1.48250x** on H, with up to 15 theorem states per board.
+- Obligation 11 is **completed as an audit construction task, not as a survival event**: R4 freezes one concrete Bidirectional Certified Frontier Reboot and prospectively attacks its first start-side bridge. The survival test is **FAILED**.
+- Obligation 12 becomes the direct R5 task: hostile/adversarial synthesis must test whether any materially different surviving bridge remains inside the reboot architecture, rather than repairing the failed R4 target after inspection.
+- `START_TO_BASIN_CONNECTOR` remains **OPEN**. Both R4 cohorts have 30–32 pieces and at most five local plies, so current 3–4-piece G12 exact dependencies are provably unreachable inside the test.
+- Complete bounded all-White target-reachability truth is not a cheap repair: both D and H breach the frozen 2 GiB baseline budget before completion.
+- New sharpened obligation for R5: **NONTERMINAL_EXACT_INTERMEDIATE_TARGET_CERTIFICATION** — determine whether a prospectively defined nonterminal target can be exact without complete surrounding W/D/L or restating “non-losing”, while certifying a material START_REACHABLE fraction with 100% Black closure, held-out transfer and favorable proof economics.
+- R4 creates **no strike**. The frozen candidate failed cleanly and materially discriminated the architecture.
+- R4 does **not** justify a reboot protocol or a viability verdict. R6 remains the bounded final survival decision.
