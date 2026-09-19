@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.3.0",
-  "review_session": "R3",
-  "reviewed_repository_head": "ff26f8668f6a9f264004dba9668ff7733e013063",
+  "schema_version": "2.4.0",
+  "review_session": "R4",
+  "reviewed_repository_head": "dd9a868c4b9ab3d74c01471c8cfbf353f49e9d75",
   "frozen_research_snapshot": "c2f0fa0530a3183df7e300d0bcbbeac554362895",
   "generated_date": "2026-09-19",
-  "status": "R3_PARTIAL_REVIEW_OPEN",
+  "status": "R4_FAILED_REVIEW_OPEN",
   "interpretation": "SUPPORTED_AT_STATED_SCOPE is documentary/proposition-level R0 support, not an automatic fresh rerun.",
   "claims": [
     {
@@ -1063,6 +1063,83 @@
       "downstream_consumers": [],
       "caveat": "Does not establish ROOTED_CLOSED_DOMAIN, BASIN_CONNECTED, INITIAL_POSITION_CERTIFICATE or viability verdict.",
       "r3_status": "SUPPORTED_AT_R3_SCOPE"
+    },
+    {
+      "id": "C43",
+      "proposition": "Under the prospectively frozen R4 Bidirectional Certified Frontier start-side test, the two-phase semantic White program certifies 0 of 1,024 D states at remaining depths 1, 3 and 5 and 0 of 1,024 unchanged knight-first held-out H states at depth 5, with zero complete local W/D/L leakage.",
+      "hypotheses": [
+        "R4_REBOOT_ARCHITECTURE.md and R4_REBOOT_SURVIVAL_HYPOTHESIS.md frozen before decisive certification",
+        "G10.RULES.v1.0 semantics plus G12.STATE.SERIAL.v2 exact full-state identity",
+        "Frozen two-phase White program and typed target grammar",
+        "No engine evaluation, opening line memorisation, square/state-ID patching or board-only merging"
+      ],
+      "domain": "R4 D king-pawn and held-out H knight-first START_REACHABLE ply-6 cohorts, 1,024 exact full states each",
+      "rules_state_model": "Full theorem state: board, turn, castling rights, effective EP, halfmove clock, repetition-count map",
+      "reachability": "START_REACHABLE by explicit legal forward generation from the standard initial state",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R4_START_POLICY_CERTIFICATION_RESULTS.md",
+        "REVIEW/R4_HELDOUT_RESULTS.md",
+        "REVIEW/R4_TYPED_TARGET_RESULTS.md",
+        "REVIEW/provenance/R4_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "Standard-start perft reproduced through depth 5",
+        "Frozen R3 D/H policy frontier counts reproduced exactly in the R4 harness"
+      ],
+      "downstream_consumers": [
+        "C45"
+      ],
+      "caveat": "This does not establish that the tested states are losing; it establishes failure of the frozen exact certification mechanism at the tested bounded scope.",
+      "r4_status": "SUPPORTED_AT_R4_SCOPE"
+    },
+    {
+      "id": "C44",
+      "proposition": "The competent exact all-White bounded target-reachability baseline fails to complete inside the frozen 2 GiB resource budget on both R4 cohorts, so a complete local baseline and exact certification-cost ratio are unavailable.",
+      "hypotheses": [
+        "Same R4 cohorts, target grammar, full-state identity and depth-5 bounded proposition",
+        "Every legal White move allowed in baseline",
+        "Every legal Black reply universal",
+        "2 GiB prospective memory ceiling"
+      ],
+      "domain": "R4 D/H bounded exact target-reachability baseline",
+      "rules_state_model": "Full-rule exact theorem state",
+      "reachability": "START_REACHABLE cohort roots with exact bounded successors",
+      "claim_class": "NEGATIVE_RESULT",
+      "producer_evidence": [
+        "REVIEW/R4_CERTIFICATION_ECONOMICS.md",
+        "REVIEW/R4_NEGATIVE_EVIDENCE.md",
+        "REVIEW/provenance/R4_RUN_SUMMARY.json"
+      ],
+      "verifier_evidence": [
+        "D terminated std::bad_alloc at 69.06 s / 2,081,320 KiB",
+        "H terminated std::bad_alloc at 71.58 s / 2,024,280 KiB"
+      ],
+      "downstream_consumers": [
+        "C45"
+      ],
+      "caveat": "Resource failure does not establish a general lower bound and does not rescue the zero-coverage semantic certifier.",
+      "r4_status": "SUPPORTED_AT_R4_SCOPE"
+    },
+    {
+      "id": "C45",
+      "proposition": "R4 is FAILED: a coherent Bidirectional Certified Frontier reboot architecture is formulated and prospectively attacked, but terminal/draw/current-G12 typed targets do not convert R3 semantic branching compression into any exact non-loss proof coverage; the surviving review dependency is nonterminal exact intermediate target certification.",
+      "hypotheses": [
+        "R4 frozen classification rules and thresholds"
+      ],
+      "domain": "Independent viability review session R4",
+      "rules_state_model": "Review synthesis over full-rule START_REACHABLE R4 evidence",
+      "reachability": "START_REACHABLE start-side bridge; lower targets only at exact compatible scope",
+      "claim_class": "NOT_CLAIMED",
+      "producer_evidence": [
+        "REVIEW/R4_REBOOT_ARCHITECTURE.md",
+        "REVIEW/R4_REBOOT_AUDIT.md",
+        "REVIEW/R4_NEGATIVE_EVIDENCE.md"
+      ],
+      "verifier_evidence": [],
+      "downstream_consumers": [],
+      "caveat": "R4 files no viability verdict, creates no reboot protocol, and does not prove that richer nonterminal exact targets are impossible.",
+      "r4_status": "SUPPORTED_AT_R4_SCOPE"
     }
   ]
 }
