@@ -10,6 +10,12 @@ The review asks three questions:
 
 While `REVIEW/REVIEW_STATUS.json` is `OPEN`, do not start a new G programme or repair blockers merely to resume the old sequence unless the user explicitly overrides the hold.
 
+## Final review state
+
+R6 is complete. The filed verdict is **`STOP_CURRENT_METHOD`**.
+
+The independent REVIEW is closed, but closure does **not** release the old G programme for automatic execution. G15–G42 remain unauthorized under `CURRENT_METHOD_CLOSEOUT.md`. Valid restricted results are preserved. Any future restart requires materially different affirmative bridge evidence and explicit authorization.
+
 ## Start here
 
 1. `REVIEW_SCOPE.md`
