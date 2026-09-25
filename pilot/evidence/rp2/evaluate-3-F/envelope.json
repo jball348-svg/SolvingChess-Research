@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+    "pilot/src/rp2.py",
+    "evaluate",
+    "--arm",
+    "F",
+    "--repeat",
+    "3",
+    "--output",
+    "pilot/evidence/rp2/evaluate-3-F/report.json",
+    "--freeze",
+    "pilot/evidence/rp2/donor-freeze.json",
+    "--freeze-commit",
+    "2736e3cf00e0696520c3d8fe1203f28087ed3db6"
+  ],
+  "status": "COMPLETED",
+  "returncode": 0,
+  "wall_s": 0.8935862329999509,
+  "cpu_s": 0.892713,
+  "child_peak_rss_kib": 20224,
+  "stdout": "{\"arm\":\"F\",\"mode\":\"evaluate\",\"outcomes\":{\"false\":11,\"true\":5},\"repeat\":3,\"status\":\"COMPLETE\",\"total_inside_process\":{\"checking\":{\"accepted\":17,\"calls\":33,\"checked_edges\":2299,\"checked_nodes\":1806,\"cpu_s\":0.11587396600000022,\"generated_edges\":7405,\"rejected\":16,\"wall_s\":0.11739330800003245},\"cpu_s\":0.806590101,\"wall_s\":0.8078601049999179,\"work\":{\"legal_edges_generated\":39132,\"move_generation_calls\":9079,\"state_keys\":4800,\"transitions\":4696}}}\n",
+  "stderr": ""
+}

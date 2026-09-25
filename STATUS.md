@@ -2,7 +2,7 @@
 
 Updated: 2026-09-25.
 
-**RP2 IN_PROGRESS — DONOR_FREEZE_READY.**
+**RP2 COMPLETE — BOUNDED_POSITIVE_ACQUISITION; NO_R1_COST_ADVANTAGE.**
 
 The previous tracked tree is archived without changes at
 `archive/pre-reboot-2026-09-25/`. Its source commit is
@@ -11,20 +11,37 @@ The previous tracked tree is archived without changes at
 | Part | State | Result |
 |---|---|---|
 | 1 — Benchmark and baseline | COMPLETE | Reference reproduced; exact baseline/checker usable; protocol v1 frozen. |
-| 2 — Discover reusable proofs | IN_PROGRESS | Eight donor proof geometries acquired reproducibly; R1 not yet generated or evaluated. |
+| 2 — Discover reusable proofs | COMPLETE | Eight exact donor objects; one internal R1 application; 16/16 checked in every arm; no first-use advantage. |
 | 3 — Cumulative reuse | NOT_STARTED | No amortization or scaling measurements yet. |
 | 4 — Transfer and connections | NOT_STARTED | No new connected strategy certificate yet. |
 | 5 — Replay and decision | NOT_STARTED | No pilot viability conclusion yet. |
 
-**Next action:** publish the donor freeze in `pilot/evidence/rp2/donor-freeze.json`,
-then execute only the 16 reserved R1 test queries with the already recorded
-measurement driver. This is the authorized continuation of RP2. No R1 training,
-R2–R4 evaluation, compounding or held-out transfer has run.
+**Next action, only when requested:** execute RP3 under the unchanged protocol.
+Reuse RP2's R1 measurements as the first prefix. Acquire from the separate R1
+training cohort for G/C before R2, then follow the frozen R2–R4 schedule and
+R3/R4 ablation/order checks. Carry the donor acquisition and all R1 costs in
+`pilot/evidence/rp2/summary.json` forward; shared setup is charged once. Do not
+regenerate R1 as unseen evidence. RP3–RP5 remain unstarted.
 
-**RP2 donor evidence:** [consolidated record](pilot/RESULTS.md#rp2--donor-acquisition-and-freeze-2026-09-25).
-The nine acquisition runs reproduce all 24 checked donor certificates; F/G's
-six runs reproduce the same eight geometries and 7,628-byte library. C's three
-runs reproduce a 357-entry, 685,523-byte geometry cache. R1 remains unopened.
+**RP2 result:** [consolidated results, limitations and exact commands](pilot/RESULTS.md#rp2-complete--bounded-positive-acquisition-no-r1-cost-advantage).
+All arms checked 16/16 R1 queries (five true, eleven false), with no unknowns or
+timeouts. Eight short, single-branch geometry objects were acquired reproducibly.
+One transferred proof discharged an internal negative-query search obligation,
+but contributed to no final R1 root certificate. F/G saved only two of 915
+fallback expansions and failed every practical cost-advantage gate.
+
+Median first-use CPU seconds, including donor construction and R1 but before
+shared environment setup: B 0.795, C 2.582, F 1.318, G 1.261. All setup, failed
+applications, candidate attempts and repetition costs are retained. This bounded
+positive acquisition result establishes neither useful scaling nor cumulative
+benefit. F/G have identical donor knowledge at this stage.
+
+**Published donor/source freeze:**
+[`2736e3cf00e0696520c3d8fe1203f28087ed3db6`](https://github.com/jball348-svg/SolvingChess-Research/commit/2736e3cf00e0696520c3d8fe1203f28087ed3db6),
+verified on the remote before R1 generation. The [manifest](pilot/evidence/rp2/donor-freeze.json),
+actual objects, donor/evaluation certificates and raw ledgers are preserved.
+No R1 training, R2–R4 evaluation, held-out counterplay/history work or old conveyor
+was run. The active protocol, original source manifest and archive are unchanged.
 
 **RP1 evidence:** [consolidated results and replay commands](pilot/RESULTS.md).
 G12's producer/verifier reproduced seven frozen artifacts; the verifier checked

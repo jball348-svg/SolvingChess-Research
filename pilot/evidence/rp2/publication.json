@@ -1,0 +1,9 @@
+{
+  "donor_freeze_commit": "2736e3cf00e0696520c3d8fe1203f28087ed3db6",
+  "tree": "7112d6eb50e4683fb90d1c8fab8b39b8d20bb068",
+  "published_via": "GitHub connector fast-forward main; fetched and matched local tree",
+  "verified_before_any_r1_generation": true,
+  "recorded_utc": "2026-09-25T12:44:40.283807+00:00",
+  "local_only_prepublication_commit": "c4a7b27ff302ec7fa7cf1b7272cac5cd9b41a11b",
+  "note": "CLI push lacked authentication; connector published the identical tree with its own commit identity."
+}

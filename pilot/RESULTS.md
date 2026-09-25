@@ -158,7 +158,8 @@ the method after inspecting R1. RP3–RP5 remain unstarted.
 new distinct KRK geometry skeletons were acquired from D's 24 training queries.
 No synthetic RP1 fixture enters the library. These are finite mating strategies
 with checked application guards, not unrestricted symbolic chess theorems.
-This section records the pre-evaluation freeze; R1 has not yet been generated.
+The donor observations below were committed before R1 generation. The completed
+R1 comparison follows the freeze record.
 
 ### Contract and execution machinery
 
@@ -240,6 +241,227 @@ All six proof-library files have SHA-256
 `6d8211ca8fb1c67b324fc142d6ea834e54da0b4241b03a4da38f964f9b1545dc`.
 All three generic-cache files have SHA-256
 `6a860f2164b178a5fff3b8458b68ef1fa7eb5aaa77544fe1b305a3cee5126a75`.
-This freeze must be committed and published before `rp2_campaign.py evaluate`
-is invoked. F and G currently contain identical knowledge; R1 cannot establish
-cumulative benefit. RP3–RP5 are unstarted.
+The donor/source freeze was published as
+[`2736e3cf00e0696520c3d8fe1203f28087ed3db6`](https://github.com/jball348-svg/SolvingChess-Research/commit/2736e3cf00e0696520c3d8fe1203f28087ed3db6)
+and fetched back before any R1 generation. [Publication evidence](evidence/rp2/publication.json)
+records the remote identity and matching tree. CLI push lacked authentication;
+the linked GitHub app published exactly the same tree. The local-only `c4a7b27`
+commit was not the published freeze. No experimental source, library or accepted
+witness changed after publication. F/G contain identical donor knowledge;
+their timing difference cannot establish cumulative benefit.
+
+### RP2 complete — bounded positive acquisition, no R1 cost advantage
+
+**Acquisition verdict: BOUNDED_POSITIVE.** The procedure created eight distinct
+structural geometry objects, and one instantiated successfully outside the donor
+rectangle. This is substantially narrower than an economic or compounding result.
+The accepted objects contain 2–6 nodes and require 1–5 plies. All eight are
+single-branch witnesses acquired from the first two positive donor roots; every
+Black node in those witnesses has exactly one admitted reply. The original RP1
+synthetic fixture's geometry is absent from the library. These are newly acquired
+objects under the protocol, not eight unrelated chess theorems or eight successful
+R1 transfers.
+
+**R1 matched coverage: 16/16 in B/C/F/G in all three repeats.** Every run has
+five checked true and eleven checked false answers, zero unknowns, zero timeouts,
+and an empty unresolved frontier. False is failure to force mate within six
+plies, not a draw theorem. The query digest, answers, per-arm certificate hashes,
+work counts, candidate outcomes and table bytes reproduce across repetitions.
+All four arms answer the same propositions. The order is B/C/F/G, C/F/G/B,
+then F/G/B/C. Acquisition runs follow those rotations with B omitted.
+
+### R1 costs and first-use accounting
+
+The next table reports median CPU / wall seconds. R1 process cost includes input
+scanning, loading, search/application, output certificates, checking, storage
+accounting, logging and interpreter startup. First use adds that arm's one donor
+acquisition process; the donor expense is not multiplied by its timing repeats.
+These are costs **given an installed environment**; observed shared setup is
+added explicitly below. No free lower-truth construction or uncharged engine
+call is involved.
+
+| Arm | R1 CPU / wall | Donor acquisition CPU / wall | First use CPU / wall | First-use CPU/query |
+|---|---:|---:|---:|---:|
+| B | 0.795 / 0.796 | 0.000 / 0.000 | 0.795 / 0.796 | 0.0497 |
+| C | 0.998 / 0.999 | 1.559 / 1.560 | 2.582 / 2.584 | 0.1614 |
+| F | 0.893 / 0.894 | 0.426 / 0.426 | 1.318 / 1.320 | 0.0824 |
+| G | 0.827 / 0.828 | 0.427 / 0.428 | 1.261 / 1.263 | 0.0788 |
+
+| Arm | First-use CPU range, seconds | First-use wall range, seconds |
+|---|---:|---:|
+| B | 0.776–0.808 | 0.778–0.809 |
+| C | 2.536–2.669 | 2.538–2.671 |
+| F | 1.255–1.323 | 1.257–1.325 |
+| G | 1.252–1.276 | 1.254–1.278 |
+
+F/G reduce fallback expansions by **2/915 = 0.22%**, well below the frozen 25%
+requirement. Their full first-use median CPU costs are respectively 1.658× and
+1.586× B. They fail the CPU, wall, absolute-saving and non-overlapping-repeat
+margins. B is the best comparator. Even after paying only for evaluation, there
+is no practically meaningful advantage. There is no R1 break-even point.
+F/G's identical objects, answers and deterministic work confirm that their
+small timing difference is measurement variation, not different acquired knowledge.
+The first-use disadvantage is retained; it is not a reason to alter the method.
+
+The outcome-blind R1 placement scan alone costs median CPU seconds of 0.456 (B),
+0.476 (C), 0.475 (F), and 0.464 (G). Each arm pays once for this shared input
+operation. Donor scans are inside each paid acquisition, roughly 0.20 seconds.
+No full-arena DP/reference solve ran in RP2. Complete per-query timing—including
+negative answers—and phase counts are in each raw report and
+[`summary.json`](evidence/rp2/summary.json).
+
+| R1 phase, median CPU seconds | B | C | F | G |
+|---|---:|---:|---:|---:|
+| Search including application | 0.1261 | 0.2989 | 0.1407 | 0.1550 |
+| Final certificate checking | 0.0919 | 0.0918 | 0.0975 | 0.0864 |
+| Application, nested within search | 0.0000 | 0.1665 | 0.0282 | 0.0239 |
+| Search residual after subtracting application | 0.1261 | 0.1281 | 0.1126 | 0.1311 |
+
+Application includes successful and failed guard work, instantiation, its embedded
+checker and event logging. Its checking cost is recorded as a nested subcost and
+is **not added again** to search or the process envelope. Final root verification
+is a genuinely separate operation. `phase_costs` and `envelope_residual` reconcile
+each individual process to disjoint phases, startup and remaining bookkeeping.
+Medians of individual phases need not sum to the median total. Tiny CPU phases
+sometimes quantize to zero; raw wall intervals and work counters remain available.
+No entire phase is treated as free because of that quantization.
+
+The two observed environment installations cost **5.568 CPU seconds and 72.650
+wall seconds** in total. The first installation did not survive the session's
+environment reset; the second installed the same pinned dependency in `.venv`.
+Both costs are preserved. Adding that common expense once yields full observed
+setup-plus-first-use medians:
+
+| Arm | Including shared setup: CPU / wall seconds |
+|---|---:|
+| B | 6.363 / 73.446 |
+| C | 8.150 / 75.234 |
+| F | 6.886 / 73.970 |
+| G | 6.829 / 73.913 |
+
+This common setup does not reverse the result. The three-run experiments consumed
+17.852 CPU seconds altogether. Setup plus the retained preflight tests/failures
+brings observed campaign cost to 23.910 CPU seconds; the separate final artifact
+reconciliation/check adds 0.553 seconds (about **24.462 measured CPU seconds**
+in all). Manual shell/publication overhead is not fully metered. Human/LLM design,
+implementation and token costs are unavailable, not zero, so these measurements
+do not establish total research economics. No paid service or engine was used.
+
+### Structural application, failures and stable work
+
+One template, `22f0268e2db64f7358674af79d8087547c5f49ab4319934ceaf4e95bef34b8fa`,
+instantiates a three-node, two-edge proof in 3×5 after being acquired in 3×4.
+The [actual transferred certificate](evidence/rp2/transfer-certificate.json) and
+its exact hash are retained. It settles an **internal search subproblem** while
+answering negative query `f0bfcfe98fe0a044`. It is absent from every final R1 root
+certificate. Thus there is one internally discharged obligation per F/G run,
+**zero final root-certificate contributions**, and no new connected root strategy
+claim. Repeating this application in six timing runs does not create six objects
+or six independent discoveries.
+
+| Application outcome per F/G run | Count |
+|---|---:|
+| Successful checked instantiation | 1 |
+| Insufficient remaining depth | 17 |
+| Missing legal opponent reply | 9 |
+| Claimed target is nonterminal | 6 |
+| Incorrect terminal/target | 1 |
+| Transformation leaves the physical board | 2 |
+
+There are 914 indexed KRK lookups, 878 index misses, 17 depth skips and 19 actual
+instantiation attempts, of which 18 fail. Sixteen failures reach the checker and
+two fail before it; phase-wide work includes both. All 35 candidate guard/check
+failures are retained, with timing in the enclosing application phase; actual
+instantiation attempts additionally have individual costs and reasons.
+C has 915 full-domain cache misses and zero applications: enlarging the rectangle
+changes its extensional domain. C's stored negative proofs and symmetry wiring
+were exercised by controls, but the cache cannot silently discard domain squares
+in this evaluation.
+
+| Deterministic R1 work | B | C | F | G |
+|---|---:|---:|---:|---:|
+| Fresh search states | 1727 | 1727 | 1725 | 1725 |
+| Fresh fallback expansions | 915 | 915 | 913 | 913 |
+| Examined search edges | 2370 | 2370 | 2368 | 2368 |
+| Search-generated edges | 7058 | 7058 | 7052 | 7052 |
+| Ordinary cache hits | 659 | 659 | 659 | 659 |
+| All generated edges, including sampling/checking/application | 38872 | 38872 | 39132 | 39132 |
+| All transitions | 4658 | 4658 | 4696 | 4696 |
+| Checked nodes, including partial rejected checks | 1778 | 1778 | 1806 | 1806 |
+| Checked edges, including partial rejected checks | 2288 | 2288 | 2299 | 2299 |
+
+Each arm's ordinary table has 812 terminal/horizon leaves: 183 bare-White-king
+exits, 601 horizon failures, 11 mates and 17 stalemates. Terminal/horizon work is
+separate from the single proof-settled obligation. Full first-use work includes
+633 donor expansions for each of C/F/G: **915 / 1,548 / 1,546 / 1,546** total
+expansions for B/C/F/G respectively. First-use generated-edge totals are
+**38,872 / 61,874 / 53,021 / 53,021**. Certificate reduction alone is not used as
+a saving metric; all arms' ordinary tables serialize to the same 489,536 bytes.
+
+### Memory, storage, checking and scope
+
+The proof library is 7,628 bytes; C's cache is 685,523 bytes. Both obey the 1 MiB
+persistent cap. Loaded Python library/index footprints are 53,859 bytes for F/G
+and 2,124,536 for C; B has none. These are measured object footprints, not a claim
+of equal Python memory. Ordinary tables occupy about 1.05 MB of Python objects.
+Evaluation process peak RSS stays below 22.1 MiB; donor and reconciliation peaks
+and actual applied memory ceilings are in their envelopes. All runs are far
+below the time, node, RAM and file limits. The evidence is approximately 9.1 MB,
+below the 1 GiB part budget; no individual file approaches 64 MiB.
+
+The post-evaluation reporting script `src/rp2_summary.py` performs no cohort
+selection or solving. It rechecked all **40 distinct root certificates**, all
+**357 generic-cache witnesses**, reconstructed all **eight templates** from their
+donor provenance, and reconstructed the transferred proof byte-for-byte. It also
+verified every frozen source/evidence hash and stable repetition counts. This is
+artifact reconciliation through the already separate checker, not an independent
+chess implementation or an RP5 campaign. The solver/checker still share the frozen
+model and python-chess; no Lean or full-FIDE proof is claimed.
+
+The claim is confined to mate within six plies in the declared history-free
+rectangles. These placements are not certified standard-start reachable states.
+No counterplay/history cohort, R1 training query, R2–R4 rung, compounding campaign
+or old conveyor was executed. There was no post-outcome experimental patch,
+threshold change, candidate replacement, extra tuning repeat or warm-pass claim.
+
+### Reproduction and RP3 handoff
+
+From the repository root, initialize the pinned environment if needed:
+
+```sh
+python -m venv .venv
+.venv/bin/python -m pip install -r pilot/requirements.txt
+.venv/bin/python -m unittest discover -s pilot/tests -v
+```
+
+Reconcile the published evidence without running new search:
+
+```sh
+.venv/bin/python pilot/src/rp2_summary.py --input pilot/evidence/rp2 --output pilot/.work/rp2-reconciliation.json --transfer-certificate pilot/.work/rp2-transfer.json
+.venv/bin/python pilot/src/checker.py pilot/evidence/rp2/transfer-certificate.json
+```
+
+For fresh timing replays, use a new empty output directory. Acquisition executes
+nine serial processes; evaluation executes twelve, in the frozen rotations:
+
+```sh
+.venv/bin/python pilot/src/rp2_campaign.py acquire --output pilot/.work/rp2-replay
+cmp pilot/evidence/rp2/acquire-1-F/library.json pilot/.work/rp2-replay/acquire-1-F/library.json
+cmp pilot/evidence/rp2/acquire-1-C/library.json pilot/.work/rp2-replay/acquire-1-C/library.json
+.venv/bin/python pilot/src/rp2_campaign.py evaluate --output pilot/.work/rp2-replay --freeze pilot/evidence/rp2/donor-freeze.json --freeze-commit 2736e3cf00e0696520c3d8fe1203f28087ed3db6
+```
+
+Evaluation loads the published donor objects; the preceding replay reproduces
+their construction and costs. These commands expose only D training and R1 test.
+Do not relabel repeated R1 answers as unseen evidence. A single-process command
+and its precise arguments also appear in every `envelope.json`.
+
+**RP3 next action, when requested:** retain this donor freeze and reuse the
+existing R1 evaluation as the first prefix. Acquire from R1's separate 24-query
+training cohort for G and C, charging that update when R2 is first evaluated;
+F retains only these eight donor proofs. Continue the frozen R2–R4 evaluation
+and training schedule, R3/R4 ablations and reverse-order diagnostics. Carry every
+arm's acquisition and R1 expense forward using `summary.json` → `carry_forward`,
+plus shared setup once if reporting setup-inclusive economics. Do not erase the
+R1 deficit or count acquisition three times because three timing repetitions
+were measured. No RP3 execution is part of this result. **Stop at RP2.**
