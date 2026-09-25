@@ -30,6 +30,38 @@ jobs:
           mkdir -p pilot/.work
           python -m unittest discover -s pilot/tests -v
 
+      - name: Materialize compact inherited evidence
+        env:
+          PYTHONPATH: pilot/src
+        shell: bash
+        run: |
+          python pilot/src/rp3_unpack.py
+          python - <<'PY'
+          import hashlib, io, json, tarfile
+          from pathlib import Path
+          root=Path('.').resolve()
+          for base, manifest_name, prefix in [
+              (Path('pilot/evidence/rp3-recovery'), 'attempt-1-raw-evidence.parts.json', 'pilot/evidence/rp3-recovery/'),
+              (Path('pilot/evidence/rp3-recovery-v2'), 'attempt-2-raw-evidence.parts.json', 'pilot/evidence/rp3-recovery-v2/'),
+          ]:
+              manifest=json.loads((base/manifest_name).read_text())
+              raw=b''.join((base/c['path']).read_bytes() for c in sorted(manifest['chunks'], key=lambda x:x['index']))
+              assert len(raw)==manifest['bytes']
+              assert hashlib.sha256(raw).hexdigest()==manifest['sha256']
+              with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
+                  for m in tf.getmembers():
+                      assert m.isfile() and not m.issym() and not m.islnk()
+                      assert m.name.startswith(prefix), m.name
+                      dest=(root/m.name).resolve()
+                      assert dest.is_relative_to((root/base).resolve())
+                      data=tf.extractfile(m).read()
+                      if dest.exists():
+                          assert dest.read_bytes()==data, 'refusing overwrite '+m.name
+                      else:
+                          dest.parent.mkdir(parents=True,exist_ok=True)
+                          dest.write_bytes(data)
+          PY
+
       - name: Record execution host
         shell: bash
         run: |
