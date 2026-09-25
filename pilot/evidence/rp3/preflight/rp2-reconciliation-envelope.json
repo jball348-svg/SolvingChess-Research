@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "pilot/src/rp2_summary.py",
+    "--input",
+    "pilot/evidence/rp2",
+    "--output",
+    "pilot/.work/rp2-reconciliation.json",
+    "--transfer-certificate",
+    "pilot/.work/rp2-transfer.json"
+  ],
+  "status": "COMPLETED",
+  "returncode": 0,
+  "wall_s": 0.5597581720003291,
+  "cpu_s": 0.5591659999999999,
+  "child_peak_rss_kib": 23484,
+  "stdout": "{\"output\": \"pilot/.work/rp2-reconciliation.json\", \"verdict\": \"BOUNDED_POSITIVE\", \"transfer\": {\"distinct_objects\": 1, \"successful_applications_per_run\": 1, \"checked_nodes\": 3, \"checked_edges\": 2, \"template\": \"22f0268e2db64f7358674af79d8087547c5f49ab4319934ceaf4e95bef34b8fa\", \"donor_arena\": {\"height\": 4, \"history\": false, \"width\": 3}, \"recipient_arena\": {\"height\": 5, \"history\": false, \"width\": 3}, \"retained_in_final_root_certificates\": [], \"source_query\": [\"f0bfcfe98fe0a044\"], \"certificate_path\": \"pilot/.work/rp2-transfer.json\", \"proof_sha256\": \"835e2d9c68d51843e82ed1513b8fad1a87eb440ba0a4c2ac1d27eeff642c3b95\"}, \"matched_coverage\": \"16/16 for B/C/F/G in all repeats; 5 true, 11 false, 0 unknown\", \"checked_root_certificates\": 40, \"actual_cpu\": 23.909565999999998}\n",
+  "stderr": ""
+}
