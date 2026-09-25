@@ -1,0 +1,1 @@
+{"archive":"raw-evidence.tar.gz","bytes":16323244,"file_members":2934,"note":"All 72 final RP3-MR1-V3 process directories; extract under repository root and verify against validation.json.","processes":72,"schema":1,"sha256":"a3d743ded8233be322185295d7f527b916cd619af7db50d4f3f2b244ebc069c0","validation":"validation.json"}
