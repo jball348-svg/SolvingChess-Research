@@ -108,8 +108,13 @@
     "all_process_sequences_wall_s": 2381.987988407,
     "recorded_preflight_cpu_s": 5.407768,
     "recorded_parent_orchestration_cpu_s": 13.382481418,
-    "recorded_total_cpu_s_lower_bound": 2395.995888418,
-    "note": "Human/LLM/shell/publication costs and GitHub Actions startup/install overhead are unavailable, not zero."
+    "recorded_total_cpu_s_lower_bound": 2401.563520418,
+    "note": "Includes original shared setup once, all published RP3/recovery process sequences, recorded preflights, and recorded parent orchestration. Human/LLM/shell/publication costs and GitHub Actions startup/install overhead are unavailable, not zero.",
+    "original_shared_setup_once": {
+      "cpu_s": 5.567632,
+      "wall_s": 72.65034238699991
+    },
+    "recorded_total_wall_s_lower_bound": 2481.411598418
   },
   "evidence": {
     "v3_raw_archive": "pilot/evidence/rp3-recovery-v3/raw-evidence.tar.gz",
