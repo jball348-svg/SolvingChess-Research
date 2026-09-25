@@ -27,7 +27,9 @@ G12's producer/verifier reproduced seven frozen artifacts; the verifier checked
 the full development-arena reference on all eight smoke queries, and fourteen
 targeted controls pass. This is readiness, not a new discovery/scaling success.
 
-**Protocol freeze:** exact published commit recorded after creation.
+**Protocol freeze:**
+[`ccf3a1c18ac9f92250bb94576a9d3f010fab80f3`](https://github.com/jball348-svg/SolvingChess-Research/commit/ccf3a1c18ac9f92250bb94576a9d3f010fab80f3).
+The follow-up status record does not change protocol or executable source.
 
 **Current evidence:** the [post-mortem](archive/POST_MORTEM_2026-09-24.md) and
 [archive guide](archive/README.md). Historical positives and limitations are

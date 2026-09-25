@@ -6,7 +6,10 @@ The available reference is reproducible, the exact bounded baseline and checker
 are usable, and [protocol v1](PROTOCOL.md) is frozen for a small single-machine
 experiment. **No RP2 discovery, RP3 compounding or RP4 transfer campaign has run.**
 Readiness is an engineering/reproducibility finding, not proof-reuse success.
-The published freeze commit will be recorded here after its creation.
+Published protocol/source freeze:
+[`ccf3a1c18ac9f92250bb94576a9d3f010fab80f3`](https://github.com/jball348-svg/SolvingChess-Research/commit/ccf3a1c18ac9f92250bb94576a9d3f010fab80f3).
+The following documentation commit records that identity without changing the
+protocol, source or reserved-query access.
 
 ### Reference replay
 
