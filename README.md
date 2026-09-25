@@ -1,6 +1,6 @@
 # Solving Chess — proof discovery reboot pilot
 
-**Status: five-part pilot planned; Part 1 has not run.**
+**Status: RP1 complete — READY_FOR_RP2.**
 
 The research question is deliberately narrower than solving chess:
 
@@ -17,7 +17,8 @@ decision.
 - [Pilot plan](PILOT_PLAN.md): five questions, experiments and decision criteria.
 - [Current status](STATUS.md): the only active progress and next-action record.
 - [Agent instructions](AGENTS.md): how to work on this pilot.
-- [Part 1 kickoff prompt](pilot/PART_1_PROMPT.md): ready to paste into a new session.
+- [Frozen protocol](pilot/PROTOCOL.md): benchmark, proof mechanism and comparison contract.
+- [Results and replay commands](pilot/RESULTS.md): RP1 evidence and limitations.
 - [Archive guide](archive/README.md): selected references and the complete old tree.
 
 | Part | Question |
@@ -36,8 +37,8 @@ for itself through later reuse; that is something to measure rather than assume.
 ## Repository layout
 
 The active project consists of this README, AGENTS.md, PILOT_PLAN.md, STATUS.md and
-the small `pilot/` working area. Code, a frozen protocol and experimental results
-will be added there only when the relevant part runs.
+the small `pilot/` working area. It now contains the exact baseline/checker,
+frozen protocol and compact RP1 evidence. Later campaigns have not run.
 
 Everything previously tracked is preserved under
 [`archive/pre-reboot-2026-09-25/`](archive/pre-reboot-2026-09-25/), including the

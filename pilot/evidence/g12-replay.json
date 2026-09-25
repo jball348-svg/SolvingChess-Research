@@ -1,0 +1,222 @@
+{
+  "bundle_sha256": "7641e0f8a4e621efb90b75cd3ce99b44e96c07a2f3541114611126a076d5695c",
+  "source_commit": "3eba1a0c60e8ffca63a85763d176e1da9f904141",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "steps": [
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++20",
+        "$WORK/frozen/g12_suite.cpp",
+        "-o",
+        "$WORK/producer"
+      ],
+      "wall_s": 5.398220716999958,
+      "cpu_s": 5.385109,
+      "cumulative_child_peak_rss_kib": 328064,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++20",
+        "$WORK/frozen/g12_verifier.cpp",
+        "-o",
+        "$WORK/verifier"
+      ],
+      "wall_s": 3.119201433999933,
+      "cpu_s": 3.1169089999999993,
+      "cumulative_child_peak_rss_kib": 328064,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "$WORK/producer",
+        "$WORK/replayed"
+      ],
+      "wall_s": 16.338696673999948,
+      "cpu_s": 16.323699,
+      "cumulative_child_peak_rss_kib": 328064,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Q done V=368452 W=345404 D=23048 rank=20 truth=d0b275b8cb22e29d edge=52d331cd50ac23e9\nR done V=399112 W=376868 D=22244 rank=32 truth=2b2148e736f682c1 edge=0b1b0d9d0d047838\nP done V=41619 W=27430 D=14189 rank=36 truth=5096d7ac7945bdc8 edge=0d85f51438a4ddd7\nBB done V=5938848 mates=0\n"
+    },
+    {
+      "command": [
+        "$WORK/verifier",
+        "$WORK/replayed"
+      ],
+      "wall_s": 6.2789844450001056,
+      "cpu_s": 6.277343000000004,
+      "cumulative_child_peak_rss_kib": 328064,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "VERIFY PASS states=809183 BB=5938848\n"
+    }
+  ],
+  "source_sha256": {
+    "g12_suite.cpp": "d759ccf161637a4b612a48f04f7ecab26b1fcab4204711030fe1c304ac40dfec",
+    "g12_verifier.cpp": "99cd9a3466169d558128df49a31416c54e380d10133740cb9c8f44fa00ed34ef"
+  },
+  "artifacts": {
+    "G12_Arena_Ledger.json": {
+      "bytes": 958,
+      "sha256": "6cd144db4dd8e5416f7dc41e2b29ddc5be76d15aa0350db10b70adf16cc7689d",
+      "matches_frozen": true
+    },
+    "G12_Conformance_Run.txt": {
+      "bytes": 824,
+      "sha256": "5a195a751e85faa105a3960ab25bae18b72b1f430b07b6f55f8d3260c5908d20",
+      "matches_frozen": true
+    },
+    "G12_History_Rules_Ledger.json": {
+      "bytes": 1042,
+      "sha256": "c8a374bd5237cab0372bd9ad0ddff0a166cebe6c23f82c14a452687f6b7432eb",
+      "matches_frozen": true
+    },
+    "G12_KPK_Certificate_v2.bin": {
+      "bytes": 196620,
+      "sha256": "b515ae01fa2c23669b00d967d9a86d921534874f90d3d53e8bef1f1155359eba",
+      "matches_frozen": true
+    },
+    "G12_KQK_Certificate_v2.bin": {
+      "bytes": 2097164,
+      "sha256": "e01dd995e050542e63d2f7c3f6fe1a9ef05a1ce065d64704e743907f8a0c9127",
+      "matches_frozen": true
+    },
+    "G12_KRK_Certificate_v2.bin": {
+      "bytes": 2097164,
+      "sha256": "badc392dbdd13b96862c4e5859cf50468f65cd65a72f40747d9300ebcc110793",
+      "matches_frozen": true
+    },
+    "G12_Verification_Ledger.json": {
+      "bytes": 614,
+      "sha256": "792ea0b9a427f9d77a97b50888f8eb7b6c47c9df0fc65b89945b72e5c83b78d4",
+      "matches_frozen": true
+    }
+  },
+  "arena": {
+    "KQK_clean": {
+      "valid": 368452,
+      "white_win": 345404,
+      "draw": 23048,
+      "max_win_rank_plies": 20,
+      "checkmates": 364,
+      "stalemates": 872,
+      "legal_edges": 4891672,
+      "truth_fnv64": "d0b275b8cb22e29d",
+      "edge_fnv64": "52d331cd50ac23e9"
+    },
+    "KRK_clean": {
+      "valid": 399112,
+      "white_win": 376868,
+      "draw": 22244,
+      "max_win_rank_plies": 32,
+      "checkmates": 216,
+      "stalemates": 68,
+      "legal_edges": 4469208,
+      "truth_fnv64": "2b2148e736f682c1",
+      "edge_fnv64": "0b1b0d9d0d047838"
+    },
+    "KPK_a_file_clean": {
+      "valid": 41619,
+      "white_win": 27430,
+      "draw": 14189,
+      "max_win_rank_plies": 36,
+      "checkmates": 0,
+      "stalemates": 4,
+      "legal_edges": 285758,
+      "truth_fnv64": "5096d7ac7945bdc8",
+      "edge_fnv64": "0d85f51438a4ddd7"
+    },
+    "KBB_same_colour_deadness": {
+      "valid": 5938848,
+      "checked_state_evasion_edges": 3715916,
+      "black_in_check_states": 783048,
+      "checkmates": 0,
+      "bishop_capture_evasion_edges": 217432,
+      "audit_fnv64": "632a491855434b4b",
+      "deadness_verdict": "ALL_DEAD_BY_ZERO_MATE_PLUS_INVARIANT"
+    }
+  },
+  "verification": {
+    "KQK": {
+      "states": 368452,
+      "legal_edges": 4891672,
+      "max_rank": 20,
+      "bellman_rank_mismatches": 0,
+      "edge_fnv64_B": "52d331cd50ac23e9"
+    },
+    "KRK": {
+      "states": 399112,
+      "legal_edges": 4469208,
+      "max_rank": 32,
+      "bellman_rank_mismatches": 0,
+      "edge_fnv64_B": "0b1b0d9d0d047838"
+    },
+    "KPK": {
+      "states": 41619,
+      "legal_edges": 285758,
+      "max_rank": 36,
+      "bellman_rank_mismatches": 0,
+      "edge_fnv64_B": "0d85f51438a4ddd7"
+    },
+    "KBB_same_colour": {
+      "valid": 5938848,
+      "black_in_check_states": 783048,
+      "checked_state_evasion_edges": 3715916,
+      "bishop_capture_evasion_edges": 217432,
+      "checkmates": 0,
+      "audit_fnv64_B": "632a491855434b4b"
+    }
+  },
+  "history_controls": {
+    "threefold_now_changes_board_truth": {
+      "fen_clean": "8/8/8/8/8/8/8/QK1k4 b - - 0 1",
+      "clean_white_win_rank": 14,
+      "seeded_current_rep_count": 3,
+      "claim_available": true,
+      "full_rule_outcome": "DRAW"
+    },
+    "fifty_now_changes_board_truth": {
+      "fen_clean": "8/8/8/8/8/8/8/QK1k4 b - - 0 1",
+      "clean_white_win_rank": 14,
+      "halfmove_clock": 100,
+      "claim_available_to_black": true,
+      "full_rule_outcome": "DRAW"
+    },
+    "seventyfive_forces_draw_without_mate": {
+      "fen_clean": "8/8/8/8/8/8/8/QK1k4 w - - 0 1",
+      "clean_white_win_rank": 9,
+      "halfmove_clock": 149,
+      "legal_moves": 16,
+      "any_mate_in_one": false,
+      "all_moves_draw_or_auto75": true,
+      "full_rule_outcome": "DRAW"
+    },
+    "intended_claim_controls": {
+      "move": "a1a2",
+      "threefold_by_move_available": true,
+      "fifty_by_move_available_from_99": true
+    },
+    "fivefold_transition": {
+      "move": "a1a2",
+      "successor_count_reaches_5": true,
+      "terminal": "DRAW_FIVEFOLD"
+    },
+    "mate_precedence_at_150": {
+      "fen": "7k/5Q2/7K/8/8/8/8/8 w - - 149 1",
+      "move": "f7g7",
+      "successor_halfmove": 150,
+      "is_checkmate": true,
+      "terminal": "CHECKMATE"
+    }
+  },
+  "verdict": "PASS"
+}

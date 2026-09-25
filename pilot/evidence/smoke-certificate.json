@@ -1,0 +1,145 @@
+{
+  "query": {
+    "fen": "8/8/8/8/8/KRk5/8/8 b - - 0 1",
+    "moves": [],
+    "id": "e521b55d470a4cf8"
+  },
+  "plies": 6,
+  "proof": {
+    "arena": {
+      "height": 4,
+      "history": false,
+      "width": 3
+    },
+    "nodes": {
+      "0": {
+        "edges": [
+          [
+            "c3c2",
+            "1"
+          ],
+          [
+            "c3c4",
+            "5"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 6,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/KRk5/8/8 b - -\",6,null,null]"
+      },
+      "1": {
+        "edges": [
+          [
+            "a3a2",
+            "2"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 5,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/KR6/2k5/8 w - -\",5,null,null]"
+      },
+      "10": {
+        "edges": [],
+        "leaf": "mate",
+        "remaining": 0,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/2k5/K7/2R5/8 b - -\",0,null,null]"
+      },
+      "2": {
+        "edges": [
+          [
+            "c2c1",
+            "3"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 4,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/1R6/K1k5/8 b - -\",4,null,null]"
+      },
+      "3": {
+        "edges": [
+          [
+            "b3c3",
+            "4"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 3,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/1R6/K7/2k5 w - -\",3,null,null]"
+      },
+      "4": {
+        "edges": [],
+        "leaf": "mate",
+        "remaining": 2,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/2R5/K7/2k5 b - -\",2,null,null]"
+      },
+      "5": {
+        "edges": [
+          [
+            "b3b4",
+            "6"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 5,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/2k5/KR6/8/8 w - -\",5,null,null]"
+      },
+      "6": {
+        "edges": [
+          [
+            "c4c3",
+            "7"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 4,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/1Rk5/K7/8/8 b - -\",4,null,null]"
+      },
+      "7": {
+        "edges": [
+          [
+            "b4b2",
+            "8"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 3,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/1R6/K1k5/8/8 w - -\",3,null,null]"
+      },
+      "8": {
+        "edges": [
+          [
+            "c3c4",
+            "9"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 2,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/8/K1k5/1R6/8 b - -\",2,null,null]"
+      },
+      "9": {
+        "edges": [
+          [
+            "b2c2",
+            "10"
+          ]
+        ],
+        "leaf": null,
+        "remaining": 1,
+        "result": true,
+        "state_key": "[{\"height\":4,\"history\":false,\"width\":3},\"8/8/8/8/2k5/K7/1R6/8 w - -\",1,null,null]"
+      }
+    },
+    "root": "0",
+    "schema": 1
+  }
+}

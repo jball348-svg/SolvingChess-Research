@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "pilot/src/run_smoke.py",
+    "--output",
+    "pilot/evidence/smoke-3.json"
+  ],
+  "status": "COMPLETED",
+  "returncode": 0,
+  "wall_s": 0.4978616539997347,
+  "cpu_s": 0.49705999999999995,
+  "child_peak_rss_kib": 16712,
+  "stdout": "{\"status\": \"PASS\", \"total_cpu_s\": 0.427287412, \"total_wall_s\": 0.4272034700002223, \"process_peak_rss_kib\": 16712, \"table_serialized_bytes\": 159150}\n",
+  "stderr": ""
+}

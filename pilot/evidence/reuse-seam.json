@@ -1,0 +1,99 @@
+{
+  "scope": "known synthetic control only; no donor/evaluation discovery",
+  "fen": "8/8/8/8/2k5/8/K7/1R6 w - - 0 1",
+  "arena": {
+    "width": 3,
+    "height": 4,
+    "history": false
+  },
+  "plies": 4,
+  "baseline_search": {
+    "cpu_s": 0.0021731789999999973,
+    "wall_s": 0.002173023000068497,
+    "work": {
+      "state_keys": 38,
+      "move_generation_calls": 38,
+      "legal_edges_generated": 140,
+      "transitions": 37
+    }
+  },
+  "baseline_counts": {
+    "calls": 38,
+    "fresh_states": 38,
+    "generated_edges": 140,
+    "expanded_states": 22,
+    "examined_edges": 37
+  },
+  "proof_emit": {
+    "cpu_s": 6.699999999998374e-06,
+    "wall_s": 6.72999976814026e-06,
+    "work": {}
+  },
+  "verification": {
+    "cpu_s": 0.00018332299999999913,
+    "wall_s": 0.0001833960000112711,
+    "work": {
+      "state_keys": 4,
+      "move_generation_calls": 4,
+      "legal_edges_generated": 16,
+      "transitions": 3
+    },
+    "audit": {
+      "checked_nodes": 4,
+      "checked_edges": 3,
+      "generated_edges": 16,
+      "result": true
+    }
+  },
+  "template_construction": {
+    "cpu_s": 0.0004187719999999978,
+    "wall_s": 0.00041922899981727824,
+    "work": {
+      "state_keys": 4,
+      "move_generation_calls": 4,
+      "legal_edges_generated": 16,
+      "transitions": 3
+    }
+  },
+  "library_serialization": {
+    "cpu_s": 1.0455000000006431e-05,
+    "wall_s": 1.0455999927216908e-05,
+    "work": {}
+  },
+  "library_loading_and_index": {
+    "cpu_s": 5.027499999998852e-05,
+    "wall_s": 5.035499998484738e-05,
+    "work": {}
+  },
+  "application_including_checker": {
+    "cpu_s": 0.0003951570000000071,
+    "wall_s": 0.000395443999877898,
+    "work": {
+      "state_keys": 8,
+      "move_generation_calls": 8,
+      "legal_edges_generated": 32,
+      "transitions": 6
+    }
+  },
+  "application_counts": {
+    "template_index_probes": 1,
+    "template_attempts": 1,
+    "application_checked_nodes": 4,
+    "application_checked_edges": 3
+  },
+  "deliberate_rejection": {
+    "cpu_s": 7.490100000000222e-05,
+    "wall_s": 7.492300028388854e-05,
+    "work": {
+      "state_keys": 1
+    }
+  },
+  "rejection_counts": {
+    "template_index_probes": 1,
+    "template_attempts": 1,
+    "template_rejections": 1
+  },
+  "serialized_library_bytes": 386,
+  "process_peak_rss_kib": 14580,
+  "status": "PASS"
+}

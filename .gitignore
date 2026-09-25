@@ -8,6 +8,7 @@ dist/
 pilot/tmp/
 pilot/cache/
 pilot/runs/
+pilot/.work/
 
 # Keep selected measurements, reproducible source and small certificates tracked.
 # Bulk generated truth must have a regeneration command or durable locator.

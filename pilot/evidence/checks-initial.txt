@@ -1,0 +1,29 @@
+test_cache_keeps_domain (test_pilot.PilotChecks.test_cache_keeps_domain) ... ok
+test_clock_and_history_identity (test_pilot.PilotChecks.test_clock_and_history_identity) ... ok
+test_dual_bounded_failure (test_pilot.PilotChecks.test_dual_bounded_failure) ... ok
+test_false_target_rejected (test_pilot.PilotChecks.test_false_target_rejected) ... ok
+test_history_quotient_rejected (test_pilot.PilotChecks.test_history_quotient_rejected) ... ok
+test_illegal_history_and_rights_rejected (test_pilot.PilotChecks.test_illegal_history_and_rights_rejected) ... ok
+test_known_move_generation (test_pilot.PilotChecks.test_known_move_generation) ... ok
+test_legal_repetition_history (test_pilot.PilotChecks.test_legal_repetition_history) ... ok
+test_lower_material_capture (test_pilot.PilotChecks.test_lower_material_capture) ... ok
+test_mate_precedes_automatic_clock_draw (test_pilot.PilotChecks.test_mate_precedes_automatic_clock_draw) ... ok
+test_missing_opponent_reply_rejected (test_pilot.PilotChecks.test_missing_opponent_reply_rejected) ... ERROR
+test_positive_and_warm_cache (test_pilot.PilotChecks.test_positive_and_warm_cache) ... ok
+test_progress_and_cycle_rejected (test_pilot.PilotChecks.test_progress_and_cycle_rejected) ... ok
+test_template_seam_known_control_only (test_pilot.PilotChecks.test_template_seam_known_control_only) ... ok
+
+======================================================================
+ERROR: test_missing_opponent_reply_rejected (test_pilot.PilotChecks.test_missing_opponent_reply_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c79d20151886/SolvingChess-Research/pilot/tests/test_pilot.py", line 52, in test_missing_opponent_reply_rejected
+    check(proof, state, self.arena, 6, expected=True)
+  File "/workspace/scratch/c79d20151886/SolvingChess-Research/pilot/src/checker.py", line 59, in check
+    raise ValueError('wrong proposition')
+ValueError: wrong proposition
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.064s
+
+FAILED (errors=1)

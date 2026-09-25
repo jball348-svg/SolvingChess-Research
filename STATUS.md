@@ -2,7 +2,7 @@
 
 Updated: 2026-09-25.
 
-**SETUP COMPLETE. PART 1 NOT STARTED.**
+**RP1 COMPLETE — READY_FOR_RP2.**
 
 The previous tracked tree is archived without changes at
 `archive/pre-reboot-2026-09-25/`. Its source commit is
@@ -10,15 +10,24 @@ The previous tracked tree is archived without changes at
 
 | Part | State | Result |
 |---|---|---|
-| 1 — Benchmark and baseline | NOT_STARTED | No experimental protocol or new baseline yet. |
+| 1 — Benchmark and baseline | COMPLETE | Reference reproduced; exact baseline/checker usable; protocol v1 frozen. |
 | 2 — Discover reusable proofs | NOT_STARTED | No pilot proof library yet. |
 | 3 — Cumulative reuse | NOT_STARTED | No amortization or scaling measurements yet. |
 | 4 — Transfer and connections | NOT_STARTED | No new connected strategy certificate yet. |
 | 5 — Replay and decision | NOT_STARTED | No pilot viability conclusion yet. |
 
-**Next action:** run only Part 1 using [its prompt](pilot/PART_1_PROMPT.md).
-Its endpoint is a reproducible baseline, a frozen feasible experiment and a clear
-readiness result. It must not run the decisive Part 2–4 campaigns.
+**Next action:** when requested, run only RP2 under [protocol v1](pilot/PROTOCOL.md):
+acquire and freeze the donor library before evaluating the reserved R1 queries.
+No discovery, compounding or transfer campaign has run. Do not restart the old
+conveyor or expand the five parts.
+
+**RP1 evidence:** [consolidated results and replay commands](pilot/RESULTS.md).
+G12's producer/verifier reproduced seven frozen artifacts; the verifier checked
+809,183 table states with zero mismatches. The new bounded baseline agrees with
+the full development-arena reference on all eight smoke queries, and fourteen
+targeted controls pass. This is readiness, not a new discovery/scaling success.
+
+**Protocol freeze:** exact published commit recorded after creation.
 
 **Current evidence:** the [post-mortem](archive/POST_MORTEM_2026-09-24.md) and
 [archive guide](archive/README.md). Historical positives and limitations are
