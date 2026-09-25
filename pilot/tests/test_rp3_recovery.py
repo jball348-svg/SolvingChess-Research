@@ -15,6 +15,7 @@ import rp3
 from model import Arena, sha
 from rp2_summary import stable
 from rp3_durable import read, write_json, validate
+from rp3_durable_v2 import write_json as write_json_v2
 from rp3_recovery_run import Run
 
 
@@ -25,6 +26,15 @@ class RecoveryChecks(unittest.TestCase):
             with patch('rp3_durable.os.replace',side_effect=OSError('injected interruption')):
                 with self.assertRaises(OSError):write_json(path,{'version':2})
             self.assertEqual(read(path),{'version':1})
+
+    def test_v2_writer_readback_and_unique_temporary(self):
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'report.json'
+            write_json_v2(path,{'version':1})
+            write_json_v2(path,{'version':2,'rows':[1,2,3]})
+            self.assertEqual(path.read_text(), '{"rows":[1,2,3],"version":2}\n')
+            self.assertEqual(list(Path(d).glob('*.pending')), [])
+            self.assertEqual(list(Path(d).glob('.*.pending')), [])
 
     def test_same_known_fixture_and_detect_missing_measurements(self):
         original_check=reuse.check

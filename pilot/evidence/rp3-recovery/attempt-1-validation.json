@@ -1,0 +1,44 @@
+{
+  "directories": 72,
+  "errors": [
+    {
+      "directory": "evaluate-r2-primary-2-G",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r2-primary-3-B",
+      "error": "AssertionError: query journal mismatch"
+    },
+    {
+      "directory": "evaluate-r2-primary-3-C",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r4-primary-2-F",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r4-primary-3-F",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r4-primary-3-G",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r4-reverse-1-G",
+      "error": "KeyError: 'status'"
+    }
+  ],
+  "execution_sha256": "3a972c3307ec47db250e36380ad1b910e8123c25e2f54257b827d77d277e9a24",
+  "experiment": "RP3-MR1",
+  "invalid_directories": 7,
+  "process_cpu_s": 622.095396,
+  "process_wall_s": 622.2972999849994,
+  "recorded_utc": "2026-09-25T18:36:39Z",
+  "schema": 1,
+  "sequence_sha256": "749c0e8f9538b1a276669f7b3b8fca63096a78a631009035987ea171345a61d5",
+  "source_freeze_sha256": "7cccb23250db3e68ebdac9ccf984eb856fe54d1d65c55796362cc1acf1d7d41b",
+  "status": "PERSISTENCE_FAULT_RECORDED",
+  "valid_directories": 65
+}
