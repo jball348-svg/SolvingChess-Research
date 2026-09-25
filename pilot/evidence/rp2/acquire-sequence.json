@@ -1,0 +1,200 @@
+[
+  {
+    "label": "acquire-1-C",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-C/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "C",
+      "--repeat",
+      "1",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-C/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 1.559103,
+    "wall_s": 1.5600866920000271
+  },
+  {
+    "label": "acquire-1-F",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-F/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "F",
+      "--repeat",
+      "1",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-F/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.42204600000000003,
+    "wall_s": 0.42277890499997284
+  },
+  {
+    "label": "acquire-1-G",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-G/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "G",
+      "--repeat",
+      "1",
+      "--output",
+      "pilot/evidence/rp2/acquire-1-G/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.4493059999999999,
+    "wall_s": 0.4500030990000141
+  },
+  {
+    "label": "acquire-2-C",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-C/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "C",
+      "--repeat",
+      "2",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-C/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 1.583964,
+    "wall_s": 1.584787446000064
+  },
+  {
+    "label": "acquire-2-F",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-F/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "F",
+      "--repeat",
+      "2",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-F/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.46783,
+    "wall_s": 0.46857530199997655
+  },
+  {
+    "label": "acquire-2-G",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-G/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "G",
+      "--repeat",
+      "2",
+      "--output",
+      "pilot/evidence/rp2/acquire-2-G/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.426377,
+    "wall_s": 0.427390575000004
+  },
+  {
+    "label": "acquire-3-F",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-F/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "F",
+      "--repeat",
+      "3",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-F/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.42578299999999997,
+    "wall_s": 0.4264565319999747
+  },
+  {
+    "label": "acquire-3-G",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-G/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "G",
+      "--repeat",
+      "3",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-G/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 0.426954,
+    "wall_s": 0.4276610859999437
+  },
+  {
+    "label": "acquire-3-C",
+    "command": [
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/measure.py",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-C/envelope.json",
+      "--",
+      "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+      "pilot/src/rp2.py",
+      "acquire",
+      "--arm",
+      "C",
+      "--repeat",
+      "3",
+      "--output",
+      "pilot/evidence/rp2/acquire-3-C/report.json"
+    ],
+    "returncode": 0,
+    "cpu_s": 1.5514960000000002,
+    "wall_s": 1.5524233630000026
+  }
+]

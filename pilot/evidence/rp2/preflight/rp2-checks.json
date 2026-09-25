@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "pilot/tests",
+    "-v"
+  ],
+  "status": "COMPLETED",
+  "returncode": 1,
+  "wall_s": 0.06774319699997022,
+  "cpu_s": 0.068547,
+  "child_peak_rss_kib": 12672,
+  "stdout": "",
+  "stderr": "test_pilot (unittest.loader._FailedTest.test_pilot) ... ERROR\ntest_rp2 (unittest.loader._FailedTest.test_rp2) ... ERROR\n\n======================================================================\nERROR: test_pilot (unittest.loader._FailedTest.test_pilot)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_pilot\nTraceback (most recent call last):\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"/workspace/scratch/da37149a87e6/SolvingChess-Research/pilot/tests/test_pilot.py\", line 9, in <module>\n    import chess\nModuleNotFoundError: No module named 'chess'\n\n\n======================================================================\nERROR: test_rp2 (unittest.loader._FailedTest.test_rp2)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_rp2\nTraceback (most recent call last):\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"/workspace/scratch/da37149a87e6/SolvingChess-Research/pilot/tests/test_rp2.py\", line 8, in <module>\n    import checker\n  File \"/workspace/scratch/da37149a87e6/SolvingChess-Research/pilot/src/checker.py\", line 6, in <module>\n    import chess\nModuleNotFoundError: No module named 'chess'\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (errors=2)\n"
+}

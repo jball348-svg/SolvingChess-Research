@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pip",
+    "install",
+    "-r",
+    "pilot/requirements.txt"
+  ],
+  "returncode": 0,
+  "wall_s": 27.12572439099995,
+  "child_cpu_s": 1.998778,
+  "peak_rss_kib": 49796,
+  "stdout": "Defaulting to user installation because normal site-packages is not writeable\nCollecting chess==1.11.2 (from -r pilot/requirements.txt (line 1))\n  Downloading chess-1.11.2.tar.gz (6.1 MB)\n     \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 6.1/6.1 MB 34.2 MB/s  0:00:00\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: chess\n  Building wheel for chess (pyproject.toml): started\n  Building wheel for chess (pyproject.toml): finished with status 'done'\n  Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147879 sha256=c53ee25a9178754e44bf9b73b3dbcdd0b5339396582ca315e1b8e45c6aecfe8f\n  Stored in directory: /root/.cache/pip/wheels/83/1f/4e/8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447\nSuccessfully built chess\nInstalling collected packages: chess\nSuccessfully installed chess-1.11.2\n",
+  "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n"
+}

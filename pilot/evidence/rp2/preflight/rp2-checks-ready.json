@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "pilot/tests",
+    "-v"
+  ],
+  "status": "COMPLETED",
+  "returncode": 1,
+  "wall_s": 0.17609076900009768,
+  "cpu_s": 0.17710299999999998,
+  "child_peak_rss_kib": 16236,
+  "stdout": "",
+  "stderr": "test_cache_keeps_domain (test_pilot.PilotChecks.test_cache_keeps_domain) ... ok\ntest_clock_and_history_identity (test_pilot.PilotChecks.test_clock_and_history_identity) ... ok\ntest_dual_bounded_failure (test_pilot.PilotChecks.test_dual_bounded_failure) ... ok\ntest_false_target_rejected (test_pilot.PilotChecks.test_false_target_rejected) ... ok\ntest_history_quotient_rejected (test_pilot.PilotChecks.test_history_quotient_rejected) ... ok\ntest_illegal_history_and_rights_rejected (test_pilot.PilotChecks.test_illegal_history_and_rights_rejected) ... ok\ntest_known_move_generation (test_pilot.PilotChecks.test_known_move_generation) ... ok\ntest_legal_repetition_history (test_pilot.PilotChecks.test_legal_repetition_history) ... ok\ntest_lower_material_capture (test_pilot.PilotChecks.test_lower_material_capture) ... ok\ntest_mate_precedes_automatic_clock_draw (test_pilot.PilotChecks.test_mate_precedes_automatic_clock_draw) ... ok\ntest_missing_opponent_reply_rejected (test_pilot.PilotChecks.test_missing_opponent_reply_rejected) ... ok\ntest_positive_and_warm_cache (test_pilot.PilotChecks.test_positive_and_warm_cache) ... ok\ntest_progress_and_cycle_rejected (test_pilot.PilotChecks.test_progress_and_cycle_rejected) ... ok\ntest_template_seam_known_control_only (test_pilot.PilotChecks.test_template_seam_known_control_only) ... ok\ntest_bfs_subproofs_check (test_rp2.RP2Checks.test_bfs_subproofs_check) ... ok\ntest_failed_checker_work_retained (test_rp2.RP2Checks.test_failed_checker_work_retained) ... ok\ntest_generic_cache_both_truths_and_symmetry (test_rp2.RP2Checks.test_generic_cache_both_truths_and_symmetry) ... ok\ntest_instrumented_library_same_witness (test_rp2.RP2Checks.test_instrumented_library_same_witness) ... FAIL\n\n======================================================================\nFAIL: test_instrumented_library_same_witness (test_rp2.RP2Checks.test_instrumented_library_same_witness)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/da37149a87e6/SolvingChess-Research/pilot/tests/test_rp2.py\", line 36, in test_instrumented_library_same_witness\n    self.assertTrue(observed.cost['cpu_s'] > 0)\nAssertionError: False is not true\n\n----------------------------------------------------------------------\nRan 18 tests in 0.082s\n\nFAILED (failures=1)\n"
+}

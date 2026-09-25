@@ -151,3 +151,95 @@ hashes and frozen archive identity are in `evidence/source-manifest.json`.
 donor library, freeze its objects, then measure the reserved R1 queries. Keep its
 acquisition result positive, negative or inconclusive as measured. Do not change
 the method after inspecting R1. RP3–RP5 remain unstarted.
+
+## RP2 — donor acquisition and freeze (2026-09-25)
+
+**Donor acquisition is positive within the frozen narrow discovery space:** eight
+new distinct KRK geometry skeletons were acquired from D's 24 training queries.
+No synthetic RP1 fixture enters the library. These are finite mating strategies
+with checked application guards, not unrestricted symbolic chess theorems.
+This section records the pre-evaluation freeze; R1 has not yet been generated.
+
+### Contract and execution machinery
+
+All 13 source-manifest files match RP1 commit
+`ccf3a1c18ac9f92250bb94576a9d3f010fab80f3` byte-for-byte. The intervening
+`68539fd` commit changes documentation only. The pinned chess 1.11.2 core hash
+also matches. RP1 solver, checker, model, generator, reuse seam, protocol and
+archive are unchanged.
+
+`src/rp2.py`, `rp2_support.py` and `rp2_campaign.py` add the mechanical enumeration,
+measurement and generic-cache comparator. F/G lookup uses the frozen index and
+candidate order. Instrumentation wraps the existing checker and reads its
+partial counters on exceptions; it changes no acceptance condition. C retains
+the full domain and the full positive/negative witness, transforms it only under
+a matching domain symmetry, and checks it before import. Each candidate is
+compiled/checked even when duplicate or over the object cap. C visits all root
+and subproof nodes, including negative and terminal nodes, in breadth-first UCI
+order. A serialized nonfitting entry would be rejected without eviction; the
+byte limit was never reached. No RP2 heuristic revision or candidate editing
+occurred.
+
+Eighteen controls pass: the unchanged 14 RP1 controls and four additional tests
+of comparator symmetry/negative certificates, subproof extraction, failed-check
+accounting and equivalence of instrumented versus frozen proof lookup. New tests
+use RP1 synthetic fixtures only, never experimental library seeds. An initial
+new test wrongly required a tiny CPU interval to be strictly positive; the clock
+can quantize to zero, so the test now accepts zero CPU and requires positive wall
+time. Both the failed test and final passing run are retained. Two earlier import
+failures arose before the dependency was available in this resumed execution
+environment. They did not execute any donor or reserved query.
+
+### Acquisition observations
+
+Each of C/F/G has three serial fresh-process acquisition runs. All nine obtained
+12 checked positive and 12 checked negative donor answers, with zero failed
+searches, timeouts, unknowns or malformed candidates. All 24 certificate hashes,
+query order, and ordinary search work are identical across the nine runs:
+1,042 fresh states, 633 expansions, 1,315 examined edges, 3,630 generated search
+edges, and 297 cache hits. Sampling performs the complete declared outcome-blind
+placement scans; no complete truth graph or tablebase is constructed.
+
+| Library | Attempts/run | Accepted | Duplicate | Over geometry cap | Serialized bytes |
+|---|---:|---:|---:|---:|---:|
+| F/G proof skeletons | 48 | 8 | 3 | 37 | 7,628 |
+| C extensional geometry cache | 471 | 357 | 114 | 0 | 685,523 |
+
+The eight-object quota, not bytes or nodes, limits the proof library. The three
+duplicates are canonical root-geometry duplicates and are not new objects.
+C's 357 stored answers/witnesses are not counted as structural discoveries.
+Accepted templates keep their first witness; the 37 over-cap attempts remain
+in the cost and candidate ledger. Source subproofs and donor provenance are
+retained with the actual objects.
+
+| Arm | Acquisition CPU median [min, max], seconds | Wall median [min, max], seconds |
+|---|---:|---:|
+| C | 1.559 [1.551, 1.584] | 1.560 [1.552, 1.585] |
+| F | 0.426 [0.422, 0.468] | 0.426 [0.423, 0.469] |
+| G | 0.427 [0.426, 0.449] | 0.428 [0.427, 0.450] |
+
+These are complete process envelopes, including startup, sampling, donor search,
+checking, all candidates, serialization, storage and instrumentation. All repeated
+execution costs remain in the raw record; one acquisition is charged per modeled
+first use. F/G share no uncharged historical proof library. Human/LLM implementation
+effort and token cost are unavailable, not zero. Dependency installation is a
+separate measured shared setup expense, not hidden acquisition or free work.
+
+### Pre-evaluation identity and preserved evidence
+
+- [Donor freeze and complete evidence/source manifest](evidence/rp2/donor-freeze.json).
+- [Actual proof library and provenance](evidence/rp2/acquire-1-F/library.json).
+- [Actual geometry-cache witnesses](evidence/rp2/acquire-1-C/library.json).
+- [Proof candidate ledger](evidence/rp2/acquire-1-F/events.jsonl) and
+  [acquisition report](evidence/rp2/acquire-1-F/report.json).
+- All nine runs, donor certificates, individual timing ledgers and process
+  envelopes are under `evidence/rp2/acquire-*`; setup and control failures are
+  under `evidence/rp2/preflight`.
+
+All six proof-library files have SHA-256
+`6d8211ca8fb1c67b324fc142d6ea834e54da0b4241b03a4da38f964f9b1545dc`.
+All three generic-cache files have SHA-256
+`6a860f2164b178a5fff3b8458b68ef1fa7eb5aaa77544fe1b305a3cee5126a75`.
+This freeze must be committed and published before `rp2_campaign.py evaluate`
+is invoked. F and G currently contain identical knowledge; R1 cannot establish
+cumulative benefit. RP3–RP5 are unstarted.

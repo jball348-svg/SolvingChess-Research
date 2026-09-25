@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/workspace/scratch/da37149a87e6/SolvingChess-Research/.venv/bin/python",
+    "pilot/src/rp2.py",
+    "acquire",
+    "--arm",
+    "C",
+    "--repeat",
+    "3",
+    "--output",
+    "pilot/evidence/rp2/acquire-3-C/report.json"
+  ],
+  "status": "COMPLETED",
+  "returncode": 0,
+  "wall_s": 1.5524233630000026,
+  "cpu_s": 1.5514960000000002,
+  "child_peak_rss_kib": 18816,
+  "stdout": "{\"arm\":\"C\",\"mode\":\"acquire\",\"outcomes\":{\"false\":12,\"true\":12},\"repeat\":3,\"status\":\"COMPLETE\",\"total_inside_process\":{\"checking\":{\"accepted\":495,\"calls\":495,\"checked_edges\":3080,\"checked_nodes\":3279,\"cpu_s\":0.17606549500000013,\"generated_edges\":11444,\"wall_s\":0.16449117100023614},\"cpu_s\":1.470704886,\"wall_s\":1.4750850650000302,\"work\":{\"legal_edges_generated\":23002,\"move_generation_calls\":6605,\"state_keys\":4965,\"transitions\":4395}}}\n",
+  "stderr": ""
+}

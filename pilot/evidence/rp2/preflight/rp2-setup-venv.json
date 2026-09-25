@@ -1,0 +1,31 @@
+{
+  "wall_s": 45.52461799599996,
+  "cpu_s": 3.568854,
+  "peak_rss_kib": 66108,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "pilot/requirements.txt"
+      ],
+      "returncode": 0,
+      "stdout": "Collecting chess==1.11.2 (from -r pilot/requirements.txt (line 1))\n  Downloading chess-1.11.2.tar.gz (6.1 MB)\n     \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 6.1/6.1 MB 38.0 MB/s eta 0:00:00\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: chess\n  Building wheel for chess (pyproject.toml): started\n  Building wheel for chess (pyproject.toml): finished with status 'done'\n  Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147879 sha256=92b7d58751edc8e61d6fbddc26a4363650144f1e5999e8ed299737b5cc5334fd\n  Stored in directory: /root/.cache/pip/wheels/83/1f/4e/8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447\nSuccessfully built chess\nInstalling collected packages: chess\nSuccessfully installed chess-1.11.2\n",
+      "stderr": ""
+    }
+  ]
+}
