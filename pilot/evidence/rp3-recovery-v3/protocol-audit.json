@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "part": "RP3",
+  "audit": "MR1-V3_PROTOCOL_STAGE_AUDIT",
+  "status": "NONCONFORMING",
+  "finding": "The final v3 campaign is durability-complete but its replacement R2 G evaluations loaded the post-R2 24-object G library instead of the pre-R2 16-object R1-trained library required by the frozen amendment.",
+  "frozen_contract": {
+    "sequence": "R1 training; freeze; R2 test; R2 training; freeze; R3 test/controls; R3 training; freeze; R4 test/controls; stop",
+    "r2_G_expected": {
+      "objects": 16,
+      "library_sha256": "d1d3916fb37c4149d41cbb491cd34c6bb9b6207b8006eae9c3dcde97f6c2579b",
+      "serialized_bytes": 15244
+    },
+    "r2_C_expected": {
+      "objects": 407,
+      "library_sha256": "c06f31b428911f30fd73068b4ac696b61038e515cd95be767e3888277a08cba0",
+      "serialized_bytes": 1048462
+    }
+  },
+  "v3_observed": {
+    "source_commit": "3af88ab121b0fd7fc4bd28147351b1b74551f024",
+    "measurement_commit": "4c335175af5aec3dc6c803968cfb4597716055c0",
+    "processes": 72,
+    "durability_validation": "72/72 complete",
+    "r2_G_actual": {
+      "objects": 24,
+      "library_sha256": "6cd3f81b1c3966d960f7bd8ebfd98f43b98dc282551a64ed5c66de1d41e0b855",
+      "serialized_bytes": 22966
+    },
+    "r2_C_actual": {
+      "objects": 407,
+      "library_sha256": "c06f31b428911f30fd73068b4ac696b61038e515cd95be767e3888277a08cba0",
+      "serialized_bytes": 1048462
+    },
+    "cause": "pilot/src/rp3_recovery_campaign_v3.py initializes current=freeze-after-r2.json before running the replacement R2 block; rp3.Run.input_record therefore selects the post-R2 G acquisition record.",
+    "scope": "B and F are unaffected by this freeze choice. C is semantically unaffected because its R2 acquisition accepted zero new entries and retained the identical library identity. R3 correctly uses the 24-object post-R2 G library; R4 correctly uses the 32-object post-R3 G library."
+  },
+  "prior_attempts": {
+    "attempt_1": {
+      "staging": "Correct: campaign begins replacement R2 with the original freeze-after-r1.json.",
+      "durability": "65/72 directories valid; 7 invalid.",
+      "r2_invalid": [
+        "evaluate-r2-primary-2-G",
+        "evaluate-r2-primary-3-B",
+        "evaluate-r2-primary-3-C"
+      ],
+      "implication": "No complete balanced three-repeat R2 replacement block survives attempt 1."
+    },
+    "attempt_2": {
+      "staging": "Nonconforming: campaign initializes current=freeze-after-r2.json before the replacement R2 block, so all R2 G replacements use 24 rather than 16 objects.",
+      "durability": "68/72 directories valid; 4 invalid, including evaluate-r2-primary-2-G.",
+      "implication": "Cannot supply the required conforming R2 replacement block."
+    }
+  },
+  "endpoint": {
+    "rp3": "BLOCKED_PROTOCOL_STAGE_CONTAMINATION",
+    "plan_class": "INCONCLUSIVE_OR_BLOCKED",
+    "reason": "The predeclared amended A/R cumulative comparison requires a complete balanced R2 replacement measured with only the library available before R2. No such complete block exists. The v3 amendment explicitly declared itself the last RP3 recovery attempt, and selective or post-outcome repair is forbidden.",
+    "cumulative_benefit": "NOT_DECIDABLE_UNDER_FROZEN_GATES",
+    "break_even": "NOT_CLAIMED",
+    "rp4": "NOT_STARTED"
+  },
+  "preserved_nondecisive_findings": {
+    "r3_evaluation_only": {
+      "B": {
+        "median_cpu_s": 4.994595,
+        "expanded_states": 3727
+      },
+      "G": {
+        "median_cpu_s": 4.981402,
+        "expanded_states": 3079
+      },
+      "G_donor_only_ablation": {
+        "median_cpu_s": 5.085053,
+        "expanded_states": 3717
+      },
+      "note": "The learned G library reduces fallback expansions locally at R3, but the CPU difference versus B is below the 0.050 s gate and this cannot be promoted to the cumulative RP3 endpoint."
+    },
+    "r4_evaluation_only": {
+      "B": {
+        "median_cpu_s": 10.491999,
+        "expanded_states": 6992
+      },
+      "G": {
+        "median_cpu_s": 10.708438,
+        "expanded_states": 6958
+      },
+      "G_donor_only_ablation": {
+        "median_cpu_s": 10.662488,
+        "expanded_states": 6975
+      },
+      "note": "The full G library saves only 34 evaluation fallback expansions versus B and is slower in median CPU; descriptive only because the cumulative prefix is nonconforming."
+    },
+    "final_library": {
+      "G_objects": 32,
+      "G_serialized_bytes": 31213,
+      "G_sha256": "14cefea9fb40b7612f37fcb9c4445e35796b2d36cef44a4aa2dc22c3bfefa353",
+      "C_objects": 407,
+      "C_serialized_bytes": 1048462
+    }
+  },
+  "expense": {
+    "original_rp3_sequence_cpu_s": 283.932637,
+    "recovery_attempt_1_sequence_cpu_s": 622.095396,
+    "recovery_attempt_2_sequence_cpu_s": 608.107991,
+    "recovery_v3_sequence_cpu_s": 863.069615,
+    "all_process_sequences_cpu_s": 2377.205639,
+    "all_process_sequences_wall_s": 2381.987988407,
+    "recorded_preflight_cpu_s": 5.407768,
+    "recorded_parent_orchestration_cpu_s": 13.382481418,
+    "recorded_total_cpu_s_lower_bound": 2395.995888418,
+    "note": "Human/LLM/shell/publication costs and GitHub Actions startup/install overhead are unavailable, not zero."
+  },
+  "evidence": {
+    "v3_raw_archive": "pilot/evidence/rp3-recovery-v3/raw-evidence.tar.gz",
+    "v3_validation": "pilot/evidence/rp3-recovery-v3/validation.json",
+    "v3_sequence": "pilot/evidence/rp3-recovery-v3/sequence.json",
+    "attempt_1_validation": "pilot/evidence/rp3-recovery/attempt-1-validation.json",
+    "attempt_2_validation": "pilot/evidence/rp3-recovery-v2/attempt-2-validation.json",
+    "amendment": "pilot/RP3_RECOVERY.md",
+    "v2_amendment": "pilot/RP3_RECOVERY_V2.md",
+    "v3_amendment": "pilot/RP3_RECOVERY_V3.md"
+  }
+}
