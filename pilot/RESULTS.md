@@ -465,3 +465,228 @@ arm's acquisition and R1 expense forward using `summary.json` → `carry_forward
 plus shared setup once if reporting setup-inclusive economics. Do not erase the
 R1 deficit or count acquisition three times because three timing repetitions
 were measured. No RP3 execution is part of this result. **Stop at RP2.**
+
+## RP3 — BLOCKED: incomplete original measurement ledgers (2026-09-25)
+**RP3 verdict: BLOCKED.** This is an incomplete compounding experiment, not a
+negative RP3 conclusion. Twenty-four prescribed processes completed: six R1
+training acquisitions, twelve R2 evaluations, and six R2 training acquisitions.
+The campaign stopped while validating the second update. No R3/R4 test query,
+R3 training, ablation, reverse-order diagnostic, counterplay/history cohort or
+anchor was generated or executed. RP4 and RP5 remain unstarted.
+
+The decisive defect is the original
+`evaluate-r2-primary-3-F/report.json`: it stops after 14 of 16 measurement rows
+and lacks the final search counters. The missing query rows are
+`70417dcad8bb70aa` and `8e37219ffa244d50`. Its application ledger also ends early:
+99 events survive, compared with 109 in both complete F repetitions. The original
+process envelope reports successful completion and retains **2.388043 CPU /
+2.389237 wall seconds**. All sixteen original root certificates survive and
+check, but those certificates do not recover the missing search work, failed
+applications or per-query phase costs. These measurements were not copied from
+another repetition, rerun, estimated as zero or silently filled in.
+
+An earlier loss affected the final checkpoint of `acquire-r2-primary-1-G`.
+Its complete original 24 per-query rows, all 19 candidate events, final library,
+process envelope and stdout work counters survived. The final status and counts
+were reconstructed from those exact records, retaining the original checkpoint
+bytes. Several phase intervals and table memory/storage details remain unavailable
+inside the explicitly unallocated envelope residual. No experiment was repeated.
+An operational resume then detected the second, more extensive loss and stopped
+before any new process. Both failures and the recovery source are preserved.
+The filesystem cause is undetermined; a successful exit is not evidence that
+all saved ledgers are intact. See [failure and cost reconciliation](evidence/rp3/summary.json)
+and [first recovery record](evidence/rp3/recovery.json).
+
+### Contract, environment and execution boundary
+
+All thirteen RP1 manifest files, all five frozen RP2 driver/test files, inherited
+RP2 evidence and library identities match the recorded commits. The immutable
+archive tree is unchanged. RP2's R1 prefix and each repetition's acquisition
+expense are carried forward unchanged. The new adapter uses the original solver,
+checker, generators, proof lookup, geometry cache, candidate order and limits.
+Twenty development controls pass; no reserved cohort enters those controls.
+
+The RP3 source/decision freeze was published and read back before R1 training:
+[`35d409bf67198340446bd7021c95e8c1dc1f5cfc`](https://github.com/jball348-svg/SolvingChess-Research/commit/35d409bf67198340446bd7021c95e8c1dc1f5cfc).
+Its tree is `ed0a2b42499e0da84030e6d63a892163fd21c901`.
+The [source manifest](evidence/rp3/source-freeze.json) records the implementation
+choices. [The R1 update freeze](evidence/rp3/freeze-after-r1.json) preceded every
+R2 outcome. All three R2-update libraries reproduce, but the campaign never
+issued its R2-update freeze because ledger validation did not finish.
+
+The campaign reused the existing RP2 environment: Python 3.12.14, identical
+`chess==1.11.2` core hash and Linux platform, on one pinned core with serial
+processes. No new installation was needed. RP2 did not record its CPU model or
+host load, so identical underlying host performance cannot be established.
+On resumption, the old virtualenv executable link was unavailable; the read-only
+audit used the same Python version and preserved, hash-matching chess package
+through `PYTHONPATH`. No new primary timing was collected in that environment.
+Human/LLM implementation and shell/publication costs are unavailable, not zero.
+
+### Acquired objects and complete candidate costs
+
+F retains the original eight donor objects. G used sixteen for R2. Its last
+training update produced twenty-four objects, but that library has not been
+evaluated on R3 or approved as the completed RP3 library for RP4.
+
+| Training update | G new / total | G bytes | C new / total | C bytes |
+|---|---:|---:|---:|---:|
+| Donor D (RP2) | 8 / 8 | 7,628 | 357 / 357 | 685,523 |
+| R1 | 8 / 16 | 15,244 | 50 / 407 | 1,048,462 |
+| R2 | 8 / 24 | 22,966 | 0 / 407 | 1,048,462 |
+| R3 | Not run | — | Not run | — |
+
+Every training cohort contains 24 separate queries balanced by turn. R1 training
+has seven positive/seventeen negative answers; R2 training has six/eighteen.
+Ordinary baseline training solves never use proof-library pruning. C and G have
+identical training root certificates and search work in every repetition.
+
+| Update / arm | Candidates | Accepted | Duplicate | Geometry cap | Byte cap | Median CPU / wall seconds |
+|---|---:|---:|---:|---:|---:|---:|
+| R1 / C | 4,402 | 50 | 14 | 0 | 4,338 | 33.863 / 33.868 |
+| R1 / G | 35 | 8 | 6 | 21 | 0 | 1.237 / 1.238 |
+| R2 / C | 5,857 | 0 | 0 | 0 | 5,857 | 48.109 / 48.116 |
+| R2 / G | 19 | 8 | 7 | 4 | 0 | 2.462 / 2.463 |
+
+All scheduled candidates were compiled/checked, including duplicates and those
+rejected by storage/quota limits. The C cache has only 114 bytes remaining;
+none of R2's 5,857 candidates fits. Its rejection cost is retained. No eviction,
+witness replacement or quota relaxation occurred. These are 24 distinct proof
+geometries, not 24 successful transfers; C's 407 witnesses are stored answers.
+Actual [16-object](evidence/rp3/acquire-r1-primary-1-G/library.json) and
+[24-object](evidence/rp3/acquire-r2-primary-1-G/library.json) libraries retain full
+provenance. Repetition identities and all actual objects are in the raw evidence.
+
+### Observed coverage and cumulative cost
+
+All R2 arms' sixteen original certificates check: **six true, ten false** in
+every repetition. Combined R1/R2 coverage is **32/32**, eleven true/twenty-one
+false per arm. No solver unknown, timeout or resource exhaustion occurred.
+The missing F ledger is a measurement failure, not a false chess answer or a
+solver timeout. False means no forced mate within six plies, not a draw theorem.
+
+The following medians use the original fresh-process envelopes. Costs include
+one donor acquisition per modeled first use and each R1 update when usable at
+R2. They include generation/scans, loading, every candidate attempt, application,
+fallback, checking, serialization and bookkeeping. Application's checker is
+nested in application, and application is nested in search: none is added twice.
+No common-success subset or favorable R1 rerun is used.
+
+| Prefix | Arm | Cumulative CPU / wall seconds | CPU/query | CPU repeat range |
+|---|---|---:|---:|---:|
+| R1 | B | 0.795 / 0.796 | 0.0497 | 0.776–0.808 |
+| R1 | C | 2.582 / 2.584 | 0.1614 | 2.536–2.669 |
+| R1 | F | 1.318 / 1.320 | 0.0824 | 1.255–1.323 |
+| R1 | G | 1.261 / 1.263 | 0.0788 | 1.252–1.276 |
+| R2 | B | 2.867 / 2.868 | 0.0896 | 2.841–2.972 |
+| R2 | C | 39.191 / 39.199 | 1.2247 | 38.373–39.667 |
+| R2 | F | 3.589 / 3.607 | 0.1121 | 3.304–3.707 |
+| R2 | G | 4.662 / 4.666 | 0.1457 | 4.471–4.847 |
+| R3 / R4 | All arms | Not measured | — | — |
+
+Add the original shared setup **5.567632 CPU / 72.650342 wall seconds once**
+to each arm's prefix for setup-inclusive economics; those columns and every
+per-repetition carry-forward are in `summary.json`. No installation cost is
+refunded. R2's later training is **not** charged to the R2 evaluation prefix:
+it first becomes usable at R3. Its actual six-run expense remains in the campaign
+ledger and as a pending next-prefix acquisition expense, despite the block.
+
+| Arm | Raw R2 evaluation CPU / wall median | R2 fresh fallback expansions |
+|---|---:|---:|
+| B | 2.072 / 2.073 | 2,586 |
+| C | 2.746 / 2.747 | 2,586 |
+| F | 2.333 / 2.350 | 2,576 (two complete ledgers; third unavailable) |
+| G | 2.160 / 2.161 | 2,569 |
+
+G saves 17/2,586 R2 fallback expansions (0.66%) against B, and just seven
+additional expansions against F. Acquisition-inclusive expansions through R2
+are B 3,501; C 6,138; G 6,119. F is 4,122 in its two complete ledgers; the third
+is unavailable. G's R2 cumulative CPU cost is 1.63× B. Neither observed prefix
+breaks even. These observations do not substitute for the required R3/R4 gates.
+There is no demonstrated one-off or fixed-library economic advantage in the
+observed data; a complete RP3 cumulative verdict remains unavailable.
+
+### Applications, work and preserved failures
+
+In the complete first R2 repetition, F discharges seven internal obligations
+using three donor objects and contributes to three final root certificates.
+G discharges twelve using five objects, and four objects contribute to four
+final root certificates. The new object beginning `86636c1f` contributes to the
+additional root `02ceb10fa68b5cac`; the new object beginning `ce63994f` is used
+internally but absent from final roots. These distinctions come from matching
+entire reconstructed sub-DAGs, not just board labels or certificate size.
+Exact object IDs, states, recipient roots and twelve small reconstructed witnesses
+are in the summary and `evidence/rp3/witnesses/`. Repeated use is not object growth.
+F's incomplete third application ledger is not presented as a complete record.
+
+| R2 work, complete first repetition | B | C | F | G |
+|---|---:|---:|---:|---:|
+| Fresh states | 4,841 | 4,841 | 4,834 | 4,825 |
+| Examined search edges | 8,143 | 8,143 | 8,133 | 8,122 |
+| Generated search edges | 23,811 | 23,811 | 23,782 | 23,766 |
+| Ordinary cache hits | 3,318 | 3,318 | 3,315 | 3,313 |
+| All generated edges | 132,277 | 132,277 | 133,247 | 133,562 |
+| All checked nodes | 3,912 | 3,912 | 4,001 | 4,029 |
+| All checked edges | 6,232 | 6,232 | 6,274 | 6,288 |
+
+F's complete first ledger has 60 depth skips and 42 failed instantiations;
+G has 86 and 53 respectively. Missing opponent replies, false targets/terminals
+and off-board transforms remain in the event ledgers. C has 2,586 full-domain
+cache misses and no application. The exact geometry-cache guard cannot discard
+new arena squares. All failures' enclosing original process expense is paid,
+including the lost tail of F's third event ledger.
+
+The audit rechecked 64 distinct root certificates, reconstructed all sixteen new
+proof objects from donor provenance, checked all fifty new cache witnesses, and
+reconstructed twelve successful application witnesses. It runs the separate
+frozen proof traversal, sharing the original model and python-chess; it is not
+an independent chess implementation, Lean proof or RP5 campaign.
+
+The 24 experimental processes consumed **283.933 CPU / 284.007 wall seconds**.
+RP2 plus RP3 processes, original setup, retained preflights and failed audit cost
+310.871 CPU / 378.040 wall seconds before the successful closing audit; that
+closing audit adds 1.847 CPU / 1.826 wall seconds. Manual orchestration and
+publication overhead are not fully metered. Experimental peak RSS was below
+37 MiB; all runs stayed below the frozen CPU/wall/RAM limits. Raw evidence is
+48.1 MB and the largest file is 3.7 MB, below the part/file limits. No limit was
+raised and no exhausted-run expense was discarded.
+
+### Reconciliation, replay and next boundary
+
+The raw 565 files are preserved losslessly in
+[raw-evidence.tar.gz](evidence/rp3/raw-evidence.tar.gz), with every member's bytes
+and SHA-256 in [raw-index.json](evidence/rp3/raw-index.json). This includes all
+repetitions, complete process envelopes, training/evaluation certificates,
+accepted libraries, candidate/application events, the incomplete original F
+report and the retained original G checkpoint. The unpacker rejects a changed
+archive or conflicting file. Frozen manifests keep their original path identities.
+
+From the repository root, in an environment with the pinned requirement:
+
+```sh
+python -m venv .venv
+.venv/bin/python -m pip install -r pilot/requirements.txt
+.venv/bin/python pilot/src/rp3_unpack.py
+.venv/bin/python pilot/src/measure.py --output pilot/.work/rp3-reconciliation-envelope.json -- .venv/bin/python pilot/src/rp3_summary.py --input pilot/evidence/rp3 --output pilot/.work/rp3-reconciliation.json --witnesses pilot/.work/rp3-witnesses
+```
+
+This is read-only checking of existing cohorts; it does not solve new queries.
+The exact original process commands and order are in `sequence.json` and each
+raw `envelope.json`. Original acquisition/evaluation use `rp3.py` with the
+published source freeze and the recorded input freeze. The untouched
+`rp3_campaign.py run` describes the full prospective schedule, but rerunning it
+now would be a fresh experiment, not recovery of missing original observations.
+Do not overwrite the primary evidence or relabel a replay as the missing run.
+
+**Ablation and order finding: NOT_RUN.** Both required R3/R4 prefixes and their
+gates are unavailable, so no cumulative-benefit verdict is possible. The blocker
+is missing measurement evidence, not the unfavorable R1/R2 intermediate result.
+No RP5 decision is made.
+
+**Next action:** first recover the missing original F measurement/event tail, if
+an authentic copy exists, or explicitly specify a labelled replacement comparison
+that preserves these original costs and separates any new measurements. Complete
+RP3 before moving on. **RP4 is not ready:** when a sound completed RP3 library
+exists and RP4 is requested, apply that frozen library without acquisition to the
+counterplay/history cohorts and declared local anchors. The present 24-object
+intermediate library must not be silently treated as a completed RP3 endpoint.

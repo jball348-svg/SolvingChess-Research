@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "pilot/src/rp3_summary.py",
+    "--input",
+    "pilot/evidence/rp3",
+    "--output",
+    "pilot/evidence/rp3/summary.json",
+    "--witnesses",
+    "pilot/evidence/rp3/witnesses"
+  ],
+  "status": "COMPLETED",
+  "returncode": 0,
+  "wall_s": 1.8262963180000042,
+  "cpu_s": 1.847005,
+  "child_peak_rss_kib": 144296,
+  "stdout": "{\"verdict\": \"BLOCKED\", \"artifact_loss\": {\"path\": \"pilot/evidence/rp3/evaluate-r2-primary-3-F/report.json\", \"sha256\": \"229704fac98653170fdf39c2a77eb57c467ae1d76620548455aecd1f2970a207\", \"preserved_measurement_rows\": 14, \"required_rows\": 16, \"missing_query_measurement_ids\": [\"70417dcad8bb70aa\", \"8e37219ffa244d50\"], \"full_original_envelope\": {\"cpu_s\": 2.3880429999999997, \"wall_s\": 2.389236528999845}, \"complete_stdout_work\": {\"checking\": {\"accepted\": 23, \"calls\": 63, \"checked_edges\": 6274, \"checked_nodes\": 4001, \"cpu_s\": 0.2625560419999997, \"generated_edges\": 18473, \"rejected\": 40, \"wall_s\": 0.2586442880001414}, \"cpu_s\": 2.282207692, \"wall_s\": 2.2831960549997348, \"work\": {\"legal_edges_generated\": 133247, \"move_generation_calls\": 24860, \"state_keys\": 14720, \"transitions\": 14483}}, \"all_16_certificates_present_and_checked\": true, \"missing\": \"Last two per-query phase/work rows; final search-count totals; table storage/memory/tally; library-hit attribution. No values copied from another repeat.\", \"preserved_application_events\": 99, \"complete_other_repeats_application_events\": [109, 109], \"application_ledger_also_incomplete\": true}, \"audit_counts\": {\"root_certificates\": 64, \"new_proof_objects\": 16, \"new_cache_witnesses\": 50, \"application_witnesses\": 12}, \"actual_rp3_cpu\": 283.932637}\n",
+  "stderr": ""
+}

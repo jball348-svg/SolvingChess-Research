@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "pilot/src/rp3_summary.py",
+    "--input",
+    "pilot/evidence/rp3",
+    "--output",
+    "pilot/evidence/rp3/summary.json",
+    "--witnesses",
+    "pilot/evidence/rp3/witnesses"
+  ],
+  "status": "COMPLETED",
+  "returncode": 1,
+  "wall_s": 1.6361216390000095,
+  "cpu_s": 1.6382690000000002,
+  "child_peak_rss_kib": 131844,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/src/rp3_summary.py\", line 213, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/src/rp3_summary.py\", line 92, in main\n    assert len(event_checks[name])==1,name+' event decisions differ'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: evaluate-r2-F event decisions differ\n"
+}

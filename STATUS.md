@@ -2,67 +2,52 @@
 
 Updated: 2026-09-25.
 
-**RP2 COMPLETE — BOUNDED_POSITIVE_ACQUISITION; NO_R1_COST_ADVANTAGE.**
-
-The previous tracked tree is archived without changes at
-`archive/pre-reboot-2026-09-25/`. Its source commit is
-`3eba1a0c60e8ffca63a85763d176e1da9f904141`.
+**RP3 BLOCKED — ORIGINAL_MEASUREMENT_LEDGER_LOSS.**
 
 | Part | State | Result |
 |---|---|---|
-| 1 — Benchmark and baseline | COMPLETE | Reference reproduced; exact baseline/checker usable; protocol v1 frozen. |
-| 2 — Discover reusable proofs | COMPLETE | Eight exact donor objects; one internal R1 application; 16/16 checked in every arm; no first-use advantage. |
-| 3 — Cumulative reuse | NOT_STARTED | No amortization or scaling measurements yet. |
-| 4 — Transfer and connections | NOT_STARTED | No new connected strategy certificate yet. |
-| 5 — Replay and decision | NOT_STARTED | No pilot viability conclusion yet. |
+| 1 — Benchmark and baseline | COMPLETE | Exact baseline/checker and protocol v1 frozen. |
+| 2 — Discover reusable proofs | COMPLETE | Eight donor objects; complete R1 coverage; no first-use cost advantage. |
+| 3 — Cumulative reuse | BLOCKED | 24 processes through R2 training preserved; one R2 evaluation ledger is incomplete. R3/R4 and controls unrun. |
+| 4 — Transfer and connections | NOT_STARTED | No held-out cohort or anchor generated. |
+| 5 — Replay and decision | NOT_STARTED | No final pilot decision. |
 
-**Next action, only when requested:** execute RP3 under the unchanged protocol.
-Reuse RP2's R1 measurements as the first prefix. Acquire from the separate R1
-training cohort for G/C before R2, then follow the frozen R2–R4 schedule and
-R3/R4 ablation/order checks. Carry the donor acquisition and all R1 costs in
-`pilot/evidence/rp2/summary.json` forward; shared setup is charged once. Do not
-regenerate R1 as unseen evidence. RP3–RP5 remain unstarted.
+**Blocker:** `pilot/evidence/rp3/evaluate-r2-primary-3-F/report.json` retains only
+14 of 16 per-query measurement rows and lacks final search counters. Its
+application log also ends early. All sixteen certificates and the complete
+original process envelope survive, but they cannot recover the lost measurements.
+No cost or work was filled in from another repeat and no primary run was replaced.
+A separate acquisition checkpoint was reconstructed from original surviving
+ledgers, with missing subphase measurements explicitly unavailable.
 
-**RP2 result:** [consolidated results, limitations and exact commands](pilot/RESULTS.md#rp2-complete--bounded-positive-acquisition-no-r1-cost-advantage).
-All arms checked 16/16 R1 queries (five true, eleven false), with no unknowns or
-timeouts. Eight short, single-branch geometry objects were acquired reproducibly.
-One transferred proof discharged an internal negative-query search obligation,
-but contributed to no final R1 root certificate. F/G saved only two of 915
-fallback expansions and failed every practical cost-advantage gate.
+**Preserved result:** G grew 8 → 16 → 24 objects through donor/R1/R2 training.
+R2 used sixteen objects and all arms checked 16/16 queries (six true, ten false).
+Complete first-repeat ledgers show twelve internal G applications, with four
+objects contributing to four final root certificates. This does not establish
+compounding. Median cumulative CPU through R1/R2: B 0.795/2.867 seconds,
+C 2.582/39.191, F 1.318/3.589, G 1.261/4.662, before the unchanged shared setup.
+No observed break-even. R3/R4 economics, ablation and order controls are unavailable.
 
-Median first-use CPU seconds, including donor construction and R1 but before
-shared environment setup: B 0.795, C 2.582, F 1.318, G 1.261. All setup, failed
-applications, candidate attempts and repetition costs are retained. This bounded
-positive acquisition result establishes neither useful scaling nor cumulative
-benefit. F/G have identical donor knowledge at this stage.
+**Next action:** recover an authentic copy of the missing original measurement
+and event tail, or explicitly specify a labelled replacement comparison retaining
+all original costs. Then finish RP3. Do not silently replay and substitute a
+primary run. RP4 is not ready: its frozen-library counterplay/history and local
+anchor tests await a sound RP3 endpoint and a request to execute RP4.
 
-**Published donor/source freeze:**
-[`2736e3cf00e0696520c3d8fe1203f28087ed3db6`](https://github.com/jball348-svg/SolvingChess-Research/commit/2736e3cf00e0696520c3d8fe1203f28087ed3db6),
-verified on the remote before R1 generation. The [manifest](pilot/evidence/rp2/donor-freeze.json),
-actual objects, donor/evaluation certificates and raw ledgers are preserved.
-No R1 training, R2–R4 evaluation, held-out counterplay/history work or old conveyor
-was run. The active protocol, original source manifest and archive are unchanged.
+[Consolidated RP3 findings, failure evidence and exact reconciliation commands](pilot/RESULTS.md#rp3--blocked-incomplete-original-measurement-ledgers-2026-09-25).
+[Compact raw evidence](pilot/evidence/rp3/raw-evidence.tar.gz) and
+[full cost carry-forward](pilot/evidence/rp3/summary.json).
+Run `python pilot/src/rp3_unpack.py` to verify/materialize the original paths.
 
-**RP1 evidence:** [consolidated results and replay commands](pilot/RESULTS.md).
-G12's producer/verifier reproduced seven frozen artifacts; the verifier checked
-809,183 table states with zero mismatches. The new bounded baseline agrees with
-the full development-arena reference on all eight smoke queries, and fourteen
-targeted controls pass. This is readiness, not a new discovery/scaling success.
+**Published RP3 source freeze:**
+`35d409bf67198340446bd7021c95e8c1dc1f5cfc` (before any R1 training).
+**RP2 publication:** `984b427eb4054c7eb11968b4f871a1e4f73d5836`.
+**RP2 donor freeze:** `2736e3cf00e0696520c3d8fe1203f28087ed3db6`.
+**RP1 protocol/source freeze:** `ccf3a1c18ac9f92250bb94576a9d3f010fab80f3`.
+All frozen experimental source and inherited RP2 evidence remain unchanged.
 
-**Protocol freeze:**
-[`ccf3a1c18ac9f92250bb94576a9d3f010fab80f3`](https://github.com/jball348-svg/SolvingChess-Research/commit/ccf3a1c18ac9f92250bb94576a9d3f010fab80f3).
-The follow-up status record does not change protocol or executable source.
-
-**Current evidence:** the [post-mortem](archive/POST_MORTEM_2026-09-24.md) and
-[archive guide](archive/README.md). Historical positives and limitations are
-inputs for experiment design, not pilot successes.
-
-**Known availability risk:** the archived late-review R2/R4/R5 provenance records
-source hashes for programs not found in the inspected tracked files or bundled
-archives. Part 1 must not depend on those source bytes being present. The G12
-reference bundle does contain source and certificates and was replayed during
-the post-mortem.
-
-After each part, update this file in place with its bounded conclusion, links to
-the consolidated results and the next action. Keep experiment measurements in
-`pilot/`, not duplicated here.
+The previous tracked programme is archived unchanged under
+`archive/pre-reboot-2026-09-25/`, source commit
+`3eba1a0c60e8ffca63a85763d176e1da9f904141`. Archived instructions do not govern
+the pilot. The original source availability limitations and reproduced G12
+reference remain in the consolidated results. No old conveyor was restarted.

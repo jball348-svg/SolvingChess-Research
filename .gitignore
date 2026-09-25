@@ -18,3 +18,7 @@ pilot/.work/
 *.pem
 *.key
 .DS_Store
+
+# Raw RP3 run directories are materialized from the checked compact archive.
+pilot/evidence/rp3/acquire-*/
+pilot/evidence/rp3/evaluate-*/
