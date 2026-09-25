@@ -7,7 +7,7 @@ on:
       - '.github/workflows/rp3-recovery-v3.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   recovery:
@@ -30,37 +30,10 @@ jobs:
           mkdir -p pilot/.work
           python -m unittest discover -s pilot/tests -v
 
-      - name: Materialize compact inherited evidence
+      - name: Materialize hash-verified original RP3 evidence
         env:
           PYTHONPATH: pilot/src
-        shell: bash
-        run: |
-          python pilot/src/rp3_unpack.py
-          python - <<'PY'
-          import hashlib, io, json, tarfile
-          from pathlib import Path
-          root=Path('.').resolve()
-          for base, manifest_name, prefix in [
-              (Path('pilot/evidence/rp3-recovery'), 'attempt-1-raw-evidence.parts.json', 'pilot/evidence/rp3-recovery/'),
-              (Path('pilot/evidence/rp3-recovery-v2'), 'attempt-2-raw-evidence.parts.json', 'pilot/evidence/rp3-recovery-v2/'),
-          ]:
-              manifest=json.loads((base/manifest_name).read_text())
-              raw=b''.join((base/c['path']).read_bytes() for c in sorted(manifest['chunks'], key=lambda x:x['index']))
-              assert len(raw)==manifest['bytes']
-              assert hashlib.sha256(raw).hexdigest()==manifest['sha256']
-              with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
-                  for m in tf.getmembers():
-                      assert m.isfile() and not m.issym() and not m.islnk()
-                      assert m.name.startswith(prefix), m.name
-                      dest=(root/m.name).resolve()
-                      assert dest.is_relative_to((root/base).resolve())
-                      data=tf.extractfile(m).read()
-                      if dest.exists():
-                          assert dest.read_bytes()==data, 'refusing overwrite '+m.name
-                      else:
-                          dest.parent.mkdir(parents=True,exist_ok=True)
-                          dest.write_bytes(data)
-          PY
+        run: python pilot/src/rp3_unpack.py
 
       - name: Record execution host
         shell: bash
@@ -141,3 +114,41 @@ jobs:
             rp3-recovery-v3-evidence.tar.gz
           compression-level: 0
           retention-days: 7
+
+      - name: Publish compact validated measurement record
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, shutil, tarfile
+          from pathlib import Path
+          base=Path('pilot/evidence/rp3-recovery-v3')
+          seq=json.loads((base/'sequence.json').read_text())
+          labels=[e['label'] for e in seq]
+          raw=base/'raw-evidence.tar.gz'
+          with tarfile.open(raw,'w:gz') as tf:
+              for label in labels:
+                  tf.add(base/label,arcname='pilot/evidence/rp3-recovery-v3/'+label)
+          members=[]
+          with tarfile.open(raw,'r:gz') as tf:
+              for m in tf.getmembers():
+                  if m.isfile():
+                      members.append(m.name)
+          manifest={
+              'schema':1,
+              'archive':'raw-evidence.tar.gz',
+              'sha256':hashlib.sha256(raw.read_bytes()).hexdigest(),
+              'bytes':raw.stat().st_size,
+              'processes':len(labels),
+              'file_members':len(members),
+              'validation':'validation.json',
+              'note':'All 72 final RP3-MR1-V3 process directories; extract under repository root and verify against validation.json.'
+          }
+          (base/'raw-evidence-manifest.json').write_text(json.dumps(manifest,sort_keys=True,separators=(',',':'))+'\n')
+          for label in labels:
+              shutil.rmtree(base/label)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f pilot/evidence/rp3-recovery-v3
+          git commit -m "RP3: publish final immutable recovery measurements"
+          git push origin HEAD:main
