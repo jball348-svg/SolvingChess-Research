@@ -1,12 +1,15 @@
 {
-  "schema": 1,
+  "schema": 2,
   "part": "RP3",
   "experiment": "RP3-MR1-V3",
-  "status": "COMPLETE",
-  "endpoint": "NO_DEMONSTRATED_CUMULATIVE_BENEFIT",
-  "question": "Does an expanding checked proof library compound into a practically meaningful total-cost advantage over ordinary caching and fixed-proof reuse on the frozen R1-R4 sequence?",
+  "execution_status": "COMPLETE",
+  "scientific_status": "BLOCKED",
+  "endpoint": "BLOCKED_PROTOCOL_STAGE_CONTAMINATION",
+  "plan_class": "INCONCLUSIVE_OR_BLOCKED",
+  "reason": "The final 72-process v3 execution is durability-complete, but all three replacement R2 G evaluations used the post-R2 24-object G library instead of the pre-R2 16-object library required by the frozen update schedule. Therefore the predeclared amended A/R cumulative comparison is nonconforming and no cumulative-benefit or no-benefit gate result is claimed.",
   "source_freeze_commit": "3af88ab121b0fd7fc4bd28147351b1b74551f024",
   "final_measurement_commit": "4c335175af5aec3dc6c803968cfb4597716055c0",
+  "protocol_audit": "pilot/evidence/rp3-recovery-v3/protocol-audit.json",
   "completion": {
     "processes": 72,
     "validated_processes": 72,
@@ -38,173 +41,28 @@
       }
     }
   },
-  "accounting_models": {
-    "A": "Amended modeled comparison: RP2 R1 carry-forward; original R1/R2 acquisitions charged at first usable prefix; full balanced replacement R2 block; final-v3 R3/R4 primary evaluations; R3 C/G acquisition first charged at R4.",
-    "R": "Recovery-inclusive comparison: A plus the original R2 evaluation envelope for the paired arm/repeat. Missing original F R2 work counters remain missing and are never inferred.",
-    "setup": "Original shared RP2 setup remains a once-only common expense; it does not change arm ordering.",
-    "timing": "No cross-session timing normalization or correction."
-  },
-  "prefix_medians": {
-    "A": {
-      "r1": {
-        "B": {
-          "cpu_s": 0.795047,
-          "wall_s": 0.795739153,
-          "fresh_expansions": 915
-        },
-        "C": {
-          "cpu_s": 2.582172,
-          "wall_s": 2.583704082,
-          "fresh_expansions": 1548
-        },
-        "F": {
-          "cpu_s": 1.318496,
-          "wall_s": 1.320042765,
-          "fresh_expansions": 1546
-        },
-        "G": {
-          "cpu_s": 1.261114,
-          "wall_s": 1.262847724,
-          "fresh_expansions": 1546
-        }
-      },
-      "r2": {
-        "B": {
-          "cpu_s": 3.647039,
-          "wall_s": 3.682428999,
-          "fresh_expansions": 3501
-        },
-        "C": {
-          "cpu_s": 40.044627,
-          "wall_s": 40.0895912,
-          "fresh_expansions": 6138
-        },
-        "F": {
-          "cpu_s": 4.257569,
-          "wall_s": 4.305203228,
-          "fresh_expansions": 4122
-        },
-        "G": {
-          "cpu_s": 5.388096,
-          "wall_s": 5.435718231,
-          "fresh_expansions": 5868
-        }
-      },
-      "r3": {
-        "B": {
-          "cpu_s": 8.6165,
-          "wall_s": 8.689314645,
-          "fresh_expansions": 7228
-        },
-        "C": {
-          "cpu_s": 94.084427,
-          "wall_s": 94.171714675,
-          "fresh_expansions": 13554
-        },
-        "F": {
-          "cpu_s": 9.358471,
-          "wall_s": 9.446625896,
-          "fresh_expansions": 7839
-        },
-        "G": {
-          "cpu_s": 12.866575,
-          "wall_s": 12.958801243,
-          "fresh_expansions": 12636
-        }
-      },
-      "r4": {
-        "B": {
-          "cpu_s": 19.108499,
-          "wall_s": 19.220094111,
-          "fresh_expansions": 14220
-        },
-        "C": {
-          "cpu_s": 228.834471,
-          "wall_s": 229.253252338,
-          "fresh_expansions": 25639
-        },
-        "F": {
-          "cpu_s": 20.007763,
-          "wall_s": 20.171357966,
-          "fresh_expansions": 14814
-        },
-        "G": {
-          "cpu_s": 29.304946,
-          "wall_s": 29.501451684,
-          "fresh_expansions": 24687
-        }
-      }
+  "protocol_defect": {
+    "expected_r2_G": {
+      "objects": 16,
+      "library_sha256": "d1d3916fb37c4149d41cbb491cd34c6bb9b6207b8006eae9c3dcde97f6c2579b",
+      "serialized_bytes": 15244
     },
-    "R": {
-      "r2": {
-        "B": {
-          "cpu_s": 5.799151,
-          "wall_s": 5.835936418,
-          "fresh_expansions": 6087
-        },
-        "C": {
-          "cpu_s": 42.79033,
-          "wall_s": 42.836322107,
-          "fresh_expansions": 8724
-        },
-        "F": {
-          "cpu_s": 6.51377,
-          "wall_s": 6.572980572,
-          "fresh_expansions": null
-        },
-        "G": {
-          "cpu_s": 7.577334,
-          "wall_s": 7.624418136,
-          "fresh_expansions": 8437
-        }
-      },
-      "r3": {
-        "B": {
-          "cpu_s": 10.811868,
-          "wall_s": 10.885794241,
-          "fresh_expansions": 9814
-        },
-        "C": {
-          "cpu_s": 96.868795,
-          "wall_s": 96.957199606,
-          "fresh_expansions": 16140
-        },
-        "F": {
-          "cpu_s": 11.596079,
-          "wall_s": 11.69774501,
-          "fresh_expansions": null
-        },
-        "G": {
-          "cpu_s": 15.026198,
-          "wall_s": 15.119477341,
-          "fresh_expansions": 15205
-        }
-      },
-      "r4": {
-        "B": {
-          "cpu_s": 21.303867,
-          "wall_s": 21.416573707,
-          "fresh_expansions": 16806
-        },
-        "C": {
-          "cpu_s": 231.402415,
-          "wall_s": 231.825720655,
-          "fresh_expansions": 28225
-        },
-        "F": {
-          "cpu_s": 22.234431,
-          "wall_s": 22.380715605,
-          "fresh_expansions": null
-        },
-        "G": {
-          "cpu_s": 31.464569,
-          "wall_s": 31.662127782,
-          "fresh_expansions": 27256
-        }
-      }
-    }
+    "observed_r2_G": {
+      "objects": 24,
+      "library_sha256": "6cd3f81b1c3966d960f7bd8ebfd98f43b98dc282551a64ed5c66de1d41e0b855",
+      "serialized_bytes": 22966
+    },
+    "cause": "rp3_recovery_campaign_v3.py sets current=freeze-after-r2.json before the replacement R2 loop.",
+    "unaffected": "B/F do not use this growing freeze. C accepted zero R2 objects, so its pre/post-R2 library identity is unchanged. R3 and R4 are staged with the intended post-R2 and post-R3 libraries.",
+    "consequence": "The R2 G timing/work measurements cannot enter the frozen cumulative A/R gates."
   },
-  "primary_evaluation_only": {
+  "attempt_reconciliation": {
+    "attempt_1": "Correct R2 staging, but 7/72 persistence failures; R2 invalid records include G repeat 2, B repeat 3 and C repeat 3, so no complete balanced R2 replacement survives.",
+    "attempt_2": "Uses the same post-R2 freeze too early for R2 G and also has 4/72 persistence failures.",
+    "attempt_3_v3": "72/72 durability-complete but R2 G stage-contaminated.",
+    "recovery_limit": "RP3_RECOVERY_V3.md declares this the last RP3 recovery attempt. No selective retry or post-outcome threshold/procedure repair is authorized."
+  },
+  "preserved_nondecisive_findings": {
     "r2": {
       "B": {
         "cpu_s": 2.839,
@@ -266,55 +124,7 @@
       }
     }
   },
-  "gates": {
-    "required": {
-      "cumulative_cpu_and_wall_improvement": ">=25% versus best B/C/F comparator",
-      "absolute_saving_s": ">=0.050",
-      "repeat_separation": "slowest G repeat faster than fastest comparator repeat",
-      "acquisition_inclusive_fallback_reduction": ">=25%",
-      "ablation": "at least half of any positive primary saving disappears",
-      "reverse_order": "claimed primary advantage must not reverse"
-    },
-    "A": {
-      "r3": {
-        "best_comparator": "B",
-        "G_vs_B_cpu_percent": 49.32484187315038,
-        "G_vs_B_wall_percent": 49.13490617418341,
-        "G_vs_B_expansions_percent": 74.82014388489209,
-        "slowest_G_cpu_s": 12.911066,
-        "fastest_B_cpu_s": 8.610062,
-        "pass": false
-      },
-      "r4": {
-        "best_comparator": "B",
-        "G_vs_B_cpu_percent": 53.360795110071166,
-        "G_vs_B_wall_percent": 53.49275354024514,
-        "G_vs_B_expansions_percent": 73.60759493670885,
-        "slowest_G_cpu_s": 29.40445,
-        "fastest_B_cpu_s": 19.101272,
-        "pass": false
-      }
-    },
-    "R": {
-      "r3": {
-        "best_comparator": "B",
-        "G_vs_B_cpu_percent": 38.978740768940234,
-        "G_vs_B_wall_percent": 38.891816309132345,
-        "G_vs_B_expansions_percent": 54.93173018137354,
-        "slowest_G_cpu_s": 15.260349,
-        "fastest_B_cpu_s": 10.643278,
-        "pass": false
-      },
-      "r4": {
-        "best_comparator": "B",
-        "G_vs_B_cpu_percent": 47.69416744856694,
-        "G_vs_B_wall_percent": 47.83937064429276,
-        "G_vs_B_expansions_percent": 62.18017374747114,
-        "slowest_G_cpu_s": 31.753733,
-        "fastest_B_cpu_s": 21.134488,
-        "pass": false
-      }
-    },
+  "controls": {
     "ablation": {
       "r3": {
         "G_primary_cpu_s": 4.981402,
@@ -346,7 +156,8 @@
         "G_reverse_expanded_states": 6958,
         "result": "No claimed primary advantage to support; order support unestablished."
       }
-    }
+    },
+    "note": "These R3/R4 controls are preserved as descriptive evidence only. They cannot repair the invalid cumulative prefix."
   },
   "library_growth": {
     "C": {
@@ -392,9 +203,10 @@
     "impact": "Neither excluded attempt supplies any final-v3 scientific measurement or library input; v3 inherited only the hash-verified original RP3/RP2 evidence and directly published frozen metadata."
   },
   "interpretation": {
-    "break_even": "None through R4 under either A or recovery-inclusive R.",
-    "result": "Checked proof reuse does reduce fresh fallback work at some individual evaluations, especially G at R2/R3, but the reduction is too small to overcome application and acquisition costs. The growing library is materially worse than ordinary caching in cumulative cost and acquisition-inclusive work at both decisive later rungs.",
-    "scope": "Bounded result for the frozen KRK-style benchmark family, solver, six-ply proposition, budgets and update policy. It does not establish an asymptotic impossibility for proof discovery or chess solving."
+    "cumulative_benefit": "NOT_DECIDABLE_UNDER_FROZEN_GATES",
+    "break_even": "NOT_CLAIMED",
+    "bounded_observation": "R3 G shows a local evaluation-only reduction in fallback expansions (3079 vs B 3727) with only a 0.013 s median CPU difference; R4 G is slower than B in median CPU (10.708 vs 10.492 s) while saving 34 fallback expansions. These observations are not a conforming cumulative RP3 verdict.",
+    "scope": "The block is an experimental-protocol defect, not evidence that proof reuse can or cannot compound asymptotically."
   },
   "evidence": {
     "raw_archive": "pilot/evidence/rp3-recovery-v3/raw-evidence.tar.gz",
@@ -402,6 +214,11 @@
     "validation": "pilot/evidence/rp3-recovery-v3/validation.json",
     "sequence": "pilot/evidence/rp3-recovery-v3/sequence.json",
     "execution_host": "pilot/evidence/rp3-recovery-v3/execution-host.json",
-    "freeze_after_r3": "pilot/evidence/rp3-recovery-v3/freeze-after-r3.json"
+    "freeze_after_r3": "pilot/evidence/rp3-recovery-v3/freeze-after-r3.json",
+    "protocol_audit": "pilot/evidence/rp3-recovery-v3/protocol-audit.json"
+  },
+  "supersedes": {
+    "prior_summary_commit": "a64b771597bad80d886cdacc7a051acf1db3bb48",
+    "correction": "The prior summary treated v3 as a conforming negative result before auditing the R2 freeze identity. This schema-2 summary corrects that interpretation; the raw measurements are unchanged."
   }
 }
