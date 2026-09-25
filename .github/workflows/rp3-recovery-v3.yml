@@ -26,7 +26,9 @@ jobs:
         run: python -m pip install -r pilot/requirements.txt
 
       - name: Verify recovery controls
-        run: python -m unittest discover -s pilot/tests -v
+        run: |
+          mkdir -p pilot/.work
+          python -m unittest discover -s pilot/tests -v
 
       - name: Record execution host
         shell: bash
