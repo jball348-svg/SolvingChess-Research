@@ -1,0 +1,60 @@
+{
+  "local_files": [
+    {
+      "path": "/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/evidence/rp3/evaluate-r2-primary-3-F/events.jsonl",
+      "sha256": "55df1a3019d5a64107d38d6b88497ebc98716b74a99047c73172aaed1b1fc979",
+      "bytes": 38469,
+      "events": 99
+    },
+    {
+      "path": "/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/evidence/rp3/evaluate-r2-primary-3-F/envelope.json",
+      "sha256": "4fb86c28f0227e06a36fc355a5e7c8011ad5827dd914b21369c5fcad51016e01",
+      "bytes": 1290
+    },
+    {
+      "path": "/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/evidence/rp3/evaluate-r2-primary-3-F/report.json",
+      "sha256": "229704fac98653170fdf39c2a77eb57c467ae1d76620548455aecd1f2970a207",
+      "bytes": 33391,
+      "status": null,
+      "rows": 14,
+      "search_counts": null
+    }
+  ],
+  "archives": [
+    "/workspace/scratch/edc5500b831d/SolvingChess-Research/pilot/evidence/rp3/raw-evidence.tar.gz"
+  ],
+  "git_path_versions": [
+    {
+      "commit": "049121b5e056e4370a7947e539faa1d1c082b585",
+      "sha256": "229704fac98653170fdf39c2a77eb57c467ae1d76620548455aecd1f2970a207",
+      "rows": 14,
+      "status": null
+    }
+  ],
+  "result": "NO_AUTHENTIC_COMPLETE_COPY_FOUND",
+  "remote_head_before_publication": "35d409bf67198340446bd7021c95e8c1dc1f5cfc",
+  "published_blocked_commit": "6c37c4765d204362d16a2647625521e0fc6f740d",
+  "published_tree": "ce7927d46f16bc8aa52b633e2305621cb69f254c",
+  "unreachable_commits_inspected": [
+    "7f6262e2dc57971c2b211b8b20ed4eccf802a4cb",
+    "93469d5d9f8a6580892a60423ac114cc7a6f515c",
+    "c4a7b27ff302ec7fa7cf1b7272cac5cd9b41a11b"
+  ],
+  "unreachable_finding": "RP2/RP3 source commits predate affected measurements; no additional unreachable evidence blobs",
+  "saved_file_search": {
+    "queries": [
+      "SolvingChess RP3 evidence report",
+      "raw-evidence.tar.gz title",
+      "RP3 title"
+    ],
+    "matching_evidence_copy": false,
+    "title_matches": 0,
+    "note": "Returned content candidates predate the affected RP3 measurements; no evidence archive/report candidate located."
+  },
+  "missing": [
+    "two per-query measurement rows: 70417dcad8bb70aa and 8e37219ffa244d50",
+    "final search counters and table measurements",
+    "application event tail after 99 preserved events"
+  ],
+  "no_new_measurement_collected": true
+}

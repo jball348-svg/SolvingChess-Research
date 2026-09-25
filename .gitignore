@@ -22,3 +22,7 @@ pilot/.work/
 # Raw RP3 run directories are materialized from the checked compact archive.
 pilot/evidence/rp3/acquire-*/
 pilot/evidence/rp3/evaluate-*/
+
+# RP3-MR1 raw runs are preserved in their own checked compact archive.
+pilot/evidence/rp3-recovery/acquire-*/
+pilot/evidence/rp3-recovery/evaluate-*/
