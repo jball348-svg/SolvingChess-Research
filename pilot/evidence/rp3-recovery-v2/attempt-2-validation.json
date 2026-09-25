@@ -1,0 +1,32 @@
+{
+  "directories": 72,
+  "errors": [
+    {
+      "directory": "evaluate-r2-primary-2-C",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r2-primary-2-G",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r2-primary-3-C",
+      "error": "KeyError: 'status'"
+    },
+    {
+      "directory": "evaluate-r4-ablation-3-G",
+      "error": "AssertionError: completion digest mismatch"
+    }
+  ],
+  "execution_sha256": "471aeb36a94eb62743ed31d06a2f54e170e5c9e102bd28c815800ca84b3690b0",
+  "experiment": "RP3-MR1-FINAL",
+  "invalid_directories": 4,
+  "process_cpu_s": 608.107991,
+  "process_wall_s": 608.289382693004,
+  "recorded_utc": "2026-09-25T19:11:22Z",
+  "schema": 1,
+  "sequence_sha256": "6616d21aa807db32a87fde3d66d1bc51a29ba85f971061a06e7dd1ab49bffa25",
+  "source_freeze_sha256": "45e4f7260a9420dcf25ead5c58467df8bc13eabce68001dc221e4d615d9d1ec0",
+  "status": "PERSISTENCE_FAULT_RECORDED",
+  "valid_directories": 68
+}

@@ -26,3 +26,7 @@ pilot/evidence/rp3/evaluate-*/
 # RP3-MR1 raw runs are preserved in their own checked compact archive.
 pilot/evidence/rp3-recovery/acquire-*/
 pilot/evidence/rp3-recovery/evaluate-*/
+pilot/evidence/rp3-recovery-v2/acquire-*/
+pilot/evidence/rp3-recovery-v2/evaluate-*/
+pilot/evidence/rp3-recovery-v3/acquire-*/
+pilot/evidence/rp3-recovery-v3/evaluate-*/
