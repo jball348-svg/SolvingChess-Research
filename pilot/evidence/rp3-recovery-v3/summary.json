@@ -1,0 +1,407 @@
+{
+  "schema": 1,
+  "part": "RP3",
+  "experiment": "RP3-MR1-V3",
+  "status": "COMPLETE",
+  "endpoint": "NO_DEMONSTRATED_CUMULATIVE_BENEFIT",
+  "question": "Does an expanding checked proof library compound into a practically meaningful total-cost advantage over ordinary caching and fixed-proof reuse on the frozen R1-R4 sequence?",
+  "source_freeze_commit": "3af88ab121b0fd7fc4bd28147351b1b74551f024",
+  "final_measurement_commit": "4c335175af5aec3dc6c803968cfb4597716055c0",
+  "completion": {
+    "processes": 72,
+    "validated_processes": 72,
+    "finished_utc": "2026-09-25T21:14:16.858976+00:00",
+    "coverage": {
+      "r2": {
+        "per_arm": "16/16",
+        "outcomes": {
+          "true": 6,
+          "false": 10,
+          "unknown": 0
+        }
+      },
+      "r3": {
+        "per_arm": "16/16",
+        "outcomes": {
+          "true": 4,
+          "false": 12,
+          "unknown": 0
+        }
+      },
+      "r4": {
+        "per_arm": "16/16",
+        "outcomes": {
+          "true": 2,
+          "false": 14,
+          "unknown": 0
+        }
+      }
+    }
+  },
+  "accounting_models": {
+    "A": "Amended modeled comparison: RP2 R1 carry-forward; original R1/R2 acquisitions charged at first usable prefix; full balanced replacement R2 block; final-v3 R3/R4 primary evaluations; R3 C/G acquisition first charged at R4.",
+    "R": "Recovery-inclusive comparison: A plus the original R2 evaluation envelope for the paired arm/repeat. Missing original F R2 work counters remain missing and are never inferred.",
+    "setup": "Original shared RP2 setup remains a once-only common expense; it does not change arm ordering.",
+    "timing": "No cross-session timing normalization or correction."
+  },
+  "prefix_medians": {
+    "A": {
+      "r1": {
+        "B": {
+          "cpu_s": 0.795047,
+          "wall_s": 0.795739153,
+          "fresh_expansions": 915
+        },
+        "C": {
+          "cpu_s": 2.582172,
+          "wall_s": 2.583704082,
+          "fresh_expansions": 1548
+        },
+        "F": {
+          "cpu_s": 1.318496,
+          "wall_s": 1.320042765,
+          "fresh_expansions": 1546
+        },
+        "G": {
+          "cpu_s": 1.261114,
+          "wall_s": 1.262847724,
+          "fresh_expansions": 1546
+        }
+      },
+      "r2": {
+        "B": {
+          "cpu_s": 3.647039,
+          "wall_s": 3.682428999,
+          "fresh_expansions": 3501
+        },
+        "C": {
+          "cpu_s": 40.044627,
+          "wall_s": 40.0895912,
+          "fresh_expansions": 6138
+        },
+        "F": {
+          "cpu_s": 4.257569,
+          "wall_s": 4.305203228,
+          "fresh_expansions": 4122
+        },
+        "G": {
+          "cpu_s": 5.388096,
+          "wall_s": 5.435718231,
+          "fresh_expansions": 5868
+        }
+      },
+      "r3": {
+        "B": {
+          "cpu_s": 8.6165,
+          "wall_s": 8.689314645,
+          "fresh_expansions": 7228
+        },
+        "C": {
+          "cpu_s": 94.084427,
+          "wall_s": 94.171714675,
+          "fresh_expansions": 13554
+        },
+        "F": {
+          "cpu_s": 9.358471,
+          "wall_s": 9.446625896,
+          "fresh_expansions": 7839
+        },
+        "G": {
+          "cpu_s": 12.866575,
+          "wall_s": 12.958801243,
+          "fresh_expansions": 12636
+        }
+      },
+      "r4": {
+        "B": {
+          "cpu_s": 19.108499,
+          "wall_s": 19.220094111,
+          "fresh_expansions": 14220
+        },
+        "C": {
+          "cpu_s": 228.834471,
+          "wall_s": 229.253252338,
+          "fresh_expansions": 25639
+        },
+        "F": {
+          "cpu_s": 20.007763,
+          "wall_s": 20.171357966,
+          "fresh_expansions": 14814
+        },
+        "G": {
+          "cpu_s": 29.304946,
+          "wall_s": 29.501451684,
+          "fresh_expansions": 24687
+        }
+      }
+    },
+    "R": {
+      "r2": {
+        "B": {
+          "cpu_s": 5.799151,
+          "wall_s": 5.835936418,
+          "fresh_expansions": 6087
+        },
+        "C": {
+          "cpu_s": 42.79033,
+          "wall_s": 42.836322107,
+          "fresh_expansions": 8724
+        },
+        "F": {
+          "cpu_s": 6.51377,
+          "wall_s": 6.572980572,
+          "fresh_expansions": null
+        },
+        "G": {
+          "cpu_s": 7.577334,
+          "wall_s": 7.624418136,
+          "fresh_expansions": 8437
+        }
+      },
+      "r3": {
+        "B": {
+          "cpu_s": 10.811868,
+          "wall_s": 10.885794241,
+          "fresh_expansions": 9814
+        },
+        "C": {
+          "cpu_s": 96.868795,
+          "wall_s": 96.957199606,
+          "fresh_expansions": 16140
+        },
+        "F": {
+          "cpu_s": 11.596079,
+          "wall_s": 11.69774501,
+          "fresh_expansions": null
+        },
+        "G": {
+          "cpu_s": 15.026198,
+          "wall_s": 15.119477341,
+          "fresh_expansions": 15205
+        }
+      },
+      "r4": {
+        "B": {
+          "cpu_s": 21.303867,
+          "wall_s": 21.416573707,
+          "fresh_expansions": 16806
+        },
+        "C": {
+          "cpu_s": 231.402415,
+          "wall_s": 231.825720655,
+          "fresh_expansions": 28225
+        },
+        "F": {
+          "cpu_s": 22.234431,
+          "wall_s": 22.380715605,
+          "fresh_expansions": null
+        },
+        "G": {
+          "cpu_s": 31.464569,
+          "wall_s": 31.662127782,
+          "fresh_expansions": 27256
+        }
+      }
+    }
+  },
+  "primary_evaluation_only": {
+    "r2": {
+      "B": {
+        "cpu_s": 2.839,
+        "expanded_states": 2586
+      },
+      "C": {
+        "cpu_s": 3.601,
+        "expanded_states": 2586
+      },
+      "F": {
+        "cpu_s": 2.934,
+        "expanded_states": 2576,
+        "accepted_applications": 7
+      },
+      "G": {
+        "cpu_s": 2.908,
+        "expanded_states": 2318,
+        "accepted_applications": 21
+      }
+    },
+    "r3": {
+      "B": {
+        "cpu_s": 4.994595,
+        "expanded_states": 3727
+      },
+      "C": {
+        "cpu_s": 6.18701,
+        "expanded_states": 3727
+      },
+      "F": {
+        "cpu_s": 5.100902,
+        "expanded_states": 3717,
+        "accepted_applications": 6
+      },
+      "G": {
+        "cpu_s": 4.981402,
+        "expanded_states": 3079,
+        "accepted_applications": 11
+      }
+    },
+    "r4": {
+      "B": {
+        "cpu_s": 10.491999,
+        "expanded_states": 6992
+      },
+      "C": {
+        "cpu_s": 12.945714,
+        "expanded_states": 6992
+      },
+      "F": {
+        "cpu_s": 10.640621,
+        "expanded_states": 6975,
+        "accepted_applications": 6
+      },
+      "G": {
+        "cpu_s": 10.708438,
+        "expanded_states": 6958,
+        "accepted_applications": 13
+      }
+    }
+  },
+  "gates": {
+    "required": {
+      "cumulative_cpu_and_wall_improvement": ">=25% versus best B/C/F comparator",
+      "absolute_saving_s": ">=0.050",
+      "repeat_separation": "slowest G repeat faster than fastest comparator repeat",
+      "acquisition_inclusive_fallback_reduction": ">=25%",
+      "ablation": "at least half of any positive primary saving disappears",
+      "reverse_order": "claimed primary advantage must not reverse"
+    },
+    "A": {
+      "r3": {
+        "best_comparator": "B",
+        "G_vs_B_cpu_percent": 49.32484187315038,
+        "G_vs_B_wall_percent": 49.13490617418341,
+        "G_vs_B_expansions_percent": 74.82014388489209,
+        "slowest_G_cpu_s": 12.911066,
+        "fastest_B_cpu_s": 8.610062,
+        "pass": false
+      },
+      "r4": {
+        "best_comparator": "B",
+        "G_vs_B_cpu_percent": 53.360795110071166,
+        "G_vs_B_wall_percent": 53.49275354024514,
+        "G_vs_B_expansions_percent": 73.60759493670885,
+        "slowest_G_cpu_s": 29.40445,
+        "fastest_B_cpu_s": 19.101272,
+        "pass": false
+      }
+    },
+    "R": {
+      "r3": {
+        "best_comparator": "B",
+        "G_vs_B_cpu_percent": 38.978740768940234,
+        "G_vs_B_wall_percent": 38.891816309132345,
+        "G_vs_B_expansions_percent": 54.93173018137354,
+        "slowest_G_cpu_s": 15.260349,
+        "fastest_B_cpu_s": 10.643278,
+        "pass": false
+      },
+      "r4": {
+        "best_comparator": "B",
+        "G_vs_B_cpu_percent": 47.69416744856694,
+        "G_vs_B_wall_percent": 47.83937064429276,
+        "G_vs_B_expansions_percent": 62.18017374747114,
+        "slowest_G_cpu_s": 31.753733,
+        "fastest_B_cpu_s": 21.134488,
+        "pass": false
+      }
+    },
+    "ablation": {
+      "r3": {
+        "G_primary_cpu_s": 4.981402,
+        "G_donor_only_cpu_s": 5.085053,
+        "G_primary_expanded_states": 3079,
+        "G_donor_only_expanded_states": 3717,
+        "interpretation": "Learned objects have a local work effect, but no positive cumulative gate exists; causal compounding gate cannot pass."
+      },
+      "r4": {
+        "G_primary_cpu_s": 10.708438,
+        "G_donor_only_cpu_s": 10.662488,
+        "G_primary_expanded_states": 6958,
+        "G_donor_only_expanded_states": 6975,
+        "interpretation": "The full learned library saves only 17 fallback expansions and is slightly slower in median CPU; no positive cumulative gate exists."
+      }
+    },
+    "reverse_order": {
+      "r3": {
+        "G_primary_cpu_s": 4.981402,
+        "G_reverse_cpu_s": 4.971123,
+        "G_primary_expanded_states": 3079,
+        "G_reverse_expanded_states": 3079,
+        "result": "No claimed primary advantage to support; order support unestablished."
+      },
+      "r4": {
+        "G_primary_cpu_s": 10.708438,
+        "G_reverse_cpu_s": 10.710901,
+        "G_primary_expanded_states": 6958,
+        "G_reverse_expanded_states": 6958,
+        "result": "No claimed primary advantage to support; order support unestablished."
+      }
+    }
+  },
+  "library_growth": {
+    "C": {
+      "rp2_initial": 357,
+      "after_r1": 407,
+      "after_r2": 407,
+      "after_r3": 407,
+      "r3_new": 0,
+      "final_serialized_bytes": 1048462,
+      "limiter": "1 MiB byte cap"
+    },
+    "G": {
+      "rp2_donor": 8,
+      "after_r1": 16,
+      "after_r2": 24,
+      "after_r3": 32,
+      "r3_new": 8,
+      "final_serialized_bytes": 31213,
+      "final_sha256": "14cefea9fb40b7612f37fcb9c4445e35796b2d36cef44a4aa2dc22c3bfefa353"
+    }
+  },
+  "expense": {
+    "original_rp3_sequence_cpu_s": 283.932637,
+    "recovery_v1_sequence_cpu_s": 622.095396,
+    "recovery_v2_sequence_cpu_s": 608.107991,
+    "recovery_v3_sequence_cpu_s": 863.069615,
+    "all_sequence_cpu_s": 2377.205639,
+    "recorded_preflight_cpu_s": 5.407768,
+    "recorded_parent_orchestration_cpu_s": 13.382481418,
+    "total_recorded_cpu_s_lower_bound": 2395.995888418,
+    "total_recorded_wall_s_lower_bound": 2408.761256031,
+    "human_llm_shell_publication_cost": "unavailable, not zero"
+  },
+  "environment": {
+    "final_v3_runner_cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "final_v3_platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "final_v3_python": "3.12.14",
+    "note": "Final v3 ran on a different host from the earlier AMD EPYC scratch sessions. The frozen recovery contract already declared changed executable/session/host-load uncertainty and forbids normalization. Within-v3 comparisons share the same runner; cumulative A/R timing combines preserved earlier costs with final-v3 costs. The host-independent fresh-expansion gates also fail by wide margins."
+  },
+  "historical_attempt_integrity": {
+    "recovery_v1": "Excluded by the frozen recovery record for seven stale/incomplete final reports. Its directly published sequence/execution records remain usable for sunk-cost accounting. The later-discovered compact raw chunk export is truncated: manifest expects 14662426 bytes, repository chunks total 12601261 bytes.",
+    "recovery_v2": "Excluded by the frozen recovery record for four post-run completeness failures. Its directly published sequence/execution records remain usable for sunk-cost accounting. The compact raw chunk export is likewise truncated: manifest expects 14678599 bytes, repository chunks total 12601261 bytes.",
+    "impact": "Neither excluded attempt supplies any final-v3 scientific measurement or library input; v3 inherited only the hash-verified original RP3/RP2 evidence and directly published frozen metadata."
+  },
+  "interpretation": {
+    "break_even": "None through R4 under either A or recovery-inclusive R.",
+    "result": "Checked proof reuse does reduce fresh fallback work at some individual evaluations, especially G at R2/R3, but the reduction is too small to overcome application and acquisition costs. The growing library is materially worse than ordinary caching in cumulative cost and acquisition-inclusive work at both decisive later rungs.",
+    "scope": "Bounded result for the frozen KRK-style benchmark family, solver, six-ply proposition, budgets and update policy. It does not establish an asymptotic impossibility for proof discovery or chess solving."
+  },
+  "evidence": {
+    "raw_archive": "pilot/evidence/rp3-recovery-v3/raw-evidence.tar.gz",
+    "raw_manifest": "pilot/evidence/rp3-recovery-v3/raw-evidence-manifest.json",
+    "validation": "pilot/evidence/rp3-recovery-v3/validation.json",
+    "sequence": "pilot/evidence/rp3-recovery-v3/sequence.json",
+    "execution_host": "pilot/evidence/rp3-recovery-v3/execution-host.json",
+    "freeze_after_r3": "pilot/evidence/rp3-recovery-v3/freeze-after-r3.json"
+  }
+}
