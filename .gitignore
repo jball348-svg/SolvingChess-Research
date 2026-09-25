@@ -1,50 +1,19 @@
-# Python and test tooling
+# Local environments, build products and temporary experiment data.
+.venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.ruff_cache/
-.mypy_cache/
-.coverage
-htmlcov/
-.venv/
-venv/
-
-# Build products
 build/
 dist/
-target/
-*.egg-info/
+pilot/tmp/
+pilot/cache/
+pilot/runs/
 
-# Editors and operating systems
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Autonomous-run transients. Critical accepted evidence is copied into a freeze.
-logs/orchestration/**/events.jsonl
-logs/orchestration/**/stderr.log
-logs/orchestration/**/final.raw.txt
-logs/orchestration/**/*.tmp
-
-# Local configuration and secrets
+# Keep selected measurements, reproducible source and small certificates tracked.
+# Bulk generated truth must have a regeneration command or durable locator.
 .env
 .env.*
 !.env.example
-.codex/local.*
 *.pem
 *.key
-
-# Scratch and generated caches
-staging/work/
-artifacts/tmp/
-artifacts/cache/
-
-# Reference working copies/snapshots are registry-located, never flattened into main Git.
-/references/local/
-/references/local-snapshots/
-/Other projects/
-
-# Short-lived controller runtime files.
-/.run/
+.DS_Store

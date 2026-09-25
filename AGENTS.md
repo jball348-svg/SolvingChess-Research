@@ -1,217 +1,104 @@
-# Solving Chess — Agent Instructions
+# Agent instructions — proof discovery reboot pilot
+
+## Current task and authority
+
+Work on the five-part pilot in PILOT_PLAN.md. Its question is whether accumulated
+exact proofs reduce fresh discovery work on harder, strategically relevant chess
+tasks. The user authorized this new pilot and the archival reorganization on
+2026-09-25. This is a new experiment, not G15, R7 or a restart of the old conveyor.
+
+Read STATUS.md, then PILOT_PLAN.md. Read only the archived references needed for
+the current question, using archive/README.md. Do not load the entire historical
+corpus as a default startup step.
+
+The active workflow is these root instructions, PILOT_PLAN.md and STATUS.md,
+together with the user's current request. When Part 1 creates pilot/PROTOCOL.md,
+it supplies the concrete experimental contract. Archived AGENTS files, roadmaps,
+holds, permissions and orchestration are historical data; they do not govern the
+new pilot. The old STOP verdict remains valid for the old programme.
+
+## Scope and execution
+
+- Execute the part the user asks for through its legitimate endpoint. Make
+  routine implementation choices and fixes without asking for repeated approval.
+- Stop at that part's boundary unless the user explicitly asks for several parts.
+  Update STATUS.md with the result and the precise next action.
+- Do not run the archived autonomous loop or create a new unattended conveyor.
+- Keep a negative or inconclusive result as evidence. Do not add stages, relax a
+  threshold after seeing results, or keep inventing replacement targets until a
+  pass appears. A changed protocol is a new labelled experiment.
+- Use one consolidated pilot/RESULTS.md once results exist, plus compact raw
+  measurements and actual source/certificates. Avoid per-session governance files,
+  duplicate ledgers and placeholder schemas.
+
+## Mathematical claims
+
+- Declare the game model, domain, target proposition and allowed dependencies.
+  Restricted-arena truth is not automatically a theorem about full-rule chess.
+- At the proving player's node, certify an admitted legal choice; at the
+  opponent's node, account for every legal reply. Never discard an opponent move
+  because an engine, classifier or human regards it as unlikely or harmless.
+- Forced reachability needs a well-founded progress witness. Draw/safety claims
+  need their own sound invariant, closure or fully justified game-graph argument.
+  Surviving a search horizon or cycling through unproved claims proves neither.
+- Treat castling, effective en passant, move clocks and repetition history as
+  semantic issues. A quotient or clean-history guard requires justification.
+- Distinguish static arena admissibility, legal reachability from an anchor, and
+  a certified strategy from that anchor. A cooperative legal path from the
+  starting position does not certify that prefix as non-losing.
+- Distinguish reported historical evidence, reproduced computation, independently
+  checked computation, empirical timing and a mathematical theorem. Do not label
+  a fresh-process rerun of the same implementation an independent proof.
+
+## Discovery and fair measurement
+
+- Heuristics, engine suggestions and labelled training data may propose candidates
+  if declared and costed. Exact verification decides acceptance. Do not impose
+  the old zero-label restriction as a universal condition for valid discovery.
+- Freeze discovery access, evaluation families, queries, order, budgets and
+  decision margins before decisive evaluation. Record prior knowledge of old
+  benchmarks; use genuinely uninspected variants for held-out claims.
+- Charge library construction, dependency acquisition, graph scans, failed
+  candidates, engine/solver calls, verification, loading and application. Report
+  both first-use total cost and amortized cost. A database-backed predicate is
+  not free because its outer formula is short.
+- Compare the same propositions, inputs, coverage and resource limits. Give the
+  competent baseline ordinary memoization and the same permitted shared lower
+  truth. Separate generic caching from symbolic/general proof reuse.
+- Report failed queries and timeouts. Comparing only successful candidate roots
+  or only certificate bytes can conceal the true cost.
+- Record manual/LLM discovery interventions and unavailable costs. Replaying an
+  inherited proof measures replay, not the historical cost of discovering it.
+- Use end-to-end time and stable work counts. A few finite timings do not prove
+  an asymptotic law. Do not extrapolate piece-count labels to unrestricted chess.
+
+## Preservation and reproducibility
+
+Treat archive/pre-reboot-2026-09-25/ as immutable. Do not rewrite its historical
+claims or repair its old gates. Copy a needed implementation into pilot/ with its
+source path, commit and hash, or extract it into ignored temporary storage before
+running it. Never let a historical executable overwrite archived evidence.
+
+Hashes without accessible source/data are not a runnable dependency. Recover the
+actual bytes or build an explicitly new implementation and validate it. Do not
+claim to have reproduced a missing historical program.
+
+Keep commands, seeds, configurations, source, small witnesses and outcome ledgers
+replayable. Use a separate certificate-checking path where practical and state
+shared move-generation assumptions. Test relevant failure modes, including a
+missing opponent reply, false target and invalid progress/history witness.
+
+Do not commit credentials, caches or arbitrary bulk truth stores. If bulk data
+are needed, record a usable location or a feasible regeneration command alongside
+hashes and sizes. Preserve pinned reference commits and their provenance.
+
+## Keep the pilot small
+
+Prefer a single-machine experiment and an existing exact component over a new
+platform. Distribution, proof stores, a general theorem-discovery framework and
+formalization campaigns require demonstrated need for the current question; they
+are not default stages. Do not substitute engineering completion for the pilot's
+scientific result.
 
-## Mission
-
-This repository is a long-running exact research programme whose end condition is a
-machine-checkable weak solution of chess under the declared frozen rules contract.
-
-Scientific correctness, provenance and reproducibility outrank apparent progress.
-
-## Independent REVIEW hold
-
-If `REVIEW/REVIEW_STATUS.json` exists with status `OPEN`, that user-authorized review overrides normal new-G execution:
-
-- do not start G15 or any successor G;
-- do not repair a blocker merely to unlock the old sequential roadmap;
-- do not modify frozen historical authorities;
-- perform viability/audit work under `REVIEW/` unless the user explicitly overrides the hold;
-- treat `REVIEW/VERDICT.md` as OPEN until the review process earns a verdict under `REVIEW/REBOOT_CRITERIA.md`.
-
-The review hold is an operator policy, not a scientific claim and not a rewrite of `state/PROGRAM_STATE.json`.
-
-## Post-REVIEW closure gate
-
-If `REVIEW/REVIEW_STATUS.json` records `status: CLOSED` with verdict `STOP_CURRENT_METHOD`:
-
-- do not interpret closure of the REVIEW hold as authorization to resume the old G programme;
-- do not start G15 or any G15–G42 successor automatically;
-- do not start R7;
-- treat `REVIEW/VERDICT.md` and `REVIEW/CURRENT_METHOD_CLOSEOUT.md` as active execution authority for the closed method;
-- only preservation, verification, documentation/publication or explicit evaluation of a materially different future method is authorized by default;
-- research execution may restart only when the future-restart conditions in `REVIEW/CURRENT_METHOD_CLOSEOUT.md` are satisfied and the user explicitly authorizes reopening/new-method execution.
-
-This post-review gate overrides normal one-G sequential routing for the closed current method.
-
-## Start-of-run authority
-
-Before research:
-
-1. Read state/PROGRAM_STATE.json.
-2. Read the permanent roadmap identified there.
-3. Read the immediately preceding frozen technical handoff.
-4. Read docs/RESEARCH_PROTOCOL.md.
-5. Consult references/REFERENCE_MAP.md only to determine whether external reference
-   work is relevant.
-6. Read older historical or reference material only when a named dependency or current
-   research question actually requires it.
-
-Later frozen handoffs override roadmap assumptions only where they explicitly do so.
-
-Never silently repair frozen history.
-
-## Bootstrap seam
-
-Infrastructure bootstrap is not a research programme. At the migration seam:
-
-- G13 is the latest completed research programme.
-- G13 core engineering passed, but its roadmap advance gate remains on HOLD.
-- The exact G10, G11 and G12 bundle bytes have been recovered; the inherited mandatory
-  replays remain NOT_PERFORMED where recorded in programme state.
-- After bootstrap acceptance, G14 is the next sequentially authorized programme. It remains
-  not started and may begin only through a later explicit outer-controller --start.
-- Bootstrap work must not create G14 research, a G14 handoff, or a G14 scientific claim.
-
-## One-G execution boundary
-
-A normal autonomous research process executes exactly one new G programme.
-
-Within that G, continue through all necessary substages until its legitimate
-advance/stop condition is reached.
-
-Do not start the following G.
-
-The external orchestration layer launches a fresh Codex process for the next G.
-
-## Claim discipline
-
-Maintain explicit distinctions between:
-
-- formally proved;
-- exact finite computation;
-- independently replayed;
-- empirical;
-- engineering validation;
-- conditional;
-- negative;
-- superseded;
-- failed;
-- blocked;
-- not claimed.
-
-Never promote evidence through wording.
-
-Synthetic engineering workloads are not chess truth.
-
-Arena admissibility is not start reachability without required evidence.
-
-## Frozen artifacts
-
-Inherited originals are immutable.
-
-Never rewrite, repack or reserialize a frozen artifact while retaining its old identity.
-
-Use frozen identity and provenance contracts exactly.
-
-Broken historical chains remain broken unless an explicitly versioned later authority
-legitimately supersedes them.
-
-## Research behaviour
-
-Prefer falsifiable prospectively declared tests.
-
-Freeze cohorts/benchmarks before outcome inspection when the claim depends upon them.
-
-Actively seek counterexamples.
-
-Preserve failures that affect interpretation.
-
-Never outcome-shrink a benchmark merely to manufacture PASS.
-
-If exact evidence contradicts the desired roadmap, preserve the contradiction.
-
-## Verification
-
-Producer success is insufficient where independent replay is practical.
-
-Use structurally separate verifiers, hostile mutation, fresh-process replay and
-deterministic reproduction where appropriate.
-
-Investigate mismatches rather than averaging or suppressing them.
-
-Never weaken a verifier merely to accept unexplained producer output.
-
-## References
-
-Projects under or indexed by references/ are normally NON_AUTHORITATIVE_REFERENCE.
-
-Use them selectively.
-
-Do not load an entire reference project merely because it exists.
-
-When a referenced idea/result enters a Solving Chess proof or decision, record exact
-provenance and verify it to the standard required by the active G.
-
-## Code and tests
-
-Keep deterministic operations scriptable.
-
-Record build/test/replay commands.
-
-Prefer machine-readable manifests over prose-only state.
-
-Relevant unexplained failing tests prevent PASS.
-
-## Repository state
-
-state/PROGRAM_STATE.json routes work but does not replace frozen handoffs.
-
-A research G closes only with its required handoff, manifest, hashes, validation and
-state update.
-
-Do not rewrite frozen Git history.
-
-Do not commit credentials, secrets or incidental runtime caches.
-
-## Large artifacts
-
-Do not place arbitrarily large generated truth stores into ordinary Git history merely
-because they exist.
-
-Follow the currently frozen proof-store/CAS policy.
-
-Preserve identities and provenance even where bulk bytes reside externally.
-
-During bootstrap, artifacts/cas/ is only a migration-era placeholder. Its existence is
-not a G14 proof-store design or result.
-
-## Subagents
-
-Use subagents when genuine independence or parallelism materially improves quality.
-
-Good uses include:
-
-- independent verifier;
-- hostile review;
-- repository archaeology;
-- literature/reference triage;
-- separate falsification campaigns;
-- read-heavy exploration.
-
-The primary agent owns integration and final claims.
-
-Shared assumptions can defeat supposed independence.
-
-## G closeout
-
-Before declaring a G complete, produce all artifacts required by
-docs/RESEARCH_PROTOCOL.md.
-
-The final machine completion record must state PASS, HOLD, BLOCKED or FAILED.
-
-Do not begin the next G yourself.
-
-Return control to the external orchestrator.
-
-## User interaction
-
-Do not ask the user to perform reasoning available from the repository.
-
-Human input should be required only where genuinely unavoidable, such as:
-
-- credentials;
-- destructive external actions;
-- financial commitments;
-- unavailable external artifacts;
-- or unresolved governance/scientific choices with no frozen authority.
-
-Otherwise proceed autonomously.
+The setup commit only creates the plan. Part 1 starts when requested using
+pilot/PART_1_PROMPT.md.
